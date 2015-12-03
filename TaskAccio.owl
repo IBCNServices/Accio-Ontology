@@ -2,6 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -20,8 +21,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
+<rdf:RDF xmlns="http://occs.intec.ugent.be/ontology/TaskAccio.owl#"
+     xml:base="http://occs.intec.ugent.be/ontology/TaskAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:profileaccio="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
@@ -32,14 +33,15 @@
      xmlns:TaskAccio="http://occs.intec.ugent.be/ontology/TaskAccio.owl#"
      xmlns:rolecompetenceaccio="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
      xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/TaskAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/ProfileAccio.owl"/>
-    </Ontology>
+    <owl:Ontology rdf:about="http://occs.intec.ugent.be/ontology/TaskAccio.owl">
+        <owl:imports rdf:resource="http://occs.intec.ugent.be/ontology/ProfileAccio.owl"/>
+    </owl:Ontology>
     
 
 
@@ -56,346 +58,346 @@
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#acceptedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;acceptedBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;acceptedBy">
         <rdfs:label xml:lang="nl">aanvaardDoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Call"/>
                     <rdf:Description rdf:about="&TaskAccio;Notification"/>
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#assignedTo -->
 
-    <ObjectProperty rdf:about="&TaskAccio;assignedTo">
+    <owl:ObjectProperty rdf:about="&TaskAccio;assignedTo">
         <rdfs:label xml:lang="nl">toegewezenAan</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Notification"/>
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#callMadeBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;callMadeBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;callMadeBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">oproepGemaaktDoor</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
-        <inverseOf rdf:resource="&TaskAccio;makesCall"/>
+        <owl:inverseOf rdf:resource="&TaskAccio;makesCall"/>
         <rdfs:range>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&profileaccio;Person"/>
                     <rdf:Description rdf:about="&wsnadjustedaccio;System"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:range>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#causedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;causedBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;causedBy">
         <rdfs:label xml:lang="nl">veroorzaaktDoor</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;ContextCall"/>
         <rdfs:range rdf:resource="&wsnadjustedaccio;Observation"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#checkedInWith -->
 
-    <ObjectProperty rdf:about="&TaskAccio;checkedInWith">
+    <owl:ObjectProperty rdf:about="&TaskAccio;checkedInWith">
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#declindedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;declindedBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;declindedBy">
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Call"/>
                     <rdf:Description rdf:about="&TaskAccio;Notification"/>
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;executedBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;executedBy">
         <rdfs:label xml:lang="nl">uitgevoerdDoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedDuring -->
 
-    <ObjectProperty rdf:about="&TaskAccio;executedDuring">
+    <owl:ObjectProperty rdf:about="&TaskAccio;executedDuring">
         <rdfs:label xml:lang="nl">uitgevoerdGedurende</rdfs:label>
         <rdfs:range rdf:resource="&temporal;ValidPeriod"/>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedOn -->
 
-    <ObjectProperty rdf:about="&TaskAccio;executedOn">
+    <owl:ObjectProperty rdf:about="&TaskAccio;executedOn">
         <rdfs:label xml:lang="nl">uitgevoerdOp</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
                     <rdf:Description rdf:about="&TaskAccio;Visit"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasConsentedForTask -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasConsentedForTask">
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasConsentedForTask">
         <rdfs:label xml:lang="nl">heeftToegezegdVoorTaak</rdfs:label>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
         <rdfs:range rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasContent -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasContent">
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasContent">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
         <rdfs:range rdf:resource="&temporal;Entity"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasCurrentTask -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasCurrentTask">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasCurrentTask">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftHuidigeTaak</rdfs:label>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
         <rdfs:range rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasPriority -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasPriority">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasPriority">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftPrioriteit</rdfs:label>
         <rdfs:range rdf:resource="&TaskAccio;Priority"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Notification"/>
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasReason -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasReason">
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasReason">
         <rdfs:label xml:lang="nl">heeftReden</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&TaskAccio;Reason"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasSequenceNumber -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasSequenceNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasSequenceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftSequentieNummer</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:subPropertyOf rdf:resource="&upperaccio;hasId"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasTODOTasks -->
 
-    <ObjectProperty rdf:about="&TaskAccio;hasTODOTasks">
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasTODOTasks">
         <rdfs:label xml:lang="nl">heeftTODOTaken</rdfs:label>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
         <rdfs:range rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isAssignedTo -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isAssignedTo">
+    <owl:ObjectProperty rdf:about="&TaskAccio;isAssignedTo">
         <rdfs:label xml:lang="nl">isToegewezenAan</rdfs:label>
-        <inverseOf rdf:resource="&TaskAccio;assignedTo"/>
-    </ObjectProperty>
+        <owl:inverseOf rdf:resource="&TaskAccio;assignedTo"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isExecutedOn -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isExecutedOn">
-        <inverseOf rdf:resource="&TaskAccio;executedOn"/>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="&TaskAccio;isExecutedOn">
+        <owl:inverseOf rdf:resource="&TaskAccio;executedOn"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isIdeallyPerformedAtLocation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;isIdeallyPerformedAtLocation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">wordtIdeaalUitgevoerdOpLocatie</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Location"/>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isInNeedOfCompetence -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isInNeedOfCompetence">
+    <owl:ObjectProperty rdf:about="&TaskAccio;isInNeedOfCompetence">
         <rdfs:label xml:lang="nl">heeftNoodAanCompetentie</rdfs:label>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Competence"/>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isRegisteredWith -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isRegisteredWith">
+    <owl:ObjectProperty rdf:about="&TaskAccio;isRegisteredWith">
         <rdfs:label xml:lang="nl">isGeregistreerdBij</rdfs:label>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isTaskFor -->
 
-    <ObjectProperty rdf:about="&TaskAccio;isTaskFor">
+    <owl:ObjectProperty rdf:about="&TaskAccio;isTaskFor">
         <rdfs:label xml:lang="nl">isTaakVoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#madeAtLocation -->
 
-    <ObjectProperty rdf:about="&TaskAccio;madeAtLocation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;madeAtLocation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">gemaaktOpLocatie</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Location"/>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#madeAtTime -->
 
-    <ObjectProperty rdf:about="&TaskAccio;madeAtTime">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;madeAtTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">aangemaaktOp</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
         <rdfs:range rdf:resource="&temporal;ValidInstant"/>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#makesCall -->
 
-    <ObjectProperty rdf:about="&TaskAccio;makesCall">
+    <owl:ObjectProperty rdf:about="&TaskAccio;makesCall">
         <rdfs:label xml:lang="nl">maaktOproep</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </ObjectProperty>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#redirectedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;redirectedBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;redirectedBy">
         <rdfs:label xml:lang="nl">doorverwezenDoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#telephonicContactMadeBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;telephonicContactMadeBy">
+    <owl:ObjectProperty rdf:about="&TaskAccio;telephonicContactMadeBy">
         <rdfs:label xml:lang="nl">telefonischContactGemaaktDoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#temporarilyAcceptedBy -->
 
-    <ObjectProperty rdf:about="&TaskAccio;temporarilyAcceptedBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&TaskAccio;temporarilyAcceptedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">tijdelijkAanvaardDoor</rdfs:label>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
@@ -412,103 +414,103 @@
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesCalled -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesCalled">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesCalled">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">aantalKeerGealarmeerd</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesRedirected -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRedirected">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRedirected">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">aantalKeerDoorverwezen</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesRelaunched -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRelaunched">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRelaunched">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">aantalKeerHergelanceerd</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#answerNeeded -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;answerNeeded">
+    <owl:DatatypeProperty rdf:about="&TaskAccio;answerNeeded">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#futherReasening -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;futherReasening">
+    <owl:DatatypeProperty rdf:about="&TaskAccio;futherReasening">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasHadTelephonicContact -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;hasHadTelephonicContact">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;hasHadTelephonicContact">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftTelefonischContactGehad</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasMinimalInterventionTime -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;hasMinimalInterventionTime">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;hasMinimalInterventionTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftMinimaleInterventieTijd</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
         <rdfs:range rdf:resource="&xsd;long"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasTimeOutTime -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;hasTimeOutTime">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;hasTimeOutTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftTimeOutTijd</rdfs:label>
         <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Notification"/>
                     <rdf:Description rdf:about="&TaskAccio;Task"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isInConversation -->
 
-    <DatatypeProperty rdf:about="&TaskAccio;isInConversation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&TaskAccio;isInConversation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">isInConversatie</rdfs:label>
         <rdfs:domain rdf:resource="&TaskAccio;Call"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
@@ -525,857 +527,866 @@
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#ActualTask -->
 
-    <Class rdf:about="&TaskAccio;ActualTask">
+    <owl:Class rdf:about="&TaskAccio;ActualTask">
         <rdfs:label xml:lang="nl">EchteTaak</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
+                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&TaskAccio;PotentialTask"/>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#AssistanceCall -->
 
-    <Class rdf:about="&TaskAccio;AssistanceCall">
+    <owl:Class rdf:about="&TaskAccio;AssistanceCall">
         <rdfs:label xml:lang="nl">AssistentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;callMadeBy"/>
-                        <someValuesFrom>
-                            <Restriction>
-                                <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                <someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
-                            </Restriction>
-                        </someValuesFrom>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasPriority"/>
-                        <onClass>
-                            <Class>
-                                <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;callMadeBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasPriority"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
                                     <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-                                </unionOf>
-                            </Class>
-                        </onClass>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Call"/>
-        <disjointWith rdf:resource="&TaskAccio;ContextCall"/>
-        <disjointWith rdf:resource="&TaskAccio;UrgencyCall"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&TaskAccio;ContextCall"/>
+        <owl:disjointWith rdf:resource="&TaskAccio;UrgencyCall"/>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Call -->
 
-    <Class rdf:about="&TaskAccio;Call">
+    <owl:Class rdf:about="&TaskAccio;Call">
         <rdfs:label xml:lang="nl">Oproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;madeAtLocation"/>
-                        <onClass rdf:resource="&contextaccio;Location"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&upperaccio;hasId"/>
-                        <onClass>
-                            <Restriction>
-                                <onProperty rdf:resource="&upperaccio;hasIDType"/>
-                                <hasValue>SequenceNumber</hasValue>
-                            </Restriction>
-                        </onClass>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;executedOn"/>
-                        <onClass>
-                            <Restriction>
-                                <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                <someValuesFrom>
-                                    <Class>
-                                        <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;madeAtLocation"/>
+                        <owl:onClass rdf:resource="&contextaccio;Location"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&upperaccio;hasId"/>
+                        <owl:onClass>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&upperaccio;hasIDType"/>
+                                <owl:hasValue>SequenceNumber</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;executedOn"/>
+                        <owl:onClass>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Patient"/>
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Resident"/>
-                                        </unionOf>
-                                    </Class>
-                                </someValuesFrom>
-                            </Restriction>
-                        </onClass>
-                        <maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</maxQualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;NumberOfTimesCalled"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;integer"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;NumberOfTimesRedirected"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;integer"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;NumberOfTimesRelaunched"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;integer"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasHadTelephonicContact"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;boolean"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasMinimalInterventionTime"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;long"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasTimeOutTime"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;long"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:onClass>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;NumberOfTimesCalled"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;NumberOfTimesRedirected"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;NumberOfTimesRelaunched"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasHadTelephonicContact"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasMinimalInterventionTime"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;long"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasTimeOutTime"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;UnplannedTask"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareAssistanceCall -->
 
-    <Class rdf:about="&TaskAccio;CareAssistanceCall">
+    <owl:Class rdf:about="&TaskAccio;CareAssistanceCall">
         <rdfs:label xml:lang="nl">VerzorgingAssistentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;AssistanceCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;AssistanceCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareCall -->
 
-    <Class rdf:about="&TaskAccio;CareCall">
+    <owl:Class rdf:about="&TaskAccio;CareCall">
         <rdfs:label xml:lang="nl">VerzorgingOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;NormalCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareContextCall -->
 
-    <Class rdf:about="&TaskAccio;CareContextCall">
+    <owl:Class rdf:about="&TaskAccio;CareContextCall">
         <rdfs:label xml:lang="nl">VerzorgingContextOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;CareReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;ContextCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareReason -->
 
-    <Class rdf:about="&TaskAccio;CareReason">
+    <owl:Class rdf:about="&TaskAccio;CareReason">
         <rdfs:label xml:lang="nl">VerzorgingReden</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Reason"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#ContextCall -->
 
-    <Class rdf:about="&TaskAccio;ContextCall">
+    <owl:Class rdf:about="&TaskAccio;ContextCall">
         <rdfs:label xml:lang="nl">ContextOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;callMadeBy"/>
-                        <someValuesFrom rdf:resource="&wsnadjustedaccio;System"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasPriority"/>
-                        <onClass>
-                            <Class>
-                                <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;callMadeBy"/>
+                        <owl:someValuesFrom rdf:resource="&wsnadjustedaccio;System"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasPriority"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
                                     <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-                                </unionOf>
-                            </Class>
-                        </onClass>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Call"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededAssistanceCall -->
 
-    <Class rdf:about="&TaskAccio;DoctorNeededAssistanceCall">
+    <owl:Class rdf:about="&TaskAccio;DoctorNeededAssistanceCall">
         <rdfs:label xml:lang="nl">ArtsNodigAssistentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;AssistanceCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;MedicalAssistanceCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededCall -->
 
-    <Class rdf:about="&TaskAccio;DoctorNeededCall">
+    <owl:Class rdf:about="&TaskAccio;DoctorNeededCall">
         <rdfs:label xml:lang="nl">ArtsNodigOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;MedicalCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededContextCall -->
 
-    <Class rdf:about="&TaskAccio;DoctorNeededContextCall">
+    <owl:Class rdf:about="&TaskAccio;DoctorNeededContextCall">
         <rdfs:label xml:lang="nl">ArtsNodigContextOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;DoctorNeededReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;MedicalContextCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededReason -->
 
-    <Class rdf:about="&TaskAccio;DoctorNeededReason">
+    <owl:Class rdf:about="&TaskAccio;DoctorNeededReason">
         <rdfs:label xml:lang="nl">ArtsNodigReden</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;MedicalReason"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionAssistanceCall -->
 
-    <Class rdf:about="&TaskAccio;HotelFunctionAssistanceCall">
+    <owl:Class rdf:about="&TaskAccio;HotelFunctionAssistanceCall">
         <rdfs:label xml:lang="nl">HotelFunctieAssistentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;AssistanceCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;AssistanceCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionCall -->
 
-    <Class rdf:about="&TaskAccio;HotelFunctionCall">
+    <owl:Class rdf:about="&TaskAccio;HotelFunctionCall">
         <rdfs:label xml:lang="nl">HotelFunctieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;NormalCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionContextCall -->
 
-    <Class rdf:about="&TaskAccio;HotelFunctionContextCall">
+    <owl:Class rdf:about="&TaskAccio;HotelFunctionContextCall">
         <rdfs:label xml:lang="nl">HotelFunctieContextOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;HotelFunctionReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;ContextCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionReason -->
 
-    <Class rdf:about="&TaskAccio;HotelFunctionReason">
+    <owl:Class rdf:about="&TaskAccio;HotelFunctionReason">
         <rdfs:label xml:lang="nl">HotelFunctieReden</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Reason"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalAssistanceCall -->
 
-    <Class rdf:about="&TaskAccio;MedicalAssistanceCall">
+    <owl:Class rdf:about="&TaskAccio;MedicalAssistanceCall">
         <rdfs:label xml:lang="nl">MedischeAssistentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;AssistanceCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;AssistanceCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalCall -->
 
-    <Class rdf:about="&TaskAccio;MedicalCall">
+    <owl:Class rdf:about="&TaskAccio;MedicalCall">
         <rdfs:label xml:lang="nl">MedischeOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;NormalCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalContextCall -->
 
-    <Class rdf:about="&TaskAccio;MedicalContextCall">
+    <owl:Class rdf:about="&TaskAccio;MedicalContextCall">
         <rdfs:label xml:lang="nl">MedischeContextOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;ContextCall"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalReason -->
 
-    <Class rdf:about="&TaskAccio;MedicalReason">
+    <owl:Class rdf:about="&TaskAccio;MedicalReason">
         <rdfs:label xml:lang="nl">MedischeReden</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Reason"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NormalCall -->
 
-    <Class rdf:about="&TaskAccio;NormalCall">
+    <owl:Class rdf:about="&TaskAccio;NormalCall">
         <rdfs:label xml:lang="nl">NormaleOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;callMadeBy"/>
-                        <allValuesFrom>
-                            <Restriction>
-                                <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                <someValuesFrom>
-                                    <Class>
-                                        <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;callMadeBy"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Patient"/>
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Resident"/>
-                                        </unionOf>
-                                    </Class>
-                                </someValuesFrom>
-                            </Restriction>
-                        </allValuesFrom>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasPriority"/>
-                        <onClass>
-                            <Class>
-                                <unionOf rdf:parseType="Collection">
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasPriority"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
                                     <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-                                </unionOf>
-                            </Class>
-                        </onClass>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Call"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NormalPriority -->
 
-    <Class rdf:about="&TaskAccio;NormalPriority">
+    <owl:Class rdf:about="&TaskAccio;NormalPriority">
         <rdfs:label xml:lang="nl">NormalePrioriteit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Priority"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Notification -->
 
-    <Class rdf:about="&TaskAccio;Notification">
+    <owl:Class rdf:about="&TaskAccio;Notification">
         <rdfs:label xml:lang="nl">Melding</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NotificationStatus -->
 
-    <Class rdf:about="&TaskAccio;NotificationStatus">
+    <owl:Class rdf:about="&TaskAccio;NotificationStatus">
         <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#PatientInfoRequest -->
 
-    <Class rdf:about="&TaskAccio;PatientInfoRequest">
+    <owl:Class rdf:about="&TaskAccio;PatientInfoRequest">
         <rdfs:subClassOf rdf:resource="&TaskAccio;Request"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#PlannedTask -->
 
-    <Class rdf:about="&TaskAccio;PlannedTask">
+    <owl:Class rdf:about="&TaskAccio;PlannedTask">
         <rdfs:label xml:lang="nl">GeplandeTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;ActualTask"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#PotentialTask -->
 
-    <Class rdf:about="&TaskAccio;PotentialTask">
+    <owl:Class rdf:about="&TaskAccio;PotentialTask">
         <rdfs:label xml:lang="nl">PotentieleTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Priority -->
 
-    <Class rdf:about="&TaskAccio;Priority">
+    <owl:Class rdf:about="&TaskAccio;Priority">
         <rdfs:label xml:lang="nl">Prioriteit</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
                     <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
                     <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-        <disjointWith rdf:resource="&TaskAccio;Task"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&TaskAccio;Task"/>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Reason -->
 
-    <Class rdf:about="&TaskAccio;Reason">
+    <owl:Class rdf:about="&TaskAccio;Reason">
         <rdfs:label xml:lang="nl">Reden</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;CareReason"/>
                     <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
                     <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-        <disjointWith rdf:resource="&TaskAccio;Task"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&TaskAccio;Task"/>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Request -->
 
-    <Class rdf:about="&TaskAccio;Request">
+    <owl:Class rdf:about="&TaskAccio;Request">
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithBusyStaffMember -->
 
-    <Class rdf:about="&TaskAccio;RoomWithBusyStaffMember">
+    <owl:Class rdf:about="&TaskAccio;RoomWithBusyStaffMember">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslid</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&contextaccio;Room"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&contextaccio;isLocationOf"/>
-                        <someValuesFrom>
-                            <Class>
-                                <intersectionOf rdf:parseType="Collection">
-                                    <Restriction>
-                                        <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                        <someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
-                                    </Restriction>
-                                    <Restriction>
-                                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                                        <hasValue rdf:resource="&profileaccio;Busy"/>
-                                    </Restriction>
-                                </intersectionOf>
-                            </Class>
-                        </someValuesFrom>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&contextaccio;isLocationOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                                        <owl:hasValue rdf:resource="&profileaccio;Busy"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&contextaccio;Room"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
 
-    <Class rdf:about="&TaskAccio;RoomWithBusyStaffMemberAcceptedMedicalCall">
+    <owl:Class rdf:about="&TaskAccio;RoomWithBusyStaffMemberAcceptedMedicalCall">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslidAanvaarddeMedischeOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&contextaccio;Room"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&contextaccio;isLocationOf"/>
-                        <someValuesFrom>
-                            <Class>
-                                <intersectionOf rdf:parseType="Collection">
-                                    <Restriction>
-                                        <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                        <someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
-                                    </Restriction>
-                                    <Restriction>
-                                        <onProperty rdf:resource="&TaskAccio;isAssignedTo"/>
-                                        <someValuesFrom>
-                                            <Class>
-                                                <intersectionOf rdf:parseType="Collection">
-                                                    <Restriction>
-                                                        <onProperty rdf:resource="&TaskAccio;hasReason"/>
-                                                        <someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
-                                                    </Restriction>
-                                                    <Restriction>
-                                                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                                                        <hasValue rdf:resource="&TaskAccio;Accepted"/>
-                                                    </Restriction>
-                                                </intersectionOf>
-                                            </Class>
-                                        </someValuesFrom>
-                                    </Restriction>
-                                    <Restriction>
-                                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                                        <hasValue rdf:resource="&profileaccio;Busy"/>
-                                    </Restriction>
-                                </intersectionOf>
-                            </Class>
-                        </someValuesFrom>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&contextaccio;isLocationOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&TaskAccio;isAssignedTo"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&TaskAccio;hasReason"/>
+                                                        <owl:someValuesFrom rdf:resource="&TaskAccio;MedicalReason"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                                                        <owl:hasValue rdf:resource="&TaskAccio;Accepted"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                                        <owl:hasValue rdf:resource="&profileaccio;Busy"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&contextaccio;Room"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithPatientorResident -->
 
-    <Class rdf:about="&TaskAccio;RoomWithPatientorResident">
+    <owl:Class rdf:about="&TaskAccio;RoomWithPatientorResident">
         <rdfs:label xml:lang="nl">KamerMetPatientOfBewoner</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&contextaccio;Room"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&contextaccio;isLocationOf"/>
-                        <someValuesFrom>
-                            <Restriction>
-                                <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                <someValuesFrom>
-                                    <Class>
-                                        <unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&contextaccio;isLocationOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Patient"/>
                                             <rdf:Description rdf:about="&rolecompetenceaccio;Resident"/>
-                                        </unionOf>
-                                    </Class>
-                                </someValuesFrom>
-                            </Restriction>
-                        </someValuesFrom>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&contextaccio;Room"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithStaffMember -->
 
-    <Class rdf:about="&TaskAccio;RoomWithStaffMember">
+    <owl:Class rdf:about="&TaskAccio;RoomWithStaffMember">
         <rdfs:label xml:lang="nl">KamerMetPersoneelslid</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&contextaccio;Room"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&contextaccio;isLocationOf"/>
-                        <someValuesFrom>
-                            <Class>
-                                <intersectionOf rdf:parseType="Collection">
-                                    <Class>
-                                        <unionOf rdf:parseType="Collection">
-                                            <Restriction>
-                                                <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                                                <hasValue rdf:resource="&profileaccio;Busy"/>
-                                            </Restriction>
-                                            <Restriction>
-                                                <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                                                <hasValue rdf:resource="&profileaccio;withPatient"/>
-                                            </Restriction>
-                                        </unionOf>
-                                    </Class>
-                                    <Restriction>
-                                        <onProperty rdf:resource="&profileaccio;hasRole"/>
-                                        <someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
-                                    </Restriction>
-                                </intersectionOf>
-                            </Class>
-                        </someValuesFrom>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&contextaccio;isLocationOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                                                <owl:hasValue rdf:resource="&profileaccio;Busy"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                                                <owl:hasValue rdf:resource="&profileaccio;withPatient"/>
+                                            </owl:Restriction>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&contextaccio;Room"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task -->
 
-    <Class rdf:about="&TaskAccio;Task">
+    <owl:Class rdf:about="&TaskAccio;Task">
         <rdfs:label xml:lang="nl">Taak</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
-                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;isInNeedOfCompetence"/>
-                        <someValuesFrom rdf:resource="&rolecompetenceaccio;Competence"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                        <someValuesFrom rdf:resource="&TaskAccio;TaskStatus"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasPriority"/>
-                        <onClass rdf:resource="&TaskAccio;Priority"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;madeAtTime"/>
-                        <onClass rdf:resource="&temporal;ValidInstant"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;isInNeedOfCompetence"/>
+                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;Competence"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&upperaccio;hasStatus"/>
+                        <owl:someValuesFrom rdf:resource="&TaskAccio;TaskStatus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasPriority"/>
+                        <owl:onClass rdf:resource="&TaskAccio;Priority"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;madeAtTime"/>
+                        <owl:onClass rdf:resource="&temporal;ValidInstant"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&TaskAccio;ActualTask"/>
+                    <rdf:Description rdf:about="&TaskAccio;PotentialTask"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
         <rdfs:subClassOf rdf:resource="&process;Process"/>
-        <disjointWith rdf:resource="&TaskAccio;TaskStatus"/>
-        <disjointWith rdf:resource="&TaskAccio;Visit"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&TaskAccio;TaskStatus"/>
+        <owl:disjointWith rdf:resource="&TaskAccio;Visit"/>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#TaskInfoRequest -->
 
-    <Class rdf:about="&TaskAccio;TaskInfoRequest">
+    <owl:Class rdf:about="&TaskAccio;TaskInfoRequest">
         <rdfs:subClassOf rdf:resource="&TaskAccio;Request"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#TaskStatus -->
 
-    <Class rdf:about="&TaskAccio;TaskStatus">
+    <owl:Class rdf:about="&TaskAccio;TaskStatus">
         <rdfs:label xml:lang="nl">TaakStatus</rdfs:label>
         <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UnplannedTask -->
 
-    <Class rdf:about="&TaskAccio;UnplannedTask">
+    <owl:Class rdf:about="&TaskAccio;UnplannedTask">
         <rdfs:label xml:lang="nl">OngeplandeTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;ActualTask"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UrgencyCall -->
 
-    <Class rdf:about="&TaskAccio;UrgencyCall">
+    <owl:Class rdf:about="&TaskAccio;UrgencyCall">
         <rdfs:label xml:lang="nl">UrgentieOproep</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&TaskAccio;Call"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&TaskAccio;hasPriority"/>
-                        <onClass rdf:resource="&TaskAccio;VeryUrgentPriority"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&TaskAccio;hasPriority"/>
+                        <owl:onClass rdf:resource="&TaskAccio;VeryUrgentPriority"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Call"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&TaskAccio;callMadeBy"/>
-                <allValuesFrom>
-                    <Restriction>
-                        <onProperty rdf:resource="&profileaccio;hasRole"/>
-                        <someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
-                    </Restriction>
-                </allValuesFrom>
-            </Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TaskAccio;callMadeBy"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&profileaccio;hasRole"/>
+                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UrgentPriority -->
 
-    <Class rdf:about="&TaskAccio;UrgentPriority">
+    <owl:Class rdf:about="&TaskAccio;UrgentPriority">
         <rdfs:label xml:lang="nl">UrgentePrioriteit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Priority"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#VeryUrgentPriority -->
 
-    <Class rdf:about="&TaskAccio;VeryUrgentPriority">
+    <owl:Class rdf:about="&TaskAccio;VeryUrgentPriority">
         <rdfs:label xml:lang="nl">ZeerUrgentePrioriteit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Priority"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Visit -->
 
-    <Class rdf:about="&TaskAccio;Visit">
+    <owl:Class rdf:about="&TaskAccio;Visit">
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
@@ -1392,106 +1403,106 @@
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Accepted -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Accepted">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Accepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Aanvaard</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Active -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Active">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Active">
         <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Actief</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Assigned -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Assigned">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Assigned">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Toegewezen</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Busy -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Busy">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Busy">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Declined -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Declined">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Declined">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Finished -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Finished">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Finished">
         <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Beeindigd</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#InConversation -->
 
-    <NamedIndividual rdf:about="&TaskAccio;InConversation">
+    <owl:NamedIndividual rdf:about="&TaskAccio;InConversation">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">InGesprek</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#New -->
 
-    <NamedIndividual rdf:about="&TaskAccio;New">
+    <owl:NamedIndividual rdf:about="&TaskAccio;New">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Pending -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Pending">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Pending">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Redirected -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Redirected">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Redirected">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Doorverwezen</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Request -->
 
-    <NamedIndividual rdf:about="&TaskAccio;Request">
+    <owl:NamedIndividual rdf:about="&TaskAccio;Request">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#TemporarilyAccepted -->
 
-    <NamedIndividual rdf:about="&TaskAccio;TemporarilyAccepted">
+    <owl:NamedIndividual rdf:about="&TaskAccio;TemporarilyAccepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">TijdelijkAanvaard</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
@@ -1504,515 +1515,515 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalContextCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Priority"/>
-            <rdf:Description rdf:about="&TaskAccio;Reason"/>
-            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;CareReason"/>
             <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
             <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
-        </members>
+        </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Priority"/>
+            <rdf:Description rdf:about="&TaskAccio;Reason"/>
+            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Request"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalContextCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
