@@ -40,7 +40,7 @@
      xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
      xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
     <Ontology rdf:about="http://occs.intec.ugent.be/ontology/MedicalAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl"/>
+        <imports rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl"/>
     </Ontology>
     
 
@@ -1001,6 +1001,19 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&MedicalAccio;Diagnosis"/>
+            <rdf:Description rdf:about="&MedicalAccio;Dose"/>
+            <rdf:Description rdf:about="&MedicalAccio;MeasurementType"/>
+            <rdf:Description rdf:about="&MedicalAccio;MedicalParameter"/>
+            <rdf:Description rdf:about="&MedicalAccio;Pathology"/>
+            <rdf:Description rdf:about="&MedicalAccio;PharmaceuticalDrug"/>
+            <rdf:Description rdf:about="&MedicalAccio;Prescription"/>
+            <rdf:Description rdf:about="&MedicalAccio;Sample"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
             <rdf:Description rdf:about="&MedicalAccio;ArmpitTemperature"/>
             <rdf:Description rdf:about="&MedicalAccio;BloodTemperature"/>
             <rdf:Description rdf:about="&MedicalAccio;RectalTemperature"/>
@@ -1013,19 +1026,6 @@
             <rdf:Description rdf:about="&MedicalAccio;Labo"/>
             <rdf:Description rdf:about="&MedicalAccio;Monitored"/>
             <rdf:Description rdf:about="&MedicalAccio;Observed"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;Diagnosis"/>
-            <rdf:Description rdf:about="&MedicalAccio;Dose"/>
-            <rdf:Description rdf:about="&MedicalAccio;MeasurementType"/>
-            <rdf:Description rdf:about="&MedicalAccio;MedicalParameter"/>
-            <rdf:Description rdf:about="&MedicalAccio;Pathology"/>
-            <rdf:Description rdf:about="&MedicalAccio;PharmaceuticalDrug"/>
-            <rdf:Description rdf:about="&MedicalAccio;Prescription"/>
-            <rdf:Description rdf:about="&MedicalAccio;Sample"/>
         </members>
     </rdf:Description>
 </rdf:RDF>

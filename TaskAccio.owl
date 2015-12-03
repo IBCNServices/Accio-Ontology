@@ -120,6 +120,15 @@
     
 
 
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#checkedInWith -->
+
+    <ObjectProperty rdf:about="&TaskAccio;checkedInWith">
+        <rdfs:range rdf:resource="&profileaccio;Person"/>
+        <rdfs:domain rdf:resource="&profileaccio;Person"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#declindedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;declindedBy">
@@ -1248,14 +1257,6 @@
         <rdfs:label xml:lang="nl">Taak</rdfs:label>
         <equivalentClass>
             <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
-                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
-        <equivalentClass>
-            <Class>
                 <intersectionOf rdf:parseType="Collection">
                     <Restriction>
                         <onProperty rdf:resource="&TaskAccio;isInNeedOfCompetence"/>
@@ -1278,9 +1279,18 @@
                 </intersectionOf>
             </Class>
         </equivalentClass>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
+                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
         <rdfs:subClassOf rdf:resource="&process;Process"/>
         <disjointWith rdf:resource="&TaskAccio;TaskStatus"/>
+        <disjointWith rdf:resource="&TaskAccio;Visit"/>
     </Class>
     
 
@@ -1480,29 +1490,22 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1516,43 +1519,8 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1565,180 +1533,8 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Priority"/>
-            <rdf:Description rdf:about="&TaskAccio;Reason"/>
-            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Assigned"/>
             <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1752,8 +1548,128 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1767,55 +1683,57 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
             <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </distinctMembers>
     </rdf:Description>
@@ -1830,6 +1748,41 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
@@ -1837,8 +1790,29 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1847,6 +1821,42 @@
             <rdf:Description rdf:about="&TaskAccio;Assigned"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Priority"/>
+            <rdf:Description rdf:about="&TaskAccio;Reason"/>
+            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
+        </members>
     </rdf:Description>
 </rdf:RDF>
 

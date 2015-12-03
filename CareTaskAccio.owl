@@ -345,6 +345,14 @@
     
 
 
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DeregistrationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DeregistrationTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
     <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DressPersonTask -->
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DressPersonTask">
