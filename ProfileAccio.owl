@@ -68,6 +68,44 @@
     
 
 
+    <!-- http://orca.test/ontology/ProfileAccio.owl#belongsToNurseGroup -->
+
+    <owl:ObjectProperty rdf:about="&ProfileAccio;belongsToNurseGroup">
+        <rdfs:range rdf:resource="&contextaccio;NurseGroup"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ProfileAccio;Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasRole"/>
+                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;CareRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://orca.test/ontology/ProfileAccio.owl#containsPatient -->
+
+    <owl:ObjectProperty rdf:about="&ProfileAccio;containsPatient">
+        <rdfs:domain rdf:resource="&contextaccio;NurseGroup"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ProfileAccio;Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasRole"/>
+                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;Patient"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://orca.test/ontology/ProfileAccio.owl#hasAssociation -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasAssociation">
@@ -455,6 +493,33 @@
     <owl:ObjectProperty rdf:about="&ProfileAccio;responsibleFor">
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;StaffMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://orca.test/ontology/ProfileAccio.owl#worksOn -->
+
+    <owl:ObjectProperty rdf:about="&ProfileAccio;worksOn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ProfileAccio;Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasRole"/>
+                        <owl:someValuesFrom rdf:resource="&rolecompetenceaccio;StaffMember"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&contextaccio;Department"/>
+                    <rdf:Description rdf:about="&contextaccio;Floor"/>
+                    <rdf:Description rdf:about="&contextaccio;Ward"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1045,18 +1110,12 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
-            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Free"/>
-            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </owl:distinctMembers>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
+            <rdf:Description rdf:about="&ProfileAccio;Language"/>
+            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
+        </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
@@ -1067,26 +1126,11 @@
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
-            <rdf:Description rdf:about="&ProfileAccio;Free"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Person"/>
-            <rdf:Description rdf:about="&ProfileAccio;Profile"/>
-            <rdf:Description rdf:about="&ProfileAccio;TrustRelationship"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;FamilyRelationship"/>
-            <rdf:Description rdf:about="&ProfileAccio;PersonalRelationship"/>
-            <rdf:Description rdf:about="&ProfileAccio;TherapeuticRelationship"/>
+            <rdf:Description rdf:about="&ProfileAccio;Agressive"/>
+            <rdf:Description rdf:about="&ProfileAccio;Impatient"/>
+            <rdf:Description rdf:about="&ProfileAccio;vegetarian"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1097,20 +1141,41 @@
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
+            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
+            <rdf:Description rdf:about="&ProfileAccio;Free"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Agressive"/>
-            <rdf:Description rdf:about="&ProfileAccio;Impatient"/>
-            <rdf:Description rdf:about="&ProfileAccio;vegetarian"/>
+            <rdf:Description rdf:about="&ProfileAccio;FamilyRelationship"/>
+            <rdf:Description rdf:about="&ProfileAccio;PersonalRelationship"/>
+            <rdf:Description rdf:about="&ProfileAccio;TherapeuticRelationship"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
-            <rdf:Description rdf:about="&ProfileAccio;Language"/>
-            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
+            <rdf:Description rdf:about="&ProfileAccio;Person"/>
+            <rdf:Description rdf:about="&ProfileAccio;Profile"/>
+            <rdf:Description rdf:about="&ProfileAccio;TrustRelationship"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Free"/>
+            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 

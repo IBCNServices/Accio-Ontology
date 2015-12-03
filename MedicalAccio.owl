@@ -39,7 +39,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
      xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://orca.test//ontology/MedicalAccio.owl">
+    <Ontology rdf:about="http://orca.test/ontology/MedicalAccio.owl">
         <imports rdf:resource="http://orca.test/ontology/CareTaskAccio.owl"/>
     </Ontology>
     

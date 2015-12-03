@@ -5,19 +5,19 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
-    <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY TaskAccio "http://orca.test/ontology/TaskAccio.owl#" >
     <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
     <!ENTITY profileaccio "http://orca.test/ontology/ProfileAccio.owl#" >
-    <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
-    <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
+    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
     <!ENTITY rolecompetenceaccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
+    <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
+    <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
+    <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
+    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
 
@@ -25,8 +25,8 @@
      xml:base="http://orca.test/ontology/TaskAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:profileaccio="http://orca.test/ontology/ProfileAccio.owl#"
-     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
@@ -53,6 +53,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://orca.test/ontology/ContextAccio.owl#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="&contextaccio;isLocationOf"/>
     
 
 
@@ -125,8 +131,8 @@
     <!-- http://orca.test/ontology/TaskAccio.owl#checkedInWith -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;checkedInWith">
-        <rdfs:domain rdf:resource="&profileaccio;Person"/>
         <rdfs:range rdf:resource="&profileaccio;Person"/>
+        <rdfs:domain rdf:resource="&profileaccio;Person"/>
     </owl:ObjectProperty>
     
 
@@ -322,8 +328,8 @@
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isRegisteredWith">
         <rdfs:label xml:lang="nl">isGeregistreerdBij</rdfs:label>
-        <rdfs:range rdf:resource="&profileaccio;Person"/>
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
+        <rdfs:range rdf:resource="&profileaccio;Person"/>
     </owl:ObjectProperty>
     
 
@@ -401,6 +407,18 @@
     
 
 
+    <!-- http://orca.test/ontology/UpperAccio.owl#hasId -->
+
+    <owl:ObjectProperty rdf:about="&upperaccio;hasId"/>
+    
+
+
+    <!-- http://orca.test/ontology/UpperAccio.owl#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="&upperaccio;hasStatus"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -450,6 +468,15 @@
     <owl:DatatypeProperty rdf:about="&TaskAccio;answerNeeded">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://orca.test/ontology/TaskAccio.owl#availableSince -->
+
+    <owl:DatatypeProperty rdf:about="&TaskAccio;availableSince">
+        <rdfs:domain rdf:resource="&profileaccio;Person"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -514,6 +541,12 @@
     
 
 
+    <!-- http://orca.test/ontology/UpperAccio.owl#hasIDType -->
+
+    <owl:DatatypeProperty rdf:about="&upperaccio;hasIDType"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -522,6 +555,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://orca.test/ontology/ContextAccio.owl#Location -->
+
+    <owl:Class rdf:about="&contextaccio;Location"/>
+    
+
+
+    <!-- http://orca.test/ontology/ContextAccio.owl#Room -->
+
+    <owl:Class rdf:about="&contextaccio;Room"/>
+    
+
+
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Patient -->
+
+    <owl:Class rdf:about="&rolecompetenceaccio;Patient"/>
+    
+
+
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Resident -->
+
+    <owl:Class rdf:about="&rolecompetenceaccio;Resident"/>
+    
+
+
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#StaffMember -->
+
+    <owl:Class rdf:about="&rolecompetenceaccio;StaffMember"/>
     
 
 
@@ -1035,6 +1098,14 @@
     
 
 
+    <!-- http://orca.test/ontology/TaskAccio.owl#PainReason -->
+
+    <owl:Class rdf:about="&TaskAccio;PainReason">
+        <rdfs:subClassOf rdf:resource="&TaskAccio;CareReason"/>
+    </owl:Class>
+    
+
+
     <!-- http://orca.test/ontology/TaskAccio.owl#PatientInfoRequest -->
 
     <owl:Class rdf:about="&TaskAccio;PatientInfoRequest">
@@ -1415,6 +1486,25 @@
     
 
 
+    <!-- http://orca.test/ontology/TaskAccio.owl#UrgentPriorityCall -->
+
+    <owl:Class rdf:about="&TaskAccio;UrgentPriorityCall">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TaskAccio;callMadeBy"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&profileaccio;hasProfile"/>
+                        <owl:someValuesFrom rdf:resource="&profileaccio;RiskProfile"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Call"/>
+    </owl:Class>
+    
+
+
     <!-- http://orca.test/ontology/TaskAccio.owl#VeryUrgentPriority -->
 
     <owl:Class rdf:about="&TaskAccio;VeryUrgentPriority">
@@ -1429,6 +1519,36 @@
     <owl:Class rdf:about="&TaskAccio;Visit">
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
     </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Observation -->
+
+    <owl:Class rdf:about="&wsnadjustedaccio;Observation"/>
+    
+
+
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#System -->
+
+    <owl:Class rdf:about="&wsnadjustedaccio;System"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Entity -->
+
+    <owl:Class rdf:about="&temporal;Entity"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidPeriod -->
+
+    <owl:Class rdf:about="&temporal;ValidPeriod"/>
+    
+
+
+    <!-- http://www.daml.org/services/owl-s/1.2/Process.owl#Process -->
+
+    <owl:Class rdf:about="&process;Process"/>
     
 
 
@@ -1557,110 +1677,45 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Priority"/>
-            <rdf:Description rdf:about="&TaskAccio;Reason"/>
-            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
             <rdf:Description rdf:about="&TaskAccio;Pending"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
-        </owl:members>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1673,15 +1728,50 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
             <rdf:Description rdf:about="&TaskAccio;New"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1695,92 +1785,50 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;Priority"/>
+            <rdf:Description rdf:about="&TaskAccio;Reason"/>
+            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
@@ -1795,84 +1843,28 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
             <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;Request"/>
         </owl:distinctMembers>
     </rdf:Description>
@@ -1887,49 +1879,42 @@
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1942,22 +1927,8 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
             <rdf:Description rdf:about="&TaskAccio;Pending"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Declined"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Pending"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1970,6 +1941,168 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Busy"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Request"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Declined"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
@@ -1977,15 +2110,22 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1999,22 +2139,8 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Declined"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2027,45 +2153,39 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Active"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Busy"/>
-            <rdf:Description rdf:about="&TaskAccio;Request"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;New"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
+            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;New"/>
+            <rdf:Description rdf:about="&TaskAccio;Pending"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 

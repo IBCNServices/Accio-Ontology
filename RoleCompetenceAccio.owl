@@ -2,40 +2,42 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
-    <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
     <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
     <!ENTITY RoleCompetenceAccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
+    <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
+<rdf:RDF xmlns="http://orca.test/ontology/RoleCompetenceAccio.owl#"
+     xml:base="http://orca.test/ontology/RoleCompetenceAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:RoleCompetenceAccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
      xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://orca.test/ontology/RoleCompetenceAccio.owl">
-        <imports rdf:resource="http://orca.test/ontology/ContextAccio.owl"/>
-    </Ontology>
+    <owl:Ontology rdf:about="http://orca.test/ontology/RoleCompetenceAccio.owl">
+        <owl:imports rdf:resource="http://orca.test/ontology/ContextAccio.owl"/>
+    </owl:Ontology>
     
 
 
@@ -52,237 +54,227 @@
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#acquiredAtTimepoint -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;acquiredAtTimepoint">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;acquiredAtTimepoint">
         <rdfs:label xml:lang="nl">VerworvenOpTijdstip</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:range rdf:resource="&temporal;ValidInstant"/>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#appliesTo -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;appliesTo">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;appliesTo">
         <rdfs:label xml:lang="nl">vanToepassingOp</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;EditDataCompetence"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;ReadDataCompetence"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;WriteDataCompetence"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#belongsToRole -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;belongsToRole">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;belongsToRole">
         <rdfs:label xml:lang="nl">hoortBijRol</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Role"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#discussedIn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;discussedIn">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;discussedIn">
         <rdfs:label xml:lang="nl">besprokenIn</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Meeting"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#drawnUpIn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;drawnUpIn">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;drawnUpIn">
         <rdfs:label xml:lang="nl">opgesteldIn</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Meeting"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasBed -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasBed">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasBed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftBed</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Bed"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Patient"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Resident"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasChild -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasChild">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasChild">
         <rdfs:label xml:lang="nl">heeftKind</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Child"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Parent"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasCompetence -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasCompetence">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasCompetence">
         <rdfs:label xml:lang="nl">heeftCompetentie</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Role"/>
-        <inverseOf rdf:resource="&RoleCompetenceAccio;belongsToRole"/>
-    </ObjectProperty>
+        <owl:inverseOf rdf:resource="&RoleCompetenceAccio;belongsToRole"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasConsort -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasConsort">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasConsort">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="nl">heeftPartner</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Partner"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Partner"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasParent -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasParent">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasParent">
         <rdfs:label xml:lang="nl">heeftOuder</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Child"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Parent"/>
-        <inverseOf rdf:resource="&RoleCompetenceAccio;hasChild"/>
-    </ObjectProperty>
+        <owl:inverseOf rdf:resource="&RoleCompetenceAccio;hasChild"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasSibling -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;hasSibling">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasSibling">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="nl">heeftBroerZus</rdfs:label>
-        <rdfs:range rdf:resource="&RoleCompetenceAccio;Sibling"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Sibling"/>
-    </ObjectProperty>
+        <rdfs:range rdf:resource="&RoleCompetenceAccio;Sibling"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isHeadOf -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;isHeadOf">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isHeadOf">
         <rdfs:label xml:lang="nl">isHoofdVan</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Role"/>
         <rdfs:range>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&contextaccio;Department"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Services"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:range>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isMemberOf -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;isMemberOf">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isMemberOf">
         <rdfs:label xml:lang="nl">maaktDeelUitVan</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Role"/>
         <rdfs:range>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Services"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Team"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:range>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isValidIn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;isValidIn">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isValidIn">
         <rdfs:label xml:lang="nl">isGeldigIn</rdfs:label>
         <rdfs:range rdf:resource="&temporal;ValidPeriod"/>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
         <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Competence"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-                </unionOf>
-            </Class>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:domain>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#liesOn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;liesOn">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;liesOn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">ligtOp</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Department"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Patient"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#livesOn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;livesOn">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;livesOn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">woontOp</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Department"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Resident"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#participatesIn -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;participatesIn">
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;participatesIn">
         <rdfs:label xml:lang="nl">neemtDeelAan</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Meeting"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Role"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#providesInputFor -->
 
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;providesInputFor">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;providesInputFor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label xml:lang="nl">levertInputVoor</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Form"/>
-    </ObjectProperty>
-    
-
-
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#worksOn -->
-
-    <ObjectProperty rdf:about="&RoleCompetenceAccio;worksOn">
-        <rdfs:label xml:lang="nl">werktOp</rdfs:label>
-        <rdfs:range rdf:resource="&contextaccio;Department"/>
-        <rdfs:domain rdf:resource="&RoleCompetenceAccio;StaffMember"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
@@ -299,23 +291,32 @@
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasFrequency -->
 
-    <DatatypeProperty rdf:about="&RoleCompetenceAccio;hasFrequency">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;hasFrequency">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftFrequentie</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isDigital -->
 
-    <DatatypeProperty rdf:about="&RoleCompetenceAccio;isDigital">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;isDigital">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">isDigitaal</rdfs:label>
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;Form"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isWorking -->
+
+    <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;isWorking">
+        <rdfs:domain rdf:resource="&RoleCompetenceAccio;StaffMember"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -332,414 +333,403 @@
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AdministerMedicationCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AdministerMedicationCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AdministerMedicationCompetence">
         <rdfs:label xml:lang="nl">MedicatieToedienenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;MedicalCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerCallCompetence">
         <rdfs:label xml:lang="nl">OproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCareCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerCareCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerCareCallCompetence">
         <rdfs:label xml:lang="nl">VerzorgingOproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;AnswerCallCompetence"/>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CareCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerDoctorNeededCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerDoctorNeededCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerDoctorNeededCallCompetence">
         <rdfs:label xml:lang="nl">ArtsNodigOproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;AnswerMedicalCallCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerHotelFunctionCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerHotelFunctionCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerHotelFunctionCallCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieOproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;AnswerCallCompetence"/>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;HotelFunctionCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerMedicalCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerMedicalCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerMedicalCallCompetence">
         <rdfs:label xml:lang="nl">MedischeOproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;AnswerCallCompetence"/>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;MedicalCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerUrgencyCallCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;AnswerUrgencyCallCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;AnswerUrgencyCallCompetence">
         <rdfs:label xml:lang="nl">UrgentieOproepBeantwoordenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;AnswerCallCompetence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;CareCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;CareCompetence">
         <rdfs:label xml:lang="nl">ZorgCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareRole -->
 
-    <Class rdf:about="&RoleCompetenceAccio;CareRole">
+    <owl:Class rdf:about="&RoleCompetenceAccio;CareRole">
         <rdfs:label xml:lang="nl">VerzorgingRol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;StaffMember"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Child -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Child">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Child">
         <rdfs:label xml:lang="nl">Kind</rdfs:label>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;hasParent"/>
-                <onClass rdf:resource="&RoleCompetenceAccio;Family"/>
-                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
-            </Restriction>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasParent"/>
+                <owl:onClass rdf:resource="&RoleCompetenceAccio;Family"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CloackCaregiver -->
 
-    <Class rdf:about="&RoleCompetenceAccio;CloackCaregiver">
+    <owl:Class rdf:about="&RoleCompetenceAccio;CloackCaregiver">
         <rdfs:label xml:lang="nl">Mantelzorger</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CareRole"/>
-        <disjointWith rdf:resource="&RoleCompetenceAccio;MedicalRole"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&RoleCompetenceAccio;MedicalRole"/>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Competence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Competence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Competence">
         <rdfs:label xml:lang="nl">Competentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;acquiredAtTimepoint"/>
-                <onClass rdf:resource="&temporal;ValidInstant"/>
-                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-            </Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;acquiredAtTimepoint"/>
+                <owl:onClass rdf:resource="&temporal;ValidInstant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
         </rdfs:subClassOf>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;EditDataCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;EditDataCompetence">
         <rdfs:label xml:lang="nl">DataWijzigenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
-                <someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
-            </Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
+                <owl:someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Family -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Family">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Family">
         <rdfs:label xml:lang="nl">Familie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Role"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Form -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Form">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Form">
         <rdfs:label xml:lang="nl">Formulier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;HotelFunctionCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;HotelFunctionCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;MedicalCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;MedicalCompetence">
         <rdfs:label xml:lang="nl">MedischeCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalRole -->
 
-    <Class rdf:about="&RoleCompetenceAccio;MedicalRole">
+    <owl:Class rdf:about="&RoleCompetenceAccio;MedicalRole">
         <rdfs:label xml:lang="nl">MedischeRol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CareRole"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Meeting -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Meeting">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Meeting">
         <rdfs:label xml:lang="nl">Vergadering</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Neighbour -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Neighbour">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Neighbour">
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CloackCaregiver"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Parent -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Parent">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Parent">
         <rdfs:label xml:lang="nl">Ouder</rdfs:label>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;hasChild"/>
-                <onClass rdf:resource="&RoleCompetenceAccio;Family"/>
-                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
-            </Restriction>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasChild"/>
+                <owl:onClass rdf:resource="&RoleCompetenceAccio;Family"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Partner -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Partner">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Partner">
         <rdfs:label xml:lang="nl">Partner</rdfs:label>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;hasConsort"/>
-                <onClass rdf:resource="&RoleCompetenceAccio;Family"/>
-                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
-            </Restriction>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasConsort"/>
+                <owl:onClass rdf:resource="&RoleCompetenceAccio;Family"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Patient -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Patient">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Patient">
         <rdfs:label xml:lang="nl">Patient</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&RoleCompetenceAccio;hasBed"/>
-                        <onClass rdf:resource="&contextaccio;Bed"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&RoleCompetenceAccio;liesOn"/>
-                        <onClass rdf:resource="&contextaccio;Department"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasBed"/>
+                        <owl:onClass rdf:resource="&contextaccio;Bed"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&RoleCompetenceAccio;liesOn"/>
+                        <owl:onClass rdf:resource="&contextaccio;Department"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Role"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadDataCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;ReadDataCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;ReadDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
-                <someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
-            </Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
+                <owl:someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadWriteEditDataCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;ReadWriteEditDataCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;ReadWriteEditDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenAanvullenWijzigenCompetentie</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;EditDataCompetence"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;ReadDataCompetence"/>
                     <rdf:Description rdf:about="&RoleCompetenceAccio;WriteDataCompetence"/>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Resident -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Resident">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Resident">
         <rdfs:label xml:lang="nl">Bewoner</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&RoleCompetenceAccio;hasBed"/>
-                        <onClass rdf:resource="&contextaccio;Bed"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&RoleCompetenceAccio;livesOn"/>
-                        <onClass rdf:resource="&contextaccio;Department"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasBed"/>
+                        <owl:onClass rdf:resource="&contextaccio;Bed"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&RoleCompetenceAccio;livesOn"/>
+                        <owl:onClass rdf:resource="&contextaccio;Department"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Role"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Role -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Role">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Role">
         <rdfs:label xml:lang="nl">Rol</rdfs:label>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;hasCompetence"/>
-                <someValuesFrom rdf:resource="&RoleCompetenceAccio;Competence"/>
-            </Restriction>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasCompetence"/>
+                <owl:someValuesFrom rdf:resource="&RoleCompetenceAccio;Competence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Services -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Services">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Services">
         <rdfs:label xml:lang="nl">Dienst</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Sibling -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Sibling">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Sibling">
         <rdfs:label xml:lang="nl">BroerZus</rdfs:label>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;hasSibling"/>
-                <onClass rdf:resource="&RoleCompetenceAccio;Family"/>
-                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
-            </Restriction>
-        </equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;hasSibling"/>
+                <owl:onClass rdf:resource="&RoleCompetenceAccio;Family"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#StaffMember -->
 
-    <Class rdf:about="&RoleCompetenceAccio;StaffMember">
+    <owl:Class rdf:about="&RoleCompetenceAccio;StaffMember">
         <rdfs:label xml:lang="nl">Personeelslid</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&RoleCompetenceAccio;worksOn"/>
-                        <someValuesFrom rdf:resource="&contextaccio;Department"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Role"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Team -->
 
-    <Class rdf:about="&RoleCompetenceAccio;Team">
+    <owl:Class rdf:about="&RoleCompetenceAccio;Team">
         <rdfs:label xml:lang="nl">Team</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#TherapeuticCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;TherapeuticCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;TherapeuticCompetence">
         <rdfs:label xml:lang="nl">TherapeutischeCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#WriteDataCompetence -->
 
-    <Class rdf:about="&RoleCompetenceAccio;WriteDataCompetence">
+    <owl:Class rdf:about="&RoleCompetenceAccio;WriteDataCompetence">
         <rdfs:label xml:lang="nl">DataAanvullenCompetentie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;Competence"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
-                <someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
-            </Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&RoleCompetenceAccio;appliesTo"/>
+                <owl:someValuesFrom rdf:resource="&RoleCompetenceAccio;Form"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
-    </Class>
+    </owl:Class>
     
 
 
@@ -752,12 +742,12 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&RoleCompetenceAccio;Competence"/>
             <rdf:Description rdf:about="&RoleCompetenceAccio;Form"/>
             <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-        </members>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 

@@ -99,6 +99,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&ContextAccio;Department"/>
                     <rdf:Description rdf:about="&ContextAccio;Floor"/>
+                    <rdf:Description rdf:about="&ContextAccio;Ward"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -392,6 +393,13 @@
         <rdfs:label xml:lang="nl">Bed</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;Furniture"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;belongsTo"/>
+                <owl:onClass rdf:resource="&ContextAccio;Room"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -406,13 +414,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;belongsTo"/>
-                <owl:onClass rdf:resource="&ContextAccio;Room"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&ContextAccio;Closet"/>
     </owl:Class>
     
@@ -426,13 +427,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -575,12 +576,6 @@
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;containsHallway"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;Hallway"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;containsRoom"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;Room"/>
             </owl:Restriction>
@@ -590,6 +585,12 @@
                 <owl:onProperty rdf:resource="&ContextAccio;hasNumber"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;containsHallway"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;Hallway"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -684,6 +685,7 @@
     <owl:Class rdf:about="&ContextAccio;Location">
         <rdfs:label xml:lang="nl">Locatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+        <owl:disjointWith rdf:resource="&ContextAccio;NurseGroup"/>
     </owl:Class>
     
 
@@ -708,12 +710,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -721,6 +717,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -732,6 +734,14 @@
     <owl:Class rdf:about="&ContextAccio;NurseCall">
         <rdfs:label xml:lang="nl">VerpleegOproep</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/ContextAccio.owl#NurseGroup -->
+
+    <owl:Class rdf:about="&ContextAccio;NurseGroup">
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Troop"/>
     </owl:Class>
     
 
@@ -759,13 +769,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -933,6 +943,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -940,12 +956,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -985,14 +995,14 @@
         <rdfs:subClassOf rdf:resource="&ContextAccio;TVProperties"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&upperaccio;hasName"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;hasNumber"/>
-                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="&upperaccio;hasName"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1073,25 +1083,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1103,13 +1101,25 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                <owl:someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
                 <owl:someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <owl:someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1139,6 +1149,14 @@
     <owl:Class rdf:about="&ContextAccio;Visualization">
         <rdfs:label xml:lang="nl">Visualisatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/ContextAccio.owl#Ward -->
+
+    <owl:Class rdf:about="&ContextAccio;Ward">
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
     </owl:Class>
     
 
@@ -1206,19 +1224,17 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
-            <rdf:Description rdf:about="&ContextAccio;Furniture"/>
-            <rdf:Description rdf:about="&ContextAccio;Towel"/>
+            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
+            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
+            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;Device"/>
-            <rdf:Description rdf:about="&ContextAccio;Function"/>
-            <rdf:Description rdf:about="&ContextAccio;Item"/>
-            <rdf:Description rdf:about="&ContextAccio;Location"/>
-            <rdf:Description rdf:about="&ContextAccio;Troop"/>
+            <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
+            <rdf:Description rdf:about="&ContextAccio;Furniture"/>
+            <rdf:Description rdf:about="&ContextAccio;Towel"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1236,9 +1252,11 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
-            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
-            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
+            <rdf:Description rdf:about="&ContextAccio;Device"/>
+            <rdf:Description rdf:about="&ContextAccio;Function"/>
+            <rdf:Description rdf:about="&ContextAccio;Item"/>
+            <rdf:Description rdf:about="&ContextAccio;Location"/>
+            <rdf:Description rdf:about="&ContextAccio;Troop"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
