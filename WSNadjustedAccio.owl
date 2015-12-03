@@ -10,13 +10,13 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY swrla "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#" >
     <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
+    <!ENTITY WSNadjustedAccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY tbox "http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#" >
     <!ENTITY abox "http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#" >
     <!ENTITY swrlx "http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#" >
     <!ENTITY swrlm "http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#" >
     <!ENTITY sqwrl "http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#" >
     <!ENTITY swrlxml "http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#" >
-    <!ENTITY WSNadjustedAccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
@@ -42,28 +42,6 @@
     <Ontology rdf:about="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl">
         <imports rdf:resource="http://occs.intec.ugent.be/ontology/UpperAccio.owl"/>
     </Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -111,8 +89,8 @@
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasNextObservation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftVolgendeObservatie</rdfs:label>
-        <rdfs:range rdf:resource="&WSNadjustedAccio;Observation"/>
         <rdfs:domain rdf:resource="&WSNadjustedAccio;Observation"/>
+        <rdfs:range rdf:resource="&WSNadjustedAccio;Observation"/>
         <inverseOf rdf:resource="&WSNadjustedAccio;hasPreviousObservation"/>
     </ObjectProperty>
     
@@ -143,8 +121,8 @@
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasSensorPart">
         <rdfs:label xml:lang="nl">heeftSensorOnderdeel</rdfs:label>
-        <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
         <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
+        <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
     </ObjectProperty>
     
 
@@ -203,8 +181,8 @@
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isSensorPartOf">
         <rdfs:label xml:lang="nl">isSensorOnderdeelVan</rdfs:label>
-        <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
         <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
+        <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
         <inverseOf rdf:resource="&WSNadjustedAccio;hasSensorPart"/>
     </ObjectProperty>
     
@@ -287,7 +265,6 @@
     <DatatypeProperty rdf:about="&WSNadjustedAccio;hasValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftWaarde</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
@@ -551,6 +528,17 @@
     <Class rdf:about="&WSNadjustedAccio;FaultyTMoteSky">
         <rdfs:label xml:lang="nl">FoutieveTMoteSky</rdfs:label>
         <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&WSNadjustedAccio;hasObservation"/>
+                <someValuesFrom>
+                    <Restriction>
+                        <onProperty rdf:resource="&WSNadjustedAccio;hasSymptom"/>
+                        <someValuesFrom rdf:resource="&WSNadjustedAccio;MissingReportsSymptom"/>
+                    </Restriction>
+                </someValuesFrom>
+            </Restriction>
+        </equivalentClass>
+        <equivalentClass>
             <Class>
                 <intersectionOf rdf:parseType="Collection">
                     <Restriction>
@@ -597,17 +585,6 @@
                     </Restriction>
                 </intersectionOf>
             </Class>
-        </equivalentClass>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&WSNadjustedAccio;hasObservation"/>
-                <someValuesFrom>
-                    <Restriction>
-                        <onProperty rdf:resource="&WSNadjustedAccio;hasSymptom"/>
-                        <someValuesFrom rdf:resource="&WSNadjustedAccio;MissingReportsSymptom"/>
-                    </Restriction>
-                </someValuesFrom>
-            </Restriction>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;DetectedFault"/>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;DoNotUseDataValue"/>
@@ -1086,5 +1063,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 

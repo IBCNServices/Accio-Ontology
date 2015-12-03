@@ -5,26 +5,26 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY taskaccio "http://occs.intec.ugent.be/ontology/TaskAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
-    <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
-    <!ENTITY taskaccio "http://occs.intec.ugent.be/ontology/TaskAccio.owl#" >
     <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
     <!ENTITY MedicalAccio "http://occs.intec.ugent.be/ontology/MedicalAccio.owl#" >
+    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
     <!ENTITY profileaccio "http://occs.intec.ugent.be/ontology/ProfileAccio.owl#" >
     <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
     <!ENTITY rolecompetenceaccio "http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
+    <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
+    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:taskaccio="http://occs.intec.ugent.be/ontology/TaskAccio.owl#"
+     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:profileaccio="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
@@ -42,28 +42,6 @@
     <Ontology rdf:about="http://occs.intec.ugent.be/ontology/MedicalAccio.owl">
         <imports rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl"/>
     </Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -1015,9 +993,26 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&MedicalAccio;BloodPressure"/>
+            <rdf:Description rdf:about="&MedicalAccio;BodyTemperature"/>
+            <rdf:Description rdf:about="&MedicalAccio;WBC"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
             <rdf:Description rdf:about="&MedicalAccio;ArmpitTemperature"/>
             <rdf:Description rdf:about="&MedicalAccio;BloodTemperature"/>
             <rdf:Description rdf:about="&MedicalAccio;RectalTemperature"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&MedicalAccio;Derived"/>
+            <rdf:Description rdf:about="&MedicalAccio;Labo"/>
+            <rdf:Description rdf:about="&MedicalAccio;Monitored"/>
+            <rdf:Description rdf:about="&MedicalAccio;Observed"/>
         </members>
     </rdf:Description>
     <rdf:Description>
@@ -1033,26 +1028,9 @@
             <rdf:Description rdf:about="&MedicalAccio;Sample"/>
         </members>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;Derived"/>
-            <rdf:Description rdf:about="&MedicalAccio;Labo"/>
-            <rdf:Description rdf:about="&MedicalAccio;Monitored"/>
-            <rdf:Description rdf:about="&MedicalAccio;Observed"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;BloodPressure"/>
-            <rdf:Description rdf:about="&MedicalAccio;BodyTemperature"/>
-            <rdf:Description rdf:about="&MedicalAccio;WBC"/>
-        </members>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 

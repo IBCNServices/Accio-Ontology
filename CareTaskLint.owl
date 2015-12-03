@@ -6,18 +6,37 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TaskAccio "http://occs.intec.ugent.be/ontology/TaskAccio.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#"
      xml:base="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:TaskAccio="http://occs.intec.ugent.be/ontology/TaskAccio.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl">
         <owl:imports rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     
 
 
@@ -90,7 +109,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask">
         <rdfs:label xml:lang="nl">OproepBeantwoordenTask</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -229,7 +248,7 @@
     <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask -->
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -238,7 +257,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeDataTask">
         <rdfs:label xml:lang="nl">DataWijzigenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -274,7 +293,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ComplementDataTask">
         <rdfs:label xml:lang="nl">DataAanvullenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -310,7 +329,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FinancialTask">
         <rdfs:label xml:lang="nl">FinancieleTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -338,14 +357,6 @@
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#GetFoodFromKitchenTask">
         <rdfs:label xml:lang="nl">EtenOphalenUitKeukenTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
-    </owl:Class>
-    
-
-
-    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#GetUpTask -->
-
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#GetUpTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
@@ -380,7 +391,7 @@
     <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask -->
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -425,7 +436,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask">
         <rdfs:label xml:lang="nl">LogistiekeTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -478,7 +489,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask">
         <rdfs:label xml:lang="nl">MedischeTaken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -579,7 +590,7 @@
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadDataTask">
         <rdfs:label xml:lang="nl">DataLezenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -605,7 +616,7 @@
     <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RegistrationTask -->
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RegistrationTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -650,7 +661,7 @@
     <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask -->
 
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
 
@@ -707,6 +718,12 @@
         <rdfs:label xml:lang="nl">VaatWassenTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task -->
+
+    <owl:Class rdf:about="&TaskAccio;Task"/>
 </rdf:RDF>
 
 
