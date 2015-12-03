@@ -14,13 +14,13 @@
     <!ENTITY TaskAccio "http://localhost/ontologies/AccioOntology/TaskAccio.owl#" >
     <!ENTITY UpperAccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
     <!ENTITY MedicalAccio "http://localhost/ontologies/AccioOntology/MedicalAccio.owl#" >
-    <!ENTITY ProfileAccio "http://localhost/ontologies/AccioOntology/ProfileAccio.owl#" >
     <!ENTITY drsonto040520 "http://cs-www.cs.yale.edu/homes/dvm/daml/drsonto040520.owl#" >
     <!ENTITY ContextAccio "http://localhost/ontologies/AccioOntology/ContextAccio.owl#" >
+    <!ENTITY ProfileAccio "http://localhost/ontologies/AccioOntology/ProfileAccio.owl#" >
     <!ENTITY ObjectList "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY Expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY WSNadjustedAccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
+    <!ENTITY WSNadjustedAccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
     <!ENTITY WSNextensionAccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
     <!ENTITY RoleCompetenceAccio "http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#" >
 ]>
@@ -28,35 +28,35 @@
 
 <rdf:RDF xmlns="http://localhost/ontologies/AccioOntology/MergedWithExistingAccio.owl#"
      xml:base="http://localhost/ontologies/AccioOntology/MergedWithExistingAccio.owl"
-     xmlns:WSNadjustedAccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
-     xmlns:Service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
-     xmlns:ObjectList="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:RoleCompetenceAccio="http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#"
      xmlns:drsonto040520="http://cs-www.cs.yale.edu/homes/dvm/daml/drsonto040520.owl#"
-     xmlns:WSNextensionAccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
-     xmlns:time-entry="http://www.isi.edu/~pan/damltime/time-entry.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:MedicalAccio="http://localhost/ontologies/AccioOntology/MedicalAccio.owl#"
-     xmlns:UpperAccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
-     xmlns:TaskAccio="http://localhost/ontologies/AccioOntology/TaskAccio.owl#"
-     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:Process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:Expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:UpperAccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
      xmlns:ProfileAccio="http://localhost/ontologies/AccioOntology/ProfileAccio.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:TaskAccio="http://localhost/ontologies/AccioOntology/TaskAccio.owl#"
+     xmlns:WSNadjustedAccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:time-entry="http://www.isi.edu/~pan/damltime/time-entry.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ObjectList="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+     xmlns:Service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:Expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:MedicalAccio="http://localhost/ontologies/AccioOntology/MedicalAccio.owl#"
+     xmlns:RoleCompetenceAccio="http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:WSNextensionAccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ContextAccio="http://localhost/ontologies/AccioOntology/ContextAccio.owl#">
     <owl:Ontology rdf:about="http://localhost/ontologies/AccioOntology/MergedWithExistingAccio.owl">
-        <rdfs:comment>
-    Top level of OWL ontology for services.
-    Part of the OWL-S ontology; see http://www.daml.org/services/.  
-  </rdfs:comment>
         <owl:versionInfo>
-    $Id: Process.owl,v 1.139 2005/05/18 21:50:34 martin Exp $
+    $Id: Service.owl,v 1.25 2005/05/18 21:45:19 martin Exp $
   </owl:versionInfo>
+        <rdfs:comment>
+    Upper-level OWL ontology for Processes.
+    Part of the DAML-S/OWL-S effort; see http://www.daml.org/services/owl-s/.
+  </rdfs:comment>
         <rdfs:comment>
     Ontology elements for capturing conditions, effects
   </rdfs:comment>
@@ -64,17 +64,17 @@
     $Id: Expression.owl,v 1.30 2006/01/04 07:54:55 martin Exp $
   </owl:versionInfo>
         <owl:versionInfo>
-    $Id: Service.owl,v 1.25 2005/05/18 21:45:19 martin Exp $
+    $Id: Process.owl,v 1.139 2005/05/18 21:50:34 martin Exp $
   </owl:versionInfo>
+        <rdfs:comment>
+  </rdfs:comment>
+        <rdfs:comment>
+    Top level of OWL ontology for services.
+    Part of the OWL-S ontology; see http://www.daml.org/services/.  
+  </rdfs:comment>
         <owl:versionInfo>
     $Id: ObjectList.owl,v 1.5 2004/11/28 16:29:55 martin Exp $
   </owl:versionInfo>
-        <rdfs:comment>
-  </rdfs:comment>
-        <rdfs:comment>
-    Upper-level OWL ontology for Processes.
-    Part of the DAML-S/OWL-S effort; see http://www.daml.org/services/owl-s/.
-  </rdfs:comment>
     </owl:Ontology>
     
 
@@ -87,8 +87,8 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&swrlb;args"/>
     <owl:AnnotationProperty rdf:about="&swrlb;minArgs"/>
+    <owl:AnnotationProperty rdf:about="&swrlb;args"/>
     
 
 
@@ -1068,8 +1068,8 @@
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasConsort">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="nl">heeftPartner</rdfs:label>
-        <rdfs:domain rdf:resource="&RoleCompetenceAccio;Partner"/>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Partner"/>
+        <rdfs:domain rdf:resource="&RoleCompetenceAccio;Partner"/>
     </owl:ObjectProperty>
     
 
@@ -1281,6 +1281,16 @@
     
 
 
+    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasConsentedForTask -->
+
+    <owl:ObjectProperty rdf:about="&TaskAccio;hasConsentedForTask">
+        <rdfs:label xml:lang="nl">heeftToegezegdVoorTaak</rdfs:label>
+        <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
+        <rdfs:range rdf:resource="&TaskAccio;Task"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasCurrentTask -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasCurrentTask">
@@ -1359,6 +1369,16 @@
     <owl:ObjectProperty rdf:about="&TaskAccio;isInNeedOfCompetence">
         <rdfs:label xml:lang="nl">heeftNoodAanCompetentie</rdfs:label>
         <rdfs:range rdf:resource="&RoleCompetenceAccio;Competence"/>
+        <rdfs:domain rdf:resource="&TaskAccio;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isTaskFor -->
+
+    <owl:ObjectProperty rdf:about="&TaskAccio;isTaskFor">
+        <rdfs:label xml:lang="nl">isTaakVoor</rdfs:label>
+        <rdfs:range rdf:resource="&ProfileAccio;Person"/>
         <rdfs:domain rdf:resource="&TaskAccio;Task"/>
     </owl:ObjectProperty>
     
@@ -1543,8 +1563,8 @@
     <owl:ObjectProperty rdf:about="&WSNadjustedAccio;hasNextObservation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftVolgendeObservatie</rdfs:label>
-        <rdfs:range rdf:resource="&WSNadjustedAccio;Observation"/>
         <rdfs:domain rdf:resource="&WSNadjustedAccio;Observation"/>
+        <rdfs:range rdf:resource="&WSNadjustedAccio;Observation"/>
         <owl:inverseOf rdf:resource="&WSNadjustedAccio;hasPreviousObservation"/>
     </owl:ObjectProperty>
     
@@ -1575,8 +1595,8 @@
 
     <owl:ObjectProperty rdf:about="&WSNadjustedAccio;hasSensorPart">
         <rdfs:label xml:lang="nl">heeftSensorOnderdeel</rdfs:label>
-        <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
         <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
+        <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
     </owl:ObjectProperty>
     
 
@@ -1635,8 +1655,8 @@
 
     <owl:ObjectProperty rdf:about="&WSNadjustedAccio;isSensorPartOf">
         <rdfs:label xml:lang="nl">isSensorOnderdeelVan</rdfs:label>
-        <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
         <rdfs:range rdf:resource="&WSNadjustedAccio;System"/>
+        <rdfs:domain rdf:resource="&WSNadjustedAccio;System"/>
         <owl:inverseOf rdf:resource="&WSNadjustedAccio;hasSensorPart"/>
     </owl:ObjectProperty>
     
@@ -4308,8 +4328,8 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ProfileAccio;Female"/>
                     <rdf:Description rdf:about="&ProfileAccio;Male"/>
+                    <rdf:Description rdf:about="&ProfileAccio;Female"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4446,6 +4466,14 @@
         <rdfs:label xml:lang="nl">Persoon</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ProfileAccio;Man"/>
+                    <rdf:Description rdf:about="&ProfileAccio;Woman"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -4494,14 +4522,6 @@
                         <owl:someValuesFrom rdf:resource="&xsd;string"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ProfileAccio;Man"/>
-                    <rdf:Description rdf:about="&ProfileAccio;Woman"/>
-                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
@@ -5095,6 +5115,15 @@
     
 
 
+    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#ActualTask -->
+
+    <owl:Class rdf:about="&TaskAccio;ActualTask">
+        <rdfs:label xml:lang="nl">EchteTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
+    </owl:Class>
+    
+
+
     <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#AssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;AssistanceCall">
@@ -5569,10 +5598,28 @@
     
 
 
+    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Notification -->
+
+    <owl:Class rdf:about="&TaskAccio;Notification">
+        <rdfs:label xml:lang="nl">Melding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </owl:Class>
+    
+
+
     <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#PlannedTask -->
 
     <owl:Class rdf:about="&TaskAccio;PlannedTask">
         <rdfs:label xml:lang="nl">GeplandeTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;ActualTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#PotentialTask -->
+
+    <owl:Class rdf:about="&TaskAccio;PotentialTask">
+        <rdfs:label xml:lang="nl">PotentieleTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
     </owl:Class>
     
@@ -5828,7 +5875,7 @@
 
     <owl:Class rdf:about="&TaskAccio;UnplannedTask">
         <rdfs:label xml:lang="nl">OngeplandeTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&TaskAccio;Task"/>
+        <rdfs:subClassOf rdf:resource="&TaskAccio;ActualTask"/>
     </owl:Class>
     
 
@@ -5969,9 +6016,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&UpperAccio;Spring"/>
-                    <rdf:Description rdf:about="&UpperAccio;Autumn"/>
                     <rdf:Description rdf:about="&UpperAccio;Winter"/>
+                    <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+                    <rdf:Description rdf:about="&UpperAccio;Spring"/>
                     <rdf:Description rdf:about="&UpperAccio;Summer"/>
                 </owl:oneOf>
             </owl:Class>
@@ -6259,17 +6306,6 @@
     <owl:Class rdf:about="&WSNadjustedAccio;FaultyTMoteSky">
         <rdfs:label xml:lang="nl">FoutieveTMoteSky</rdfs:label>
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&WSNadjustedAccio;hasObservation"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&WSNadjustedAccio;hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="&WSNadjustedAccio;MissingReportsSymptom"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -6316,6 +6352,17 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&WSNadjustedAccio;hasObservation"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&WSNadjustedAccio;hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="&WSNadjustedAccio;MissingReportsSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;DetectedFault"/>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;DoNotUseDataValue"/>
@@ -6855,6 +6902,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#CODetector -->
 
     <owl:Class rdf:about="&WSNextensionAccio;CODetector">
+        <rdfs:label xml:lang="nl">CODetector</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -6863,6 +6911,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#COObservation -->
 
     <owl:Class rdf:about="&WSNextensionAccio;COObservation">
+        <rdfs:label xml:lang="nl">COObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Observation"/>
     </owl:Class>
     
@@ -7053,6 +7102,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#PressureSensor -->
 
     <owl:Class rdf:about="&WSNextensionAccio;PressureSensor">
+        <rdfs:label xml:lang="nl">DrukSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -7061,6 +7111,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#PressureStatusObservation -->
 
     <owl:Class rdf:about="&WSNextensionAccio;PressureStatusObservation">
+        <rdfs:label xml:lang="nl">DrukStatusObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Observation"/>
     </owl:Class>
     
@@ -7075,10 +7126,10 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#RFTag -->
+    <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#RFIDSensor -->
 
-    <owl:Class rdf:about="&WSNextensionAccio;RFTag">
-        <rdfs:label xml:lang="nl">RFTag</rdfs:label>
+    <owl:Class rdf:about="&WSNextensionAccio;RFIDSensor">
+        <rdfs:label xml:lang="nl">RFIDSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -7096,6 +7147,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#SoundLevelObservation -->
 
     <owl:Class rdf:about="&WSNextensionAccio;SoundLevelObservation">
+        <rdfs:label xml:lang="nl">GeluidNiveauObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Observation"/>
     </owl:Class>
     
@@ -7104,6 +7156,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#SoundSensor -->
 
     <owl:Class rdf:about="&WSNextensionAccio;SoundSensor">
+        <rdfs:label xml:lang="nl">GeluidSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -7130,6 +7183,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TiltCompass -->
 
     <owl:Class rdf:about="&WSNextensionAccio;TiltCompass">
+        <rdfs:label xml:lang="nl">TiltKompas</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -7138,6 +7192,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TiltObservation -->
 
     <owl:Class rdf:about="&WSNextensionAccio;TiltObservation">
+        <rdfs:label xml:lang="nl">TiltObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Observation"/>
     </owl:Class>
     
@@ -7146,6 +7201,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TouchSensor -->
 
     <owl:Class rdf:about="&WSNextensionAccio;TouchSensor">
+        <rdfs:label xml:lang="nl">AanrakingSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Sensor"/>
     </owl:Class>
     
@@ -7154,6 +7210,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TouchStatusObservation -->
 
     <owl:Class rdf:about="&WSNextensionAccio;TouchStatusObservation">
+        <rdfs:label xml:lang="nl">AanrakingStatusObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNadjustedAccio;Observation"/>
     </owl:Class>
     
@@ -7247,13 +7304,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>
@@ -7273,14 +7330,14 @@
         <rdfs:subClassOf rdf:resource="&Process;Process"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;performedBy"/>
-                <owl:hasValue rdf:resource="&Process;TheServer"/>
+                <owl:onProperty rdf:resource="&Process;hasClient"/>
+                <owl:hasValue rdf:resource="&Process;TheClient"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;hasClient"/>
-                <owl:hasValue rdf:resource="&Process;TheClient"/>
+                <owl:onProperty rdf:resource="&Process;performedBy"/>
+                <owl:hasValue rdf:resource="&Process;TheServer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&Process;CompositeProcess"/>
@@ -7294,19 +7351,13 @@
     <owl:Class rdf:about="&Process;Binding">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;valueData"/>
+                <owl:onProperty rdf:resource="&Process;valueSource"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;toParam"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;valueSource"/>
+                <owl:onProperty rdf:resource="&Process;valueData"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7314,6 +7365,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;valueSpecifier"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Process;toParam"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -7327,13 +7384,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>
@@ -7374,6 +7431,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&Process;computedEffect"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;computedOutput"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -7384,20 +7447,14 @@
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;computedEffect"/>
-                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&Process;SimpleProcess"/>
+        <rdfs:comment>
+    A CompositeProcess must have exactly 1 composedOf property.
+  </rdfs:comment>
         <rdfs:comment>
     A CompositeProcess can have at most one invocable property. Similarly for
     computedInput, computedOutput, computedEffect, and
     computedPrecondition.
-  </rdfs:comment>
-        <rdfs:comment>
-    A CompositeProcess must have exactly 1 composedOf property.
   </rdfs:comment>
     </owl:Class>
     
@@ -7425,14 +7482,14 @@
         <rdfs:subClassOf rdf:resource="&ObjectList;List"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ObjectList;first"/>
-                <owl:allValuesFrom rdf:resource="&Process;ControlConstruct"/>
+                <owl:onProperty rdf:resource="&ObjectList;rest"/>
+                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ObjectList;rest"/>
-                <owl:allValuesFrom rdf:resource="&Process;ControlConstructBag"/>
+                <owl:onProperty rdf:resource="&ObjectList;first"/>
+                <owl:allValuesFrom rdf:resource="&Process;ControlConstruct"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment> A multiset of control constructs </rdfs:comment>
@@ -7471,14 +7528,14 @@
         <rdfs:subClassOf rdf:resource="&Process;ControlConstruct"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;else"/>
-                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="&Process;then"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;then"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&Process;else"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7657,10 +7714,10 @@
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment> The most general class of processes </rdfs:comment>
         <rdfs:comment>
     A Process can have at most one name, but names need not be unique.
   </rdfs:comment>
+        <rdfs:comment> The most general class of processes </rdfs:comment>
     </owl:Class>
     
 
@@ -7679,13 +7736,13 @@
         <rdfs:subClassOf rdf:resource="&Process;Iterate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;untilProcess"/>
+                <owl:onProperty rdf:resource="&Process;untilCondition"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Process;untilCondition"/>
+                <owl:onProperty rdf:resource="&Process;untilProcess"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7750,13 +7807,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:allValuesFrom rdf:resource="&Process;ControlConstructList"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&Process;components"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:allValuesFrom rdf:resource="&Process;ControlConstructList"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>
@@ -7844,13 +7901,13 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>
-    We allow for the possibility that another parameter of the same process is 
-    referenced, in which case this property is optional (hence maxCard)
-  </rdfs:comment>
-        <rdfs:comment>
     Within a value form, or when using valueSource, references to
     parameters of other processes require a tuple of (perform-ref,
     param-ref, which we represent with ValueOf
+  </rdfs:comment>
+        <rdfs:comment>
+    We allow for the possibility that another parameter of the same process is 
+    referenced, in which case this property is optional (hence maxCard)
   </rdfs:comment>
     </owl:Class>
     
@@ -7866,12 +7923,12 @@
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>See comments above</rdfs:comment>
         <rdfs:comment> 
     A service has 0 or 1 models.  (But note that a service with 0 models 
     does not provide automated online access; it exists only for
     discovery purposes; that is, it exists so as to provide a Profile.)
   </rdfs:comment>
+        <rdfs:comment>See comments above</rdfs:comment>
     </owl:Class>
     
 
@@ -7886,12 +7943,12 @@
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>See comments above</rdfs:comment>
         <rdfs:comment> 
     A Grounding must be associated with exactly one service.
     (Also, that service must have a model - but that constraint
     isn&#39;t expressed here.)
   </rdfs:comment>
+        <rdfs:comment>See comments above</rdfs:comment>
     </owl:Class>
     
 
@@ -7938,14 +7995,14 @@
         <rdfs:subClassOf rdf:resource="&Expression;UnquotedExpression"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
-                <owl:allValuesFrom rdf:resource="&drsonto040520;Formula"/>
+                <owl:onProperty rdf:resource="&Expression;expressionLanguage"/>
+                <owl:hasValue rdf:resource="&Expression;DRS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionLanguage"/>
-                <owl:hasValue rdf:resource="&Expression;DRS"/>
+                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
+                <owl:allValuesFrom rdf:resource="&drsonto040520;Formula"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -8078,14 +8135,14 @@
         <rdfs:subClassOf rdf:resource="&Expression;UnquotedExpression"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
-                <owl:allValuesFrom rdf:resource="&swrl;AtomList"/>
+                <owl:onProperty rdf:resource="&Expression;expressionLanguage"/>
+                <owl:hasValue rdf:resource="&Expression;SWRL"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionLanguage"/>
-                <owl:hasValue rdf:resource="&Expression;SWRL"/>
+                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
+                <owl:allValuesFrom rdf:resource="&swrl;AtomList"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -8134,13 +8191,13 @@
     <owl:Class rdf:about="&Expression;VariableBinding">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;theObject"/>
+                <owl:onProperty rdf:resource="&Expression;theVariable"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;theVariable"/>
+                <owl:onProperty rdf:resource="&Expression;theObject"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8510,13 +8567,13 @@
         <rdf:type rdf:resource="&Expression;Condition"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
+                <owl:onProperty rdf:resource="&Expression;expressionData"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
             </owl:Restriction>
         </rdf:type>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&Expression;expressionData"/>
+                <owl:onProperty rdf:resource="&Expression;expressionObject"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
             </owl:Restriction>
         </rdf:type>
@@ -8600,11 +8657,11 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="&temporal;duration">
-        <swrlb:args rdf:datatype="&xsd;int">1</swrlb:args>
-    </rdf:Description>
     <rdf:Description rdf:about="&temporal;before">
         <swrlb:minArgs rdf:datatype="&xsd;int">1</swrlb:minArgs>
+    </rdf:Description>
+    <rdf:Description rdf:about="&temporal;duration">
+        <swrlb:args rdf:datatype="&xsd;int">1</swrlb:args>
     </rdf:Description>
     
 
@@ -8618,16 +8675,6 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;Device"/>
-            <rdf:Description rdf:about="&ContextAccio;Function"/>
-            <rdf:Description rdf:about="&ContextAccio;Item"/>
-            <rdf:Description rdf:about="&ContextAccio;Location"/>
-            <rdf:Description rdf:about="&ContextAccio;Troop"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;Busy"/>
@@ -8635,286 +8682,17 @@
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&RoleCompetenceAccio;Competence"/>
-            <rdf:Description rdf:about="&RoleCompetenceAccio;Form"/>
-            <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;Diagnosis"/>
-            <rdf:Description rdf:about="&MedicalAccio;Dose"/>
-            <rdf:Description rdf:about="&MedicalAccio;MeasurementType"/>
-            <rdf:Description rdf:about="&MedicalAccio;MedicalParameter"/>
-            <rdf:Description rdf:about="&MedicalAccio;Pathology"/>
-            <rdf:Description rdf:about="&MedicalAccio;PharmaceuticalDrug"/>
-            <rdf:Description rdf:about="&MedicalAccio;Prescription"/>
-            <rdf:Description rdf:about="&MedicalAccio;Sample"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
-            <rdf:Description rdf:about="&ContextAccio;Furniture"/>
-            <rdf:Description rdf:about="&ContextAccio;Towel"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
-            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
-            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Agressive"/>
-            <rdf:Description rdf:about="&ProfileAccio;Impatient"/>
-            <rdf:Description rdf:about="&ProfileAccio;vegetarian"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;BloodPressure"/>
-            <rdf:Description rdf:about="&MedicalAccio;BodyTemperature"/>
-            <rdf:Description rdf:about="&MedicalAccio;WBC"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
-            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Priority"/>
-            <rdf:Description rdf:about="&TaskAccio;Reason"/>
-            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;Spring"/>
-            <rdf:Description rdf:about="&UpperAccio;Winter"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
-            <rdf:Description rdf:about="&ProfileAccio;Language"/>
-            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;LightControl"/>
-            <rdf:Description rdf:about="&ContextAccio;NurseCall"/>
-            <rdf:Description rdf:about="&ContextAccio;RollingShutterControl"/>
-            <rdf:Description rdf:about="&ContextAccio;TVControl"/>
-            <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
-            <rdf:Description rdf:about="&ContextAccio;Telephony"/>
-            <rdf:Description rdf:about="&ContextAccio;Visualization"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
             <rdf:Description rdf:about="&UpperAccio;Summer"/>
-            <rdf:Description rdf:about="&UpperAccio;Winter"/>
         </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
-            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
-            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Female"/>
-            <rdf:Description rdf:about="&ProfileAccio;Male"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
-            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Person"/>
-            <rdf:Description rdf:about="&ProfileAccio;Profile"/>
-            <rdf:Description rdf:about="&ProfileAccio;TrustRelationship"/>
-        </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
-            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -8936,38 +8714,21 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
-            <rdf:Description rdf:about="&UpperAccio;Winter"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;BiologicalProfile"/>
-            <rdf:Description rdf:about="&ProfileAccio;PsychologicalProfile"/>
-            <rdf:Description rdf:about="&ProfileAccio;SociologicalProfile"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
-            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&MedicalAccio;ArmpitTemperature"/>
-            <rdf:Description rdf:about="&MedicalAccio;BloodTemperature"/>
-            <rdf:Description rdf:about="&MedicalAccio;RectalTemperature"/>
+            <rdf:Description rdf:about="&MedicalAccio;Diagnosis"/>
+            <rdf:Description rdf:about="&MedicalAccio;Dose"/>
+            <rdf:Description rdf:about="&MedicalAccio;MeasurementType"/>
+            <rdf:Description rdf:about="&MedicalAccio;MedicalParameter"/>
+            <rdf:Description rdf:about="&MedicalAccio;Pathology"/>
+            <rdf:Description rdf:about="&MedicalAccio;PharmaceuticalDrug"/>
+            <rdf:Description rdf:about="&MedicalAccio;Prescription"/>
+            <rdf:Description rdf:about="&MedicalAccio;Sample"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -8975,69 +8736,6 @@
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&UpperAccio;ChristmasHoliday"/>
             <rdf:Description rdf:about="&UpperAccio;SummerHoliday"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
-            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Free"/>
-            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
-            <rdf:Description rdf:about="&UpperAccio;Summer"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -9061,9 +8759,157 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;BiologicalProfile"/>
+            <rdf:Description rdf:about="&ProfileAccio;PsychologicalProfile"/>
+            <rdf:Description rdf:about="&ProfileAccio;SociologicalProfile"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;Device"/>
+            <rdf:Description rdf:about="&ContextAccio;Function"/>
+            <rdf:Description rdf:about="&ContextAccio;Item"/>
+            <rdf:Description rdf:about="&ContextAccio;Location"/>
+            <rdf:Description rdf:about="&ContextAccio;Troop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Free"/>
+            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
+            <rdf:Description rdf:about="&ContextAccio;Furniture"/>
+            <rdf:Description rdf:about="&ContextAccio;Towel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
+            <rdf:Description rdf:about="&ProfileAccio;Language"/>
+            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Agressive"/>
+            <rdf:Description rdf:about="&ProfileAccio;Impatient"/>
+            <rdf:Description rdf:about="&ProfileAccio;vegetarian"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Female"/>
+            <rdf:Description rdf:about="&ProfileAccio;Male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;CareContextCall"/>
             <rdf:Description rdf:about="&TaskAccio;HotelFunctionContextCall"/>
             <rdf:Description rdf:about="&TaskAccio;MedicalContextCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;ContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;NormalCall"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgencyCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Busy"/>
+            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Priority"/>
+            <rdf:Description rdf:about="&TaskAccio;Reason"/>
+            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;LightControl"/>
+            <rdf:Description rdf:about="&ContextAccio;NurseCall"/>
+            <rdf:Description rdf:about="&ContextAccio;RollingShutterControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TVControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
+            <rdf:Description rdf:about="&ContextAccio;Telephony"/>
+            <rdf:Description rdf:about="&ContextAccio;Visualization"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9074,12 +8920,223 @@
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Summer"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Person"/>
+            <rdf:Description rdf:about="&ProfileAccio;Profile"/>
+            <rdf:Description rdf:about="&ProfileAccio;TrustRelationship"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&MedicalAccio;BloodPressure"/>
+            <rdf:Description rdf:about="&MedicalAccio;BodyTemperature"/>
+            <rdf:Description rdf:about="&MedicalAccio;WBC"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&MedicalAccio;ArmpitTemperature"/>
+            <rdf:Description rdf:about="&MedicalAccio;BloodTemperature"/>
+            <rdf:Description rdf:about="&MedicalAccio;RectalTemperature"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;FamilyRelationship"/>
             <rdf:Description rdf:about="&ProfileAccio;PersonalRelationship"/>
             <rdf:Description rdf:about="&ProfileAccio;TherapeuticRelationship"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
+            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
+            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&RoleCompetenceAccio;Competence"/>
+            <rdf:Description rdf:about="&RoleCompetenceAccio;Form"/>
+            <rdf:Description rdf:about="&RoleCompetenceAccio;Role"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </owl:distinctMembers>
     </rdf:Description>
     
 
@@ -9109,6 +9166,80 @@
                 </rdf:first>
                 <rdf:rest>
                     <swrl:AtomList>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest>
+                                                    <swrl:AtomList>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                        <rdf:first>
+                                                            <swrl:IndividualPropertyAtom>
+                                                                <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                            </swrl:IndividualPropertyAtom>
+                                                        </rdf:first>
+                                                    </swrl:AtomList>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasSister"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#k"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasAunt"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
                         <rdf:first>
                             <swrl:ClassAtom>
                                 <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
@@ -9131,7 +9262,7 @@
                                                 <rdf:rest rdf:resource="&rdf;nil"/>
                                                 <rdf:first>
                                                     <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
                                                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl#y"/>
                                                     </swrl:IndividualPropertyAtom>
@@ -9151,6 +9282,12 @@
                         </rdf:rest>
                     </swrl:AtomList>
                 </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
             </swrl:AtomList>
         </swrl:body>
         <swrl:head>
@@ -9158,7 +9295,7 @@
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasMother"/>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasDaughter"/>
                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl#y"/>
                     </swrl:IndividualPropertyAtom>
@@ -9167,102 +9304,50 @@
         </swrl:head>
     </swrl:Imp>
     <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:DifferentIndividualsAtom>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                                                    </swrl:DifferentIndividualsAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
         <swrl:head>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasBrother"/>
                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>
         </swrl:head>
-    </swrl:Imp>
-    <swrl:Imp>
         <swrl:body>
             <swrl:AtomList>
                 <rdf:first>
                     <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
                     </swrl:ClassAtom>
                 </rdf:first>
                 <rdf:rest>
                     <swrl:AtomList>
                         <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasBrother"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                            </swrl:IndividualPropertyAtom>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                            </swrl:ClassAtom>
                         </rdf:first>
                         <rdf:rest>
                             <swrl:AtomList>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#k"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
                                 <rdf:rest>
                                     <swrl:AtomList>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
                                         <rdf:first>
                                             <swrl:IndividualPropertyAtom>
                                                 <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
@@ -9270,15 +9355,33 @@
                                                 <swrl:argument2 rdf:resource="urn:swrl#x"/>
                                             </swrl:IndividualPropertyAtom>
                                         </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
                                         <rdf:rest>
                                             <swrl:AtomList>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
                                                 <rdf:rest>
                                                     <swrl:AtomList>
                                                         <rdf:rest rdf:resource="&rdf;nil"/>
@@ -9291,14 +9394,48 @@
                                                         </rdf:first>
                                                     </swrl:AtomList>
                                                 </rdf:rest>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
                                             </swrl:AtomList>
                                         </rdf:rest>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
                                     </swrl:AtomList>
                                 </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#k"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
                             </swrl:AtomList>
                         </rdf:rest>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasBrother"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
                     </swrl:AtomList>
                 </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
             </swrl:AtomList>
         </swrl:body>
         <swrl:head>
@@ -9315,20 +9452,26 @@
         </swrl:head>
     </swrl:Imp>
     <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasWife"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
         <swrl:body>
             <swrl:AtomList>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
                 <rdf:rest>
                     <swrl:AtomList>
                         <rdf:first>
                             <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
                             </swrl:ClassAtom>
                         </rdf:first>
                         <rdf:rest>
@@ -9367,6 +9510,136 @@
                         </rdf:rest>
                     </swrl:AtomList>
                 </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasSister"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasConsort"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
             </swrl:AtomList>
         </swrl:body>
         <swrl:head>
@@ -9385,207 +9658,8 @@
     <swrl:Imp>
         <swrl:body>
             <swrl:AtomList>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
                 <rdf:rest>
                     <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                            </swrl:ClassAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasBrother"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                            </swrl:ClassAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasFather"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasAunt"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasSister"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest>
-                                                    <swrl:AtomList>
-                                                        <rdf:rest rdf:resource="&rdf;nil"/>
-                                                        <rdf:first>
-                                                            <swrl:IndividualPropertyAtom>
-                                                                <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                                            </swrl:IndividualPropertyAtom>
-                                                        </rdf:first>
-                                                    </swrl:AtomList>
-                                                </rdf:rest>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                            </swrl:AtomList>
-                        </rdf:rest>
                         <rdf:first>
                             <swrl:IndividualPropertyAtom>
                                 <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
@@ -9593,29 +9667,12 @@
                                 <swrl:argument1 rdf:resource="urn:swrl#m"/>
                             </swrl:IndividualPropertyAtom>
                         </rdf:first>
-                    </swrl:AtomList>
-                </rdf:rest>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
                         <rdf:rest>
                             <swrl:AtomList>
                                 <rdf:rest>
                                     <swrl:AtomList>
                                         <rdf:rest>
                                             <swrl:AtomList>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
                                                 <rdf:rest>
                                                     <swrl:AtomList>
                                                         <rdf:rest rdf:resource="&rdf;nil"/>
@@ -9628,6 +9685,13 @@
                                                         </rdf:first>
                                                     </swrl:AtomList>
                                                 </rdf:rest>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
                                             </swrl:AtomList>
                                         </rdf:rest>
                                         <rdf:first>
@@ -9648,13 +9712,6 @@
                                 </rdf:first>
                             </swrl:AtomList>
                         </rdf:rest>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#k"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
                     </swrl:AtomList>
                 </rdf:rest>
                 <rdf:first>
@@ -9684,142 +9741,6 @@
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasSister"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                            </swrl:ClassAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                            </swrl:ClassAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasConsort"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasWife"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
                         <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasNiece"/>
                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl#z"/>
@@ -9831,26 +9752,19 @@
             <swrl:AtomList>
                 <rdf:rest>
                     <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasDaughter"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
                         <rdf:rest>
                             <swrl:AtomList>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#k"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
                                 <rdf:rest>
                                     <swrl:AtomList>
                                         <rdf:rest>
                                             <swrl:AtomList>
-                                                <rdf:first>
-                                                    <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                                    </swrl:IndividualPropertyAtom>
-                                                </rdf:first>
                                                 <rdf:rest>
                                                     <swrl:AtomList>
                                                         <rdf:rest rdf:resource="&rdf;nil"/>
@@ -9863,73 +9777,11 @@
                                                         </rdf:first>
                                                     </swrl:AtomList>
                                                 </rdf:rest>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasDaughter"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#k"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:ClassAtom>
-                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                            </swrl:ClassAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:first>
-                                    <swrl:IndividualPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                                    </swrl:IndividualPropertyAtom>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
                                                 <rdf:first>
                                                     <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;isRoleOf"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
                                                     </swrl:IndividualPropertyAtom>
                                                 </rdf:first>
                                             </swrl:AtomList>
@@ -9943,24 +9795,25 @@
                                         </rdf:first>
                                     </swrl:AtomList>
                                 </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#k"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
                             </swrl:AtomList>
                         </rdf:rest>
                     </swrl:AtomList>
                 </rdf:rest>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasDaughter"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </swrl:IndividualPropertyAtom>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
                 </rdf:first>
             </swrl:AtomList>
-        </swrl:head>
+        </swrl:body>
     </swrl:Imp>
     <swrl:Imp>
         <swrl:body>
@@ -9976,7 +9829,7 @@
                                                 <rdf:rest rdf:resource="&rdf;nil"/>
                                                 <rdf:first>
                                                     <swrl:IndividualPropertyAtom>
-                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
                                                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl#y"/>
                                                     </swrl:IndividualPropertyAtom>
@@ -10022,9 +9875,213 @@
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasFather"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Man"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
                         <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasSon"/>
                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasMother"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="&ProfileAccio;Woman"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasParent"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="&ProfileAccio;hasRole"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasChild"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:DifferentIndividualsAtom>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                                    </swrl:DifferentIndividualsAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&ProfileAccio;Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&RoleCompetenceAccio;hasSibling"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>

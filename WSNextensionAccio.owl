@@ -10,25 +10,25 @@
     <!ENTITY upperaccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
+    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
     <!ENTITY WSNextensionAccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:WSNextensionAccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
-     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
-     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#">
+     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
+     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+     xmlns:WSNextensionAccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <Ontology rdf:about="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl">
         <imports rdf:resource="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl"/>
         <imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
@@ -203,6 +203,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#CODetector -->
 
     <Class rdf:about="&WSNextensionAccio;CODetector">
+        <rdfs:label xml:lang="nl">CODetector</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -211,6 +212,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#COObservation -->
 
     <Class rdf:about="&WSNextensionAccio;COObservation">
+        <rdfs:label xml:lang="nl">COObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
     </Class>
     
@@ -401,6 +403,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#PressureSensor -->
 
     <Class rdf:about="&WSNextensionAccio;PressureSensor">
+        <rdfs:label xml:lang="nl">DrukSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -409,6 +412,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#PressureStatusObservation -->
 
     <Class rdf:about="&WSNextensionAccio;PressureStatusObservation">
+        <rdfs:label xml:lang="nl">DrukStatusObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
     </Class>
     
@@ -423,10 +427,10 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#RFTag -->
+    <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#RFIDSensor -->
 
-    <Class rdf:about="&WSNextensionAccio;RFTag">
-        <rdfs:label xml:lang="nl">RFTag</rdfs:label>
+    <Class rdf:about="&WSNextensionAccio;RFIDSensor">
+        <rdfs:label xml:lang="nl">RFIDSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -444,6 +448,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#SoundLevelObservation -->
 
     <Class rdf:about="&WSNextensionAccio;SoundLevelObservation">
+        <rdfs:label xml:lang="nl">GeluidNiveauObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
     </Class>
     
@@ -452,6 +457,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#SoundSensor -->
 
     <Class rdf:about="&WSNextensionAccio;SoundSensor">
+        <rdfs:label xml:lang="nl">GeluidSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -478,6 +484,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TiltCompass -->
 
     <Class rdf:about="&WSNextensionAccio;TiltCompass">
+        <rdfs:label xml:lang="nl">TiltKompas</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -486,6 +493,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TiltObservation -->
 
     <Class rdf:about="&WSNextensionAccio;TiltObservation">
+        <rdfs:label xml:lang="nl">TiltObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
     </Class>
     
@@ -494,6 +502,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TouchSensor -->
 
     <Class rdf:about="&WSNextensionAccio;TouchSensor">
+        <rdfs:label xml:lang="nl">AanrakingSensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
     </Class>
     
@@ -502,6 +511,7 @@
     <!-- http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#TouchStatusObservation -->
 
     <Class rdf:about="&WSNextensionAccio;TouchStatusObservation">
+        <rdfs:label xml:lang="nl">AanrakingStatusObservatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
     </Class>
     
