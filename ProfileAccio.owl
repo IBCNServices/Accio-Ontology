@@ -2,46 +2,48 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY ProfileAccio "http://orca.test/ontology/ProfileAccio.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
-    <!ENTITY ProfileAccio "http://occs.intec.ugent.be/ontology/ProfileAccio.owl#" >
-    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
+<rdf:RDF xmlns="http://orca.test/ontology/ProfileAccio.owl#"
+     xml:base="http://orca.test/ontology/ProfileAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:wsnextensionaccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
-     xmlns:rolecompetenceaccio="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#"
+     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
+     xmlns:rolecompetenceaccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ProfileAccio="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#"
-     xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/ProfileAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl"/>
-    </Ontology>
+     xmlns:ProfileAccio="http://orca.test/ontology/ProfileAccio.owl#"
+     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
+    <owl:Ontology rdf:about="http://orca.test/ontology/ProfileAccio.owl">
+        <owl:imports rdf:resource="http://orca.test/ontology/RoleCompetenceAccio.owl"/>
+    </owl:Ontology>
     
 
 
@@ -56,404 +58,404 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#associatedWith -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#associatedWith -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;associatedWith">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;associatedWith">
         <rdfs:label xml:lang="nl">geassocieerdMet</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
         <rdfs:domain rdf:resource="&wsnadjustedaccio;System"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasAssociation -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasAssociation -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasAssociation">
-        <inverseOf rdf:resource="&ProfileAccio;associatedWith"/>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasAssociation">
+        <owl:inverseOf rdf:resource="&ProfileAccio;associatedWith"/>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasAunt -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasAunt -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasAunt">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasAunt">
         <rdfs:range rdf:resource="&ProfileAccio;Aunt"/>
-        <inverseOf rdf:resource="&ProfileAccio;isAuntOf"/>
+        <owl:inverseOf rdf:resource="&ProfileAccio;isAuntOf"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;Family"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBasicProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBasicProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasBasicProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasBasicProfile">
         <rdfs:label xml:lang="nl">heeftBasisProfiel</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;BasicProfile"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBiologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBiologicalProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasBiologicalProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasBiologicalProfile">
         <rdfs:label xml:lang="nl">heeftBiologischProfiel</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;BiologicalProfile"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasBasicProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBirthDate -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBirthDate -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasBirthDate">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasBirthDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftGeboorteDatum</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&temporal;ValidInstant"/>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBrother -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBrother -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasBrother">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasBrother">
         <rdfs:range rdf:resource="&ProfileAccio;Brother"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasSibling"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasCurrentRole -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasCurrentRole -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasCurrentRole">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasCurrentRole">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftHuidigeRol</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Role"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasDaughter -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasDaughter -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasDaughter">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasDaughter">
         <rdfs:range rdf:resource="&ProfileAccio;Daughter"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasChild"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasExperienceCompetence -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasExperienceCompetence -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasExperienceCompetence">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasExperienceCompetence">
         <rdfs:label xml:lang="nl">heeftErvaringsCompetentie</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Competence"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFaith -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFaith -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasFaith">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasFaith">
         <rdfs:label xml:lang="nl">heeftGeloof</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Faith"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasSociologicalProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFather -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFather -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasFather">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasFather">
         <rdfs:range rdf:resource="&ProfileAccio;Father"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasParent"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFormalTrainingCompetence -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFormalTrainingCompetence -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasFormalTrainingCompetence">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasFormalTrainingCompetence">
         <rdfs:label xml:lang="nl">heeftVormingsCompetentie</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Competence"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasGender -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasGender -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasGender">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasGender">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftGeslacht</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Gender"/>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasBiologicalProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasHusband -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasHusband -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasHusband">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasHusband">
         <rdfs:range rdf:resource="&ProfileAccio;Husband"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasConsort"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasLanguage -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasLanguage -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasLanguage">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasLanguage">
         <rdfs:label xml:lang="nl">heeftTaal</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Language"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasSociologicalProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasMother -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasMother -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasMother">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasMother">
         <rdfs:range rdf:resource="&ProfileAccio;Mother"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasParent"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNationality -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNationality -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasNationality">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasNationality">
         <rdfs:label xml:lang="nl">heeftNationaliteit</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Nationality"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasSociologicalProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNephew -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNephew -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasNephew">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasNephew">
         <rdfs:range rdf:resource="&ProfileAccio;Nephew"/>
-        <inverseOf rdf:resource="&ProfileAccio;isNephewOf"/>
+        <owl:inverseOf rdf:resource="&ProfileAccio;isNephewOf"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;Family"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNiece -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNiece -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasNiece">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasNiece">
         <rdfs:range rdf:resource="&ProfileAccio;Niece"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;Family"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasProfile">
         <rdfs:label xml:lang="nl">heeftProfiel</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&ProfileAccio;Profile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasProxy -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasProxy -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasProxy">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasProxy">
         <rdfs:label xml:lang="nl">heeftProxy</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasPsychologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasPsychologicalProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasPsychologicalProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasPsychologicalProfile">
         <rdfs:label xml:lang="nl">heeftPsychologischProfiel</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;PsychologicalProfile"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasBasicProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRiskProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRiskProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasRiskProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasRiskProfile">
         <rdfs:label xml:lang="nl">heeftRisicoProfiel</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;RiskProfile"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRole -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRole -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasRole">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasRole">
         <rdfs:label xml:lang="nl">heeftRol</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
-        <inverseOf rdf:resource="&ProfileAccio;isRoleOf"/>
+        <owl:inverseOf rdf:resource="&ProfileAccio;isRoleOf"/>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Role"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRoleAsFunction -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRoleAsFunction -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasRoleAsFunction">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasRoleAsFunction">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment>heeftRolAlsFunctie</rdfs:comment>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&rolecompetenceaccio;Role"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSister -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSister -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasSister">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasSister">
         <rdfs:range rdf:resource="&ProfileAccio;Sister"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasSibling"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSociologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSociologicalProfile -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasSociologicalProfile">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasSociologicalProfile">
         <rdfs:label xml:lang="nl">heeftSociologischProfiel</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;SociologicalProfile"/>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasBasicProfile"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSon -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSon -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasSon">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasSon">
         <rdfs:range rdf:resource="&ProfileAccio;Son"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasChild"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTrustRelationship -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTrustRelationship -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationship">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationship">
         <rdfs:label xml:lang="nl">heeftVertrouwensRelatie</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&ProfileAccio;TrustRelationship"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTrustRelationshipWith -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTrustRelationshipWith -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationshipWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationshipWith">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftVertrouwensRelatieMet</rdfs:label>
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
         <rdfs:domain rdf:resource="&ProfileAccio;TrustRelationship"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasUncle -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasUncle -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasUncle">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasUncle">
         <rdfs:range rdf:resource="&ProfileAccio;Uncle"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;Family"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasWife -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasWife -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;hasWife">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;hasWife">
         <rdfs:range rdf:resource="&ProfileAccio;Wife"/>
         <rdfs:subPropertyOf rdf:resource="&rolecompetenceaccio;hasConsort"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isAuntOf -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#isAuntOf -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;isAuntOf"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;isAuntOf"/>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isNephewOf -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#isNephewOf -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;isNephewOf"/>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;isNephewOf"/>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isNieceOf -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#isNieceOf -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;isNieceOf">
-        <inverseOf rdf:resource="&ProfileAccio;hasNiece"/>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;isNieceOf">
+        <owl:inverseOf rdf:resource="&ProfileAccio;hasNiece"/>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isRoleOf -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#isRoleOf -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;isRoleOf">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;isRoleOf">
         <rdfs:label xml:lang="nl">isRolVan</rdfs:label>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isUncleOf -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#isUncleOf -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;isUncleOf">
-        <inverseOf rdf:resource="&ProfileAccio;hasUncle"/>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="&ProfileAccio;isUncleOf">
+        <owl:inverseOf rdf:resource="&ProfileAccio;hasUncle"/>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#loggedIntoDevice -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#loggedIntoDevice -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;loggedIntoDevice">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;loggedIntoDevice">
         <rdfs:label xml:lang="nl">aangemeldBijToestel</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Device"/>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#ownsDevice -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#ownsDevice -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;ownsDevice">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;ownsDevice">
         <rdfs:label xml:lang="nl">BezitToestel</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Device"/>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#ownsItem -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#ownsItem -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;ownsItem">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;ownsItem">
         <rdfs:label xml:lang="nl">BezitItem</rdfs:label>
         <rdfs:range rdf:resource="&contextaccio;Item"/>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#responsibleFor -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#responsibleFor -->
 
-    <ObjectProperty rdf:about="&ProfileAccio;responsibleFor">
+    <owl:ObjectProperty rdf:about="&ProfileAccio;responsibleFor">
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
         <rdfs:domain rdf:resource="&rolecompetenceaccio;StaffMember"/>
-    </ObjectProperty>
+    </owl:ObjectProperty>
     
 
 
@@ -468,42 +470,42 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasDegree -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasDegree -->
 
-    <DatatypeProperty rdf:about="&ProfileAccio;hasDegree">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="&ProfileAccio;hasDegree">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftGraad</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;TrustRelationship"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
 
-    <DatatypeProperty rdf:about="&ProfileAccio;hasPersonalTelephoneNumber">
+    <owl:DatatypeProperty rdf:about="&ProfileAccio;hasPersonalTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftPersoonlijkTelefoonNummer</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasTelephoneNumber"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTelephoneNumber -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTelephoneNumber -->
 
-    <DatatypeProperty rdf:about="&ProfileAccio;hasTelephoneNumber">
+    <owl:DatatypeProperty rdf:about="&ProfileAccio;hasTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftTelefoonNummer</rdfs:label>
         <rdfs:domain rdf:resource="&ProfileAccio;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasWorkTelephoneNumber -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#hasWorkTelephoneNumber -->
 
-    <DatatypeProperty rdf:about="&ProfileAccio;hasWorkTelephoneNumber">
+    <owl:DatatypeProperty rdf:about="&ProfileAccio;hasWorkTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftWerkTelefoonNummer</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&ProfileAccio;hasTelephoneNumber"/>
-    </DatatypeProperty>
+    </owl:DatatypeProperty>
     
 
 
@@ -518,515 +520,463 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Agressive -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Agressive -->
 
-    <Class rdf:about="&ProfileAccio;Agressive">
+    <owl:Class rdf:about="&ProfileAccio;Agressive">
         <rdfs:label xml:lang="nl">Agressief</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;PsychologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Aunt -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Aunt -->
 
-    <Class rdf:about="&ProfileAccio;Aunt">
+    <owl:Class rdf:about="&ProfileAccio;Aunt">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
-        <disjointWith rdf:resource="&ProfileAccio;Uncle"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Uncle"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BasicProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#BasicProfile -->
 
-    <Class rdf:about="&ProfileAccio;BasicProfile">
+    <owl:Class rdf:about="&ProfileAccio;BasicProfile">
         <rdfs:label xml:lang="nl">BasisProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;Profile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BehavioralRiskProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#BehavioralRiskProfile -->
 
-    <Class rdf:about="&ProfileAccio;BehavioralRiskProfile">
+    <owl:Class rdf:about="&ProfileAccio;BehavioralRiskProfile">
         <rdfs:label xml:lang="nl">GedragsRisicoProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;RiskProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BiologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#BiologicalProfile -->
 
-    <Class rdf:about="&ProfileAccio;BiologicalProfile">
+    <owl:Class rdf:about="&ProfileAccio;BiologicalProfile">
         <rdfs:label xml:lang="nl">BiologischProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;BasicProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Brother -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Brother -->
 
-    <Class rdf:about="&ProfileAccio;Brother">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Brother">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Sibling"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Man"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Man"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Sibling"/>
-        <disjointWith rdf:resource="&ProfileAccio;Sister"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Sister"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Daughter -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Daughter -->
 
-    <Class rdf:about="&ProfileAccio;Daughter">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Daughter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Child"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Child"/>
-        <disjointWith rdf:resource="&ProfileAccio;Son"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Son"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Faith -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Faith -->
 
-    <Class rdf:about="&ProfileAccio;Faith">
+    <owl:Class rdf:about="&ProfileAccio;Faith">
         <rdfs:label xml:lang="nl">Geloof</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;SociologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#FamilyRelationship -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#FamilyRelationship -->
 
-    <Class rdf:about="&ProfileAccio;FamilyRelationship">
+    <owl:Class rdf:about="&ProfileAccio;FamilyRelationship">
         <rdfs:label xml:lang="nl">FamilialeRelatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;TrustRelationship"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Father -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Father -->
 
-    <Class rdf:about="&ProfileAccio;Father">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Father">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Parent"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Man"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Man"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Parent"/>
-        <disjointWith rdf:resource="&ProfileAccio;Mother"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Mother"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Gender -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Gender -->
 
-    <Class rdf:about="&ProfileAccio;Gender">
+    <owl:Class rdf:about="&ProfileAccio;Gender">
         <rdfs:label xml:lang="nl">Geslacht</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <oneOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&ProfileAccio;Male"/>
                     <rdf:Description rdf:about="&ProfileAccio;Female"/>
-                </oneOf>
-            </Class>
-        </equivalentClass>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;BiologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Husband -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Husband -->
 
-    <Class rdf:about="&ProfileAccio;Husband">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Husband">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Partner"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Man"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Man"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Partner"/>
-        <disjointWith rdf:resource="&ProfileAccio;Wife"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Wife"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Impatient -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Impatient -->
 
-    <Class rdf:about="&ProfileAccio;Impatient">
+    <owl:Class rdf:about="&ProfileAccio;Impatient">
         <rdfs:label xml:lang="nl">Ongeduldig</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;PsychologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Language -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Language -->
 
-    <Class rdf:about="&ProfileAccio;Language">
+    <owl:Class rdf:about="&ProfileAccio;Language">
         <rdfs:label xml:lang="nl">Taal</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;SociologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Man -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Man -->
 
-    <Class rdf:about="&ProfileAccio;Man">
+    <owl:Class rdf:about="&ProfileAccio;Man">
         <rdfs:label xml:lang="nl">Man</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&ProfileAccio;Person"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasGender"/>
-                        <hasValue rdf:resource="&ProfileAccio;Male"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasGender"/>
+                        <owl:hasValue rdf:resource="&ProfileAccio;Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;Person"/>
-        <disjointWith rdf:resource="&ProfileAccio;Woman"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Woman"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#MedicalRiskProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#MedicalRiskProfile -->
 
-    <Class rdf:about="&ProfileAccio;MedicalRiskProfile">
+    <owl:Class rdf:about="&ProfileAccio;MedicalRiskProfile">
         <rdfs:label xml:lang="nl">MedischRisicoProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;RiskProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Mother -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Mother -->
 
-    <Class rdf:about="&ProfileAccio;Mother">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Mother">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Parent"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Parent"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#MotherTongue -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#MotherTongue -->
 
-    <Class rdf:about="&ProfileAccio;MotherTongue">
+    <owl:Class rdf:about="&ProfileAccio;MotherTongue">
         <rdfs:label xml:lang="nl">Moedertaal</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;Language"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Nationality -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Nationality -->
 
-    <Class rdf:about="&ProfileAccio;Nationality">
+    <owl:Class rdf:about="&ProfileAccio;Nationality">
         <rdfs:label xml:lang="nl">Nationaliteit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;SociologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Nephew -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Nephew -->
 
-    <Class rdf:about="&ProfileAccio;Nephew">
+    <owl:Class rdf:about="&ProfileAccio;Nephew">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
-        <disjointWith rdf:resource="&ProfileAccio;Niece"/>
-    </Class>
+        <owl:disjointWith rdf:resource="&ProfileAccio;Niece"/>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Niece -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Niece -->
 
-    <Class rdf:about="&ProfileAccio;Niece">
+    <owl:Class rdf:about="&ProfileAccio;Niece">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Person -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Person -->
 
-    <Class rdf:about="&ProfileAccio;Person">
+    <owl:Class rdf:about="&ProfileAccio;Person">
         <rdfs:label xml:lang="nl">Persoon</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&ProfileAccio;Man"/>
                     <rdf:Description rdf:about="&ProfileAccio;Woman"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Class>
-                        <unionOf rdf:parseType="Collection">
-                            <Restriction>
-                                <onProperty rdf:resource="&contextaccio;hasLocation"/>
-                                <onClass rdf:resource="&contextaccio;Coordinate"/>
-                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                            </Restriction>
-                            <Restriction>
-                                <onProperty rdf:resource="&contextaccio;hasLocation"/>
-                                <onClass rdf:resource="&contextaccio;Zone"/>
-                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                            </Restriction>
-                        </unionOf>
-                    </Class>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasRole"/>
-                        <someValuesFrom rdf:resource="&rolecompetenceaccio;Role"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;PersonStatus"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&upperaccio;hasId"/>
-                        <onClass rdf:resource="&upperaccio;ID"/>
-                        <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasBirthDate"/>
-                        <onClass rdf:resource="&temporal;ValidInstant"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasGender"/>
-                        <onClass rdf:resource="&ProfileAccio;Gender"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasRoleAsFunction"/>
-                        <onClass rdf:resource="&rolecompetenceaccio;Role"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasTelephoneNumber"/>
-                        <someValuesFrom rdf:resource="&xsd;string"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PersonStatus -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#PersonStatus -->
 
-    <Class rdf:about="&ProfileAccio;PersonStatus">
+    <owl:Class rdf:about="&ProfileAccio;PersonStatus">
         <rdfs:label xml:lang="nl">PersoonStatus</rdfs:label>
         <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PersonalRelationship -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#PersonalRelationship -->
 
-    <Class rdf:about="&ProfileAccio;PersonalRelationship">
+    <owl:Class rdf:about="&ProfileAccio;PersonalRelationship">
         <rdfs:label xml:lang="nl">PersoonlijkeRelatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;TrustRelationship"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Profile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Profile -->
 
-    <Class rdf:about="&ProfileAccio;Profile">
+    <owl:Class rdf:about="&ProfileAccio;Profile">
         <rdfs:label xml:lang="nl">Profiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PsychologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#PsychologicalProfile -->
 
-    <Class rdf:about="&ProfileAccio;PsychologicalProfile">
+    <owl:Class rdf:about="&ProfileAccio;PsychologicalProfile">
         <rdfs:label xml:lang="nl">PsychologischProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;BasicProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#RiskProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#RiskProfile -->
 
-    <Class rdf:about="&ProfileAccio;RiskProfile">
+    <owl:Class rdf:about="&ProfileAccio;RiskProfile">
         <rdfs:label xml:lang="nl">RisicoProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;Profile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Sister -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Sister -->
 
-    <Class rdf:about="&ProfileAccio;Sister">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Sister">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Sibling"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Sibling"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#SociologicalProfile -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#SociologicalProfile -->
 
-    <Class rdf:about="&ProfileAccio;SociologicalProfile">
+    <owl:Class rdf:about="&ProfileAccio;SociologicalProfile">
         <rdfs:label xml:lang="nl">SociologischProfiel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;BasicProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Son -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Son -->
 
-    <Class rdf:about="&ProfileAccio;Son">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Son">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Child"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Man"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Man"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Child"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#TherapeuticRelationship -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#TherapeuticRelationship -->
 
-    <Class rdf:about="&ProfileAccio;TherapeuticRelationship">
+    <owl:Class rdf:about="&ProfileAccio;TherapeuticRelationship">
         <rdfs:label xml:lang="nl">TherapeutischeRelatie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;TrustRelationship"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#TrustRelationship -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#TrustRelationship -->
 
-    <Class rdf:about="&ProfileAccio;TrustRelationship">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasTrustRelationshipWith"/>
-                        <onClass rdf:resource="&ProfileAccio;Person"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasDegree"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;integer"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+    <owl:Class rdf:about="&ProfileAccio;TrustRelationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasTrustRelationshipWith"/>
+                        <owl:onClass rdf:resource="&ProfileAccio;Person"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasDegree"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Uncle -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Uncle -->
 
-    <Class rdf:about="&ProfileAccio;Uncle">
+    <owl:Class rdf:about="&ProfileAccio;Uncle">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Wife -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Wife -->
 
-    <Class rdf:about="&ProfileAccio;Wife">
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="&ProfileAccio;Wife">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&rolecompetenceaccio;Partner"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
-                        <someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;isRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="&ProfileAccio;Woman"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Partner"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Woman -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Woman -->
 
-    <Class rdf:about="&ProfileAccio;Woman">
+    <owl:Class rdf:about="&ProfileAccio;Woman">
         <rdfs:label xml:lang="nl">Vrouw</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&ProfileAccio;Person"/>
-                    <Restriction>
-                        <onProperty rdf:resource="&ProfileAccio;hasGender"/>
-                        <hasValue rdf:resource="&ProfileAccio;Female"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
-        </equivalentClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ProfileAccio;hasGender"/>
+                        <owl:hasValue rdf:resource="&ProfileAccio;Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;Person"/>
-    </Class>
+    </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#vegetarian -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#vegetarian -->
 
-    <Class rdf:about="&ProfileAccio;vegetarian">
+    <owl:Class rdf:about="&ProfileAccio;vegetarian">
         <rdfs:label xml:lang="nl">Vegetarier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ProfileAccio;PsychologicalProfile"/>
-    </Class>
+    </owl:Class>
     
 
 
@@ -1041,48 +991,48 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Busy -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Busy -->
 
-    <NamedIndividual rdf:about="&ProfileAccio;Busy">
+    <owl:NamedIndividual rdf:about="&ProfileAccio;Busy">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
         <rdfs:label xml:lang="nl">Bezig</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Female -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Female -->
 
-    <NamedIndividual rdf:about="&ProfileAccio;Female">
+    <owl:NamedIndividual rdf:about="&ProfileAccio;Female">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
         <rdfs:label xml:lang="nl">Vrouwelijk</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Free -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Free -->
 
-    <NamedIndividual rdf:about="&ProfileAccio;Free">
+    <owl:NamedIndividual rdf:about="&ProfileAccio;Free">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
         <rdfs:label xml:lang="nl">Vrij</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Male -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#Male -->
 
-    <NamedIndividual rdf:about="&ProfileAccio;Male">
+    <owl:NamedIndividual rdf:about="&ProfileAccio;Male">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
         <rdfs:label xml:lang="nl">Mannelijk</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#withPatient -->
+    <!-- http://orca.test/ontology/ProfileAccio.owl#withPatient -->
 
-    <NamedIndividual rdf:about="&ProfileAccio;withPatient">
+    <owl:NamedIndividual rdf:about="&ProfileAccio;withPatient">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
         <rdfs:label xml:lang="nl">BijPatient</rdfs:label>
-    </NamedIndividual>
+    </owl:NamedIndividual>
     
 
 
@@ -1095,72 +1045,72 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;Busy"/>
             <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </distinctMembers>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Free"/>
+            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;BiologicalProfile"/>
             <rdf:Description rdf:about="&ProfileAccio;PsychologicalProfile"/>
             <rdf:Description rdf:about="&ProfileAccio;SociologicalProfile"/>
-        </members>
+        </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Female"/>
-            <rdf:Description rdf:about="&ProfileAccio;Male"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
-            <rdf:Description rdf:about="&ProfileAccio;Language"/>
-            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;Free"/>
-            <rdf:Description rdf:about="&ProfileAccio;withPatient"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ProfileAccio;FamilyRelationship"/>
-            <rdf:Description rdf:about="&ProfileAccio;PersonalRelationship"/>
-            <rdf:Description rdf:about="&ProfileAccio;TherapeuticRelationship"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;Busy"/>
             <rdf:Description rdf:about="&ProfileAccio;Free"/>
-        </distinctMembers>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;Person"/>
             <rdf:Description rdf:about="&ProfileAccio;Profile"/>
             <rdf:Description rdf:about="&ProfileAccio;TrustRelationship"/>
-        </members>
+        </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;FamilyRelationship"/>
+            <rdf:Description rdf:about="&ProfileAccio;PersonalRelationship"/>
+            <rdf:Description rdf:about="&ProfileAccio;TherapeuticRelationship"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Female"/>
+            <rdf:Description rdf:about="&ProfileAccio;Male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ProfileAccio;Agressive"/>
             <rdf:Description rdf:about="&ProfileAccio;Impatient"/>
             <rdf:Description rdf:about="&ProfileAccio;vegetarian"/>
-        </members>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ProfileAccio;Faith"/>
+            <rdf:Description rdf:about="&ProfileAccio;Language"/>
+            <rdf:Description rdf:about="&ProfileAccio;Nationality"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 

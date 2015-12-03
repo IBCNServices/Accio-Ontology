@@ -7,11 +7,11 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
-    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY RoleCompetenceAccio "http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY RoleCompetenceAccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
@@ -22,19 +22,19 @@
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
-     xmlns:RoleCompetenceAccio="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#"
+     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:RoleCompetenceAccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wsnextensionaccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
+     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/ContextAccio.owl"/>
+     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://orca.test/ontology/RoleCompetenceAccio.owl">
+        <imports rdf:resource="http://orca.test/ontology/ContextAccio.owl"/>
     </Ontology>
     
 
@@ -50,7 +50,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#acquiredAtTimepoint -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#acquiredAtTimepoint -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;acquiredAtTimepoint">
         <rdfs:label xml:lang="nl">VerworvenOpTijdstip</rdfs:label>
@@ -61,7 +61,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#appliesTo -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#appliesTo -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;appliesTo">
         <rdfs:label xml:lang="nl">vanToepassingOp</rdfs:label>
@@ -79,7 +79,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#belongsToRole -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#belongsToRole -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;belongsToRole">
         <rdfs:label xml:lang="nl">hoortBijRol</rdfs:label>
@@ -89,7 +89,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#discussedIn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#discussedIn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;discussedIn">
         <rdfs:label xml:lang="nl">besprokenIn</rdfs:label>
@@ -99,7 +99,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#drawnUpIn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#drawnUpIn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;drawnUpIn">
         <rdfs:label xml:lang="nl">opgesteldIn</rdfs:label>
@@ -109,7 +109,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasBed -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasBed -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasBed">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -127,7 +127,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasChild -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasChild -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasChild">
         <rdfs:label xml:lang="nl">heeftKind</rdfs:label>
@@ -137,7 +137,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasCompetence -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasCompetence">
         <rdfs:label xml:lang="nl">heeftCompetentie</rdfs:label>
@@ -148,7 +148,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasConsort -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasConsort -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasConsort">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -159,7 +159,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasParent -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasParent -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasParent">
         <rdfs:label xml:lang="nl">heeftOuder</rdfs:label>
@@ -170,7 +170,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasSibling -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasSibling -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;hasSibling">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -181,7 +181,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#isHeadOf -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isHeadOf -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;isHeadOf">
         <rdfs:label xml:lang="nl">isHoofdVan</rdfs:label>
@@ -198,7 +198,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#isMemberOf -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isMemberOf -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;isMemberOf">
         <rdfs:label xml:lang="nl">maaktDeelUitVan</rdfs:label>
@@ -215,7 +215,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#isValidIn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isValidIn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;isValidIn">
         <rdfs:label xml:lang="nl">isGeldigIn</rdfs:label>
@@ -233,7 +233,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#liesOn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#liesOn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;liesOn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -244,7 +244,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#livesOn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#livesOn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;livesOn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -255,7 +255,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#participatesIn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#participatesIn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;participatesIn">
         <rdfs:label xml:lang="nl">neemtDeelAan</rdfs:label>
@@ -265,7 +265,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#providesInputFor -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#providesInputFor -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;providesInputFor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -276,7 +276,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#worksOn -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#worksOn -->
 
     <ObjectProperty rdf:about="&RoleCompetenceAccio;worksOn">
         <rdfs:label xml:lang="nl">werktOp</rdfs:label>
@@ -297,7 +297,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#hasFrequency -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasFrequency -->
 
     <DatatypeProperty rdf:about="&RoleCompetenceAccio;hasFrequency">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -308,7 +308,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#isDigital -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isDigital -->
 
     <DatatypeProperty rdf:about="&RoleCompetenceAccio;isDigital">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -330,7 +330,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AdministerMedicationCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AdministerMedicationCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AdministerMedicationCompetence">
         <rdfs:label xml:lang="nl">MedicatieToedienenCompetentie</rdfs:label>
@@ -339,7 +339,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerCallCompetence">
         <rdfs:label xml:lang="nl">OproepBeantwoordenCompetentie</rdfs:label>
@@ -348,7 +348,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerCareCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCareCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerCareCallCompetence">
         <rdfs:label xml:lang="nl">VerzorgingOproepBeantwoordenCompetentie</rdfs:label>
@@ -358,7 +358,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerDoctorNeededCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerDoctorNeededCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerDoctorNeededCallCompetence">
         <rdfs:label xml:lang="nl">ArtsNodigOproepBeantwoordenCompetentie</rdfs:label>
@@ -367,7 +367,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerHotelFunctionCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerHotelFunctionCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerHotelFunctionCallCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieOproepBeantwoordenCompetentie</rdfs:label>
@@ -377,7 +377,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerMedicalCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerMedicalCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerMedicalCallCompetence">
         <rdfs:label xml:lang="nl">MedischeOproepBeantwoordenCompetentie</rdfs:label>
@@ -387,7 +387,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#AnswerUrgencyCallCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerUrgencyCallCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;AnswerUrgencyCallCompetence">
         <rdfs:label xml:lang="nl">UrgentieOproepBeantwoordenCompetentie</rdfs:label>
@@ -396,7 +396,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#CareCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;CareCompetence">
         <rdfs:label xml:lang="nl">ZorgCompetentie</rdfs:label>
@@ -405,7 +405,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#CareRole -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareRole -->
 
     <Class rdf:about="&RoleCompetenceAccio;CareRole">
         <rdfs:label xml:lang="nl">VerzorgingRol</rdfs:label>
@@ -414,7 +414,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Child -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Child -->
 
     <Class rdf:about="&RoleCompetenceAccio;Child">
         <rdfs:label xml:lang="nl">Kind</rdfs:label>
@@ -430,7 +430,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#CloackCaregiver -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CloackCaregiver -->
 
     <Class rdf:about="&RoleCompetenceAccio;CloackCaregiver">
         <rdfs:label xml:lang="nl">Mantelzorger</rdfs:label>
@@ -440,7 +440,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Competence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Competence -->
 
     <Class rdf:about="&RoleCompetenceAccio;Competence">
         <rdfs:label xml:lang="nl">Competentie</rdfs:label>
@@ -456,7 +456,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;EditDataCompetence">
         <rdfs:label xml:lang="nl">DataWijzigenCompetentie</rdfs:label>
@@ -471,7 +471,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Family -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Family -->
 
     <Class rdf:about="&RoleCompetenceAccio;Family">
         <rdfs:label xml:lang="nl">Familie</rdfs:label>
@@ -480,7 +480,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Form -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Form -->
 
     <Class rdf:about="&RoleCompetenceAccio;Form">
         <rdfs:label xml:lang="nl">Formulier</rdfs:label>
@@ -489,7 +489,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;HotelFunctionCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieCompetentie</rdfs:label>
@@ -498,7 +498,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#MedicalCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;MedicalCompetence">
         <rdfs:label xml:lang="nl">MedischeCompetentie</rdfs:label>
@@ -507,7 +507,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#MedicalRole -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalRole -->
 
     <Class rdf:about="&RoleCompetenceAccio;MedicalRole">
         <rdfs:label xml:lang="nl">MedischeRol</rdfs:label>
@@ -516,7 +516,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Meeting -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Meeting -->
 
     <Class rdf:about="&RoleCompetenceAccio;Meeting">
         <rdfs:label xml:lang="nl">Vergadering</rdfs:label>
@@ -525,7 +525,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Neighbour -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Neighbour -->
 
     <Class rdf:about="&RoleCompetenceAccio;Neighbour">
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CloackCaregiver"/>
@@ -533,7 +533,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Parent -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Parent -->
 
     <Class rdf:about="&RoleCompetenceAccio;Parent">
         <rdfs:label xml:lang="nl">Ouder</rdfs:label>
@@ -549,7 +549,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Partner -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Partner -->
 
     <Class rdf:about="&RoleCompetenceAccio;Partner">
         <rdfs:label xml:lang="nl">Partner</rdfs:label>
@@ -565,7 +565,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Patient -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Patient -->
 
     <Class rdf:about="&RoleCompetenceAccio;Patient">
         <rdfs:label xml:lang="nl">Patient</rdfs:label>
@@ -591,7 +591,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#ReadDataCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadDataCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;ReadDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenCompetentie</rdfs:label>
@@ -606,7 +606,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#ReadWriteEditDataCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadWriteEditDataCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;ReadWriteEditDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenAanvullenWijzigenCompetentie</rdfs:label>
@@ -624,7 +624,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Resident -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Resident -->
 
     <Class rdf:about="&RoleCompetenceAccio;Resident">
         <rdfs:label xml:lang="nl">Bewoner</rdfs:label>
@@ -650,7 +650,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Role -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Role -->
 
     <Class rdf:about="&RoleCompetenceAccio;Role">
         <rdfs:label xml:lang="nl">Rol</rdfs:label>
@@ -665,7 +665,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Services -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Services -->
 
     <Class rdf:about="&RoleCompetenceAccio;Services">
         <rdfs:label xml:lang="nl">Dienst</rdfs:label>
@@ -674,7 +674,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Sibling -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Sibling -->
 
     <Class rdf:about="&RoleCompetenceAccio;Sibling">
         <rdfs:label xml:lang="nl">BroerZus</rdfs:label>
@@ -690,7 +690,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#StaffMember -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#StaffMember -->
 
     <Class rdf:about="&RoleCompetenceAccio;StaffMember">
         <rdfs:label xml:lang="nl">Personeelslid</rdfs:label>
@@ -710,7 +710,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#Team -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Team -->
 
     <Class rdf:about="&RoleCompetenceAccio;Team">
         <rdfs:label xml:lang="nl">Team</rdfs:label>
@@ -719,7 +719,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#TherapeuticCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#TherapeuticCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;TherapeuticCompetence">
         <rdfs:label xml:lang="nl">TherapeutischeCompetentie</rdfs:label>
@@ -728,7 +728,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#WriteDataCompetence -->
+    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#WriteDataCompetence -->
 
     <Class rdf:about="&RoleCompetenceAccio;WriteDataCompetence">
         <rdfs:label xml:lang="nl">DataAanvullenCompetentie</rdfs:label>

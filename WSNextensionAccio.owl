@@ -7,9 +7,9 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
-    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY WSNextensionAccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY WSNextensionAccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
@@ -20,17 +20,17 @@
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
-     xmlns:WSNextensionAccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
+     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:WSNextensionAccio="http://orca.test/ontology/WSNextensionAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl"/>
+     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://orca.test/ontology/WSNextensionAccio.owl">
+        <imports rdf:resource="http://orca.test/ontology/WSNadjustedAccio.owl"/>
         <imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
     </Ontology>
     
@@ -47,7 +47,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#UsedIn -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#UsedIn -->
 
     <ObjectProperty rdf:about="&WSNextensionAccio;UsedIn">
         <rdfs:label xml:lang="nl">gebruiktIn</rdfs:label>
@@ -57,7 +57,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#controls -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#controls -->
 
     <ObjectProperty rdf:about="&WSNextensionAccio;controls">
         <rdfs:label xml:lang="nl">stuurtAan</rdfs:label>
@@ -78,7 +78,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#hasAlarmThresholdUnit -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#hasAlarmThresholdUnit -->
 
     <DatatypeProperty rdf:about="&WSNextensionAccio;hasAlarmThresholdUnit">
         <rdfs:label xml:lang="nl">heeftAlarmDrempelEenheid</rdfs:label>
@@ -88,7 +88,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#hasAlarmThresholdValue -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#hasAlarmThresholdValue -->
 
     <DatatypeProperty rdf:about="&WSNextensionAccio;hasAlarmThresholdValue">
         <rdfs:label xml:lang="nl">heeftAlarmDrempelWaarde</rdfs:label>
@@ -98,7 +98,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#hasUnit -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#hasUnit -->
 
     <DatatypeProperty rdf:about="&WSNextensionAccio;hasUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -119,7 +119,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Actuator -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Actuator -->
 
     <Class rdf:about="&WSNextensionAccio;Actuator">
         <rdfs:label xml:lang="nl">Actuator</rdfs:label>
@@ -140,7 +140,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#AxisRegistration -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#AxisRegistration -->
 
     <Class rdf:about="&WSNextensionAccio;AxisRegistration">
         <rdfs:label xml:lang="nl">AxisRegistratie</rdfs:label>
@@ -149,7 +149,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#AxisSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#AxisSensor -->
 
     <Class rdf:about="&WSNextensionAccio;AxisSensor">
         <rdfs:label xml:lang="nl">AxisSensor</rdfs:label>
@@ -158,7 +158,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#BodyTemperatureObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#BodyTemperatureObservation -->
 
     <Class rdf:about="&WSNextensionAccio;BodyTemperatureObservation">
         <rdfs:label xml:lang="nl">LichaamsTemperatuurObservatie</rdfs:label>
@@ -167,7 +167,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Buzzer -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Buzzer -->
 
     <Class rdf:about="&WSNextensionAccio;Buzzer">
         <rdfs:label xml:lang="nl">Zoemer</rdfs:label>
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#CODetector -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#CODetector -->
 
     <Class rdf:about="&WSNextensionAccio;CODetector">
         <rdfs:label xml:lang="nl">CODetector</rdfs:label>
@@ -185,7 +185,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#COObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#COObservation -->
 
     <Class rdf:about="&WSNextensionAccio;COObservation">
         <rdfs:label xml:lang="nl">COObservatie</rdfs:label>
@@ -194,7 +194,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#CallButton -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#CallButton -->
 
     <Class rdf:about="&WSNextensionAccio;CallButton">
         <rdfs:label xml:lang="nl">OproepDrukKnop</rdfs:label>
@@ -203,7 +203,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#CallButtonPushed -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#CallButtonPushed -->
 
     <Class rdf:about="&WSNextensionAccio;CallButtonPushed">
         <rdfs:label xml:lang="nl">OproepKnopIngedrukt</rdfs:label>
@@ -212,7 +212,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#CallButtonPushedInRapidSuccessionSymptom -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#CallButtonPushedInRapidSuccessionSymptom -->
 
     <Class rdf:about="&WSNextensionAccio;CallButtonPushedInRapidSuccessionSymptom">
         <rdfs:label xml:lang="nl">OproepKnopSnelNaElkaarIngedruktSymptoom</rdfs:label>
@@ -222,7 +222,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#ColorWall -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#ColorWall -->
 
     <Class rdf:about="&WSNextensionAccio;ColorWall">
         <rdfs:label xml:lang="nl">KleurWand</rdfs:label>
@@ -231,7 +231,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#DoorActuator -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#DoorActuator -->
 
     <Class rdf:about="&WSNextensionAccio;DoorActuator">
         <rdfs:label xml:lang="nl">DeurActuator</rdfs:label>
@@ -240,7 +240,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#DoorSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#DoorSensor -->
 
     <Class rdf:about="&WSNextensionAccio;DoorSensor">
         <rdfs:label xml:lang="nl">DeurSensor</rdfs:label>
@@ -249,7 +249,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#DoorStatusObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#DoorStatusObservation -->
 
     <Class rdf:about="&WSNextensionAccio;DoorStatusObservation">
         <rdfs:label xml:lang="nl">DeurStatusObservatie</rdfs:label>
@@ -258,7 +258,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#FallDetection -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#FallDetection -->
 
     <Class rdf:about="&WSNextensionAccio;FallDetection">
         <rdfs:label xml:lang="nl">ValDetectie</rdfs:label>
@@ -267,7 +267,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#FallObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#FallObservation -->
 
     <Class rdf:about="&WSNextensionAccio;FallObservation">
         <rdfs:label xml:lang="nl">ValObservatie</rdfs:label>
@@ -276,7 +276,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#IndicatorLight -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#IndicatorLight -->
 
     <Class rdf:about="&WSNextensionAccio;IndicatorLight">
         <rdfs:label xml:lang="nl">IndicatieLicht</rdfs:label>
@@ -285,7 +285,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Light -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Light -->
 
     <Class rdf:about="&WSNextensionAccio;Light">
         <rdfs:label xml:lang="nl">Licht</rdfs:label>
@@ -294,7 +294,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#LightSwitch -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#LightSwitch -->
 
     <Class rdf:about="&WSNextensionAccio;LightSwitch">
         <rdfs:label xml:lang="nl">LichtSchakelaar</rdfs:label>
@@ -303,7 +303,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#MagneticLock -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#MagneticLock -->
 
     <Class rdf:about="&WSNextensionAccio;MagneticLock">
         <rdfs:label xml:lang="nl">MagnetischSlot</rdfs:label>
@@ -312,7 +312,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#MoodLighting -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#MoodLighting -->
 
     <Class rdf:about="&WSNextensionAccio;MoodLighting">
         <rdfs:label xml:lang="nl">SfeerLicht</rdfs:label>
@@ -321,7 +321,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#MotionObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#MotionObservation -->
 
     <Class rdf:about="&WSNextensionAccio;MotionObservation">
         <rdfs:label xml:lang="nl">BewegingObservatie</rdfs:label>
@@ -330,7 +330,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#MotionSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#MotionSensor -->
 
     <Class rdf:about="&WSNextensionAccio;MotionSensor">
         <rdfs:label xml:lang="nl">BewegingSensor</rdfs:label>
@@ -339,7 +339,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#NoiseAboveAlarmThresholdSymptom -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#NoiseAboveAlarmThresholdSymptom -->
 
     <Class rdf:about="&WSNextensionAccio;NoiseAboveAlarmThresholdSymptom">
         <rdfs:label xml:lang="nl">GeluidBovenAlarmDrempelSymptoom</rdfs:label>
@@ -348,7 +348,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#NoiseObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#NoiseObservation -->
 
     <Class rdf:about="&WSNextensionAccio;NoiseObservation">
         <rdfs:label xml:lang="nl">GeluidObservatie</rdfs:label>
@@ -357,7 +357,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#NoiseSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#NoiseSensor -->
 
     <Class rdf:about="&WSNextensionAccio;NoiseSensor">
         <rdfs:label xml:lang="nl">GeluidSensor</rdfs:label>
@@ -366,17 +366,18 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#NormalCallButton -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#NormalCallButton -->
 
     <Class rdf:about="&WSNextensionAccio;NormalCallButton">
         <rdfs:label xml:lang="nl">NormaleOproepDrukKnop</rdfs:label>
         <rdfs:subClassOf rdf:resource="&WSNextensionAccio;CallButton"/>
+        <disjointWith rdf:resource="&WSNextensionAccio;RegistrationButton"/>
         <disjointWith rdf:resource="&WSNextensionAccio;UrgencyCallButton"/>
     </Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#PressureSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#PressureSensor -->
 
     <Class rdf:about="&WSNextensionAccio;PressureSensor">
         <rdfs:label xml:lang="nl">DrukSensor</rdfs:label>
@@ -385,7 +386,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#PressureStatusObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#PressureStatusObservation -->
 
     <Class rdf:about="&WSNextensionAccio;PressureStatusObservation">
         <rdfs:label xml:lang="nl">DrukStatusObservatie</rdfs:label>
@@ -394,7 +395,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Prism -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Prism -->
 
     <Class rdf:about="&WSNextensionAccio;Prism">
         <rdfs:label xml:lang="nl">Prisma</rdfs:label>
@@ -403,7 +404,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#RFIDSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#RFIDSensor -->
 
     <Class rdf:about="&WSNextensionAccio;RFIDSensor">
         <rdfs:label xml:lang="nl">RFIDSensor</rdfs:label>
@@ -412,7 +413,16 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#RoomLight -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#RegistrationButton -->
+
+    <Class rdf:about="&WSNextensionAccio;RegistrationButton">
+        <rdfs:subClassOf rdf:resource="&WSNextensionAccio;CallButton"/>
+        <disjointWith rdf:resource="&WSNextensionAccio;UrgencyCallButton"/>
+    </Class>
+    
+
+
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#RoomLight -->
 
     <Class rdf:about="&WSNextensionAccio;RoomLight">
         <rdfs:label xml:lang="nl">KamerLicht</rdfs:label>
@@ -421,7 +431,15 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#SoundLevelObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#SensorStatus -->
+
+    <Class rdf:about="&WSNextensionAccio;SensorStatus">
+        <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
+    </Class>
+    
+
+
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#SoundLevelObservation -->
 
     <Class rdf:about="&WSNextensionAccio;SoundLevelObservation">
         <rdfs:label xml:lang="nl">GeluidNiveauObservatie</rdfs:label>
@@ -430,7 +448,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#SoundSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#SoundSensor -->
 
     <Class rdf:about="&WSNextensionAccio;SoundSensor">
         <rdfs:label xml:lang="nl">GeluidSensor</rdfs:label>
@@ -439,7 +457,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Spock -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Spock -->
 
     <Class rdf:about="&WSNextensionAccio;Spock">
         <rdfs:label xml:lang="nl">Spock</rdfs:label>
@@ -448,7 +466,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TVSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TVSensor -->
 
     <Class rdf:about="&WSNextensionAccio;TVSensor">
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Sensor"/>
@@ -456,7 +474,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TagRegistration -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TagRegistration -->
 
     <Class rdf:about="&WSNextensionAccio;TagRegistration">
         <rdfs:label xml:lang="nl">TagRegistratie</rdfs:label>
@@ -465,7 +483,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TiltCompass -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TiltCompass -->
 
     <Class rdf:about="&WSNextensionAccio;TiltCompass">
         <rdfs:label xml:lang="nl">TiltKompas</rdfs:label>
@@ -474,7 +492,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TiltObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TiltObservation -->
 
     <Class rdf:about="&WSNextensionAccio;TiltObservation">
         <rdfs:label xml:lang="nl">TiltObservatie</rdfs:label>
@@ -483,7 +501,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TouchSensor -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TouchSensor -->
 
     <Class rdf:about="&WSNextensionAccio;TouchSensor">
         <rdfs:label xml:lang="nl">AanrakingSensor</rdfs:label>
@@ -492,7 +510,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#TouchStatusObservation -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#TouchStatusObservation -->
 
     <Class rdf:about="&WSNextensionAccio;TouchStatusObservation">
         <rdfs:label xml:lang="nl">AanrakingStatusObservatie</rdfs:label>
@@ -501,7 +519,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#UnderBedLight -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#UnderBedLight -->
 
     <Class rdf:about="&WSNextensionAccio;UnderBedLight">
         <rdfs:label xml:lang="nl">OnderBedLicht</rdfs:label>
@@ -510,7 +528,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#UrgencyCallButton -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#UrgencyCallButton -->
 
     <Class rdf:about="&WSNextensionAccio;UrgencyCallButton">
         <rdfs:label xml:lang="nl">UrgentieOproepDrukKnop</rdfs:label>
@@ -519,7 +537,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#Vibrator -->
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Vibrator -->
 
     <Class rdf:about="&WSNextensionAccio;Vibrator">
         <rdfs:label xml:lang="nl">Triller</rdfs:label>
@@ -531,11 +549,45 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#Off -->
+
+    <NamedIndividual rdf:about="&WSNextensionAccio;Off">
+        <rdf:type rdf:resource="&WSNextensionAccio;SensorStatus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://orca.test/ontology/WSNextensionAccio.owl#On -->
+
+    <NamedIndividual rdf:about="&WSNextensionAccio;On">
+        <rdf:type rdf:resource="&WSNextensionAccio;SensorStatus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&WSNextensionAccio;Off"/>
+            <rdf:Description rdf:about="&WSNextensionAccio;On"/>
+        </distinctMembers>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">

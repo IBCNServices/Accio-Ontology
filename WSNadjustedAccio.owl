@@ -9,8 +9,8 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY swrla "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#" >
-    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
-    <!ENTITY WSNadjustedAccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY WSNadjustedAccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY tbox "http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#" >
     <!ENTITY abox "http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#" >
     <!ENTITY swrlx "http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#" >
@@ -23,7 +23,7 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:WSNadjustedAccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
+     xmlns:WSNadjustedAccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
      xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
      xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
      xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
@@ -37,10 +37,10 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
-     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#"
+     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
-    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl">
-        <imports rdf:resource="http://occs.intec.ugent.be/ontology/UpperAccio.owl"/>
+    <Ontology rdf:about="http://orca.test/ontology/WSNadjustedAccio.owl">
+        <imports rdf:resource="http://orca.test/ontology/UpperAccio.owl"/>
     </Ontology>
     
 
@@ -56,7 +56,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#ObservedAtTime -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#ObservedAtTime -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;ObservedAtTime">
         <rdfs:label xml:lang="nl">geobserveerdOpTijdstip</rdfs:label>
@@ -74,7 +74,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasFault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasFault -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasFault">
         <rdfs:label xml:lang="nl">heeftFout</rdfs:label>
@@ -84,7 +84,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasNextObservation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasNextObservation -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasNextObservation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -96,7 +96,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasObservation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasObservation -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasObservation">
         <rdfs:label xml:lang="nl">heeftObservatie</rdfs:label>
@@ -106,7 +106,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasPreviousObservation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasPreviousObservation -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasPreviousObservation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -117,7 +117,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasSensorPart -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasSensorPart -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasSensorPart">
         <rdfs:label xml:lang="nl">heeftSensorOnderdeel</rdfs:label>
@@ -127,7 +127,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasSolution -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasSolution -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasSolution">
         <rdfs:label xml:lang="nl">heeftOplossing</rdfs:label>
@@ -137,7 +137,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasSymptom -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;hasSymptom">
         <rdfs:label xml:lang="nl">heeftSymptoom</rdfs:label>
@@ -148,7 +148,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isActionOf -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isActionOf -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isActionOf">
         <rdfs:label xml:lang="nl">isActieVan</rdfs:label>
@@ -159,7 +159,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isFaultOf -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isFaultOf -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isFaultOf">
         <rdfs:label xml:lang="nl">isFoutVan</rdfs:label>
@@ -168,7 +168,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isObservationOf -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isObservationOf -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isObservationOf">
         <rdfs:label xml:lang="nl">isObservatieVan</rdfs:label>
@@ -177,7 +177,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isSensorPartOf -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isSensorPartOf -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isSensorPartOf">
         <rdfs:label xml:lang="nl">isSensorOnderdeelVan</rdfs:label>
@@ -188,7 +188,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isSolutionForFault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isSolutionForFault -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isSolutionForFault">
         <rdfs:label xml:lang="nl">isOplossingVoorFout</rdfs:label>
@@ -199,7 +199,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#isSymptomOf -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#isSymptomOf -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;isSymptomOf">
         <rdfs:label xml:lang="nl">isSymptoomVan</rdfs:label>
@@ -207,7 +207,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#requiresAction -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#requiresAction -->
 
     <ObjectProperty rdf:about="&WSNadjustedAccio;requiresAction">
         <rdfs:label xml:lang="nl">vereistActie</rdfs:label>
@@ -228,7 +228,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#command -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#command -->
 
     <DatatypeProperty rdf:about="&WSNadjustedAccio;command">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -239,7 +239,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#description -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#description -->
 
     <DatatypeProperty rdf:about="&WSNadjustedAccio;description">
         <rdfs:label xml:lang="nl">heeftBeschrijving</rdfs:label>
@@ -249,7 +249,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#forOS -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#forOS -->
 
     <DatatypeProperty rdf:about="&WSNadjustedAccio;forOS">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -260,7 +260,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasValue -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#hasValue -->
 
     <DatatypeProperty rdf:about="&WSNadjustedAccio;hasValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -280,7 +280,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Action -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Action -->
 
     <Class rdf:about="&WSNadjustedAccio;Action">
         <rdfs:label xml:lang="nl">Actie</rdfs:label>
@@ -293,7 +293,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#AllSensorValuesZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#AllSensorValuesZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;AllSensorValuesZeroSymptom">
         <rdfs:label xml:lang="nl">AlleSensorWaardenNulSymptoom</rdfs:label>
@@ -305,7 +305,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#AverageDataValue -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#AverageDataValue -->
 
     <Class rdf:about="&WSNadjustedAccio;AverageDataValue">
         <rdfs:label xml:lang="nl">GemiddeldeDataWaarde</rdfs:label>
@@ -323,7 +323,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#BelowZeroValueSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#BelowZeroValueSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;BelowZeroValueSymptom">
         <rdfs:label xml:lang="nl">OnderNulWaardeSymptoom</rdfs:label>
@@ -336,7 +336,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#BytesReceived -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#BytesReceived -->
 
     <Class rdf:about="&WSNadjustedAccio;BytesReceived">
         <rdfs:label xml:lang="nl">BytesOntvangen</rdfs:label>
@@ -356,7 +356,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#BytesSent -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#BytesSent -->
 
     <Class rdf:about="&WSNadjustedAccio;BytesSent">
         <rdfs:label xml:lang="nl">BytesVerzonden</rdfs:label>
@@ -375,7 +375,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#CheckHVACSettings -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#CheckHVACSettings -->
 
     <Class rdf:about="&WSNadjustedAccio;CheckHVACSettings">
         <rdfs:label xml:lang="nl">ControleerHVACInstellingen</rdfs:label>
@@ -385,7 +385,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#DetectedFault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#DetectedFault -->
 
     <Class rdf:about="&WSNadjustedAccio;DetectedFault">
         <rdfs:label xml:lang="nl">GedecteerdeFout</rdfs:label>
@@ -394,7 +394,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#DoNotUseDataValue -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#DoNotUseDataValue -->
 
     <Class rdf:about="&WSNadjustedAccio;DoNotUseDataValue">
         <rdfs:label xml:lang="nl">GebruikDataWaardeNiet</rdfs:label>
@@ -413,7 +413,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#DoNotUseMote -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#DoNotUseMote -->
 
     <Class rdf:about="&WSNadjustedAccio;DoNotUseMote">
         <rdfs:label xml:lang="nl">GebruikMoteNiet</rdfs:label>
@@ -423,7 +423,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#ExternalTemperatureObservation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#ExternalTemperatureObservation -->
 
     <Class rdf:about="&WSNadjustedAccio;ExternalTemperatureObservation">
         <rdfs:label xml:lang="nl">ExterneTemperatuurObservatie</rdfs:label>
@@ -441,7 +441,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FailedPacketsSent -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FailedPacketsSent -->
 
     <Class rdf:about="&WSNadjustedAccio;FailedPacketsSent">
         <rdfs:label xml:lang="nl">GefaaldePakettenVerzonden</rdfs:label>
@@ -458,7 +458,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Fault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Fault -->
 
     <Class rdf:about="&WSNadjustedAccio;Fault">
         <rdfs:label xml:lang="nl">Fout</rdfs:label>
@@ -467,7 +467,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FaultyHumiditySensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FaultyHumiditySensor -->
 
     <Class rdf:about="&WSNadjustedAccio;FaultyHumiditySensor">
         <rdfs:label xml:lang="nl">FoutieveVochtigheidSensor</rdfs:label>
@@ -487,7 +487,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FaultyLightSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FaultyLightSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;FaultyLightSensor">
         <rdfs:label xml:lang="nl">FoutieveLichtSensor</rdfs:label>
@@ -507,7 +507,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FaultyPacketsReceived -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FaultyPacketsReceived -->
 
     <Class rdf:about="&WSNadjustedAccio;FaultyPacketsReceived">
         <rdfs:label xml:lang="nl">FoutievePakettenOntvangen</rdfs:label>
@@ -523,7 +523,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FaultyTMoteSky -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FaultyTMoteSky -->
 
     <Class rdf:about="&WSNadjustedAccio;FaultyTMoteSky">
         <rdfs:label xml:lang="nl">FoutieveTMoteSky</rdfs:label>
@@ -592,7 +592,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#FaultyTemperatureSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#FaultyTemperatureSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;FaultyTemperatureSensor">
         <rdfs:label xml:lang="nl">FoutieveTemperatuurSensor</rdfs:label>
@@ -612,7 +612,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Humidity -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Humidity -->
 
     <Class rdf:about="&WSNadjustedAccio;Humidity">
         <rdfs:label xml:lang="nl">Vochtigheid</rdfs:label>
@@ -627,7 +627,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#HumidityBelowZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#HumidityBelowZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;HumidityBelowZeroSymptom">
         <rdfs:label xml:lang="nl">VochtigheidOnderNulSymptoom</rdfs:label>
@@ -637,7 +637,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#HumidityNotZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#HumidityNotZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;HumidityNotZeroSymptom">
         <rdfs:label xml:lang="nl">VochtigheidNietNulSymptoom</rdfs:label>
@@ -648,7 +648,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#HumiditySensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#HumiditySensor -->
 
     <Class rdf:about="&WSNadjustedAccio;HumiditySensor">
         <rdfs:label xml:lang="nl">VochtigheidSensor</rdfs:label>
@@ -657,7 +657,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#HumidityZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#HumidityZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;HumidityZeroSymptom">
         <rdfs:label xml:lang="nl">VochtigheidNulSymptoom</rdfs:label>
@@ -668,7 +668,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#IncipientFault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#IncipientFault -->
 
     <Class rdf:about="&WSNadjustedAccio;IncipientFault">
         <rdfs:label xml:lang="nl">AanvangendeFout</rdfs:label>
@@ -677,7 +677,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#InternalTemperatureObservation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#InternalTemperatureObservation -->
 
     <Class rdf:about="&WSNadjustedAccio;InternalTemperatureObservation">
         <rdfs:label xml:lang="nl">InterneTemperatuurObservatie</rdfs:label>
@@ -691,7 +691,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#InternalVoltage -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#InternalVoltage -->
 
     <Class rdf:about="&WSNadjustedAccio;InternalVoltage">
         <rdfs:label xml:lang="nl">InterneVoltage</rdfs:label>
@@ -704,7 +704,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#LightIntensityBelowZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#LightIntensityBelowZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;LightIntensityBelowZeroSymptom">
         <rdfs:label xml:lang="nl">LichtIntensiteitOnderNulSymptoom</rdfs:label>
@@ -713,7 +713,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#LightIntensityNotZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#LightIntensityNotZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;LightIntensityNotZeroSymptom">
         <rdfs:label xml:lang="nl">LichtIntensiteitNietNulSymptoom</rdfs:label>
@@ -723,7 +723,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#LightIntensityZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#LightIntensityZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;LightIntensityZeroSymptom">
         <rdfs:label xml:lang="nl">LichtIntensiteitNulSymptoom</rdfs:label>
@@ -733,7 +733,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#LightSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#LightSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;LightSensor">
         <rdfs:label xml:lang="nl">LichtSensor</rdfs:label>
@@ -742,7 +742,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#MissingReportsSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#MissingReportsSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;MissingReportsSymptom">
         <rdfs:label xml:lang="nl">OntbekendeRapportenSymptoom</rdfs:label>
@@ -754,7 +754,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#NotZeroValueSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#NotZeroValueSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;NotZeroValueSymptom">
         <rdfs:label xml:lang="nl">NielNulWaardeSymptoom</rdfs:label>
@@ -765,7 +765,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Observation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Observation -->
 
     <Class rdf:about="&WSNadjustedAccio;Observation">
         <rdfs:label xml:lang="nl">Observatie</rdfs:label>
@@ -793,7 +793,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#ObservationEvent -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#ObservationEvent -->
 
     <Class rdf:about="&WSNadjustedAccio;ObservationEvent">
         <rdfs:label xml:lang="nl">ObservatieGebeurtenis</rdfs:label>
@@ -820,7 +820,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PacketsDropped -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PacketsDropped -->
 
     <Class rdf:about="&WSNadjustedAccio;PacketsDropped">
         <rdfs:label xml:lang="nl">PakettenLatenVallen</rdfs:label>
@@ -832,7 +832,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PacketsReceived -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PacketsReceived -->
 
     <Class rdf:about="&WSNadjustedAccio;PacketsReceived">
         <rdfs:label xml:lang="nl">PakettenOntvangen</rdfs:label>
@@ -843,7 +843,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PacketsSent -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PacketsSent -->
 
     <Class rdf:about="&WSNadjustedAccio;PacketsSent">
         <rdfs:label xml:lang="nl">PakettenVerzonden</rdfs:label>
@@ -853,7 +853,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PossibleFaultyHumiditySensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PossibleFaultyHumiditySensor -->
 
     <Class rdf:about="&WSNadjustedAccio;PossibleFaultyHumiditySensor">
         <rdfs:label xml:lang="nl">MogelijksFoutieveVochtigheidSensor</rdfs:label>
@@ -873,7 +873,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PossibleFaultyLightSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PossibleFaultyLightSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;PossibleFaultyLightSensor">
         <rdfs:label xml:lang="nl">MogelijksFoutieveLichtSensor</rdfs:label>
@@ -893,7 +893,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PossibleFaultyTemperatureSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PossibleFaultyTemperatureSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;PossibleFaultyTemperatureSensor">
         <rdfs:label xml:lang="nl">MogelijksFoutieveTemperatuurSensor</rdfs:label>
@@ -913,7 +913,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#PossibleHeatingFault -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#PossibleHeatingFault -->
 
     <Class rdf:about="&WSNadjustedAccio;PossibleHeatingFault">
         <rdfs:label xml:lang="nl">MogelijksVerwarmingsFout</rdfs:label>
@@ -922,7 +922,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#QueueOccupation -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#QueueOccupation -->
 
     <Class rdf:about="&WSNadjustedAccio;QueueOccupation">
         <rdfs:label xml:lang="nl">WachtrijBezetting</rdfs:label>
@@ -931,7 +931,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Sensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Sensor -->
 
     <Class rdf:about="&WSNadjustedAccio;Sensor">
         <rdfs:label xml:lang="nl">Sensor</rdfs:label>
@@ -940,7 +940,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#SensorBoard -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#SensorBoard -->
 
     <Class rdf:about="&WSNadjustedAccio;SensorBoard">
         <rdfs:label xml:lang="nl">SensorBord</rdfs:label>
@@ -949,7 +949,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Solution -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Solution -->
 
     <Class rdf:about="&WSNadjustedAccio;Solution">
         <rdfs:label xml:lang="nl">Oplossing</rdfs:label>
@@ -958,7 +958,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#Symptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Symptom -->
 
     <Class rdf:about="&WSNadjustedAccio;Symptom">
         <rdfs:label xml:lang="nl">Symptoom</rdfs:label>
@@ -968,7 +968,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#System -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#System -->
 
     <Class rdf:about="&WSNadjustedAccio;System">
         <rdfs:label xml:lang="nl">Systeem</rdfs:label>
@@ -977,7 +977,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TMoteSky -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TMoteSky -->
 
     <Class rdf:about="&WSNadjustedAccio;TMoteSky">
         <rdfs:label xml:lang="nl">TMoteSky</rdfs:label>
@@ -986,7 +986,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureAbove25Symptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureAbove25Symptom -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureAbove25Symptom">
         <rdfs:label xml:lang="nl">TemperatuurBoven25Symptoom</rdfs:label>
@@ -997,7 +997,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureBelow15Symptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureBelow15Symptom -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureBelow15Symptom">
         <rdfs:label xml:lang="nl">TemperatuurOnder15Symptoom</rdfs:label>
@@ -1007,7 +1007,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureNotZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureNotZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureNotZeroSymptom">
         <rdfs:label xml:lang="nl">TemperatuurNietNulSymptoom</rdfs:label>
@@ -1016,7 +1016,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureSensor -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureSensor -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureSensor">
         <rdfs:label xml:lang="nl">TemperatuurSensor</rdfs:label>
@@ -1025,7 +1025,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureSensorValue10DeviationSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureSensorValue10DeviationSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureSensorValue10DeviationSymptom">
         <rdfs:label xml:lang="nl">TemperatuurSensorWaarde10AfwijkingSymptoom</rdfs:label>
@@ -1034,7 +1034,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#TemperatureZeroSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#TemperatureZeroSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;TemperatureZeroSymptom">
         <rdfs:label xml:lang="nl">TemperatuurNulSymptoom</rdfs:label>
@@ -1043,7 +1043,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#ThresholdSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#ThresholdSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;ThresholdSymptom">
         <rdfs:label xml:lang="nl">DrempelWaardeSymptoom</rdfs:label>
@@ -1053,7 +1053,7 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#ZeroValueSymptom -->
+    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#ZeroValueSymptom -->
 
     <Class rdf:about="&WSNadjustedAccio;ZeroValueSymptom">
         <rdfs:label xml:lang="nl">NulWaardeSymptoom</rdfs:label>

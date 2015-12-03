@@ -9,14 +9,14 @@
 ]>
 
 
-<rdf:RDF xmlns="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#"
-     xml:base="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl"
+<rdf:RDF xmlns="http://orca.test/ontology/CureTaskAccio.owl#"
+     xml:base="http://orca.test/ontology/CureTaskAccio.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl">
-        <owl:imports rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl"/>
+    <owl:Ontology rdf:about="http://orca.test/ontology/CureTaskAccio.owl">
+        <owl:imports rdf:resource="http://orca.test/ontology/TaskAccio.owl"/>
     </owl:Ontology>
     
 
@@ -32,217 +32,281 @@
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdministrativeTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#AdministrativeTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdministrativeTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#AdministrativeTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">AdministratieveTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdviseFamilyAboutPersonConditionTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#AdviseFamilyAboutPersonConditionTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdviseFamilyAboutPersonConditionTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#AdviseFamilyAboutPersonConditionTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">AdviseerFamilieOverToestandPersoonTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AnswerCareCallTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#AnswerCareCallTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AnswerCareCallTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#AnswerCareCallTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">VerzorgingOproepBeantwoordenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#CareTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#CareTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
         <rdfs:comment xml:lang="nl">ZorgTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckGlycaemia -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#CheckGlycaemia -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckGlycaemia">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckParametersPatient"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#CheckGlycaemia">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CheckParametersPatient"/>
         <rdfs:comment xml:lang="nl">GlykemieControleren</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckParametersPatient -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#CheckParametersPatient -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckParametersPatient">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#CheckParametersPatient">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">ParametersPatientControleren</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CleanPatient -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#CleanPatient -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CleanPatient">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#CleanPatient">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientWassen</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#ComposePlanning -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#ComposePlanning -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#ComposePlanning">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdministrativeTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#ComposePlanning">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#AdministrativeTask"/>
         <rdfs:comment xml:lang="nl">PlanningOpstellen</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#DressPatientTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#DressPatientTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#DressPatientTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#DressPatientTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientAankledenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#FollowUpPsychologicalConditionTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#FollowUpPsychologicalConditionTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#FollowUpPsychologicalConditionTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#FollowUpPsychologicalConditionTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PsychologischeToestandOpvolgenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientToiletAssistentieGevenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientFromToiletTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#HelpPatientFromToiletTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientFromToiletTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#HelpPatientFromToiletTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask"/>
         <rdfs:comment xml:lang="nl">PatientVanToiletHelpenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientInOrOutBedTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#HelpPatientInOrOutBedTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientInOrOutBedTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MovePatientInRoom"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#HelpPatientInOrOutBedTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MovePatientInRoom"/>
         <rdfs:comment xml:lang="nl">PatientInOfUitBedHelpenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientOnTheToiletTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#HelpPatientOnTheToiletTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#HelpPatientOnTheToiletTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#HelpPatientOnTheToiletTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#GivePatientToiletAssistenceTask"/>
         <rdfs:comment xml:lang="nl">PatientOpToiletHelpenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#InFormFamilyAboutPersonConditionTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#InFormFamilyAboutPersonConditionTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#InFormFamilyAboutPersonConditionTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#InFormFamilyAboutPersonConditionTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">InformeerFamilieOverToestandPatientTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MeasureBloodPressure -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#MeasureBloodPressure -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MeasureBloodPressure">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CheckParametersPatient"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#MeasureBloodPressure">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CheckParametersPatient"/>
         <rdfs:comment xml:lang="nl">BloeddrukMeten</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MedicalTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#MedicalTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MedicalTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MorningCare -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#MorningCare -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MorningCare">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#MorningCare">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">OchtendVerzorging</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MovePatientInRoom -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#MovePatientInRoom -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#MovePatientInRoom">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#MovePatientInRoom">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientVerplaatsenInKamer</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#PlaceOrder -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#PlaceOrder -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#PlaceOrder">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdministrativeTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#PlaceOrder">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#AdministrativeTask"/>
         <rdfs:comment xml:lang="nl">BestellingPlaatsen</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#PutPatientInBetterPosition -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#PutPatientInBetterPosition -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#PutPatientInBetterPosition">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#PutPatientInBetterPosition">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientGoedLeggen</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#RefreshPatientTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#RefreshPatientTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#RefreshPatientTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#CareTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#RefreshPatientTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#CareTask"/>
         <rdfs:comment xml:lang="nl">PatientVerversenTaak</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#RegisterPatient -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#RegisterPatient -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#RegisterPatient">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#AdministrativeTask"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#RegisterPatient">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#AdministrativeTask"/>
         <rdfs:comment xml:lang="nl">PatientRegisteren</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#TurnPatientInBedTask -->
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#TurnPatientInBedTask -->
 
-    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#TurnPatientInBedTask">
-        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CureTaskAccio.owl#PutPatientInBetterPosition"/>
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#TurnPatientInBedTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#PutPatientInBetterPosition"/>
         <rdfs:comment xml:lang="nl">PatientDraaienInBedTaak</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#AdministerEpiduralTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#AdministerEpiduralTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#AdministerMedicationTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#AdministerMedicationTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#ConstructMedicationSchemeTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#ConstructMedicationSchemeTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#CreateTreatmentPlanTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#CreateTreatmentPlanTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#DiagnosisTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#DiagnosisTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#PerformPatientRoundsTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#PerformPatientRoundsTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#RequestBloodTestTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#RequestBloodTestTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#RequestExaminationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://orca.test/ontology/CureTaskAccio.owl#RequestExaminationTask -->
+
+    <owl:Class rdf:about="http://orca.test/ontology/CureTaskAccio.owl#RequestExaminationTask">
+        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CureTaskAccio.owl#MedicalTask"/>
     </owl:Class>
 </rdf:RDF>
 
