@@ -5,7 +5,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY UpperAccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
+    <!ENTITY UpperAccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
@@ -13,11 +13,11 @@
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:UpperAccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
+     xmlns:UpperAccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/UpperAccio.owl">
+    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/UpperAccio.owl">
         <imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
     </Ontology>
     
@@ -56,7 +56,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasContext -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasContext -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasContext">
         <rdfs:label xml:lang="nl">heeftContext</rdfs:label>
@@ -66,7 +66,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentSeason -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasCurrentSeason -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasCurrentSeason">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -77,7 +77,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentShift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasCurrentShift -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasCurrentShift">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -88,7 +88,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentVacationPeriod -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasCurrentVacationPeriod -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasCurrentVacationPeriod">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -99,7 +99,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasEnterTimeOntology -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasEnterTimeOntology -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasEnterTimeOntology">
         <rdfs:label xml:lang="nl">heeftIngaveTijdOntologie</rdfs:label>
@@ -108,7 +108,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasId -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasId -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasId">
         <rdfs:label xml:lang="nl">heeftId</rdfs:label>
@@ -118,7 +118,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasSource -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasSource -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasSource">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -129,7 +129,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasStatus -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasStatus -->
 
     <ObjectProperty rdf:about="&UpperAccio;hasStatus">
         <rdfs:label xml:lang="nl">heeftStatus</rdfs:label>
@@ -150,7 +150,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasID -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasID -->
 
     <DatatypeProperty rdf:about="&UpperAccio;hasID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -161,7 +161,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasIDType -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasIDType -->
 
     <DatatypeProperty rdf:about="&UpperAccio;hasIDType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -171,7 +171,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasName -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#hasName -->
 
     <DatatypeProperty rdf:about="&UpperAccio;hasName">
         <rdfs:domain rdf:resource="&temporal;Entity"/>
@@ -180,7 +180,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#isVacationPeriod -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#isVacationPeriod -->
 
     <DatatypeProperty rdf:about="&UpperAccio;isVacationPeriod">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -202,7 +202,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#CurrentTime -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#CurrentTime -->
 
     <Class rdf:about="&UpperAccio;CurrentTime">
         <rdfs:label xml:lang="nl">HuidigeTijd</rdfs:label>
@@ -242,7 +242,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Event -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Event -->
 
     <Class rdf:about="&UpperAccio;Event">
         <rdfs:label xml:lang="nl">Gebeurtenis</rdfs:label>
@@ -251,7 +251,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#ID -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#ID -->
 
     <Class rdf:about="&UpperAccio;ID">
         <rdfs:label xml:lang="nl">ID</rdfs:label>
@@ -281,7 +281,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Season -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Season -->
 
     <Class rdf:about="&UpperAccio;Season">
         <rdfs:label xml:lang="nl">Seizoen</rdfs:label>
@@ -302,7 +302,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Shift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Shift -->
 
     <Class rdf:about="&UpperAccio;Shift">
         <rdfs:label xml:lang="nl">Regime</rdfs:label>
@@ -312,7 +312,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Status -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Status -->
 
     <Class rdf:about="&UpperAccio;Status">
         <rdfs:label xml:lang="nl">Status</rdfs:label>
@@ -321,7 +321,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Vacation -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Vacation -->
 
     <Class rdf:about="&UpperAccio;Vacation">
         <rdfs:label xml:lang="nl">Vakantie</rdfs:label>
@@ -341,7 +341,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Autumn -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Autumn -->
 
     <NamedIndividual rdf:about="&UpperAccio;Autumn">
         <rdf:type rdf:resource="&UpperAccio;Season"/>
@@ -350,7 +350,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#ChristmasHoliday -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#ChristmasHoliday -->
 
     <NamedIndividual rdf:about="&UpperAccio;ChristmasHoliday">
         <rdf:type rdf:resource="&UpperAccio;Vacation"/>
@@ -359,7 +359,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#DayShift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#DayShift -->
 
     <NamedIndividual rdf:about="&UpperAccio;DayShift">
         <rdf:type rdf:resource="&UpperAccio;Shift"/>
@@ -368,7 +368,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#MorningShift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#MorningShift -->
 
     <NamedIndividual rdf:about="&UpperAccio;MorningShift">
         <rdf:type rdf:resource="&UpperAccio;Shift"/>
@@ -377,7 +377,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#NightShift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#NightShift -->
 
     <NamedIndividual rdf:about="&UpperAccio;NightShift">
         <rdf:type rdf:resource="&UpperAccio;Shift"/>
@@ -386,7 +386,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Spring -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Spring -->
 
     <NamedIndividual rdf:about="&UpperAccio;Spring">
         <rdf:type rdf:resource="&UpperAccio;Season"/>
@@ -395,7 +395,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Summer -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Summer -->
 
     <NamedIndividual rdf:about="&UpperAccio;Summer">
         <rdf:type rdf:resource="&UpperAccio;Season"/>
@@ -404,7 +404,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#SummerHoliday -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#SummerHoliday -->
 
     <NamedIndividual rdf:about="&UpperAccio;SummerHoliday">
         <rdf:type rdf:resource="&UpperAccio;Vacation"/>
@@ -413,7 +413,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#WeekendShift -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#WeekendShift -->
 
     <NamedIndividual rdf:about="&UpperAccio;WeekendShift">
         <rdf:type rdf:resource="&UpperAccio;Shift"/>
@@ -422,7 +422,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Winter -->
+    <!-- http://occs.intec.ugent.be/ontology/UpperAccio.owl#Winter -->
 
     <NamedIndividual rdf:about="&UpperAccio;Winter">
         <rdf:type rdf:resource="&UpperAccio;Season"/>

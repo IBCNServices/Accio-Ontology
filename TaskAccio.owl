@@ -5,63 +5,41 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TaskAccio "http://occs.intec.ugent.be/ontology/TaskAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY TaskAccio "http://localhost/ontologies/AccioOntology/TaskAccio.owl#" >
-    <!ENTITY upperaccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://localhost/ontologies/AccioOntology/ContextAccio.owl#" >
-    <!ENTITY profileaccio "http://localhost/ontologies/AccioOntology/ProfileAccio.owl#" >
+    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
+    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
+    <!ENTITY profileaccio "http://occs.intec.ugent.be/ontology/ProfileAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
-    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnextensionaccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
-     xmlns:TaskAccio="http://localhost/ontologies/AccioOntology/TaskAccio.owl#"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
-     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
-     xmlns:profileaccio="http://localhost/ontologies/AccioOntology/ProfileAccio.owl#"
-     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
-     xmlns:rolecompetenceaccio="http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#"
+     xmlns:profileaccio="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#"
+     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
-     xmlns:contextaccio="http://localhost/ontologies/AccioOntology/ContextAccio.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/TaskAccio.owl">
-        <imports rdf:resource="http://localhost/ontologies/AccioOntology/ProfileAccio.owl"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wsnextensionaccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
+     xmlns:TaskAccio="http://occs.intec.ugent.be/ontology/TaskAccio.owl#"
+     xmlns:rolecompetenceaccio="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/TaskAccio.owl">
+        <imports rdf:resource="http://occs.intec.ugent.be/ontology/ProfileAccio.owl"/>
     </Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -76,7 +54,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#acceptedBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#acceptedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;acceptedBy">
         <rdfs:label xml:lang="nl">aanvaardDoor</rdfs:label>
@@ -86,7 +64,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#assignedTo -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#assignedTo -->
 
     <ObjectProperty rdf:about="&TaskAccio;assignedTo">
         <rdfs:label xml:lang="nl">toegewezenAan</rdfs:label>
@@ -96,7 +74,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#callMadeBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#callMadeBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;callMadeBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -115,7 +93,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#causedBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#causedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;causedBy">
         <rdfs:label xml:lang="nl">veroorzaaktDoor</rdfs:label>
@@ -125,7 +103,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#executedBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;executedBy">
         <rdfs:label xml:lang="nl">uitgevoerdDoor</rdfs:label>
@@ -135,7 +113,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#executedDuring -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedDuring -->
 
     <ObjectProperty rdf:about="&TaskAccio;executedDuring">
         <rdfs:label xml:lang="nl">uitgevoerdGedurende</rdfs:label>
@@ -146,7 +124,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#executedOn -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#executedOn -->
 
     <ObjectProperty rdf:about="&TaskAccio;executedOn">
         <rdfs:label xml:lang="nl">uitgevoerdOp</rdfs:label>
@@ -156,7 +134,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasConsentedForTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasConsentedForTask -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasConsentedForTask">
         <rdfs:label xml:lang="nl">heeftToegezegdVoorTaak</rdfs:label>
@@ -166,7 +144,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasCurrentTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasCurrentTask -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasCurrentTask">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -177,7 +155,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasPriority -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasPriority -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasPriority">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -188,7 +166,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasReason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasReason -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasReason">
         <rdfs:label xml:lang="nl">heeftReden</rdfs:label>
@@ -198,7 +176,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasSequenceNumber -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasSequenceNumber -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasSequenceNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -209,7 +187,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasTODOTasks -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasTODOTasks -->
 
     <ObjectProperty rdf:about="&TaskAccio;hasTODOTasks">
         <rdfs:label xml:lang="nl">heeftTODOTaken</rdfs:label>
@@ -219,7 +197,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isAssignedTo -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isAssignedTo -->
 
     <ObjectProperty rdf:about="&TaskAccio;isAssignedTo">
         <rdfs:label xml:lang="nl">isToegewezenAan</rdfs:label>
@@ -228,7 +206,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
 
     <ObjectProperty rdf:about="&TaskAccio;isIdeallyPerformedAtLocation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -239,7 +217,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isInNeedOfCompetence -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isInNeedOfCompetence -->
 
     <ObjectProperty rdf:about="&TaskAccio;isInNeedOfCompetence">
         <rdfs:label xml:lang="nl">heeftNoodAanCompetentie</rdfs:label>
@@ -249,7 +227,17 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isTaskFor -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isRegisteredWith -->
+
+    <ObjectProperty rdf:about="&TaskAccio;isRegisteredWith">
+        <rdfs:label xml:lang="nl">isGeregistreerdBij</rdfs:label>
+        <rdfs:domain rdf:resource="&profileaccio;Person"/>
+        <rdfs:range rdf:resource="&profileaccio;Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isTaskFor -->
 
     <ObjectProperty rdf:about="&TaskAccio;isTaskFor">
         <rdfs:label xml:lang="nl">isTaakVoor</rdfs:label>
@@ -259,7 +247,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#madeAtLocation -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#madeAtLocation -->
 
     <ObjectProperty rdf:about="&TaskAccio;madeAtLocation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -270,7 +258,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#madeAtTime -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#madeAtTime -->
 
     <ObjectProperty rdf:about="&TaskAccio;madeAtTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -282,7 +270,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#makesCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#makesCall -->
 
     <ObjectProperty rdf:about="&TaskAccio;makesCall">
         <rdfs:label xml:lang="nl">maaktOproep</rdfs:label>
@@ -291,7 +279,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#redirectedBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#redirectedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;redirectedBy">
         <rdfs:label xml:lang="nl">doorverwezenDoor</rdfs:label>
@@ -301,7 +289,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#telephonicContactMadeBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#telephonicContactMadeBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;telephonicContactMadeBy">
         <rdfs:label xml:lang="nl">telefonischContactGemaaktDoor</rdfs:label>
@@ -311,7 +299,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#temporarilyAcceptedBy -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#temporarilyAcceptedBy -->
 
     <ObjectProperty rdf:about="&TaskAccio;temporarilyAcceptedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -333,7 +321,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#NumberOfTimesCalled -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesCalled -->
 
     <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesCalled">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -344,7 +332,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#NumberOfTimesRedirected -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesRedirected -->
 
     <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRedirected">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -355,7 +343,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#NumberOfTimesRelaunched -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NumberOfTimesRelaunched -->
 
     <DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRelaunched">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -366,7 +354,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasHadTelephonicContact -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasHadTelephonicContact -->
 
     <DatatypeProperty rdf:about="&TaskAccio;hasHadTelephonicContact">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -377,7 +365,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasMinimalInterventionTime -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasMinimalInterventionTime -->
 
     <DatatypeProperty rdf:about="&TaskAccio;hasMinimalInterventionTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -388,7 +376,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#hasTimeOutTime -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#hasTimeOutTime -->
 
     <DatatypeProperty rdf:about="&TaskAccio;hasTimeOutTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -399,7 +387,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#isInConversation -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#isInConversation -->
 
     <DatatypeProperty rdf:about="&TaskAccio;isInConversation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -421,7 +409,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#ActualTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#ActualTask -->
 
     <Class rdf:about="&TaskAccio;ActualTask">
         <rdfs:label xml:lang="nl">EchteTaak</rdfs:label>
@@ -430,7 +418,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#AssistanceCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#AssistanceCall -->
 
     <Class rdf:about="&TaskAccio;AssistanceCall">
         <rdfs:label xml:lang="nl">AssistentieOproep</rdfs:label>
@@ -468,7 +456,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Call -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Call -->
 
     <Class rdf:about="&TaskAccio;Call">
         <rdfs:label xml:lang="nl">Oproep</rdfs:label>
@@ -545,7 +533,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#CareAssistanceCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareAssistanceCall -->
 
     <Class rdf:about="&TaskAccio;CareAssistanceCall">
         <rdfs:label xml:lang="nl">VerzorgingAssistentieOproep</rdfs:label>
@@ -565,7 +553,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#CareCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareCall -->
 
     <Class rdf:about="&TaskAccio;CareCall">
         <rdfs:label xml:lang="nl">VerzorgingOproep</rdfs:label>
@@ -585,7 +573,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#CareContextCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareContextCall -->
 
     <Class rdf:about="&TaskAccio;CareContextCall">
         <rdfs:label xml:lang="nl">VerzorgingContextOproep</rdfs:label>
@@ -605,7 +593,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#CareReason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#CareReason -->
 
     <Class rdf:about="&TaskAccio;CareReason">
         <rdfs:label xml:lang="nl">VerzorgingReden</rdfs:label>
@@ -614,7 +602,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#ContextCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#ContextCall -->
 
     <Class rdf:about="&TaskAccio;ContextCall">
         <rdfs:label xml:lang="nl">ContextOproep</rdfs:label>
@@ -645,7 +633,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#DoctorNeededAssistanceCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededAssistanceCall -->
 
     <Class rdf:about="&TaskAccio;DoctorNeededAssistanceCall">
         <rdfs:label xml:lang="nl">ArtsNodigAssistentieOproep</rdfs:label>
@@ -665,7 +653,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#DoctorNeededCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededCall -->
 
     <Class rdf:about="&TaskAccio;DoctorNeededCall">
         <rdfs:label xml:lang="nl">ArtsNodigOproep</rdfs:label>
@@ -685,7 +673,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#DoctorNeededContextCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededContextCall -->
 
     <Class rdf:about="&TaskAccio;DoctorNeededContextCall">
         <rdfs:label xml:lang="nl">ArtsNodigContextOproep</rdfs:label>
@@ -705,7 +693,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#DoctorNeededReason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#DoctorNeededReason -->
 
     <Class rdf:about="&TaskAccio;DoctorNeededReason">
         <rdfs:label xml:lang="nl">ArtsNodigReden</rdfs:label>
@@ -714,7 +702,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#HotelFunctionAssistanceCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionAssistanceCall -->
 
     <Class rdf:about="&TaskAccio;HotelFunctionAssistanceCall">
         <rdfs:label xml:lang="nl">HotelFunctieAssistentieOproep</rdfs:label>
@@ -734,7 +722,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#HotelFunctionCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionCall -->
 
     <Class rdf:about="&TaskAccio;HotelFunctionCall">
         <rdfs:label xml:lang="nl">HotelFunctieOproep</rdfs:label>
@@ -754,7 +742,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#HotelFunctionContextCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionContextCall -->
 
     <Class rdf:about="&TaskAccio;HotelFunctionContextCall">
         <rdfs:label xml:lang="nl">HotelFunctieContextOproep</rdfs:label>
@@ -774,7 +762,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#HotelFunctionReason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#HotelFunctionReason -->
 
     <Class rdf:about="&TaskAccio;HotelFunctionReason">
         <rdfs:label xml:lang="nl">HotelFunctieReden</rdfs:label>
@@ -783,7 +771,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#MedicalAssistanceCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalAssistanceCall -->
 
     <Class rdf:about="&TaskAccio;MedicalAssistanceCall">
         <rdfs:label xml:lang="nl">MedischeAssistentieOproep</rdfs:label>
@@ -803,7 +791,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#MedicalCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalCall -->
 
     <Class rdf:about="&TaskAccio;MedicalCall">
         <rdfs:label xml:lang="nl">MedischeOproep</rdfs:label>
@@ -823,7 +811,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#MedicalContextCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalContextCall -->
 
     <Class rdf:about="&TaskAccio;MedicalContextCall">
         <rdfs:label xml:lang="nl">MedischeContextOproep</rdfs:label>
@@ -843,7 +831,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#MedicalReason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#MedicalReason -->
 
     <Class rdf:about="&TaskAccio;MedicalReason">
         <rdfs:label xml:lang="nl">MedischeReden</rdfs:label>
@@ -852,7 +840,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#NormalCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NormalCall -->
 
     <Class rdf:about="&TaskAccio;NormalCall">
         <rdfs:label xml:lang="nl">NormaleOproep</rdfs:label>
@@ -895,7 +883,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#NormalPriority -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NormalPriority -->
 
     <Class rdf:about="&TaskAccio;NormalPriority">
         <rdfs:label xml:lang="nl">NormalePrioriteit</rdfs:label>
@@ -904,7 +892,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Notification -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Notification -->
 
     <Class rdf:about="&TaskAccio;Notification">
         <rdfs:label xml:lang="nl">Melding</rdfs:label>
@@ -913,7 +901,15 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#PlannedTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#NotificationStatus -->
+
+    <Class rdf:about="&TaskAccio;NotificationStatus">
+        <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#PlannedTask -->
 
     <Class rdf:about="&TaskAccio;PlannedTask">
         <rdfs:label xml:lang="nl">GeplandeTaak</rdfs:label>
@@ -922,7 +918,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#PotentialTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#PotentialTask -->
 
     <Class rdf:about="&TaskAccio;PotentialTask">
         <rdfs:label xml:lang="nl">PotentieleTaak</rdfs:label>
@@ -931,7 +927,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Priority -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Priority -->
 
     <Class rdf:about="&TaskAccio;Priority">
         <rdfs:label xml:lang="nl">Prioriteit</rdfs:label>
@@ -950,7 +946,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Reason -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Reason -->
 
     <Class rdf:about="&TaskAccio;Reason">
         <rdfs:label xml:lang="nl">Reden</rdfs:label>
@@ -969,7 +965,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#RoomWithBusyStaffMember -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithBusyStaffMember -->
 
     <Class rdf:about="&TaskAccio;RoomWithBusyStaffMember">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslid</rdfs:label>
@@ -1002,7 +998,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
 
     <Class rdf:about="&TaskAccio;RoomWithBusyStaffMemberAcceptedMedicalCall">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslidAanvaarddeMedischeOproep</rdfs:label>
@@ -1052,7 +1048,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#RoomWithPatientorResident -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithPatientorResident -->
 
     <Class rdf:about="&TaskAccio;RoomWithPatientorResident">
         <rdfs:label xml:lang="nl">KamerMetPatientOfBewoner</rdfs:label>
@@ -1084,7 +1080,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#RoomWithStaffMember -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#RoomWithStaffMember -->
 
     <Class rdf:about="&TaskAccio;RoomWithStaffMember">
         <rdfs:label xml:lang="nl">KamerMetPersoneelslid</rdfs:label>
@@ -1125,18 +1121,10 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Task -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task -->
 
     <Class rdf:about="&TaskAccio;Task">
         <rdfs:label xml:lang="nl">Taak</rdfs:label>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
-                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
-                </unionOf>
-            </Class>
-        </equivalentClass>
         <equivalentClass>
             <Class>
                 <intersectionOf rdf:parseType="Collection">
@@ -1161,6 +1149,14 @@
                 </intersectionOf>
             </Class>
         </equivalentClass>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&TaskAccio;PlannedTask"/>
+                    <rdf:Description rdf:about="&TaskAccio;UnplannedTask"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
         <rdfs:subClassOf rdf:resource="&process;Process"/>
         <disjointWith rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1168,7 +1164,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#TaskStatus -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#TaskStatus -->
 
     <Class rdf:about="&TaskAccio;TaskStatus">
         <rdfs:label xml:lang="nl">TaakStatus</rdfs:label>
@@ -1177,7 +1173,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#UnplannedTask -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UnplannedTask -->
 
     <Class rdf:about="&TaskAccio;UnplannedTask">
         <rdfs:label xml:lang="nl">OngeplandeTaak</rdfs:label>
@@ -1186,7 +1182,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#UrgencyCall -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UrgencyCall -->
 
     <Class rdf:about="&TaskAccio;UrgencyCall">
         <rdfs:label xml:lang="nl">UrgentieOproep</rdfs:label>
@@ -1218,7 +1214,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#UrgentPriority -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#UrgentPriority -->
 
     <Class rdf:about="&TaskAccio;UrgentPriority">
         <rdfs:label xml:lang="nl">UrgentePrioriteit</rdfs:label>
@@ -1227,7 +1223,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#VeryUrgentPriority -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#VeryUrgentPriority -->
 
     <Class rdf:about="&TaskAccio;VeryUrgentPriority">
         <rdfs:label xml:lang="nl">ZeerUrgentePrioriteit</rdfs:label>
@@ -1247,7 +1243,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Accepted -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Accepted -->
 
     <NamedIndividual rdf:about="&TaskAccio;Accepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1256,16 +1252,17 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Active -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Active -->
 
     <NamedIndividual rdf:about="&TaskAccio;Active">
+        <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Actief</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Assigned -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Assigned -->
 
     <NamedIndividual rdf:about="&TaskAccio;Assigned">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1274,16 +1271,17 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Finished -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Finished -->
 
     <NamedIndividual rdf:about="&TaskAccio;Finished">
+        <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
         <rdfs:label xml:lang="nl">Beeindigd</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#InConversation -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#InConversation -->
 
     <NamedIndividual rdf:about="&TaskAccio;InConversation">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1292,7 +1290,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#Redirected -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#Redirected -->
 
     <NamedIndividual rdf:about="&TaskAccio;Redirected">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1301,7 +1299,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/TaskAccio.owl#TemporarilyAccepted -->
+    <!-- http://occs.intec.ugent.be/ontology/TaskAccio.owl#TemporarilyAccepted -->
 
     <NamedIndividual rdf:about="&TaskAccio;TemporarilyAccepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1321,102 +1319,36 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
             <rdf:Description rdf:about="&TaskAccio;InConversation"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
+            <rdf:Description rdf:about="&TaskAccio;Priority"/>
+            <rdf:Description rdf:about="&TaskAccio;Reason"/>
+            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
         </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionContextCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalContextCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
-            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
-            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </distinctMembers>
     </rdf:Description>
@@ -1431,21 +1363,109 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareReason"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionReason"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalReason"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;NormalPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;UrgentPriority"/>
+            <rdf:Description rdf:about="&TaskAccio;VeryUrgentPriority"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionAssistanceCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalAssistanceCall"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;CareContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;HotelFunctionContextCall"/>
+            <rdf:Description rdf:about="&TaskAccio;MedicalContextCall"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Redirected"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
@@ -1459,22 +1479,21 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-            <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Priority"/>
-            <rdf:Description rdf:about="&TaskAccio;Reason"/>
-            <rdf:Description rdf:about="&TaskAccio;TaskStatus"/>
-        </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
+            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
@@ -1489,35 +1508,14 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&TaskAccio;Accepted"/>
             <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Finished"/>
             <rdf:Description rdf:about="&TaskAccio;Redirected"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Active"/>
-            <rdf:Description rdf:about="&TaskAccio;InConversation"/>
-        </distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&TaskAccio;Assigned"/>
             <rdf:Description rdf:about="&TaskAccio;TemporarilyAccepted"/>
         </distinctMembers>
     </rdf:Description>
@@ -1525,5 +1523,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 

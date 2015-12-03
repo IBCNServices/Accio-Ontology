@@ -9,15 +9,15 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
-    <!ENTITY ProfileAccio "http://localhost/ontologies/AccioOntology/ProfileAccio.owl#" >
-    <!ENTITY contextaccio "http://localhost/ontologies/AccioOntology/ContextAccio.owl#" >
+    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
+    <!ENTITY ProfileAccio "http://occs.intec.ugent.be/ontology/ProfileAccio.owl#" >
+    <!ENTITY contextaccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
-    <!ENTITY wsnextensionaccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#" >
 ]>
 
 
@@ -25,22 +25,22 @@
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:wsnextensionaccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
-     xmlns:rolecompetenceaccio="http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl#"
+     xmlns:wsnextensionaccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
+     xmlns:rolecompetenceaccio="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ProfileAccio="http://localhost/ontologies/AccioOntology/ProfileAccio.owl#"
-     xmlns:contextaccio="http://localhost/ontologies/AccioOntology/ContextAccio.owl#"
-     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#">
-    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/ProfileAccio.owl">
-        <imports rdf:resource="http://localhost/ontologies/AccioOntology/RoleCompetenceAccio.owl"/>
+     xmlns:ProfileAccio="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#"
+     xmlns:contextaccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/ProfileAccio.owl">
+        <imports rdf:resource="http://occs.intec.ugent.be/ontology/RoleCompetenceAccio.owl"/>
     </Ontology>
     
 
@@ -78,7 +78,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#associatedWith -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#associatedWith -->
 
     <ObjectProperty rdf:about="&ProfileAccio;associatedWith">
         <rdfs:label xml:lang="nl">geassocieerdMet</rdfs:label>
@@ -88,7 +88,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasAunt -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasAunt -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasAunt">
         <rdfs:range rdf:resource="&ProfileAccio;Aunt"/>
@@ -98,7 +98,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasBasicProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBasicProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasBasicProfile">
         <rdfs:label xml:lang="nl">heeftBasisProfiel</rdfs:label>
@@ -108,7 +108,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasBiologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBiologicalProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasBiologicalProfile">
         <rdfs:label xml:lang="nl">heeftBiologischProfiel</rdfs:label>
@@ -118,7 +118,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasBirthDate -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBirthDate -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasBirthDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -130,7 +130,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasBrother -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasBrother -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasBrother">
         <rdfs:range rdf:resource="&ProfileAccio;Brother"/>
@@ -139,7 +139,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasCurrentRole -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasCurrentRole -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasCurrentRole">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -150,7 +150,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasDaughter -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasDaughter -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasDaughter">
         <rdfs:range rdf:resource="&ProfileAccio;Daughter"/>
@@ -159,7 +159,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasExperienceCompetence -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasExperienceCompetence -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasExperienceCompetence">
         <rdfs:label xml:lang="nl">heeftErvaringsCompetentie</rdfs:label>
@@ -169,7 +169,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasFaith -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFaith -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasFaith">
         <rdfs:label xml:lang="nl">heeftGeloof</rdfs:label>
@@ -179,7 +179,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasFather -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFather -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasFather">
         <rdfs:range rdf:resource="&ProfileAccio;Father"/>
@@ -188,7 +188,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasFormalTrainingCompetence -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasFormalTrainingCompetence -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasFormalTrainingCompetence">
         <rdfs:label xml:lang="nl">heeftVormingsCompetentie</rdfs:label>
@@ -198,7 +198,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasGender -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasGender -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasGender">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -210,7 +210,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasHusband -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasHusband -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasHusband">
         <rdfs:range rdf:resource="&ProfileAccio;Husband"/>
@@ -219,7 +219,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasLanguage -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasLanguage -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasLanguage">
         <rdfs:label xml:lang="nl">heeftTaal</rdfs:label>
@@ -229,7 +229,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasMother -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasMother -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasMother">
         <rdfs:range rdf:resource="&ProfileAccio;Mother"/>
@@ -238,7 +238,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasNationality -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNationality -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasNationality">
         <rdfs:label xml:lang="nl">heeftNationaliteit</rdfs:label>
@@ -248,7 +248,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasNephew -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNephew -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasNephew">
         <rdfs:range rdf:resource="&ProfileAccio;Nephew"/>
@@ -258,7 +258,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasNiece -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasNiece -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasNiece">
         <rdfs:range rdf:resource="&ProfileAccio;Niece"/>
@@ -267,7 +267,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasProfile">
         <rdfs:label xml:lang="nl">heeftProfiel</rdfs:label>
@@ -277,7 +277,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasProxy -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasProxy -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasProxy">
         <rdfs:label xml:lang="nl">heeftProxy</rdfs:label>
@@ -287,7 +287,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasPsychologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasPsychologicalProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasPsychologicalProfile">
         <rdfs:label xml:lang="nl">heeftPsychologischProfiel</rdfs:label>
@@ -297,7 +297,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasRiskProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRiskProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasRiskProfile">
         <rdfs:label xml:lang="nl">heeftRisicoProfiel</rdfs:label>
@@ -307,7 +307,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasRole -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRole -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasRole">
         <rdfs:label xml:lang="nl">heeftRol</rdfs:label>
@@ -318,7 +318,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasRoleAsFunction -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasRoleAsFunction -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasRoleAsFunction">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -329,7 +329,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasSister -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSister -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasSister">
         <rdfs:range rdf:resource="&ProfileAccio;Sister"/>
@@ -338,7 +338,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasSociologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSociologicalProfile -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasSociologicalProfile">
         <rdfs:label xml:lang="nl">heeftSociologischProfiel</rdfs:label>
@@ -348,7 +348,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasSon -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasSon -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasSon">
         <rdfs:range rdf:resource="&ProfileAccio;Son"/>
@@ -357,7 +357,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasTrustRelationship -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTrustRelationship -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationship">
         <rdfs:label xml:lang="nl">heeftVertrouwensRelatie</rdfs:label>
@@ -367,7 +367,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasTrustRelationshipWith -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTrustRelationshipWith -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationshipWith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -378,7 +378,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasUncle -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasUncle -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasUncle">
         <rdfs:range rdf:resource="&ProfileAccio;Uncle"/>
@@ -387,7 +387,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasWife -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasWife -->
 
     <ObjectProperty rdf:about="&ProfileAccio;hasWife">
         <rdfs:range rdf:resource="&ProfileAccio;Wife"/>
@@ -396,19 +396,19 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#isAuntOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isAuntOf -->
 
     <ObjectProperty rdf:about="&ProfileAccio;isAuntOf"/>
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#isNephewOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isNephewOf -->
 
     <ObjectProperty rdf:about="&ProfileAccio;isNephewOf"/>
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#isNieceOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isNieceOf -->
 
     <ObjectProperty rdf:about="&ProfileAccio;isNieceOf">
         <inverseOf rdf:resource="&ProfileAccio;hasNiece"/>
@@ -416,7 +416,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#isRoleOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isRoleOf -->
 
     <ObjectProperty rdf:about="&ProfileAccio;isRoleOf">
         <rdfs:label xml:lang="nl">isRolVan</rdfs:label>
@@ -424,7 +424,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#isUncleOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#isUncleOf -->
 
     <ObjectProperty rdf:about="&ProfileAccio;isUncleOf">
         <inverseOf rdf:resource="&ProfileAccio;hasUncle"/>
@@ -432,7 +432,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#loggedIntoDevice -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#loggedIntoDevice -->
 
     <ObjectProperty rdf:about="&ProfileAccio;loggedIntoDevice">
         <rdfs:label xml:lang="nl">aangemeldBijToestel</rdfs:label>
@@ -442,7 +442,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#ownsDevice -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#ownsDevice -->
 
     <ObjectProperty rdf:about="&ProfileAccio;ownsDevice">
         <rdfs:label xml:lang="nl">BezitToestel</rdfs:label>
@@ -452,7 +452,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#ownsItem -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#ownsItem -->
 
     <ObjectProperty rdf:about="&ProfileAccio;ownsItem">
         <rdfs:label xml:lang="nl">BezitItem</rdfs:label>
@@ -462,7 +462,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#responsibleFor -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#responsibleFor -->
 
     <ObjectProperty rdf:about="&ProfileAccio;responsibleFor">
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
@@ -482,7 +482,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasDegree -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasDegree -->
 
     <DatatypeProperty rdf:about="&ProfileAccio;hasDegree">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -493,7 +493,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
 
     <DatatypeProperty rdf:about="&ProfileAccio;hasPersonalTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftPersoonlijkTelefoonNummer</rdfs:label>
@@ -502,7 +502,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasTelephoneNumber -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasTelephoneNumber -->
 
     <DatatypeProperty rdf:about="&ProfileAccio;hasTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftTelefoonNummer</rdfs:label>
@@ -512,7 +512,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#hasWorkTelephoneNumber -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#hasWorkTelephoneNumber -->
 
     <DatatypeProperty rdf:about="&ProfileAccio;hasWorkTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftWerkTelefoonNummer</rdfs:label>
@@ -532,7 +532,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Agressive -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Agressive -->
 
     <Class rdf:about="&ProfileAccio;Agressive">
         <rdfs:label xml:lang="nl">Agressief</rdfs:label>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Aunt -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Aunt -->
 
     <Class rdf:about="&ProfileAccio;Aunt">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -550,7 +550,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#BasicProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BasicProfile -->
 
     <Class rdf:about="&ProfileAccio;BasicProfile">
         <rdfs:label xml:lang="nl">BasisProfiel</rdfs:label>
@@ -559,7 +559,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#BehavioralRiskProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BehavioralRiskProfile -->
 
     <Class rdf:about="&ProfileAccio;BehavioralRiskProfile">
         <rdfs:label xml:lang="nl">GedragsRisicoProfiel</rdfs:label>
@@ -568,7 +568,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#BiologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#BiologicalProfile -->
 
     <Class rdf:about="&ProfileAccio;BiologicalProfile">
         <rdfs:label xml:lang="nl">BiologischProfiel</rdfs:label>
@@ -577,7 +577,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Brother -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Brother -->
 
     <Class rdf:about="&ProfileAccio;Brother">
         <equivalentClass>
@@ -597,7 +597,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Daughter -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Daughter -->
 
     <Class rdf:about="&ProfileAccio;Daughter">
         <equivalentClass>
@@ -617,7 +617,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Faith -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Faith -->
 
     <Class rdf:about="&ProfileAccio;Faith">
         <rdfs:label xml:lang="nl">Geloof</rdfs:label>
@@ -626,7 +626,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#FamilyRelationship -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#FamilyRelationship -->
 
     <Class rdf:about="&ProfileAccio;FamilyRelationship">
         <rdfs:label xml:lang="nl">FamilialeRelatie</rdfs:label>
@@ -635,7 +635,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Father -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Father -->
 
     <Class rdf:about="&ProfileAccio;Father">
         <equivalentClass>
@@ -655,7 +655,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Gender -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Gender -->
 
     <Class rdf:about="&ProfileAccio;Gender">
         <rdfs:label xml:lang="nl">Geslacht</rdfs:label>
@@ -672,7 +672,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Husband -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Husband -->
 
     <Class rdf:about="&ProfileAccio;Husband">
         <equivalentClass>
@@ -692,7 +692,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Impatient -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Impatient -->
 
     <Class rdf:about="&ProfileAccio;Impatient">
         <rdfs:label xml:lang="nl">Ongeduldig</rdfs:label>
@@ -701,7 +701,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Language -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Language -->
 
     <Class rdf:about="&ProfileAccio;Language">
         <rdfs:label xml:lang="nl">Taal</rdfs:label>
@@ -710,7 +710,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Man -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Man -->
 
     <Class rdf:about="&ProfileAccio;Man">
         <rdfs:label xml:lang="nl">Man</rdfs:label>
@@ -731,7 +731,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#MedicalRiskProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#MedicalRiskProfile -->
 
     <Class rdf:about="&ProfileAccio;MedicalRiskProfile">
         <rdfs:label xml:lang="nl">MedischRisicoProfiel</rdfs:label>
@@ -740,7 +740,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Mother -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Mother -->
 
     <Class rdf:about="&ProfileAccio;Mother">
         <equivalentClass>
@@ -759,7 +759,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#MotherTongue -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#MotherTongue -->
 
     <Class rdf:about="&ProfileAccio;MotherTongue">
         <rdfs:label xml:lang="nl">Moedertaal</rdfs:label>
@@ -768,7 +768,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Nationality -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Nationality -->
 
     <Class rdf:about="&ProfileAccio;Nationality">
         <rdfs:label xml:lang="nl">Nationaliteit</rdfs:label>
@@ -777,7 +777,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Nephew -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Nephew -->
 
     <Class rdf:about="&ProfileAccio;Nephew">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -786,7 +786,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Niece -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Niece -->
 
     <Class rdf:about="&ProfileAccio;Niece">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -794,7 +794,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Person -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Person -->
 
     <Class rdf:about="&ProfileAccio;Person">
         <rdfs:label xml:lang="nl">Persoon</rdfs:label>
@@ -863,7 +863,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#PersonStatus -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PersonStatus -->
 
     <Class rdf:about="&ProfileAccio;PersonStatus">
         <rdfs:label xml:lang="nl">PersoonStatus</rdfs:label>
@@ -872,7 +872,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#PersonalRelationship -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PersonalRelationship -->
 
     <Class rdf:about="&ProfileAccio;PersonalRelationship">
         <rdfs:label xml:lang="nl">PersoonlijkeRelatie</rdfs:label>
@@ -881,7 +881,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Profile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Profile -->
 
     <Class rdf:about="&ProfileAccio;Profile">
         <rdfs:label xml:lang="nl">Profiel</rdfs:label>
@@ -890,7 +890,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#PsychologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#PsychologicalProfile -->
 
     <Class rdf:about="&ProfileAccio;PsychologicalProfile">
         <rdfs:label xml:lang="nl">PsychologischProfiel</rdfs:label>
@@ -899,7 +899,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#RiskProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#RiskProfile -->
 
     <Class rdf:about="&ProfileAccio;RiskProfile">
         <rdfs:label xml:lang="nl">RisicoProfiel</rdfs:label>
@@ -908,7 +908,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Sister -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Sister -->
 
     <Class rdf:about="&ProfileAccio;Sister">
         <equivalentClass>
@@ -927,7 +927,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#SociologicalProfile -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#SociologicalProfile -->
 
     <Class rdf:about="&ProfileAccio;SociologicalProfile">
         <rdfs:label xml:lang="nl">SociologischProfiel</rdfs:label>
@@ -936,7 +936,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Son -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Son -->
 
     <Class rdf:about="&ProfileAccio;Son">
         <equivalentClass>
@@ -955,7 +955,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#TherapeuticRelationship -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#TherapeuticRelationship -->
 
     <Class rdf:about="&ProfileAccio;TherapeuticRelationship">
         <rdfs:label xml:lang="nl">TherapeutischeRelatie</rdfs:label>
@@ -964,7 +964,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#TrustRelationship -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#TrustRelationship -->
 
     <Class rdf:about="&ProfileAccio;TrustRelationship">
         <equivalentClass>
@@ -988,7 +988,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Uncle -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Uncle -->
 
     <Class rdf:about="&ProfileAccio;Uncle">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -996,7 +996,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Wife -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Wife -->
 
     <Class rdf:about="&ProfileAccio;Wife">
         <equivalentClass>
@@ -1015,7 +1015,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Woman -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Woman -->
 
     <Class rdf:about="&ProfileAccio;Woman">
         <rdfs:label xml:lang="nl">Vrouw</rdfs:label>
@@ -1035,7 +1035,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#vegetarian -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#vegetarian -->
 
     <Class rdf:about="&ProfileAccio;vegetarian">
         <rdfs:label xml:lang="nl">Vegetarier</rdfs:label>
@@ -1055,7 +1055,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Busy -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Busy -->
 
     <NamedIndividual rdf:about="&ProfileAccio;Busy">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
@@ -1064,7 +1064,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Female -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Female -->
 
     <NamedIndividual rdf:about="&ProfileAccio;Female">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
@@ -1073,7 +1073,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Free -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Free -->
 
     <NamedIndividual rdf:about="&ProfileAccio;Free">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
@@ -1082,7 +1082,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#Male -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Male -->
 
     <NamedIndividual rdf:about="&ProfileAccio;Male">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
@@ -1091,7 +1091,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ProfileAccio.owl#withPatient -->
+    <!-- http://occs.intec.ugent.be/ontology/ProfileAccio.owl#withPatient -->
 
     <NamedIndividual rdf:about="&ProfileAccio;withPatient">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>

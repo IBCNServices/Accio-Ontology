@@ -7,13 +7,13 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
-    <!ENTITY ContextAccio "http://localhost/ontologies/AccioOntology/ContextAccio.owl#" >
+    <!ENTITY upperaccio "http://occs.intec.ugent.be/ontology/UpperAccio.owl#" >
+    <!ENTITY ContextAccio "http://occs.intec.ugent.be/ontology/ContextAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
-    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
-    <!ENTITY wsnextensionaccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
 ]>
 
 
@@ -21,41 +21,19 @@
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wsnextensionaccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
+     xmlns:wsnextensionaccio="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ContextAccio="http://localhost/ontologies/AccioOntology/ContextAccio.owl#"
-     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#">
-    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/ContextAccio.owl">
-        <imports rdf:resource="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl"/>
+     xmlns:ContextAccio="http://occs.intec.ugent.be/ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://occs.intec.ugent.be/ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://occs.intec.ugent.be/ontology/ContextAccio.owl">
+        <imports rdf:resource="http://occs.intec.ugent.be/ontology/WSNextensionAccio.owl"/>
     </Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -70,7 +48,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#belongsTo -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#belongsTo -->
 
     <ObjectProperty rdf:about="&ContextAccio;belongsTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -81,7 +59,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#belongsToTroop -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#belongsToTroop -->
 
     <ObjectProperty rdf:about="&ContextAccio;belongsToTroop">
         <rdfs:label xml:lang="nl">behoortTotTroep</rdfs:label>
@@ -90,7 +68,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsHallway -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#containsHallway -->
 
     <ObjectProperty rdf:about="&ContextAccio;containsHallway">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -108,7 +86,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsRoom -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#containsRoom -->
 
     <ObjectProperty rdf:about="&ContextAccio;containsRoom">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -126,7 +104,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsSystem -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#containsSystem -->
 
     <ObjectProperty rdf:about="&ContextAccio;containsSystem">
         <rdfs:label xml:lang="nl">bevatSysteem</rdfs:label>
@@ -136,7 +114,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasCentreCoordinate -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasCentreCoordinate -->
 
     <ObjectProperty rdf:about="&ContextAccio;hasCentreCoordinate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -147,7 +125,17 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasFunction -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasDeviceProperty -->
+
+    <ObjectProperty rdf:about="&ContextAccio;hasDeviceProperty">
+        <rdfs:comment>heeftToestelEigenschap</rdfs:comment>
+        <rdfs:domain rdf:resource="&ContextAccio;Device"/>
+        <rdfs:range rdf:resource="&ContextAccio;DeviceProperties"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasFunction -->
 
     <ObjectProperty rdf:about="&ContextAccio;hasFunction">
         <rdfs:label xml:lang="nl">heeftFunctie</rdfs:label>
@@ -164,7 +152,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasLocation -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasLocation -->
 
     <ObjectProperty rdf:about="&ContextAccio;hasLocation">
         <rdfs:label xml:lang="nl">heeftLocatie</rdfs:label>
@@ -173,7 +161,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isLocationOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#isLocationOf -->
 
     <ObjectProperty rdf:about="&ContextAccio;isLocationOf">
         <rdfs:label xml:lang="nl">isLocatieVan</rdfs:label>
@@ -182,7 +170,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isOnDepartment -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#isOnDepartment -->
 
     <ObjectProperty rdf:about="&ContextAccio;isOnDepartment">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -200,7 +188,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isOnFloor -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#isOnFloor -->
 
     <ObjectProperty rdf:about="&ContextAccio;isOnFloor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -218,7 +206,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#troopComposedOf -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#troopComposedOf -->
 
     <ObjectProperty rdf:about="&ContextAccio;troopComposedOf">
         <rdfs:label xml:lang="nl">troepSamengesteldUit</rdfs:label>
@@ -239,7 +227,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageHumidity -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasAverageHumidity -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasAverageHumidity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -250,7 +238,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageLightIntensity -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasAverageLightIntensity -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasAverageLightIntensity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -261,7 +249,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageTemperature -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasAverageTemperature -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasAverageTemperature">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -272,7 +260,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasNumber -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasNumber -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -284,6 +272,7 @@
                     <rdf:Description rdf:about="&ContextAccio;Bed"/>
                     <rdf:Description rdf:about="&ContextAccio;Floor"/>
                     <rdf:Description rdf:about="&ContextAccio;Room"/>
+                    <rdf:Description rdf:about="&ContextAccio;TVChannel"/>
                 </unionOf>
             </Class>
         </rdfs:domain>
@@ -291,7 +280,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasRadius -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasRadius -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasRadius">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -302,7 +291,16 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasXCoordinate -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasVolume -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasVolume">
+        <rdfs:domain rdf:resource="&ContextAccio;TVVolume"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasXCoordinate -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasXCoordinate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -313,7 +311,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasYCoordinate -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#hasYCoordinate -->
 
     <DatatypeProperty rdf:about="&ContextAccio;hasYCoordinate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -335,7 +333,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#AxisKey -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#AxisKey -->
 
     <Class rdf:about="&ContextAccio;AxisKey">
         <rdfs:label xml:lang="nl">AxisSleutel</rdfs:label>
@@ -375,7 +373,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Bed -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Bed -->
 
     <Class rdf:about="&ContextAccio;Bed">
         <rdfs:label xml:lang="nl">Bed</rdfs:label>
@@ -409,7 +407,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#CellPhone -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#CellPhone -->
 
     <Class rdf:about="&ContextAccio;CellPhone">
         <rdfs:label xml:lang="nl">GSM</rdfs:label>
@@ -432,7 +430,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Closet -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Closet -->
 
     <Class rdf:about="&ContextAccio;Closet">
         <rdfs:label xml:lang="nl">Kast</rdfs:label>
@@ -441,7 +439,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Coordinate -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Coordinate -->
 
     <Class rdf:about="&ContextAccio;Coordinate">
         <rdfs:label xml:lang="nl">Coordinaat</rdfs:label>
@@ -466,7 +464,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Department -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Department -->
 
     <Class rdf:about="&ContextAccio;Department">
         <rdfs:label xml:lang="nl">Afdeling</rdfs:label>
@@ -489,7 +487,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Device -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Device -->
 
     <Class rdf:about="&ContextAccio;Device">
         <rdfs:label xml:lang="nl">Toestel</rdfs:label>
@@ -527,7 +525,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#DeviceFunction -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#DeviceFunction -->
 
     <Class rdf:about="&ContextAccio;DeviceFunction">
         <rdfs:label xml:lang="nl">ToestelFunctie</rdfs:label>
@@ -537,7 +535,16 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#DeviceStatus -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#DeviceProperties -->
+
+    <Class rdf:about="&ContextAccio;DeviceProperties">
+        <rdfs:label xml:lang="nl">ToestelEigenschappen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#DeviceStatus -->
 
     <Class rdf:about="&ContextAccio;DeviceStatus">
         <rdfs:label xml:lang="nl">ToestelStatus</rdfs:label>
@@ -550,7 +557,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Floor -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Floor -->
 
     <Class rdf:about="&ContextAccio;Floor">
         <rdfs:label xml:lang="nl">Verdieping</rdfs:label>
@@ -578,7 +585,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Function -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Function -->
 
     <Class rdf:about="&ContextAccio;Function">
         <rdfs:label xml:lang="nl">Functie</rdfs:label>
@@ -587,7 +594,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Furniture -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Furniture -->
 
     <Class rdf:about="&ContextAccio;Furniture">
         <rdfs:label xml:lang="nl">Meubel</rdfs:label>
@@ -596,7 +603,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#GPS -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#GPS -->
 
     <Class rdf:about="&ContextAccio;GPS">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
@@ -604,7 +611,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Hallway -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Hallway -->
 
     <Class rdf:about="&ContextAccio;Hallway">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
@@ -628,7 +635,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Intercom -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Intercom -->
 
     <Class rdf:about="&ContextAccio;Intercom">
         <rdfs:label xml:lang="nl">Intercom</rdfs:label>
@@ -643,7 +650,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Item -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Item -->
 
     <Class rdf:about="&ContextAccio;Item">
         <rdfs:label xml:lang="nl">Item</rdfs:label>
@@ -652,7 +659,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#LightControl -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#LightControl -->
 
     <Class rdf:about="&ContextAccio;LightControl">
         <rdfs:label xml:lang="nl">LichtBediening</rdfs:label>
@@ -661,7 +668,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Location -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Location -->
 
     <Class rdf:about="&ContextAccio;Location">
         <rdfs:label xml:lang="nl">Locatie</rdfs:label>
@@ -670,7 +677,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#MultimediaHandset -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#MultimediaHandset -->
 
     <Class rdf:about="&ContextAccio;MultimediaHandset">
         <rdfs:label xml:lang="nl">MultimediaHandset</rdfs:label>
@@ -705,7 +712,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#NurseCall -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#NurseCall -->
 
     <Class rdf:about="&ContextAccio;NurseCall">
         <rdfs:label xml:lang="nl">VerpleegOproep</rdfs:label>
@@ -714,7 +721,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#NursingOfficeTerminal -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#NursingOfficeTerminal -->
 
     <Class rdf:about="&ContextAccio;NursingOfficeTerminal">
         <rdfs:label xml:lang="nl">VerpleegpostTerminal</rdfs:label>
@@ -729,7 +736,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PDA -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#PDA -->
 
     <Class rdf:about="&ContextAccio;PDA">
         <rdfs:label xml:lang="nl">PDA</rdfs:label>
@@ -752,7 +759,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PatientCare -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#PatientCare -->
 
     <Class rdf:about="&ContextAccio;PatientCare">
         <rdfs:label xml:lang="nl">PatientVerzorging</rdfs:label>
@@ -761,7 +768,16 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PersonalElectronicDevice -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#PatientUnit -->
+
+    <Class rdf:about="&ContextAccio;PatientUnit">
+        <rdfs:label xml:lang="nl">PatientEenheid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#PersonalElectronicDevice -->
 
     <Class rdf:about="&ContextAccio;PersonalElectronicDevice">
         <rdfs:label xml:lang="nl">PersoonlijkElektronischToestel</rdfs:label>
@@ -772,7 +788,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PortablePhone -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#PortablePhone -->
 
     <Class rdf:about="&ContextAccio;PortablePhone">
         <rdfs:label xml:lang="nl">DECT</rdfs:label>
@@ -795,7 +811,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#ResidentialUse -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#ResidentialUse -->
 
     <Class rdf:about="&ContextAccio;ResidentialUse">
         <rdfs:label xml:lang="nl">WoonFunctie</rdfs:label>
@@ -804,7 +820,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#RollingShutterControl -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#RollingShutterControl -->
 
     <Class rdf:about="&ContextAccio;RollingShutterControl">
         <rdfs:label xml:lang="nl">RolluikBediening</rdfs:label>
@@ -813,7 +829,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Room -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Room -->
 
     <Class rdf:about="&ContextAccio;Room">
         <rdfs:label xml:lang="nl">Kamer</rdfs:label>
@@ -859,7 +875,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#RoomFunction -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#RoomFunction -->
 
     <Class rdf:about="&ContextAccio;RoomFunction">
         <rdfs:label xml:lang="nl">KamerFunctie</rdfs:label>
@@ -868,7 +884,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Sanitary -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Sanitary -->
 
     <Class rdf:about="&ContextAccio;Sanitary">
         <rdfs:label xml:lang="nl">Sanitair</rdfs:label>
@@ -877,7 +893,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Screen -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Screen -->
 
     <Class rdf:about="&ContextAccio;Screen">
         <rdfs:label xml:lang="nl">Scherm</rdfs:label>
@@ -892,7 +908,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#SmartPhone -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#SmartPhone -->
 
     <Class rdf:about="&ContextAccio;SmartPhone">
         <rdfs:label xml:lang="nl">SmartPhone</rdfs:label>
@@ -923,7 +939,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TV -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TV -->
 
     <Class rdf:about="&ContextAccio;TV">
         <rdfs:label xml:lang="nl">TV</rdfs:label>
@@ -938,7 +954,39 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TVControl -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TVChannel -->
+
+    <Class rdf:about="&ContextAccio;TVChannel">
+        <rdfs:label xml:lang="nl">TVKanaal</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;TVChannel"/>
+                    <Restriction>
+                        <onProperty rdf:resource="&upperaccio;hasName"/>
+                        <someValuesFrom rdf:resource="&xsd;string"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;TVProperties"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                <someValuesFrom rdf:resource="&xsd;integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&upperaccio;hasName"/>
+                <someValuesFrom rdf:resource="&xsd;string"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TVControl -->
 
     <Class rdf:about="&ContextAccio;TVControl">
         <rdfs:label xml:lang="nl">TVBediening</rdfs:label>
@@ -947,7 +995,31 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TaskManagement -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TVProperties -->
+
+    <Class rdf:about="&ContextAccio;TVProperties">
+        <rdfs:label xml:lang="nl">TVEigenschappen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceProperties"/>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TVVolume -->
+
+    <Class rdf:about="&ContextAccio;TVVolume">
+        <rdfs:label xml:lang="nl">TVVolume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;TVProperties"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasVolume"/>
+                <someValuesFrom rdf:resource="&xsd;integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#TaskManagement -->
 
     <Class rdf:about="&ContextAccio;TaskManagement">
         <rdfs:label xml:lang="nl">TaakBeheer</rdfs:label>
@@ -956,7 +1028,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Telephone -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Telephone -->
 
     <Class rdf:about="&ContextAccio;Telephone">
         <rdfs:label xml:lang="nl">Telefoon</rdfs:label>
@@ -971,7 +1043,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Telephony -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Telephony -->
 
     <Class rdf:about="&ContextAccio;Telephony">
         <rdfs:label xml:lang="nl">Telefonie</rdfs:label>
@@ -980,7 +1052,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Terminal -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Terminal -->
 
     <Class rdf:about="&ContextAccio;Terminal">
         <rdfs:label xml:lang="nl">Terminal</rdfs:label>
@@ -1023,7 +1095,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Towel -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Towel -->
 
     <Class rdf:about="&ContextAccio;Towel">
         <rdfs:label xml:lang="nl">Handdoek</rdfs:label>
@@ -1032,7 +1104,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Troop -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Troop -->
 
     <Class rdf:about="&ContextAccio;Troop">
         <rdfs:label xml:lang="nl">Troep</rdfs:label>
@@ -1041,7 +1113,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Visualization -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Visualization -->
 
     <Class rdf:about="&ContextAccio;Visualization">
         <rdfs:label xml:lang="nl">Visualisatie</rdfs:label>
@@ -1050,7 +1122,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Zone -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Zone -->
 
     <Class rdf:about="&ContextAccio;Zone">
         <rdfs:label xml:lang="nl">Zone</rdfs:label>
@@ -1084,7 +1156,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Off -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#Off -->
 
     <NamedIndividual rdf:about="&ContextAccio;Off">
         <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>
@@ -1093,7 +1165,7 @@
     
 
 
-    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#On -->
+    <!-- http://occs.intec.ugent.be/ontology/ContextAccio.owl#On -->
 
     <NamedIndividual rdf:about="&ContextAccio;On">
         <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>
@@ -1121,18 +1193,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;LightControl"/>
-            <rdf:Description rdf:about="&ContextAccio;NurseCall"/>
-            <rdf:Description rdf:about="&ContextAccio;RollingShutterControl"/>
-            <rdf:Description rdf:about="&ContextAccio;TVControl"/>
-            <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
-            <rdf:Description rdf:about="&ContextAccio;Telephony"/>
-            <rdf:Description rdf:about="&ContextAccio;Visualization"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
             <rdf:Description rdf:about="&ContextAccio;Furniture"/>
             <rdf:Description rdf:about="&ContextAccio;Towel"/>
@@ -1148,9 +1208,21 @@
             <rdf:Description rdf:about="&ContextAccio;Troop"/>
         </members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;LightControl"/>
+            <rdf:Description rdf:about="&ContextAccio;NurseCall"/>
+            <rdf:Description rdf:about="&ContextAccio;RollingShutterControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TVControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
+            <rdf:Description rdf:about="&ContextAccio;Telephony"/>
+            <rdf:Description rdf:about="&ContextAccio;Visualization"/>
+        </members>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
