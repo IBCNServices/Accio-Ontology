@@ -24,6 +24,72 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasTrendValue -->
+
+    <owl:ObjectProperty rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasTrendValue">
+        <rdfs:domain rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Trend"/>
+        <rdfs:range rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TrendValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#isTrendOf -->
+
+    <owl:ObjectProperty rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#isTrendOf">
+        <rdfs:domain rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Trend"/>
+        <rdfs:range rdf:resource="http://occs.intec.ugent.be/ontology/ProfileAccio.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasAverageValue -->
+
+    <owl:DatatypeProperty rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasAverageValue">
+        <rdfs:subPropertyOf rdf:resource="http://occs.intec.ugent.be/ontology/WSNadjustedAccio.owl#hasValue"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasDuration">
+        <rdfs:domain rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Trend"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasNumberOfOccurrence -->
+
+    <owl:DatatypeProperty rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#hasNumberOfOccurrence">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -669,6 +735,22 @@
     <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask">
         <rdfs:label xml:lang="nl">MateriaalVervoerenOfVerplaatsenTaak</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Trend -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Trend">
+        <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TrendValue -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TrendValue">
+        <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
     </owl:Class>
     
 
