@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY UpperAccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
+    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UpperAccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/UpperAccio.owl">
+        <imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasContext -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasContext">
+        <rdfs:label xml:lang="nl">heeftContext</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;Event"/>
+        <rdfs:range rdf:resource="&temporal;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentSeason -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasCurrentSeason">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftHuidigSeizoen</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;CurrentTime"/>
+        <rdfs:range rdf:resource="&UpperAccio;Season"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentShift -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasCurrentShift">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftHuidigShift</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;CurrentTime"/>
+        <rdfs:range rdf:resource="&UpperAccio;Shift"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasCurrentVacationPeriod -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasCurrentVacationPeriod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftHuidigVakantiePeriode</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;CurrentTime"/>
+        <rdfs:range rdf:resource="&UpperAccio;Vacation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasEnterTimeOntology -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasEnterTimeOntology">
+        <rdfs:label xml:lang="nl">heeftIngaveTijdOntologie</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasId -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasId">
+        <rdfs:label xml:lang="nl">heeftId</rdfs:label>
+        <rdfs:range rdf:resource="&UpperAccio;ID"/>
+        <rdfs:domain rdf:resource="&temporal;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasSource -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasSource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftBron</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;Event"/>
+        <rdfs:range rdf:resource="&temporal;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasStatus -->
+
+    <ObjectProperty rdf:about="&UpperAccio;hasStatus">
+        <rdfs:label xml:lang="nl">heeftStatus</rdfs:label>
+        <rdfs:range rdf:resource="&UpperAccio;Status"/>
+        <rdfs:domain rdf:resource="&temporal;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasID -->
+
+    <DatatypeProperty rdf:about="&UpperAccio;hasID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftID</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;ID"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasIDType -->
+
+    <DatatypeProperty rdf:about="&UpperAccio;hasIDType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&UpperAccio;ID"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#hasName -->
+
+    <DatatypeProperty rdf:about="&UpperAccio;hasName">
+        <rdfs:domain rdf:resource="&temporal;Entity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#isVacationPeriod -->
+
+    <DatatypeProperty rdf:about="&UpperAccio;isVacationPeriod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">isVakantiePeriode</rdfs:label>
+        <rdfs:domain rdf:resource="&UpperAccio;CurrentTime"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#CurrentTime -->
+
+    <Class rdf:about="&UpperAccio;CurrentTime">
+        <rdfs:label xml:lang="nl">HuidigeTijd</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasCurrentSeason"/>
+                        <onClass rdf:resource="&UpperAccio;Season"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasCurrentShift"/>
+                        <onClass rdf:resource="&UpperAccio;Shift"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasCurrentVacationPeriod"/>
+                        <onClass rdf:resource="&UpperAccio;Vacation"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;isVacationPeriod"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;boolean"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&temporal;hasTime"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;dateTime"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&temporal;ValidInstant"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Event -->
+
+    <Class rdf:about="&UpperAccio;Event">
+        <rdfs:label xml:lang="nl">Gebeurtenis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;Entity"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#ID -->
+
+    <Class rdf:about="&UpperAccio;ID">
+        <rdfs:label xml:lang="nl">ID</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasEnterTimeOntology"/>
+                        <onClass rdf:resource="&temporal;ValidInstant"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasID"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;string"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&UpperAccio;hasIDType"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;string"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Season -->
+
+    <Class rdf:about="&UpperAccio;Season">
+        <rdfs:label xml:lang="nl">Seizoen</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&UpperAccio;Spring"/>
+                    <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+                    <rdf:Description rdf:about="&UpperAccio;Winter"/>
+                    <rdf:Description rdf:about="&UpperAccio;Summer"/>
+                </oneOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
+        <disjointWith rdf:resource="&UpperAccio;Shift"/>
+        <disjointWith rdf:resource="&UpperAccio;Vacation"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Shift -->
+
+    <Class rdf:about="&UpperAccio;Shift">
+        <rdfs:label xml:lang="nl">Regime</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
+        <disjointWith rdf:resource="&UpperAccio;Vacation"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Status -->
+
+    <Class rdf:about="&UpperAccio;Status">
+        <rdfs:label xml:lang="nl">Status</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Vacation -->
+
+    <Class rdf:about="&UpperAccio;Vacation">
+        <rdfs:label xml:lang="nl">Vakantie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Autumn -->
+
+    <NamedIndividual rdf:about="&UpperAccio;Autumn">
+        <rdf:type rdf:resource="&UpperAccio;Season"/>
+        <rdfs:label xml:lang="nl">Herfst</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#ChristmasHoliday -->
+
+    <NamedIndividual rdf:about="&UpperAccio;ChristmasHoliday">
+        <rdf:type rdf:resource="&UpperAccio;Vacation"/>
+        <rdfs:label xml:lang="nl">KerstVakantie</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#DayShift -->
+
+    <NamedIndividual rdf:about="&UpperAccio;DayShift">
+        <rdf:type rdf:resource="&UpperAccio;Shift"/>
+        <rdfs:label xml:lang="nl">DagRegime</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#MorningShift -->
+
+    <NamedIndividual rdf:about="&UpperAccio;MorningShift">
+        <rdf:type rdf:resource="&UpperAccio;Shift"/>
+        <rdfs:label xml:lang="nl">OchtendRegime</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#NightShift -->
+
+    <NamedIndividual rdf:about="&UpperAccio;NightShift">
+        <rdf:type rdf:resource="&UpperAccio;Shift"/>
+        <rdfs:label xml:lang="nl">NachtRegime</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Spring -->
+
+    <NamedIndividual rdf:about="&UpperAccio;Spring">
+        <rdf:type rdf:resource="&UpperAccio;Season"/>
+        <rdfs:label xml:lang="nl">Lente</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Summer -->
+
+    <NamedIndividual rdf:about="&UpperAccio;Summer">
+        <rdf:type rdf:resource="&UpperAccio;Season"/>
+        <rdfs:label xml:lang="nl">Zomer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#SummerHoliday -->
+
+    <NamedIndividual rdf:about="&UpperAccio;SummerHoliday">
+        <rdf:type rdf:resource="&UpperAccio;Vacation"/>
+        <rdfs:label xml:lang="nl">ZomerVakantie</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#WeekendShift -->
+
+    <NamedIndividual rdf:about="&UpperAccio;WeekendShift">
+        <rdf:type rdf:resource="&UpperAccio;Shift"/>
+        <rdfs:label xml:lang="nl">WeekendRegime</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/UpperAccio.owl#Winter -->
+
+    <NamedIndividual rdf:about="&UpperAccio;Winter">
+        <rdf:type rdf:resource="&UpperAccio;Season"/>
+        <rdfs:label xml:lang="nl">Winter</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;DayShift"/>
+            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Summer"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+            <rdf:Description rdf:about="&UpperAccio;Winter"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;ChristmasHoliday"/>
+            <rdf:Description rdf:about="&UpperAccio;SummerHoliday"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;MorningShift"/>
+            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Autumn"/>
+            <rdf:Description rdf:about="&UpperAccio;Summer"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;NightShift"/>
+            <rdf:Description rdf:about="&UpperAccio;WeekendShift"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&UpperAccio;Spring"/>
+            <rdf:Description rdf:about="&UpperAccio;Summer"/>
+        </distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

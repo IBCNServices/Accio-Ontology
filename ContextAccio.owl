@@ -1,0 +1,1156 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
+    <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
+    <!ENTITY upperaccio "http://localhost/ontologies/AccioOntology/UpperAccio.owl#" >
+    <!ENTITY ContextAccio "http://localhost/ontologies/AccioOntology/ContextAccio.owl#" >
+    <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
+    <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
+    <!ENTITY wsnadjustedaccio "http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#" >
+    <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
+    <!ENTITY wsnextensionaccio "http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+     xmlns:wsnadjustedaccio="http://localhost/ontologies/AccioOntology/WSNadjustedAccio.owl#"
+     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wsnextensionaccio="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ContextAccio="http://localhost/ontologies/AccioOntology/ContextAccio.owl#"
+     xmlns:upperaccio="http://localhost/ontologies/AccioOntology/UpperAccio.owl#">
+    <Ontology rdf:about="http://localhost/ontologies/AccioOntology/ContextAccio.owl">
+        <imports rdf:resource="http://localhost/ontologies/AccioOntology/WSNextensionAccio.owl"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#belongsTo -->
+
+    <ObjectProperty rdf:about="&ContextAccio;belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">hoortBij</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Bed"/>
+        <rdfs:range rdf:resource="&ContextAccio;Room"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#belongsToTroop -->
+
+    <ObjectProperty rdf:about="&ContextAccio;belongsToTroop">
+        <rdfs:label xml:lang="nl">behoortTotTroep</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Troop"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsHallway -->
+
+    <ObjectProperty rdf:about="&ContextAccio;containsHallway">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="nl">bevatGang</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Hallway"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Department"/>
+                    <rdf:Description rdf:about="&ContextAccio;Floor"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsRoom -->
+
+    <ObjectProperty rdf:about="&ContextAccio;containsRoom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="nl">bevatKamer</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Room"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Department"/>
+                    <rdf:Description rdf:about="&ContextAccio;Floor"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#containsSystem -->
+
+    <ObjectProperty rdf:about="&ContextAccio;containsSystem">
+        <rdfs:label xml:lang="nl">bevatSysteem</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Room"/>
+        <rdfs:range rdf:resource="&wsnadjustedaccio;System"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasCentreCoordinate -->
+
+    <ObjectProperty rdf:about="&ContextAccio;hasCentreCoordinate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftCentrumCoordinaat</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Coordinate"/>
+        <rdfs:domain rdf:resource="&ContextAccio;Zone"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasFunction -->
+
+    <ObjectProperty rdf:about="&ContextAccio;hasFunction">
+        <rdfs:label xml:lang="nl">heeftFunctie</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Function"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Device"/>
+                    <rdf:Description rdf:about="&ContextAccio;Zone"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasLocation -->
+
+    <ObjectProperty rdf:about="&ContextAccio;hasLocation">
+        <rdfs:label xml:lang="nl">heeftLocatie</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Location"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isLocationOf -->
+
+    <ObjectProperty rdf:about="&ContextAccio;isLocationOf">
+        <rdfs:label xml:lang="nl">isLocatieVan</rdfs:label>
+        <inverseOf rdf:resource="&ContextAccio;hasLocation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isOnDepartment -->
+
+    <ObjectProperty rdf:about="&ContextAccio;isOnDepartment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">isOpAfdeling</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Department"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Hallway"/>
+                    <rdf:Description rdf:about="&ContextAccio;Room"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#isOnFloor -->
+
+    <ObjectProperty rdf:about="&ContextAccio;isOnFloor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">isOpVerdieping</rdfs:label>
+        <rdfs:range rdf:resource="&ContextAccio;Floor"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Hallway"/>
+                    <rdf:Description rdf:about="&ContextAccio;Room"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#troopComposedOf -->
+
+    <ObjectProperty rdf:about="&ContextAccio;troopComposedOf">
+        <rdfs:label xml:lang="nl">troepSamengesteldUit</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Troop"/>
+        <inverseOf rdf:resource="&ContextAccio;belongsToTroop"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageHumidity -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasAverageHumidity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftGemiddeldeVochtigheid</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Room"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageLightIntensity -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasAverageLightIntensity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftGemiddeldeLichtIntensiteit</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Room"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasAverageTemperature -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasAverageTemperature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftGemiddeldeTemperatuur</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Room"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasNumber -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftNr</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Bed"/>
+                    <rdf:Description rdf:about="&ContextAccio;Floor"/>
+                    <rdf:Description rdf:about="&ContextAccio;Room"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasRadius -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasRadius">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="nl">straal</rdfs:comment>
+        <rdfs:domain rdf:resource="&ContextAccio;Zone"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasXCoordinate -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasXCoordinate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftXCoordinaat</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Coordinate"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#hasYCoordinate -->
+
+    <DatatypeProperty rdf:about="&ContextAccio;hasYCoordinate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="nl">heeftYCoordinaat</rdfs:label>
+        <rdfs:domain rdf:resource="&ContextAccio;Coordinate"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#AxisKey -->
+
+    <Class rdf:about="&ContextAccio;AxisKey">
+        <rdfs:label xml:lang="nl">AxisSleutel</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ContextAccio;Item"/>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasLocation"/>
+                                <onClass rdf:resource="&ContextAccio;Coordinate"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasLocation"/>
+                                <onClass rdf:resource="&ContextAccio;Zone"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </unionOf>
+                    </Class>
+                    <Restriction>
+                        <onProperty rdf:resource="&upperaccio;hasId"/>
+                        <onClass>
+                            <Restriction>
+                                <onProperty rdf:resource="&upperaccio;hasIDType"/>
+                                <hasValue>axis</hasValue>
+                            </Restriction>
+                        </onClass>
+                        <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Item"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Bed -->
+
+    <Class rdf:about="&ContextAccio;Bed">
+        <rdfs:label xml:lang="nl">Bed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Furniture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="&upperaccio;hasName"/>
+                                <someValuesFrom rdf:resource="&xsd;string"/>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                                <onDataRange rdf:resource="&xsd;integer"/>
+                            </Restriction>
+                        </unionOf>
+                    </Class>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;belongsTo"/>
+                        <onClass rdf:resource="&ContextAccio;Room"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ContextAccio;Closet"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#CellPhone -->
+
+    <Class rdf:about="&ContextAccio;CellPhone">
+        <rdfs:label xml:lang="nl">GSM</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Closet -->
+
+    <Class rdf:about="&ContextAccio;Closet">
+        <rdfs:label xml:lang="nl">Kast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Furniture"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Coordinate -->
+
+    <Class rdf:about="&ContextAccio;Coordinate">
+        <rdfs:label xml:lang="nl">Coordinaat</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasXCoordinate"/>
+                        <someValuesFrom rdf:resource="&xsd;double"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasYCoordinate"/>
+                        <someValuesFrom rdf:resource="&xsd;double"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Location"/>
+        <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;Observation"/>
+        <disjointWith rdf:resource="&ContextAccio;Zone"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Department -->
+
+    <Class rdf:about="&ContextAccio;Department">
+        <rdfs:label xml:lang="nl">Afdeling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;containsRoom"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Room"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&upperaccio;hasName"/>
+                        <someValuesFrom rdf:resource="&xsd;string"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Device -->
+
+    <Class rdf:about="&ContextAccio;Device">
+        <rdfs:label xml:lang="nl">Toestel</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasLocation"/>
+                                <onClass rdf:resource="&ContextAccio;Coordinate"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasLocation"/>
+                                <onClass rdf:resource="&ContextAccio;Zone"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </unionOf>
+                    </Class>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;DeviceFunction"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&upperaccio;hasStatus"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;DeviceStatus"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;System"/>
+        <disjointWith rdf:resource="&ContextAccio;DeviceStatus"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#DeviceFunction -->
+
+    <Class rdf:about="&ContextAccio;DeviceFunction">
+        <rdfs:label xml:lang="nl">ToestelFunctie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Function"/>
+        <disjointWith rdf:resource="&ContextAccio;RoomFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#DeviceStatus -->
+
+    <Class rdf:about="&ContextAccio;DeviceStatus">
+        <rdfs:label xml:lang="nl">ToestelStatus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
+        <disjointWith rdf:resource="&ContextAccio;Function"/>
+        <disjointWith rdf:resource="&ContextAccio;Item"/>
+        <disjointWith rdf:resource="&ContextAccio;Location"/>
+        <disjointWith rdf:resource="&ContextAccio;Troop"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Floor -->
+
+    <Class rdf:about="&ContextAccio;Floor">
+        <rdfs:label xml:lang="nl">Verdieping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;containsHallway"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Hallway"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;containsRoom"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Room"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;integer"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Function -->
+
+    <Class rdf:about="&ContextAccio;Function">
+        <rdfs:label xml:lang="nl">Functie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Furniture -->
+
+    <Class rdf:about="&ContextAccio;Furniture">
+        <rdfs:label xml:lang="nl">Meubel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Item"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#GPS -->
+
+    <Class rdf:about="&ContextAccio;GPS">
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Hallway -->
+
+    <Class rdf:about="&ContextAccio;Hallway">
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;isOnDepartment"/>
+                        <onClass rdf:resource="&ContextAccio;Department"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;isOnFloor"/>
+                        <onClass rdf:resource="&ContextAccio;Floor"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Intercom -->
+
+    <Class rdf:about="&ContextAccio;Intercom">
+        <rdfs:label xml:lang="nl">Intercom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Item -->
+
+    <Class rdf:about="&ContextAccio;Item">
+        <rdfs:label xml:lang="nl">Item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#LightControl -->
+
+    <Class rdf:about="&ContextAccio;LightControl">
+        <rdfs:label xml:lang="nl">LichtBediening</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Location -->
+
+    <Class rdf:about="&ContextAccio;Location">
+        <rdfs:label xml:lang="nl">Locatie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#MultimediaHandset -->
+
+    <Class rdf:about="&ContextAccio;MultimediaHandset">
+        <rdfs:label xml:lang="nl">MultimediaHandset</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#NurseCall -->
+
+    <Class rdf:about="&ContextAccio;NurseCall">
+        <rdfs:label xml:lang="nl">VerpleegOproep</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#NursingOfficeTerminal -->
+
+    <Class rdf:about="&ContextAccio;NursingOfficeTerminal">
+        <rdfs:label xml:lang="nl">VerpleegpostTerminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PDA -->
+
+    <Class rdf:about="&ContextAccio;PDA">
+        <rdfs:label xml:lang="nl">PDA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PatientCare -->
+
+    <Class rdf:about="&ContextAccio;PatientCare">
+        <rdfs:label xml:lang="nl">PatientVerzorging</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;RoomFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PersonalElectronicDevice -->
+
+    <Class rdf:about="&ContextAccio;PersonalElectronicDevice">
+        <rdfs:label xml:lang="nl">PersoonlijkElektronischToestel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:comment>abbreviation: PED</rdfs:comment>
+        <rdfs:comment xml:lang="nl">afkorting: PET</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#PortablePhone -->
+
+    <Class rdf:about="&ContextAccio;PortablePhone">
+        <rdfs:label xml:lang="nl">DECT</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#ResidentialUse -->
+
+    <Class rdf:about="&ContextAccio;ResidentialUse">
+        <rdfs:label xml:lang="nl">WoonFunctie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;RoomFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#RollingShutterControl -->
+
+    <Class rdf:about="&ContextAccio;RollingShutterControl">
+        <rdfs:label xml:lang="nl">RolluikBediening</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Room -->
+
+    <Class rdf:about="&ContextAccio;Room">
+        <rdfs:label xml:lang="nl">Kamer</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;isOnDepartment"/>
+                                <onClass rdf:resource="&ContextAccio;Department"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;isOnFloor"/>
+                                <onClass rdf:resource="&ContextAccio;Floor"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </unionOf>
+                    </Class>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="&upperaccio;hasName"/>
+                                <someValuesFrom rdf:resource="&xsd;string"/>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                                <onDataRange rdf:resource="&xsd;integer"/>
+                            </Restriction>
+                        </unionOf>
+                    </Class>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;RoomFunction"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#RoomFunction -->
+
+    <Class rdf:about="&ContextAccio;RoomFunction">
+        <rdfs:label xml:lang="nl">KamerFunctie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Function"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Sanitary -->
+
+    <Class rdf:about="&ContextAccio;Sanitary">
+        <rdfs:label xml:lang="nl">Sanitair</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;RoomFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Screen -->
+
+    <Class rdf:about="&ContextAccio;Screen">
+        <rdfs:label xml:lang="nl">Scherm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#SmartPhone -->
+
+    <Class rdf:about="&ContextAccio;SmartPhone">
+        <rdfs:label xml:lang="nl">SmartPhone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TV -->
+
+    <Class rdf:about="&ContextAccio;TV">
+        <rdfs:label xml:lang="nl">TV</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TVControl -->
+
+    <Class rdf:about="&ContextAccio;TVControl">
+        <rdfs:label xml:lang="nl">TVBediening</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#TaskManagement -->
+
+    <Class rdf:about="&ContextAccio;TaskManagement">
+        <rdfs:label xml:lang="nl">TaakBeheer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Telephone -->
+
+    <Class rdf:about="&ContextAccio;Telephone">
+        <rdfs:label xml:lang="nl">Telefoon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Telephony -->
+
+    <Class rdf:about="&ContextAccio;Telephony">
+        <rdfs:label xml:lang="nl">Telefonie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Terminal -->
+
+    <Class rdf:about="&ContextAccio;Terminal">
+        <rdfs:label xml:lang="nl">Terminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Towel -->
+
+    <Class rdf:about="&ContextAccio;Towel">
+        <rdfs:label xml:lang="nl">Handdoek</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Item"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Troop -->
+
+    <Class rdf:about="&ContextAccio;Troop">
+        <rdfs:label xml:lang="nl">Troep</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Visualization -->
+
+    <Class rdf:about="&ContextAccio;Visualization">
+        <rdfs:label xml:lang="nl">Visualisatie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;DeviceFunction"/>
+    </Class>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Zone -->
+
+    <Class rdf:about="&ContextAccio;Zone">
+        <rdfs:label xml:lang="nl">Zone</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasCentreCoordinate"/>
+                        <someValuesFrom rdf:resource="&ContextAccio;Coordinate"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasRadius"/>
+                        <someValuesFrom rdf:resource="&xsd;double"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ContextAccio;Location"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#Off -->
+
+    <NamedIndividual rdf:about="&ContextAccio;Off">
+        <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>
+        <rdfs:label xml:lang="nl">Uit</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://localhost/ontologies/AccioOntology/ContextAccio.owl#On -->
+
+    <NamedIndividual rdf:about="&ContextAccio;On">
+        <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>
+        <rdfs:label xml:lang="nl">Aan</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
+            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
+            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;LightControl"/>
+            <rdf:Description rdf:about="&ContextAccio;NurseCall"/>
+            <rdf:Description rdf:about="&ContextAccio;RollingShutterControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TVControl"/>
+            <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
+            <rdf:Description rdf:about="&ContextAccio;Telephony"/>
+            <rdf:Description rdf:about="&ContextAccio;Visualization"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
+            <rdf:Description rdf:about="&ContextAccio;Furniture"/>
+            <rdf:Description rdf:about="&ContextAccio;Towel"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;Device"/>
+            <rdf:Description rdf:about="&ContextAccio;Function"/>
+            <rdf:Description rdf:about="&ContextAccio;Item"/>
+            <rdf:Description rdf:about="&ContextAccio;Location"/>
+            <rdf:Description rdf:about="&ContextAccio;Troop"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
