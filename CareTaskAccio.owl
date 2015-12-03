@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#"
+     xml:base="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl">
+        <owl:imports rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#A_Tasks -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#A_Tasks">
+        <rdfs:label xml:lang="nl">A_Taken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask">
+        <rdfs:label xml:lang="nl">PersonenVergezellenNaarPlaatsenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask">
+        <rdfs:label xml:lang="nl">IntraveneusToedienenMedicatieTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministerMedicationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministerMedicationTask">
+        <rdfs:label xml:lang="nl">MedicatieToedienenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask">
+        <rdfs:label xml:lang="nl">AdviesOverHygieneTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask">
+        <rdfs:label xml:lang="nl">AdviseerFamilieOverToestandPersoonTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask">
+        <rdfs:label xml:lang="nl">OproepBeantwoordenTask</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCareCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCareCallTask">
+        <rdfs:label xml:lang="nl">VerzorgingOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask">
+        <rdfs:label xml:lang="nl">ArtsNodigOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerMedicalCallTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerMedicalCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerMedicalCallTask">
+        <rdfs:label xml:lang="nl">MedischeOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerPermanenceCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerPermanenceCallTask">
+        <rdfs:label xml:lang="nl">PermanentieOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerSanitaryCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerSanitaryCallTask">
+        <rdfs:label xml:lang="nl">SanitaireOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerUrgencyCallTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerUrgencyCallTask">
+        <rdfs:label xml:lang="nl">UrgentieOproepBeantwoordenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask">
+        <rdfs:label xml:lang="nl">VervoerBewonerRegelenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B1_Tasks -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B1_Tasks">
+        <rdfs:label xml:lang="nl">B1_Taken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B2_Tasks -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B2_Tasks">
+        <rdfs:label xml:lang="nl">B2_Taken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B3_Tasks -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#B3_Tasks">
+        <rdfs:label xml:lang="nl">B3_Taken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask">
+        <rdfs:label xml:lang="nl">EtenTerugBrengenNaarKeukenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BringMailTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BringMailTask">
+        <rdfs:label xml:lang="nl">PostRondbrengenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#C_Tasks -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#C_Tasks">
+        <rdfs:label xml:lang="nl">C_Taken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeDataTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeDataTask">
+        <rdfs:label xml:lang="nl">DataWijzigenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeMedicationCardTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeMedicationCardTask">
+        <rdfs:label xml:lang="nl">MedischeFicheWijzigenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeDataTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CleanBedTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CleanBedTask">
+        <rdfs:label xml:lang="nl">BedVerschonenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CleanRoomTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CleanRoomTask">
+        <rdfs:label xml:lang="nl">KamerKuisenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ComplementDataTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ComplementDataTask">
+        <rdfs:label xml:lang="nl">DataAanvullenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DressPersonTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#DressPersonTask">
+        <rdfs:label xml:lang="nl">PersoonAankledenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask">
+        <rdfs:label xml:lang="nl">PersonenBegeleidenNaarOfVanActiviteitTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FillMedicationCardTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FillMedicationCardTask">
+        <rdfs:label xml:lang="nl">MedicatieFicheInvullenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ComplementDataTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FinancialTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FinancialTask">
+        <rdfs:label xml:lang="nl">FinancieleTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FollowUpMedicationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FollowUpMedicationTask">
+        <rdfs:label xml:lang="nl">MedicatieOpvolgenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask">
+        <rdfs:label xml:lang="nl">PsychologischeToestandOpvolgenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#GetFoodFromKitchenTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#GetFoodFromKitchenTask">
+        <rdfs:label xml:lang="nl">EtenOphalenUitKeukenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonFromToiletTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonFromToiletTask">
+        <rdfs:label xml:lang="nl">PersoonVanToiletHelpenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask">
+        <rdfs:label xml:lang="nl">PersoonInOfUitBedHelpenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonOnToiletTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HelpPersonOnToiletTask">
+        <rdfs:label xml:lang="nl">PersoonOpToiletHelpenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask">
+        <rdfs:label xml:lang="nl">InformeerFamilieOverToestandPersoonTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#IronTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#IronTask">
+        <rdfs:label xml:lang="nl">StrijkenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#KinesiotherapyTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#KinesiotherapyTask">
+        <rdfs:label xml:lang="nl">KinesitherapieTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LoadPillBoxTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LoadPillBoxTask">
+        <rdfs:label xml:lang="nl">LadenPillendoosTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask">
+        <rdfs:label xml:lang="nl">LogistiekeTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MakeBedTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MakeBedTask">
+        <rdfs:label xml:lang="nl">BedOpmakenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CleanBedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask">
+        <rdfs:label xml:lang="nl">BeherenLeefgroepbudgetTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageMoneyTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageMoneyTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageMoneyTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#FinancialTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManagePocketMoneyTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManagePocketMoneyTask">
+        <rdfs:label xml:lang="nl">BeherenZakgeldTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ManageMoneyTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalInspectionTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalInspectionTask">
+        <rdfs:label xml:lang="nl">MedischOnderzoekTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask">
+        <rdfs:label xml:lang="nl">MedischeTaken</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MopTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MopTask">
+        <rdfs:label xml:lang="nl">DweilenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OccupationalTherapyTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OccupationalTherapyTask">
+        <rdfs:label xml:lang="nl">ErgotherapeutischeTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderDietFoodTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderDietFoodTask">
+        <rdfs:label xml:lang="nl">DieetVoedingBestellenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMaterialTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMaterialTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMaterialTask">
+        <rdfs:label xml:lang="nl">MateriaalBestellenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMedicationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMedicationTask">
+        <rdfs:label xml:lang="nl">MedicatieBestellenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask">
+        <rdfs:label xml:lang="nl">PersoonToiletAssistentieGevenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PlaceKitchenOrderTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PlaceKitchenOrderTask">
+        <rdfs:label xml:lang="nl">KeukenbestellingPlaatsenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OrderMaterialTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PrepareMealTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PrepareMealTask">
+        <rdfs:label xml:lang="nl">MaaltijdBereidenTask</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PrescribeMedicationTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PrescribeMedicationTask">
+        <rdfs:label xml:lang="nl">MedicatieVoorschrijvenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MedicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadComplementChangeDataTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadComplementChangeDataTask">
+        <rdfs:label xml:lang="nl">DataLezenAanvullenWijzigenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ChangeDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ComplementDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadDataTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadDataTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadDataTask">
+        <rdfs:label xml:lang="nl">DataLezenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadMedicationCardTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadMedicationCardTask">
+        <rdfs:label xml:lang="nl">MedicatieFicheLezenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#ReadDataTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RefreshPersonTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RefreshPersonTask">
+        <rdfs:label xml:lang="nl">PersoonVerversenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#SpeechTherapyTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#SpeechTherapyTask">
+        <rdfs:label xml:lang="nl">LogopedischeTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#StoolCareTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#StoolCareTask">
+        <rdfs:label xml:lang="nl">StoelgangVerzorgingTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RefreshPersonTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TakeGarbageOutSideTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TakeGarbageOutSideTask">
+        <rdfs:label xml:lang="nl">VuilinszakkenBuitenzettenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TakeTemperatureTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TakeTemperatureTask">
+        <rdfs:label xml:lang="nl">TemperatuurOpnemenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TherapeuticalTask">
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOccupantTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOccupantTask">
+        <rdfs:label xml:lang="nl">BewonerVervoerenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask">
+        <rdfs:label xml:lang="nl">MateriaalVervoerenOfVerplaatsenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#LogisticTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TurnPersonInBedTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#TurnPersonInBedTask">
+        <rdfs:label xml:lang="nl">PersoonDraaienInBedTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#CareTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#UrineCareTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#UrineCareTask">
+        <rdfs:label xml:lang="nl">UrineVerzorgingTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#RefreshPersonTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#WashClothesTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#WashClothesTask">
+        <rdfs:label xml:lang="nl">KlerenWassenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#WashDishesTask -->
+
+    <owl:Class rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#WashDishesTask">
+        <rdfs:label xml:lang="nl">VaatWassenTaak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
