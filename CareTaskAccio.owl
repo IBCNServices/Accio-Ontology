@@ -834,7 +834,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">2</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministratieID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministratieID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#AdministratieID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">2</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -843,7 +852,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">1</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BoodschappenID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BoodschappenID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#BoodschappenID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">1</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -852,7 +870,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">6</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#KleedijID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#KleedijID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#KleedijID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">6</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -861,7 +888,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">5</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MaaltijdenID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MaaltijdenID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#MaaltijdenID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">5</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -870,7 +906,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">3</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OnderhoudID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OnderhoudID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#OnderhoudID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">3</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -879,7 +924,16 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">7</UpperAccio:hasID>
+        <UpperAccio:hasId rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID -->
+
+    <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID">
+        <rdf:type rdf:resource="&UpperAccio;ID"/>
+        <UpperAccio:hasID rdf:datatype="&xsd;string">7</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -888,7 +942,6 @@
 
     <owl:NamedIndividual rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport">
         <rdf:type rdf:resource="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasID rdf:datatype="&xsd;int">4</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
@@ -904,57 +957,15 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -968,7 +979,7 @@
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -981,14 +992,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
@@ -996,7 +1000,14 @@
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1004,6 +1015,48 @@
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1023,22 +1076,22 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Onderhoud"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Maaltijden"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
             <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Boodschappen"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://occs.intec.ugent.be/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
