@@ -125,18 +125,16 @@
         <rdfs:label xml:lang="nl">Actuator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&wsnadjustedaccio;System"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&wsnadjustedaccio;hasValue"/>
-                        <someValuesFrom rdf:resource="&xsd;float"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&WSNextensionAccio;hasUnit"/>
-                        <someValuesFrom rdf:resource="&xsd;string"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&wsnadjustedaccio;hasValue"/>
+                <someValuesFrom rdf:resource="&xsd;float"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&WSNextensionAccio;hasUnit"/>
+                <someValuesFrom rdf:resource="&xsd;string"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     

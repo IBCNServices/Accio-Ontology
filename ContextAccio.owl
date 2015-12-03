@@ -380,27 +380,25 @@
         <rdfs:subClassOf rdf:resource="&ContextAccio;Furniture"/>
         <rdfs:subClassOf>
             <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Class>
-                        <unionOf rdf:parseType="Collection">
-                            <Restriction>
-                                <onProperty rdf:resource="&upperaccio;hasName"/>
-                                <someValuesFrom rdf:resource="&xsd;string"/>
-                            </Restriction>
-                            <Restriction>
-                                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
-                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                                <onDataRange rdf:resource="&xsd;integer"/>
-                            </Restriction>
-                        </unionOf>
-                    </Class>
+                <unionOf rdf:parseType="Collection">
                     <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;belongsTo"/>
-                        <onClass rdf:resource="&ContextAccio;Room"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onProperty rdf:resource="&upperaccio;hasName"/>
+                        <someValuesFrom rdf:resource="&xsd;string"/>
                     </Restriction>
-                </intersectionOf>
+                    <Restriction>
+                        <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                        <onDataRange rdf:resource="&xsd;integer"/>
+                    </Restriction>
+                </unionOf>
             </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;belongsTo"/>
+                <onClass rdf:resource="&ContextAccio;Room"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ContextAccio;Closet"/>
     </Class>
@@ -413,18 +411,16 @@
         <rdfs:label xml:lang="nl">GSM</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -470,18 +466,16 @@
         <rdfs:label xml:lang="nl">Afdeling</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;containsRoom"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Room"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&upperaccio;hasName"/>
-                        <someValuesFrom rdf:resource="&xsd;string"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&upperaccio;hasName"/>
+                <someValuesFrom rdf:resource="&xsd;string"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;containsRoom"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Room"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -563,23 +557,23 @@
         <rdfs:label xml:lang="nl">Verdieping</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;containsHallway"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Hallway"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;containsRoom"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Room"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasNumber"/>
-                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
-                        <onDataRange rdf:resource="&xsd;integer"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;containsHallway"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Hallway"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;containsRoom"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Room"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="&xsd;integer"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -683,30 +677,34 @@
         <rdfs:label xml:lang="nl">MultimediaHandset</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -742,18 +740,16 @@
         <rdfs:label xml:lang="nl">PDA</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -794,18 +790,16 @@
         <rdfs:label xml:lang="nl">DECT</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -914,26 +908,28 @@
         <rdfs:label xml:lang="nl">SmartPhone</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;PersonalElectronicDevice"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -972,14 +968,14 @@
         <rdfs:subClassOf rdf:resource="&ContextAccio;TVProperties"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
-                <someValuesFrom rdf:resource="&xsd;integer"/>
+                <onProperty rdf:resource="&upperaccio;hasName"/>
+                <someValuesFrom rdf:resource="&xsd;string"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&upperaccio;hasName"/>
-                <someValuesFrom rdf:resource="&xsd;string"/>
+                <onProperty rdf:resource="&ContextAccio;hasNumber"/>
+                <someValuesFrom rdf:resource="&xsd;integer"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -1058,38 +1054,46 @@
         <rdfs:label xml:lang="nl">Terminal</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
         <rdfs:subClassOf>
-            <Class>
-                <intersectionOf rdf:parseType="Collection">
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
-                    </Restriction>
-                    <Restriction>
-                        <onProperty rdf:resource="&ContextAccio;hasFunction"/>
-                        <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
-                    </Restriction>
-                </intersectionOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;TaskManagement"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Telephony"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;NurseCall"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;RollingShutterControl"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;Visualization"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;LightControl"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ContextAccio;hasFunction"/>
+                <someValuesFrom rdf:resource="&ContextAccio;TVControl"/>
+            </Restriction>
         </rdfs:subClassOf>
     </Class>
     
@@ -1185,14 +1189,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
-            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
-            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
             <rdf:Description rdf:about="&ContextAccio;AxisKey"/>
             <rdf:Description rdf:about="&ContextAccio;Furniture"/>
             <rdf:Description rdf:about="&ContextAccio;Towel"/>
@@ -1218,6 +1214,14 @@
             <rdf:Description rdf:about="&ContextAccio;TaskManagement"/>
             <rdf:Description rdf:about="&ContextAccio;Telephony"/>
             <rdf:Description rdf:about="&ContextAccio;Visualization"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ContextAccio;PatientCare"/>
+            <rdf:Description rdf:about="&ContextAccio;ResidentialUse"/>
+            <rdf:Description rdf:about="&ContextAccio;Sanitary"/>
         </members>
     </rdf:Description>
 </rdf:RDF>
