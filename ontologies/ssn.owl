@@ -132,7 +132,7 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#attachedSystem -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#attachedSystem">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
         <rdfs:comment>Relation between a Platform and any Systems (e.g., Sensors) that are attached to the Platform.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -145,7 +145,7 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#deployedOnPlatform -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#deployedOnPlatform">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inDeployment"/>
         <rdfs:comment>Relation between a deployment and the platform on which the system was deployed.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -158,7 +158,7 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#deployedSystem -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#deployedSystem">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasDeployment"/>
         <rdfs:comment>Relation between a deployment and the deployed system.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -171,7 +171,7 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#deploymentProcessPart -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#deploymentProcessPart">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
         <rdfs:comment>Has part relation between a deployment process and its constituent processes.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>deployment process part</rdfs:label>
@@ -195,7 +195,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#endTime -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#endTime">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>end time</rdfs:label>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#Time</rdfs:seeAlso>
@@ -206,7 +206,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#featureOfInterest -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#featureOfInterest">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
         <dc:source>skos:exactMatch &apos;featureOfInterest&apos; [O&amp;M - ISO/DIS 19156] 
 		                    http://portal.opengeospatial.org/files/?artifact_id=41579</dc:source>
         <rdfs:comment>A relation between an observation and the entity whose quality was observed.   For example, in an observation of the weight of a person, the feature of interest is the person and the quality is weight.</rdfs:comment>
@@ -231,7 +231,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasDeployment -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasDeployment">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
         <rdfs:comment>Relation between a System and a Deployment, recording that the System/Sensor was deployed in that Deployment.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>has deployment</rdfs:label>
@@ -311,7 +311,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasProperty -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
         <rdfs:comment>A relation between a FeatureOfInterest and a Property of that feature.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -324,7 +324,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
         <rdfs:comment>Haspart relation between a system and its parts.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>has subsystem</rdfs:label>
@@ -360,7 +360,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasValue -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>has value</rdfs:label>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#Data</rdfs:seeAlso>
@@ -371,7 +371,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#implementedBy -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implementedBy">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#describes"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#implements"/>
         <rdfs:comment>A relation between the description of an algorithm, procedure or method and an entity that implements that method in some executable way.  For example, between a scientific measuring method and a sensor the senses via that method.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -384,7 +384,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#implements -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
         <rdfs:comment>A relation between an entity that implements a method in some executable way and the description of an algorithm, procedure or method.  For example, between a Sensor and the scientific measuring method that the Sensor uses to observe a Property.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>implements</rdfs:label>
@@ -407,7 +407,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#inDeployment -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#inDeployment">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
         <rdfs:comment>Relation between a Platform and a Deployment, recording that the object was used as a platform for a system/sensor for a particular deployment: as in this PhysicalObject is acting as a Platform inDeployment Deployment.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>in deployment</rdfs:label>
@@ -430,7 +430,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
         <rdfs:comment>Relation between a FeatureOfInterest and a Property (a Quality observable by a sensor) of that feature.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>is property of</rdfs:label>
@@ -453,7 +453,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#madeObservation -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#madeObservation">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
         <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
         <rdfs:comment>Relation between a Sensor and Observations it has made.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -466,7 +466,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observationResult -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResult">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
         <dc:source>skos:closeMatch &apos;result&apos; [O&amp;M - ISO/DIS 19156] 
 		                    http://portal.opengeospatial.org/files/?artifact_id=41579</dc:source>
         <rdfs:comment>Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property.</rdfs:comment>
@@ -480,7 +480,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observationResultTime -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResultTime">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
         <dc:source>http://www.opengeospatial.org/standards/om</dc:source>
         <rdfs:comment>The result time is the time when the procedure associated with the observation act was applied.</rdfs:comment>
         <rdfs:comment>The result time shall describe the time when the result became available, typically when the procedure associated with the observation was completed For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.[O&amp;M]</rdfs:comment>
@@ -494,7 +494,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
         <dc:source>http://www.opengeospatial.org/standards/om</dc:source>
         <rdfs:comment>Rebadged as phenomenon time in [O&amp;M]. The phenomenon time shall describe the time that the result applies to the property of the feature-of-interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature.</rdfs:comment>
         <rdfs:comment>The sampling time is the time that the result applies to the feature-of-interest. This is the time usually required for geospatial analysis of the result.</rdfs:comment>
@@ -508,7 +508,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observedBy -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -518,7 +518,7 @@ The Stimulus itself will be serving as a proxy for (see isProxyOf) some observab
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observedProperty -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedProperty">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
         <dc:source>skos:exactMatch &apos;observedProperty&apos; [O&amp;M - ISO/DIS 19156] 
 		                    http://portal.opengeospatial.org/files/?artifact_id=41579</dc:source>
         <rdfs:comment>Relation linking an Observation to the Property that was observed.  The observedProperty should be a Property (hasProperty) of the FeatureOfInterest (linked by featureOfInterest) of this observation.</rdfs:comment>
@@ -564,7 +564,7 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     <!-- http://purl.oclc.org/NET/ssnx/ssn#onPlatform -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#onPlatform">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
         <rdfs:comment>Relation between a System (e.g., a Sensor) and a Platform.  The relation locates the sensor relative to other described entities entities: i.e., the Sensor s1&apos;s location is Platform p1.  More precise locations for sensors in space (relative to other entities, where attached to another entity, or in 3D space) are made using DOLCE&apos;s Regions (SpaceRegion).</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>on platform</rdfs:label>
@@ -590,7 +590,7 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     <!-- http://purl.oclc.org/NET/ssnx/ssn#sensingMethodUsed -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#sensingMethodUsed">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
         <dc:source>http://www.bipm.org/en/committees/jc/jcgm/wg2.html</dc:source>
         <rdfs:comment>A (measurement) procedure is a detailed description of a measurement according to one or more measurement principles and to a given measurement method, based on a measurement model and including any calculation to obtain a measurement result [VIM 2.6]</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -603,7 +603,7 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     <!-- http://purl.oclc.org/NET/ssnx/ssn#startTime -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#startTime">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:label>start time</rdfs:label>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#Time</rdfs:seeAlso>
@@ -611,99 +611,99 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#describes -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#describes"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasPart -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasParticipant -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasQuality -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesEvent -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesObject -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isDescribedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isLocationOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isParticipantIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isQualityOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isRegionFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isSettingFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#satisfies -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
     
 
 
@@ -785,7 +785,7 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     <!-- http://purl.oclc.org/NET/ssnx/ssn#DeploymentRelatedProcess -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#DeploymentRelatedProcess">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Process"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#deploymentProcessPart"/>
@@ -819,7 +819,7 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
         <dc:source>http://www.w3.org/2005/Incubator/ssn/</dc:source>
         <rdfs:comment>A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components).</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -850,8 +850,8 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Event"/>
-                    <rdf:Description rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Object"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -994,10 +994,10 @@ The conditions specified here are those that affect the measurement properties, 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
+                <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
                 <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Stimulus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1099,10 +1099,10 @@ Measurement result in VIM is the measured value plus any other relevant informat
     <!-- http://purl.oclc.org/NET/ssnx/ssn#ObservationValue -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Region"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
+                <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
                 <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1191,7 +1191,7 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Platform -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#attachedSystem"/>
@@ -1231,7 +1231,7 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Process -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Process">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Method"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOutput"/>
@@ -1262,7 +1262,7 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
@@ -1365,7 +1365,7 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#implements"/>
@@ -1408,7 +1408,7 @@ O&amp;M allows sensors, methods, instruments, systems, algorithms and process ch
     <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorDataSheet -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorDataSheet">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
         <dc:source>http://www.w3.org/2005/Incubator/ssn/</dc:source>
         <rdfs:comment>A data sheet records properties of a sensor.  A data sheet might describe for example the accuracy in various conditions, the power use, the types of connectors that the sensor has, etc.  
 
@@ -1424,7 +1424,7 @@ Generally a sensor&apos;s properties are recorded directly (with hasMeasurementC
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorInput">
         <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Stimulus"/>
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Event"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isProxyFor"/>
@@ -1443,7 +1443,7 @@ Generally a sensor&apos;s properties are recorded directly (with hasMeasurementC
     <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorOutput -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
@@ -1473,7 +1473,7 @@ See comments at ObservationValue.</dc:source>
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Stimulus -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Stimulus">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Event"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
         <dc:source>http://www.w3.org/2005/Incubator/ssn/</dc:source>
         <rdfs:comment>An Event in the real world that &apos;triggers&apos; the sensor.  The properties associated to the stimulus may be different to eventual observed property.  It is the event, not the object that triggers the sensor.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -1524,7 +1524,7 @@ See comments at ObservationValue.</dc:source>
     <!-- http://purl.oclc.org/NET/ssnx/ssn#System -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System">
-        <rdfs:subClassOf rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
@@ -1582,63 +1582,63 @@ See comments at ObservationValue.</dc:source>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Event -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Event"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#InformationObject -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Method -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Method"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Object -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Object"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#PhysicalObject -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Process -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Process"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Quality -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Region -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Region"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
     
 
 
-    <!-- https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Situation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation -->
 
-    <owl:Class rdf:about="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
 </rdf:RDF>
 
 
