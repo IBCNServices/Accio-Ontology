@@ -7,13 +7,13 @@
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY ProfileAccio "http://orca.test/ontology/ProfileAccio.owl#" >
+    <!ENTITY upperaccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
+    <!ENTITY ProfileAccio "http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
-    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY contextaccio "http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
@@ -22,27 +22,27 @@
 ]>
 
 
-<rdf:RDF xmlns="http://orca.test/ontology/ProfileAccio.owl#"
-     xml:base="http://orca.test/ontology/ProfileAccio.owl"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
-     xmlns:rolecompetenceaccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
+     xmlns:wsnextensionaccio="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#"
+     xmlns:rolecompetenceaccio="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ProfileAccio="http://orca.test/ontology/ProfileAccio.owl#"
-     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <owl:Ontology rdf:about="http://orca.test/ontology/ProfileAccio.owl">
-        <owl:imports rdf:resource="http://orca.test/ontology/RoleCompetenceAccio.owl"/>
+     xmlns:ProfileAccio="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#"
+     xmlns:contextaccio="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#">
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
     </owl:Ontology>
     
 
@@ -58,7 +58,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#associatedWith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#associatedWith -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;associatedWith">
         <rdfs:label xml:lang="nl">geassocieerdMet</rdfs:label>
@@ -68,7 +68,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#belongsToNurseGroup -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#belongsToNurseGroup -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;belongsToNurseGroup">
         <rdfs:range rdf:resource="&contextaccio;NurseGroup"/>
@@ -87,7 +87,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#containsPatient -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#containsPatient -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;containsPatient">
         <rdfs:domain rdf:resource="&contextaccio;NurseGroup"/>
@@ -106,7 +106,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasAssociation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasAssociation -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasAssociation">
         <owl:inverseOf rdf:resource="&ProfileAccio;associatedWith"/>
@@ -114,7 +114,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasAunt -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasAunt -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasAunt">
         <rdfs:range rdf:resource="&ProfileAccio;Aunt"/>
@@ -124,7 +124,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBasicProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasBasicProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasBasicProfile">
         <rdfs:label xml:lang="nl">heeftBasisProfiel</rdfs:label>
@@ -134,7 +134,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBiologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasBiologicalProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasBiologicalProfile">
         <rdfs:label xml:lang="nl">heeftBiologischProfiel</rdfs:label>
@@ -144,7 +144,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBirthDate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasBirthDate -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasBirthDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -156,7 +156,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasBrother -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasBrother -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasBrother">
         <rdfs:range rdf:resource="&ProfileAccio;Brother"/>
@@ -165,7 +165,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasCurrentRole -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasCurrentRole -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasCurrentRole">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasDaughter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasDaughter -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasDaughter">
         <rdfs:range rdf:resource="&ProfileAccio;Daughter"/>
@@ -185,7 +185,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasExperienceCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasExperienceCompetence -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasExperienceCompetence">
         <rdfs:label xml:lang="nl">heeftErvaringsCompetentie</rdfs:label>
@@ -195,7 +195,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFaith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasFaith -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasFaith">
         <rdfs:label xml:lang="nl">heeftGeloof</rdfs:label>
@@ -205,7 +205,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFather -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasFather -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasFather">
         <rdfs:range rdf:resource="&ProfileAccio;Father"/>
@@ -214,7 +214,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasFormalTrainingCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasFormalTrainingCompetence -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasFormalTrainingCompetence">
         <rdfs:label xml:lang="nl">heeftVormingsCompetentie</rdfs:label>
@@ -224,7 +224,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasGender -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasGender -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasGender">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -236,7 +236,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasHusband -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasHusband -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasHusband">
         <rdfs:range rdf:resource="&ProfileAccio;Husband"/>
@@ -245,7 +245,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasLanguage -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasLanguage -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasLanguage">
         <rdfs:label xml:lang="nl">heeftTaal</rdfs:label>
@@ -255,7 +255,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasMother -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasMother -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasMother">
         <rdfs:range rdf:resource="&ProfileAccio;Mother"/>
@@ -264,7 +264,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNationality -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasNationality -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasNationality">
         <rdfs:label xml:lang="nl">heeftNationaliteit</rdfs:label>
@@ -274,7 +274,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNephew -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasNephew -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasNephew">
         <rdfs:range rdf:resource="&ProfileAccio;Nephew"/>
@@ -284,7 +284,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasNiece -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasNiece -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasNiece">
         <rdfs:range rdf:resource="&ProfileAccio;Niece"/>
@@ -293,7 +293,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasProfile">
         <rdfs:label xml:lang="nl">heeftProfiel</rdfs:label>
@@ -303,7 +303,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasProxy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasProxy -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasProxy">
         <rdfs:label xml:lang="nl">heeftProxy</rdfs:label>
@@ -313,7 +313,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasPsychologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasPsychologicalProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasPsychologicalProfile">
         <rdfs:label xml:lang="nl">heeftPsychologischProfiel</rdfs:label>
@@ -323,7 +323,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRiskProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasRiskProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasRiskProfile">
         <rdfs:label xml:lang="nl">heeftRisicoProfiel</rdfs:label>
@@ -333,7 +333,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRole -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasRole -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasRole">
         <rdfs:label xml:lang="nl">heeftRol</rdfs:label>
@@ -344,7 +344,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasRoleAsFunction -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasRoleAsFunction -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasRoleAsFunction">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -355,7 +355,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSister -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasSister -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasSister">
         <rdfs:range rdf:resource="&ProfileAccio;Sister"/>
@@ -364,7 +364,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSociologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasSociologicalProfile -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasSociologicalProfile">
         <rdfs:label xml:lang="nl">heeftSociologischProfiel</rdfs:label>
@@ -374,7 +374,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasSon -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasSon -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasSon">
         <rdfs:range rdf:resource="&ProfileAccio;Son"/>
@@ -383,7 +383,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTrustRelationship -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasTrustRelationship -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationship">
         <rdfs:label xml:lang="nl">heeftVertrouwensRelatie</rdfs:label>
@@ -393,7 +393,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTrustRelationshipWith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasTrustRelationshipWith -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasTrustRelationshipWith">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -404,7 +404,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasUncle -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasUncle -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasUncle">
         <rdfs:range rdf:resource="&ProfileAccio;Uncle"/>
@@ -413,7 +413,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasWife -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasWife -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;hasWife">
         <rdfs:range rdf:resource="&ProfileAccio;Wife"/>
@@ -422,19 +422,19 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#isAuntOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#isAuntOf -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;isAuntOf"/>
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#isNephewOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#isNephewOf -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;isNephewOf"/>
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#isNieceOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#isNieceOf -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;isNieceOf">
         <owl:inverseOf rdf:resource="&ProfileAccio;hasNiece"/>
@@ -442,7 +442,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#isRoleOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#isRoleOf -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;isRoleOf">
         <rdfs:label xml:lang="nl">isRolVan</rdfs:label>
@@ -450,7 +450,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#isUncleOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#isUncleOf -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;isUncleOf">
         <owl:inverseOf rdf:resource="&ProfileAccio;hasUncle"/>
@@ -458,7 +458,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#loggedIntoDevice -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#loggedIntoDevice -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;loggedIntoDevice">
         <rdfs:label xml:lang="nl">aangemeldBijToestel</rdfs:label>
@@ -468,7 +468,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#ownsDevice -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#ownsDevice -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;ownsDevice">
         <rdfs:label xml:lang="nl">BezitToestel</rdfs:label>
@@ -478,7 +478,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#ownsItem -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#ownsItem -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;ownsItem">
         <rdfs:label xml:lang="nl">BezitItem</rdfs:label>
@@ -488,7 +488,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#responsibleFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#responsibleFor -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;responsibleFor">
         <rdfs:range rdf:resource="&ProfileAccio;Person"/>
@@ -497,7 +497,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#worksOn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#worksOn -->
 
     <owl:ObjectProperty rdf:about="&ProfileAccio;worksOn">
         <rdfs:domain>
@@ -535,7 +535,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasDegree -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasDegree -->
 
     <owl:DatatypeProperty rdf:about="&ProfileAccio;hasDegree">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -546,7 +546,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasPersonalTelephoneNumber -->
 
     <owl:DatatypeProperty rdf:about="&ProfileAccio;hasPersonalTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftPersoonlijkTelefoonNummer</rdfs:label>
@@ -555,7 +555,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasTelephoneNumber -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasTelephoneNumber -->
 
     <owl:DatatypeProperty rdf:about="&ProfileAccio;hasTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftTelefoonNummer</rdfs:label>
@@ -565,7 +565,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#hasWorkTelephoneNumber -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#hasWorkTelephoneNumber -->
 
     <owl:DatatypeProperty rdf:about="&ProfileAccio;hasWorkTelephoneNumber">
         <rdfs:label xml:lang="nl">heeftWerkTelefoonNummer</rdfs:label>
@@ -585,7 +585,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Agressive -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Agressive -->
 
     <owl:Class rdf:about="&ProfileAccio;Agressive">
         <rdfs:label xml:lang="nl">Agressief</rdfs:label>
@@ -594,7 +594,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Aunt -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Aunt -->
 
     <owl:Class rdf:about="&ProfileAccio;Aunt">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -603,7 +603,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#BasicProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#BasicProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;BasicProfile">
         <rdfs:label xml:lang="nl">BasisProfiel</rdfs:label>
@@ -612,7 +612,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#BehavioralRiskProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#BehavioralRiskProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;BehavioralRiskProfile">
         <rdfs:label xml:lang="nl">GedragsRisicoProfiel</rdfs:label>
@@ -621,7 +621,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#BiologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#BiologicalProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;BiologicalProfile">
         <rdfs:label xml:lang="nl">BiologischProfiel</rdfs:label>
@@ -630,7 +630,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Brother -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Brother -->
 
     <owl:Class rdf:about="&ProfileAccio;Brother">
         <owl:equivalentClass>
@@ -650,7 +650,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Daughter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Daughter -->
 
     <owl:Class rdf:about="&ProfileAccio;Daughter">
         <owl:equivalentClass>
@@ -670,7 +670,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Faith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Faith -->
 
     <owl:Class rdf:about="&ProfileAccio;Faith">
         <rdfs:label xml:lang="nl">Geloof</rdfs:label>
@@ -679,7 +679,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#FamilyRelationship -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#FamilyRelationship -->
 
     <owl:Class rdf:about="&ProfileAccio;FamilyRelationship">
         <rdfs:label xml:lang="nl">FamilialeRelatie</rdfs:label>
@@ -688,7 +688,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Father -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Father -->
 
     <owl:Class rdf:about="&ProfileAccio;Father">
         <owl:equivalentClass>
@@ -708,7 +708,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Gender -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Gender -->
 
     <owl:Class rdf:about="&ProfileAccio;Gender">
         <rdfs:label xml:lang="nl">Geslacht</rdfs:label>
@@ -725,7 +725,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Husband -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Husband -->
 
     <owl:Class rdf:about="&ProfileAccio;Husband">
         <owl:equivalentClass>
@@ -745,7 +745,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Impatient -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Impatient -->
 
     <owl:Class rdf:about="&ProfileAccio;Impatient">
         <rdfs:label xml:lang="nl">Ongeduldig</rdfs:label>
@@ -754,7 +754,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Language -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Language -->
 
     <owl:Class rdf:about="&ProfileAccio;Language">
         <rdfs:label xml:lang="nl">Taal</rdfs:label>
@@ -763,7 +763,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Man -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Man -->
 
     <owl:Class rdf:about="&ProfileAccio;Man">
         <rdfs:label xml:lang="nl">Man</rdfs:label>
@@ -784,7 +784,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#MedicalRiskProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#MedicalRiskProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;MedicalRiskProfile">
         <rdfs:label xml:lang="nl">MedischRisicoProfiel</rdfs:label>
@@ -793,7 +793,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Mother -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Mother -->
 
     <owl:Class rdf:about="&ProfileAccio;Mother">
         <owl:equivalentClass>
@@ -812,7 +812,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#MotherTongue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#MotherTongue -->
 
     <owl:Class rdf:about="&ProfileAccio;MotherTongue">
         <rdfs:label xml:lang="nl">Moedertaal</rdfs:label>
@@ -821,7 +821,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Nationality -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Nationality -->
 
     <owl:Class rdf:about="&ProfileAccio;Nationality">
         <rdfs:label xml:lang="nl">Nationaliteit</rdfs:label>
@@ -830,7 +830,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Nephew -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Nephew -->
 
     <owl:Class rdf:about="&ProfileAccio;Nephew">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -839,7 +839,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Niece -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Niece -->
 
     <owl:Class rdf:about="&ProfileAccio;Niece">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -847,7 +847,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Person -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Person -->
 
     <owl:Class rdf:about="&ProfileAccio;Person">
         <rdfs:label xml:lang="nl">Persoon</rdfs:label>
@@ -864,7 +864,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#PersonStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#PersonStatus -->
 
     <owl:Class rdf:about="&ProfileAccio;PersonStatus">
         <rdfs:label xml:lang="nl">PersoonStatus</rdfs:label>
@@ -873,7 +873,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#PersonalRelationship -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#PersonalRelationship -->
 
     <owl:Class rdf:about="&ProfileAccio;PersonalRelationship">
         <rdfs:label xml:lang="nl">PersoonlijkeRelatie</rdfs:label>
@@ -882,7 +882,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Profile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Profile -->
 
     <owl:Class rdf:about="&ProfileAccio;Profile">
         <rdfs:label xml:lang="nl">Profiel</rdfs:label>
@@ -891,7 +891,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#PsychologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#PsychologicalProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;PsychologicalProfile">
         <rdfs:label xml:lang="nl">PsychologischProfiel</rdfs:label>
@@ -900,7 +900,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#RiskProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#RiskProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;RiskProfile">
         <rdfs:label xml:lang="nl">RisicoProfiel</rdfs:label>
@@ -909,7 +909,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Sister -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Sister -->
 
     <owl:Class rdf:about="&ProfileAccio;Sister">
         <owl:equivalentClass>
@@ -928,7 +928,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#SociologicalProfile -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#SociologicalProfile -->
 
     <owl:Class rdf:about="&ProfileAccio;SociologicalProfile">
         <rdfs:label xml:lang="nl">SociologischProfiel</rdfs:label>
@@ -937,7 +937,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Son -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Son -->
 
     <owl:Class rdf:about="&ProfileAccio;Son">
         <owl:equivalentClass>
@@ -956,7 +956,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#TherapeuticRelationship -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#TherapeuticRelationship -->
 
     <owl:Class rdf:about="&ProfileAccio;TherapeuticRelationship">
         <rdfs:label xml:lang="nl">TherapeutischeRelatie</rdfs:label>
@@ -965,7 +965,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#TrustRelationship -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#TrustRelationship -->
 
     <owl:Class rdf:about="&ProfileAccio;TrustRelationship">
         <owl:equivalentClass>
@@ -989,7 +989,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Uncle -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Uncle -->
 
     <owl:Class rdf:about="&ProfileAccio;Uncle">
         <rdfs:subClassOf rdf:resource="&rolecompetenceaccio;Family"/>
@@ -997,7 +997,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Wife -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Wife -->
 
     <owl:Class rdf:about="&ProfileAccio;Wife">
         <owl:equivalentClass>
@@ -1016,7 +1016,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Woman -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Woman -->
 
     <owl:Class rdf:about="&ProfileAccio;Woman">
         <rdfs:label xml:lang="nl">Vrouw</rdfs:label>
@@ -1036,7 +1036,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#vegetarian -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#vegetarian -->
 
     <owl:Class rdf:about="&ProfileAccio;vegetarian">
         <rdfs:label xml:lang="nl">Vegetarier</rdfs:label>
@@ -1056,7 +1056,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Busy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Busy -->
 
     <owl:NamedIndividual rdf:about="&ProfileAccio;Busy">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
@@ -1065,7 +1065,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Female -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Female -->
 
     <owl:NamedIndividual rdf:about="&ProfileAccio;Female">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
@@ -1074,7 +1074,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Free -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Free -->
 
     <owl:NamedIndividual rdf:about="&ProfileAccio;Free">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>
@@ -1083,7 +1083,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#Male -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Male -->
 
     <owl:NamedIndividual rdf:about="&ProfileAccio;Male">
         <rdf:type rdf:resource="&ProfileAccio;Gender"/>
@@ -1092,7 +1092,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ProfileAccio.owl#withPatient -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#withPatient -->
 
     <owl:NamedIndividual rdf:about="&ProfileAccio;withPatient">
         <rdf:type rdf:resource="&ProfileAccio;PersonStatus"/>

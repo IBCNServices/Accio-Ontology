@@ -2,7 +2,7 @@
 <!--
   This document uses entities as abbreviations for URIs.
   For a version with entity references expanded, load the source into 
-  Internet Explorer.
+  Internet Explorer. 
   -->
 <!DOCTYPE uridef [
   <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns">

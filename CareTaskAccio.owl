@@ -6,19 +6,19 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY UpperAccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY UpperAccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://orca.test/ontology/CareTaskAccio.owl#"
-     xml:base="http://orca.test/ontology/CareTaskAccio.owl"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:UpperAccio="http://orca.test/ontology/UpperAccio.owl#"
+     xmlns:UpperAccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://orca.test/ontology/CareTaskAccio.owl">
-        <owl:imports rdf:resource="http://orca.test/ontology/TaskAccio.owl"/>
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl"/>
     </owl:Ontology>
     
 
@@ -34,29 +34,29 @@
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#hasCategory -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasCategory -->
 
-    <owl:ObjectProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#hasCategory">
-        <rdfs:range rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasCategory">
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#hasTrendValue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasTrendValue -->
 
-    <owl:ObjectProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#hasTrendValue">
-        <rdfs:domain rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Trend"/>
-        <rdfs:range rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TrendValue"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasTrendValue">
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Trend"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TrendValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#isTrendOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#isTrendOf -->
 
-    <owl:ObjectProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#isTrendOf">
-        <rdfs:domain rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Trend"/>
-        <rdfs:range rdf:resource="http://orca.test/ontology/ProfileAccio.owl#Person"/>
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#isTrendOf">
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Trend"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#Person"/>
     </owl:ObjectProperty>
     
 
@@ -72,27 +72,27 @@
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#hasAverageValue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasAverageValue -->
 
-    <owl:DatatypeProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#hasAverageValue">
-        <rdfs:subPropertyOf rdf:resource="http://orca.test/ontology/WSNadjustedAccio.owl#hasValue"/>
+    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasAverageValue">
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#hasValue"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#hasDuration -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasDuration -->
 
-    <owl:DatatypeProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#hasDuration">
-        <rdfs:domain rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Trend"/>
+    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasDuration">
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Trend"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#hasNumberOfOccurrence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasNumberOfOccurrence -->
 
-    <owl:DatatypeProperty rdf:about="http://orca.test/ontology/CareTaskAccio.owl#hasNumberOfOccurrence">
+    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#hasNumberOfOccurrence">
         <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
@@ -109,712 +109,712 @@
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#A_Tasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#A_Tasks -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#A_Tasks">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#A_Tasks">
         <rdfs:label xml:lang="nl">A_Taken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask">
         <rdfs:label xml:lang="nl">PersonenVergezellenNaarPlaatsenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministerIntravenousMedicationTask">
         <rdfs:label xml:lang="nl">IntraveneusToedienenMedicatieTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AdministerMedicationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministerMedicationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AdministerMedicationTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministerMedicationTask">
         <rdfs:label xml:lang="nl">MedicatieToedienenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdviseAboutHiegieneTask">
         <rdfs:label xml:lang="nl">AdviesOverHygieneTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdviseFamilyAboutPersonConditionTask">
         <rdfs:label xml:lang="nl">AdviseerFamilieOverToestandPersoonTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask">
         <rdfs:label xml:lang="nl">OproepBeantwoordenTask</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerCareCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCareCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerCareCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCareCallTask">
         <rdfs:label xml:lang="nl">VerzorgingOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerDoctorNecessaryCallTask">
         <rdfs:label xml:lang="nl">ArtsNodigOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerMedicalCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerMedicalCallTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerHotelFunctionCallTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerMedicalCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerMedicalCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerMedicalCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerMedicalCallTask">
         <rdfs:label xml:lang="nl">MedischeOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerPermanenceCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerPermanenceCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerPermanenceCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerPermanenceCallTask">
         <rdfs:label xml:lang="nl">PermanentieOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerSanitaryCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerSanitaryCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerSanitaryCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerSanitaryCallTask">
         <rdfs:label xml:lang="nl">SanitaireOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AnswerUrgencyCallTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerUrgencyCallTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AnswerUrgencyCallTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerUrgencyCallTask">
         <rdfs:label xml:lang="nl">UrgentieOproepBeantwoordenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AnswerCallTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AnswerCallTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ArrangeTransporOccupantTask">
         <rdfs:label xml:lang="nl">VervoerBewonerRegelenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#B1_Tasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B1_Tasks -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#B1_Tasks">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B1_Tasks">
         <rdfs:label xml:lang="nl">B1_Taken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#B2_Tasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B2_Tasks -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#B2_Tasks">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B2_Tasks">
         <rdfs:label xml:lang="nl">B2_Taken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#B3_Tasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B3_Tasks -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#B3_Tasks">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#B3_Tasks">
         <rdfs:label xml:lang="nl">B3_Taken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BringFoodBackToKitchenTask">
         <rdfs:label xml:lang="nl">EtenTerugBrengenNaarKeukenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#BringMailTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BringMailTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#BringMailTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BringMailTask">
         <rdfs:label xml:lang="nl">PostRondbrengenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#C_Tasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#C_Tasks -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#C_Tasks">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#C_Tasks">
         <rdfs:label xml:lang="nl">C_Taken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#CareTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#CareTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Category -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Category">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category">
         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ChangeDataTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeDataTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ChangeDataTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeDataTask">
         <rdfs:label xml:lang="nl">DataWijzigenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ChangeMedicationCardTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeMedicationCardTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ChangeMedicationCardTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeMedicationCardTask">
         <rdfs:label xml:lang="nl">MedischeFicheWijzigenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ChangeDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeDataTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#CleanBedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CleanBedTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#CleanBedTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CleanBedTask">
         <rdfs:label xml:lang="nl">BedVerschonenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#CleanRoomTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CleanRoomTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#CleanRoomTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CleanRoomTask">
         <rdfs:label xml:lang="nl">KamerKuisenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ComplementDataTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ComplementDataTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ComplementDataTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ComplementDataTask">
         <rdfs:label xml:lang="nl">DataAanvullenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#DeregistrationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#DeregistrationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#DeregistrationTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#DeregistrationTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#DressPersonTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#DressPersonTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#DressPersonTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#DressPersonTask">
         <rdfs:label xml:lang="nl">PersoonAankledenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#EscortPersonToOrFromActivityTask">
         <rdfs:label xml:lang="nl">PersonenBegeleidenNaarOfVanActiviteitTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AccompanyPersonToPlacesTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#FillMedicationCardTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FillMedicationCardTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#FillMedicationCardTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FillMedicationCardTask">
         <rdfs:label xml:lang="nl">MedicatieFicheInvullenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ComplementDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ComplementDataTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#FinancialTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FinancialTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#FinancialTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FinancialTask">
         <rdfs:label xml:lang="nl">FinancieleTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#FollowUpMedicationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FollowUpMedicationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#FollowUpMedicationTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FollowUpMedicationTask">
         <rdfs:label xml:lang="nl">MedicatieOpvolgenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FollowUpPychologicalConditionTask">
         <rdfs:label xml:lang="nl">PsychologischeToestandOpvolgenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#GetFoodFromKitchenTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#GetFoodFromKitchenTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#GetFoodFromKitchenTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#GetFoodFromKitchenTask">
         <rdfs:label xml:lang="nl">EtenOphalenUitKeukenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#GetUpTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#GetUpTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#GetUpTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#GetUpTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#HelpPersonFromToiletTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonFromToiletTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#HelpPersonFromToiletTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonFromToiletTask">
         <rdfs:label xml:lang="nl">PersoonVanToiletHelpenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonInOrOutOfBedTask">
         <rdfs:label xml:lang="nl">PersoonInOfUitBedHelpenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#HelpPersonOnToiletTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonOnToiletTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#HelpPersonOnToiletTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HelpPersonOnToiletTask">
         <rdfs:label xml:lang="nl">PersoonOpToiletHelpenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#InformFamilyAboutPersonConditionTask">
         <rdfs:label xml:lang="nl">InformeerFamilieOverToestandPersoonTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#IronTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#IronTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#IronTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#IronTask">
         <rdfs:label xml:lang="nl">StrijkenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#KinesiotherapyTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#KinesiotherapyTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#KinesiotherapyTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#KinesiotherapyTask">
         <rdfs:label xml:lang="nl">KinesitherapieTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TherapeuticalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#LoadPillBoxTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LoadPillBoxTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#LoadPillBoxTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LoadPillBoxTask">
         <rdfs:label xml:lang="nl">LadenPillendoosTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#LogisticTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask">
         <rdfs:label xml:lang="nl">LogistiekeTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#MakeBedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MakeBedTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#MakeBedTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MakeBedTask">
         <rdfs:label xml:lang="nl">BedOpmakenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CleanBedTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CleanBedTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageLivingGroupBudgetTask">
         <rdfs:label xml:lang="nl">BeherenLeefgroepbudgetTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ManageMoneyTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageMoneyTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ManageMoneyTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageMoneyTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ManageMoneyTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#FinancialTask"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageMoneyTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#FinancialTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ManagePocketMoneyTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManagePocketMoneyTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ManagePocketMoneyTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManagePocketMoneyTask">
         <rdfs:label xml:lang="nl">BeherenZakgeldTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ManageMoneyTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ManageMoneyTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#MedicalInspectionTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalInspectionTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#MedicalInspectionTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalInspectionTask">
         <rdfs:label xml:lang="nl">MedischOnderzoekTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#MedicalTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask">
         <rdfs:label xml:lang="nl">MedischeTaken</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#MopTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MopTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#MopTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MopTask">
         <rdfs:label xml:lang="nl">DweilenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#OccupationalTherapyTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OccupationalTherapyTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#OccupationalTherapyTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OccupationalTherapyTask">
         <rdfs:label xml:lang="nl">ErgotherapeutischeTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TherapeuticalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#OrderDietFoodTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderDietFoodTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#OrderDietFoodTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderDietFoodTask">
         <rdfs:label xml:lang="nl">DieetVoedingBestellenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#OrderMaterialTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMaterialTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#OrderMaterialTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMaterialTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#OrderMaterialTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMaterialTask">
         <rdfs:label xml:lang="nl">MateriaalBestellenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#OrderMedicationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMedicationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#OrderMedicationTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMedicationTask">
         <rdfs:label xml:lang="nl">MedicatieBestellenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask">
         <rdfs:label xml:lang="nl">PersoonToiletAssistentieGevenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PlaceKitchenOrderTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PlaceKitchenOrderTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PlaceKitchenOrderTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PlaceKitchenOrderTask">
         <rdfs:label xml:lang="nl">KeukenbestellingPlaatsenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#OrderMaterialTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OrderMaterialTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PrepareMealTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PrepareMealTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PrepareMealTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PrepareMealTask">
         <rdfs:label xml:lang="nl">MaaltijdBereidenTask</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PrescribeMedicationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PrescribeMedicationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PrescribeMedicationTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PrescribeMedicationTask">
         <rdfs:label xml:lang="nl">MedicatieVoorschrijvenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MedicalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MedicalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ReadComplementChangeDataTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadComplementChangeDataTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ReadComplementChangeDataTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadComplementChangeDataTask">
         <rdfs:label xml:lang="nl">DataLezenAanvullenWijzigenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ChangeDataTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ComplementDataTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ReadDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ChangeDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ComplementDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadDataTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ReadDataTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadDataTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ReadDataTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadDataTask">
         <rdfs:label xml:lang="nl">DataLezenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#ReadMedicationCardTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadMedicationCardTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#ReadMedicationCardTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadMedicationCardTask">
         <rdfs:label xml:lang="nl">MedicatieFicheLezenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#ReadDataTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#ReadDataTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#RefreshPersonTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RefreshPersonTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#RefreshPersonTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RefreshPersonTask">
         <rdfs:label xml:lang="nl">PersoonVerversenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#RegistrationTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RegistrationTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#RegistrationTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RegistrationTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#SpeechTherapyTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#SpeechTherapyTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#SpeechTherapyTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#SpeechTherapyTask">
         <rdfs:label xml:lang="nl">LogopedischeTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#TherapeuticalTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TherapeuticalTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#StoolCareTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#StoolCareTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#StoolCareTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#StoolCareTask">
         <rdfs:label xml:lang="nl">StoelgangVerzorgingTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#RefreshPersonTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RefreshPersonTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TakeGarbageOutSideTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TakeGarbageOutSideTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TakeGarbageOutSideTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TakeGarbageOutSideTask">
         <rdfs:label xml:lang="nl">VuilinszakkenBuitenzettenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TakeTemperatureTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TakeTemperatureTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TakeTemperatureTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TakeTemperatureTask">
         <rdfs:label xml:lang="nl">TemperatuurOpnemenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TherapeuticalTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TherapeuticalTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TherapeuticalTask">
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/TaskAccio.owl#Task"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TherapeuticalTask">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TransportOccupantTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOccupantTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TransportOccupantTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOccupantTask">
         <rdfs:label xml:lang="nl">BewonerVervoerenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TransportOrMoveMaterialTask">
         <rdfs:label xml:lang="nl">MateriaalVervoerenOfVerplaatsenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#LogisticTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#LogisticTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Trend -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Trend -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Trend">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Trend">
         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TrendValue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TrendValue -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TrendValue">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TrendValue">
         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#TurnPersonInBedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TurnPersonInBedTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#TurnPersonInBedTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#TurnPersonInBedTask">
         <rdfs:label xml:lang="nl">PersoonDraaienInBedTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#CareTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#CareTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#UrineCareTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#UrineCareTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#UrineCareTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#UrineCareTask">
         <rdfs:label xml:lang="nl">UrineVerzorgingTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#RefreshPersonTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersonToiletAssistanceTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#RefreshPersonTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#WashClothesTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#WashClothesTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#WashClothesTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#WashClothesTask">
         <rdfs:label xml:lang="nl">KlerenWassenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#WashDishesTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#WashDishesTask -->
 
-    <owl:Class rdf:about="http://orca.test/ontology/CareTaskAccio.owl#WashDishesTask">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#WashDishesTask">
         <rdfs:label xml:lang="nl">VaatWassenTaak</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#HotelFunctionTask"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#HotelFunctionTask"/>
     </owl:Class>
     
 
@@ -830,118 +830,118 @@
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Administratie -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#AdministratieID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministratieID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#AdministratieID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministratieID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#AdministratieID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#AdministratieID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">2</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Boodschappen -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#BoodschappenID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BoodschappenID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#BoodschappenID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BoodschappenID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#BoodschappenID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#BoodschappenID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">1</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Kledij -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#KleedijID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#KleedijID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#KleedijID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#KleedijID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#KleedijID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#KleedijID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">6</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Maaltijden -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#MaaltijdenID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MaaltijdenID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#MaaltijdenID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MaaltijdenID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#MaaltijdenID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#MaaltijdenID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">5</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Onderhoud -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#OnderhoudID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OnderhoudID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#OnderhoudID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OnderhoudID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#OnderhoudID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#OnderhoudID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">3</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
-        <UpperAccio:hasId rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
+        <UpperAccio:hasId rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID">
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorgingID">
         <rdf:type rdf:resource="&UpperAccio;ID"/>
         <UpperAccio:hasID rdf:datatype="&xsd;string">7</UpperAccio:hasID>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/CareTaskAccio.owl#Transport -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport -->
 
-    <owl:NamedIndividual rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport">
-        <rdf:type rdf:resource="http://orca.test/ontology/CareTaskAccio.owl#Category"/>
+    <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Category"/>
     </owl:NamedIndividual>
     
 
@@ -957,148 +957,148 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Onderhoud"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Onderhoud"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Kledij"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Kledij"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#PersoonlijkeVerzorging"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Transport"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Transport"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Administratie"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Administratie"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Boodschappen"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/CareTaskAccio.owl#Maaltijden"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Boodschappen"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl#Maaltijden"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>

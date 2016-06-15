@@ -1,7 +1,7 @@
 <rdf:RDF
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
   xmlns="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
   xml:base="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl">
 

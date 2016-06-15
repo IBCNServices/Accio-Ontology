@@ -5,12 +5,12 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY upperaccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
+    <!ENTITY contextaccio "http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY RoleCompetenceAccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#" >
+    <!ENTITY RoleCompetenceAccio "http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
@@ -19,24 +19,24 @@
 ]>
 
 
-<rdf:RDF xmlns="http://orca.test/ontology/RoleCompetenceAccio.owl#"
-     xml:base="http://orca.test/ontology/RoleCompetenceAccio.owl"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:RoleCompetenceAccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
+     xmlns:RoleCompetenceAccio="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
+     xmlns:wsnextensionaccio="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <owl:Ontology rdf:about="http://orca.test/ontology/RoleCompetenceAccio.owl">
-        <owl:imports rdf:resource="http://orca.test/ontology/ContextAccio.owl"/>
+     xmlns:contextaccio="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#">
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl"/>
     </owl:Ontology>
     
 
@@ -52,7 +52,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#acquiredAtTimepoint -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#acquiredAtTimepoint -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;acquiredAtTimepoint">
         <rdfs:label xml:lang="nl">VerworvenOpTijdstip</rdfs:label>
@@ -63,7 +63,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#appliesTo -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#appliesTo -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;appliesTo">
         <rdfs:label xml:lang="nl">vanToepassingOp</rdfs:label>
@@ -81,7 +81,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#belongsToRole -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#belongsToRole -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;belongsToRole">
         <rdfs:label xml:lang="nl">hoortBijRol</rdfs:label>
@@ -91,7 +91,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#discussedIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#discussedIn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;discussedIn">
         <rdfs:label xml:lang="nl">besprokenIn</rdfs:label>
@@ -101,7 +101,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#drawnUpIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#drawnUpIn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;drawnUpIn">
         <rdfs:label xml:lang="nl">opgesteldIn</rdfs:label>
@@ -111,7 +111,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasBed -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasBed -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasBed">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -129,7 +129,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasChild -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasChild">
         <rdfs:label xml:lang="nl">heeftKind</rdfs:label>
@@ -139,7 +139,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasCompetence -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasCompetence">
         <rdfs:label xml:lang="nl">heeftCompetentie</rdfs:label>
@@ -150,7 +150,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasConsort -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasConsort -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasConsort">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -161,7 +161,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasParent -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasParent">
         <rdfs:label xml:lang="nl">heeftOuder</rdfs:label>
@@ -172,7 +172,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasSibling -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;hasSibling">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -183,7 +183,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isHeadOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isHeadOf -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isHeadOf">
         <rdfs:label xml:lang="nl">isHoofdVan</rdfs:label>
@@ -200,7 +200,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isMemberOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isMemberOf -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isMemberOf">
         <rdfs:label xml:lang="nl">maaktDeelUitVan</rdfs:label>
@@ -217,7 +217,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isValidIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isValidIn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;isValidIn">
         <rdfs:label xml:lang="nl">isGeldigIn</rdfs:label>
@@ -235,7 +235,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#liesOn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#liesOn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;liesOn">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -246,7 +246,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#livesOn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#livesOn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;livesOn">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -257,7 +257,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#participatesIn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#participatesIn -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;participatesIn">
         <rdfs:label xml:lang="nl">neemtDeelAan</rdfs:label>
@@ -267,7 +267,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#providesInputFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#providesInputFor -->
 
     <owl:ObjectProperty rdf:about="&RoleCompetenceAccio;providesInputFor">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -289,7 +289,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#hasFrequency -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasFrequency -->
 
     <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;hasFrequency">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -300,7 +300,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isDigital -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isDigital -->
 
     <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;isDigital">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -311,7 +311,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#isWorking -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isWorking -->
 
     <owl:DatatypeProperty rdf:about="&RoleCompetenceAccio;isWorking">
         <rdfs:domain rdf:resource="&RoleCompetenceAccio;StaffMember"/>
@@ -331,7 +331,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AdministerMedicationCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AdministerMedicationCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AdministerMedicationCompetence">
         <rdfs:label xml:lang="nl">MedicatieToedienenCompetentie</rdfs:label>
@@ -340,7 +340,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerCallCompetence">
         <rdfs:label xml:lang="nl">OproepBeantwoordenCompetentie</rdfs:label>
@@ -349,7 +349,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerCareCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerCareCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerCareCallCompetence">
         <rdfs:label xml:lang="nl">VerzorgingOproepBeantwoordenCompetentie</rdfs:label>
@@ -359,7 +359,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerDoctorNeededCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerDoctorNeededCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerDoctorNeededCallCompetence">
         <rdfs:label xml:lang="nl">ArtsNodigOproepBeantwoordenCompetentie</rdfs:label>
@@ -368,7 +368,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerHotelFunctionCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerHotelFunctionCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerHotelFunctionCallCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieOproepBeantwoordenCompetentie</rdfs:label>
@@ -378,7 +378,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerMedicalCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerMedicalCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerMedicalCallCompetence">
         <rdfs:label xml:lang="nl">MedischeOproepBeantwoordenCompetentie</rdfs:label>
@@ -388,7 +388,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#AnswerUrgencyCallCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AnswerUrgencyCallCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;AnswerUrgencyCallCompetence">
         <rdfs:label xml:lang="nl">UrgentieOproepBeantwoordenCompetentie</rdfs:label>
@@ -397,7 +397,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CareCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;CareCompetence">
         <rdfs:label xml:lang="nl">ZorgCompetentie</rdfs:label>
@@ -406,7 +406,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CareRole -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CareRole -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;CareRole">
         <rdfs:label xml:lang="nl">VerzorgingRol</rdfs:label>
@@ -415,7 +415,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Child -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Child -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Child">
         <rdfs:label xml:lang="nl">Kind</rdfs:label>
@@ -431,7 +431,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#CloackCaregiver -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CloackCaregiver -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;CloackCaregiver">
         <rdfs:label xml:lang="nl">Mantelzorger</rdfs:label>
@@ -441,7 +441,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Competence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Competence">
         <rdfs:label xml:lang="nl">Competentie</rdfs:label>
@@ -457,7 +457,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;EditDataCompetence">
         <rdfs:label xml:lang="nl">DataWijzigenCompetentie</rdfs:label>
@@ -472,7 +472,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Family -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Family -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Family">
         <rdfs:label xml:lang="nl">Familie</rdfs:label>
@@ -481,7 +481,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Form -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Form -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Form">
         <rdfs:label xml:lang="nl">Formulier</rdfs:label>
@@ -490,7 +490,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;HotelFunctionCompetence">
         <rdfs:label xml:lang="nl">HotelFunctieCompetentie</rdfs:label>
@@ -499,7 +499,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MedicalCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;MedicalCompetence">
         <rdfs:label xml:lang="nl">MedischeCompetentie</rdfs:label>
@@ -508,7 +508,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#MedicalRole -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MedicalRole -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;MedicalRole">
         <rdfs:label xml:lang="nl">MedischeRol</rdfs:label>
@@ -517,7 +517,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Meeting -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Meeting -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Meeting">
         <rdfs:label xml:lang="nl">Vergadering</rdfs:label>
@@ -526,7 +526,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Neighbour -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Neighbour -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Neighbour">
         <rdfs:subClassOf rdf:resource="&RoleCompetenceAccio;CloackCaregiver"/>
@@ -534,7 +534,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Parent -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Parent -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Parent">
         <rdfs:label xml:lang="nl">Ouder</rdfs:label>
@@ -550,7 +550,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Partner -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Partner -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Partner">
         <rdfs:label xml:lang="nl">Partner</rdfs:label>
@@ -566,7 +566,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Patient -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Patient -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Patient">
         <rdfs:label xml:lang="nl">Patient</rdfs:label>
@@ -592,7 +592,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadDataCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ReadDataCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;ReadDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenCompetentie</rdfs:label>
@@ -607,7 +607,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#ReadWriteEditDataCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ReadWriteEditDataCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;ReadWriteEditDataCompetence">
         <rdfs:label xml:lang="nl">DataLezenAanvullenWijzigenCompetentie</rdfs:label>
@@ -625,7 +625,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Resident -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Resident -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Resident">
         <rdfs:label xml:lang="nl">Bewoner</rdfs:label>
@@ -651,7 +651,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Role -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Role -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Role">
         <rdfs:label xml:lang="nl">Rol</rdfs:label>
@@ -666,7 +666,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Services -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Services -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Services">
         <rdfs:label xml:lang="nl">Dienst</rdfs:label>
@@ -675,7 +675,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Sibling -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Sibling -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Sibling">
         <rdfs:label xml:lang="nl">BroerZus</rdfs:label>
@@ -691,7 +691,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#StaffMember -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMember -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;StaffMember">
         <rdfs:label xml:lang="nl">Personeelslid</rdfs:label>
@@ -700,7 +700,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Team -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Team -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;Team">
         <rdfs:label xml:lang="nl">Team</rdfs:label>
@@ -709,7 +709,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#TherapeuticCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#TherapeuticCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;TherapeuticCompetence">
         <rdfs:label xml:lang="nl">TherapeutischeCompetentie</rdfs:label>
@@ -718,7 +718,7 @@
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#WriteDataCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WriteDataCompetence -->
 
     <owl:Class rdf:about="&RoleCompetenceAccio;WriteDataCompetence">
         <rdfs:label xml:lang="nl">DataAanvullenCompetentie</rdfs:label>

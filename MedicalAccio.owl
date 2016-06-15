@@ -5,16 +5,16 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY taskaccio "http://orca.test/ontology/TaskAccio.owl#" >
+    <!ENTITY taskaccio "http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
-    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY MedicalAccio "http://orca.test/ontology/MedicalAccio.owl#" >
-    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
-    <!ENTITY profileaccio "http://orca.test/ontology/ProfileAccio.owl#" >
-    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY upperaccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
+    <!ENTITY MedicalAccio "http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#" >
+    <!ENTITY contextaccio "http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#" >
+    <!ENTITY profileaccio "http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
     <!ENTITY expression "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
@@ -23,24 +23,24 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:taskaccio="http://orca.test/ontology/TaskAccio.owl#"
+     xmlns:taskaccio="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:profileaccio="http://orca.test/ontology/ProfileAccio.owl#"
+     xmlns:profileaccio="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:MedicalAccio="http://orca.test/ontology/MedicalAccio.owl#"
-     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
-     xmlns:rolecompetenceaccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
+     xmlns:MedicalAccio="http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#"
+     xmlns:wsnextensionaccio="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#"
+     xmlns:rolecompetenceaccio="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <Ontology rdf:about="http://orca.test/ontology/MedicalAccio.owl">
-        <imports rdf:resource="http://orca.test/ontology/CareTaskAccio.owl"/>
+     xmlns:contextaccio="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#">
+    <Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl">
+        <imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/CareTaskAccio.owl"/>
     </Ontology>
     
 
@@ -56,7 +56,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#DiagnosisMadeBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#DiagnosisMadeBy -->
 
     <ObjectProperty rdf:about="&MedicalAccio;DiagnosisMadeBy">
         <rdfs:label xml:lang="nl">diagnoseGesteldDoor</rdfs:label>
@@ -66,7 +66,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#diagnosisFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#diagnosisFor -->
 
     <ObjectProperty rdf:about="&MedicalAccio;diagnosisFor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -77,7 +77,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#diagnosisMadeAt -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#diagnosisMadeAt -->
 
     <ObjectProperty rdf:about="&MedicalAccio;diagnosisMadeAt">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -89,7 +89,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#diagnosisValidDuring -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#diagnosisValidDuring -->
 
     <ObjectProperty rdf:about="&MedicalAccio;diagnosisValidDuring">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -101,7 +101,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#drugInfluences -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#drugInfluences -->
 
     <ObjectProperty rdf:about="&MedicalAccio;drugInfluences">
         <rdfs:isDefinedBy xml:lang="nl">geneesmiddelBeinvloed</rdfs:isDefinedBy>
@@ -111,7 +111,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasAssociatedDrug -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasAssociatedDrug -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasAssociatedDrug">
         <rdfs:isDefinedBy xml:lang="nl">heeftGeassocieerdGeneesmiddel</rdfs:isDefinedBy>
@@ -121,7 +121,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasAssociatedPathology -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasAssociatedPathology -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasAssociatedPathology">
         <rdfs:label xml:lang="nl">heeftGeassocieerdePathologie</rdfs:label>
@@ -131,7 +131,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasAssociatedSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasAssociatedSample -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasAssociatedSample">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -142,7 +142,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasBloodSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasBloodSample -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasBloodSample">
         <rdfs:isDefinedBy xml:lang="nl">heeftBloedStaal</rdfs:isDefinedBy>
@@ -152,7 +152,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasDerivedTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasDerivedTime -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasDerivedTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -164,7 +164,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasDiagnosis -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasDiagnosis -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasDiagnosis">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasDose -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasDose -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasDose">
         <rdfs:label xml:lang="nl">heeftDosis</rdfs:label>
@@ -186,7 +186,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasLaboAnalyzedTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasLaboAnalyzedTime -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasLaboAnalyzedTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -198,7 +198,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasMeasurementType -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasMeasurementType -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasMeasurementType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -209,7 +209,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasMedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasMedicalParameter -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasMedicalParameter">
         <rdfs:label xml:lang="nl">heeftMedischeParameter</rdfs:label>
@@ -219,7 +219,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasMonitorTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasMonitorTime -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasMonitorTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -231,7 +231,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasObservationTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasObservationTime -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasObservationTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -243,7 +243,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasParameterMeasuredAtTimepoint -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasParameterMeasuredAtTimepoint -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasParameterMeasuredAtTimepoint">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -255,7 +255,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasPrescription -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasPrescription -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasPrescription">
         <rdfs:label xml:lang="nl">heeftVoorschrift</rdfs:label>
@@ -266,7 +266,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasPrescriptionPeriod -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasPrescriptionPeriod -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasPrescriptionPeriod">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -278,7 +278,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasSample -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasSample">
         <rdfs:label xml:lang="nl">heeftStaal</rdfs:label>
@@ -289,7 +289,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasSampleTakenAtTimepoint -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasSampleTakenAtTimepoint -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasSampleTakenAtTimepoint">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -301,7 +301,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasUrineSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasUrineSample -->
 
     <ObjectProperty rdf:about="&MedicalAccio;hasUrineSample">
         <rdfs:label xml:lang="nl">heeftUrineStaal</rdfs:label>
@@ -311,7 +311,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#isMedicalParameterFrom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#isMedicalParameterFrom -->
 
     <ObjectProperty rdf:about="&MedicalAccio;isMedicalParameterFrom">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -323,7 +323,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#isPrescriptionFrom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#isPrescriptionFrom -->
 
     <ObjectProperty rdf:about="&MedicalAccio;isPrescriptionFrom">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -334,7 +334,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#prescribedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#prescribedBy -->
 
     <ObjectProperty rdf:about="&MedicalAccio;prescribedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -345,7 +345,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#sampleFrom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#sampleFrom -->
 
     <ObjectProperty rdf:about="&MedicalAccio;sampleFrom">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -367,7 +367,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#hasDoseValue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#hasDoseValue -->
 
     <DatatypeProperty rdf:about="&MedicalAccio;hasDoseValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -389,7 +389,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#ArmpitTemperature -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#ArmpitTemperature -->
 
     <Class rdf:about="&MedicalAccio;ArmpitTemperature">
         <rdfs:label xml:lang="nl">OkselTemperatuur</rdfs:label>
@@ -405,7 +405,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#ArterialBloodPressure -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#ArterialBloodPressure -->
 
     <Class rdf:about="&MedicalAccio;ArterialBloodPressure">
         <rdfs:label xml:lang="nl">SlagaderlijkeBloeddruk</rdfs:label>
@@ -414,7 +414,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#BloodPressure -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#BloodPressure -->
 
     <Class rdf:about="&MedicalAccio;BloodPressure">
         <rdfs:label xml:lang="nl">Bloeddruk</rdfs:label>
@@ -423,7 +423,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#BloodSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#BloodSample -->
 
     <Class rdf:about="&MedicalAccio;BloodSample">
         <rdfs:label xml:lang="nl">BloedStaal</rdfs:label>
@@ -433,7 +433,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#BloodTemperature -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#BloodTemperature -->
 
     <Class rdf:about="&MedicalAccio;BloodTemperature">
         <rdfs:label xml:lang="nl">BloedTemperatuur</rdfs:label>
@@ -449,7 +449,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#BodyTemperature -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#BodyTemperature -->
 
     <Class rdf:about="&MedicalAccio;BodyTemperature">
         <rdfs:label xml:lang="nl">Lichaamstemperatuur</rdfs:label>
@@ -458,7 +458,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Derived -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Derived -->
 
     <Class rdf:about="&MedicalAccio;Derived">
         <rdfs:label xml:lang="nl">Afgeleid</rdfs:label>
@@ -467,7 +467,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#DerivedMedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#DerivedMedicalParameter -->
 
     <Class rdf:about="&MedicalAccio;DerivedMedicalParameter">
         <rdfs:label xml:lang="nl">AfgeleideMedischeParameter</rdfs:label>
@@ -490,7 +490,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Diabetes -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Diabetes -->
 
     <Class rdf:about="&MedicalAccio;Diabetes">
         <rdfs:label xml:lang="nl">Diabetes</rdfs:label>
@@ -500,7 +500,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Diagnosis -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Diagnosis -->
 
     <Class rdf:about="&MedicalAccio;Diagnosis">
         <rdfs:label xml:lang="nl">Diagnose</rdfs:label>
@@ -546,7 +546,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#DiastolicBloodPressure -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#DiastolicBloodPressure -->
 
     <Class rdf:about="&MedicalAccio;DiastolicBloodPressure">
         <rdfs:label xml:lang="nl">DiastolischeBloeddruk</rdfs:label>
@@ -556,7 +556,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Dose -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Dose -->
 
     <Class rdf:about="&MedicalAccio;Dose">
         <rdfs:label xml:lang="nl">Dosis</rdfs:label>
@@ -581,7 +581,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Duchenne -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Duchenne -->
 
     <Class rdf:about="&MedicalAccio;Duchenne">
         <rdfs:subClassOf rdf:resource="&MedicalAccio;Pathology"/>
@@ -589,7 +589,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Examination -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Examination -->
 
     <Class rdf:about="&MedicalAccio;Examination">
         <rdfs:label xml:lang="nl">Onderzoek</rdfs:label>
@@ -599,7 +599,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Labo -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Labo -->
 
     <Class rdf:about="&MedicalAccio;Labo">
         <rdfs:label xml:lang="nl">Labo</rdfs:label>
@@ -608,7 +608,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#LaboMedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#LaboMedicalParameter -->
 
     <Class rdf:about="&MedicalAccio;LaboMedicalParameter">
         <rdfs:label xml:lang="nl">LaboMedischeParameter</rdfs:label>
@@ -639,7 +639,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Levophed -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Levophed -->
 
     <Class rdf:about="&MedicalAccio;Levophed">
         <rdfs:label xml:lang="nl">Levophed</rdfs:label>
@@ -654,7 +654,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#MeasurementType -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#MeasurementType -->
 
     <Class rdf:about="&MedicalAccio;MeasurementType">
         <rdfs:label xml:lang="nl">MeetType</rdfs:label>
@@ -663,7 +663,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#MedicalDiagnosis -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#MedicalDiagnosis -->
 
     <Class rdf:about="&MedicalAccio;MedicalDiagnosis">
         <rdfs:label xml:lang="nl">MedischeDiagnose</rdfs:label>
@@ -683,7 +683,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#MedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#MedicalParameter -->
 
     <Class rdf:about="&MedicalAccio;MedicalParameter">
         <rdfs:label xml:lang="nl">MedischeParameter</rdfs:label>
@@ -735,7 +735,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Monitored -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Monitored -->
 
     <Class rdf:about="&MedicalAccio;Monitored">
         <rdfs:label xml:lang="nl">DoorMonitorApparatuur</rdfs:label>
@@ -744,7 +744,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#MonitoredMedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#MonitoredMedicalParameter -->
 
     <Class rdf:about="&MedicalAccio;MonitoredMedicalParameter">
         <rdfs:label xml:lang="nl">MonitorApparatuurMedischeParameter</rdfs:label>
@@ -767,7 +767,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Observed -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Observed -->
 
     <Class rdf:about="&MedicalAccio;Observed">
         <rdfs:label xml:lang="nl">Geobserveerd</rdfs:label>
@@ -776,7 +776,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#ObservedMedicalParameter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#ObservedMedicalParameter -->
 
     <Class rdf:about="&MedicalAccio;ObservedMedicalParameter">
         <rdfs:label xml:lang="nl">GeobserveerdeMedischeParameter</rdfs:label>
@@ -799,7 +799,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Pathology -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Pathology -->
 
     <Class rdf:about="&MedicalAccio;Pathology">
         <rdfs:label xml:lang="nl">Pathologie</rdfs:label>
@@ -808,7 +808,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#PharmaceuticalDrug -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#PharmaceuticalDrug -->
 
     <Class rdf:about="&MedicalAccio;PharmaceuticalDrug">
         <rdfs:label xml:lang="nl">PharmaceutischGeneesmiddel</rdfs:label>
@@ -831,7 +831,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Prescription -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Prescription -->
 
     <Class rdf:about="&MedicalAccio;Prescription">
         <rdfs:label xml:lang="nl">Voorschrift</rdfs:label>
@@ -882,7 +882,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#RectalTemperature -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#RectalTemperature -->
 
     <Class rdf:about="&MedicalAccio;RectalTemperature">
         <rdfs:label xml:lang="nl">RectaleTemperatuur</rdfs:label>
@@ -891,7 +891,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Sample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Sample -->
 
     <Class rdf:about="&MedicalAccio;Sample">
         <rdfs:label xml:lang="nl">Staal</rdfs:label>
@@ -928,7 +928,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#SystolicBloodPressure -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#SystolicBloodPressure -->
 
     <Class rdf:about="&MedicalAccio;SystolicBloodPressure">
         <rdfs:label xml:lang="nl">SystolischeBloeddruk</rdfs:label>
@@ -937,7 +937,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#Treatment -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#Treatment -->
 
     <Class rdf:about="&MedicalAccio;Treatment">
         <rdfs:label xml:lang="nl">Behandeling</rdfs:label>
@@ -947,7 +947,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#UrineSample -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#UrineSample -->
 
     <Class rdf:about="&MedicalAccio;UrineSample">
         <rdfs:label xml:lang="nl">UrineStaal</rdfs:label>
@@ -956,7 +956,7 @@
     
 
 
-    <!-- http://orca.test/ontology/MedicalAccio.owl#WBC -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/MedicalAccio.owl#WBC -->
 
     <Class rdf:about="&MedicalAccio;WBC">
         <rdfs:label xml:lang="nl">WBC</rdfs:label>

@@ -5,11 +5,11 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY ContextAccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY upperaccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
+    <!ENTITY ContextAccio "http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
@@ -18,23 +18,23 @@
 ]>
 
 
-<rdf:RDF xmlns="http://orca.test/ontology/ContextAccio.owl#"
-     xml:base="http://orca.test/ontology/ContextAccio.owl"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:wsnadjustedaccio="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
+     xmlns:wsnextensionaccio="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ContextAccio="http://orca.test/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <owl:Ontology rdf:about="http://orca.test/ontology/ContextAccio.owl">
-        <owl:imports rdf:resource="http://orca.test/ontology/WSNextensionAccio.owl"/>
+     xmlns:ContextAccio="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#">
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl"/>
     </owl:Ontology>
     
 
@@ -50,7 +50,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#belongsTo -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#belongsTo -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;belongsTo">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -61,7 +61,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#belongsToTroop -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#belongsToTroop -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;belongsToTroop">
         <rdfs:label xml:lang="nl">behoortTotTroep</rdfs:label>
@@ -70,7 +70,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#containsHallway -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#containsHallway -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;containsHallway">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -88,7 +88,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#containsRoom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#containsRoom -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;containsRoom">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -107,7 +107,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#containsSystem -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#containsSystem -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;containsSystem">
         <rdfs:label xml:lang="nl">bevatSysteem</rdfs:label>
@@ -117,7 +117,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasCentreCoordinate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasCentreCoordinate -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;hasCentreCoordinate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasDeviceProperty -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasDeviceProperty -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;hasDeviceProperty">
         <rdfs:comment>heeftToestelEigenschap</rdfs:comment>
@@ -138,7 +138,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasFunction -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasFunction -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;hasFunction">
         <rdfs:label xml:lang="nl">heeftFunctie</rdfs:label>
@@ -155,7 +155,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasLocation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasLocation -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;hasLocation">
         <rdfs:label xml:lang="nl">heeftLocatie</rdfs:label>
@@ -164,7 +164,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#isLocationOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#isLocationOf -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;isLocationOf">
         <rdfs:label xml:lang="nl">isLocatieVan</rdfs:label>
@@ -173,7 +173,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#isOnDepartment -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#isOnDepartment -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;isOnDepartment">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -191,7 +191,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#isOnFloor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#isOnFloor -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;isOnFloor">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -209,7 +209,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#troopComposedOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#troopComposedOf -->
 
     <owl:ObjectProperty rdf:about="&ContextAccio;troopComposedOf">
         <rdfs:label xml:lang="nl">troepSamengesteldUit</rdfs:label>
@@ -230,7 +230,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasAverageHumidity -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasAverageHumidity -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasAverageHumidity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -241,7 +241,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasAverageLightIntensity -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasAverageLightIntensity -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasAverageLightIntensity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -252,7 +252,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasAverageTemperature -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasAverageTemperature -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasAverageTemperature">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -263,7 +263,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasNumber -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasNumber -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasNumber">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -283,7 +283,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasRadius -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasRadius -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasRadius">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -294,7 +294,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasVolume -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasVolume -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasVolume">
         <rdfs:domain rdf:resource="&ContextAccio;TVVolume"/>
@@ -303,7 +303,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasXCoordinate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasXCoordinate -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasXCoordinate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -314,7 +314,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasYCoordinate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasYCoordinate -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasYCoordinate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -325,7 +325,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#hasZCoordinate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#hasZCoordinate -->
 
     <owl:DatatypeProperty rdf:about="&ContextAccio;hasZCoordinate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -347,7 +347,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#AxisKey -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#AxisKey -->
 
     <owl:Class rdf:about="&ContextAccio;AxisKey">
         <rdfs:label xml:lang="nl">AxisSleutel</rdfs:label>
@@ -387,7 +387,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Bed -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Bed -->
 
     <owl:Class rdf:about="&ContextAccio;Bed">
         <rdfs:label xml:lang="nl">Bed</rdfs:label>
@@ -419,7 +419,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#CellPhone -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#CellPhone -->
 
     <owl:Class rdf:about="&ContextAccio;CellPhone">
         <rdfs:label xml:lang="nl">GSM</rdfs:label>
@@ -440,7 +440,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Closet -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Closet -->
 
     <owl:Class rdf:about="&ContextAccio;Closet">
         <rdfs:label xml:lang="nl">Kast</rdfs:label>
@@ -449,7 +449,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Coordinate -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Coordinate -->
 
     <owl:Class rdf:about="&ContextAccio;Coordinate">
         <rdfs:label xml:lang="nl">Coordinaat</rdfs:label>
@@ -478,7 +478,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Department -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Department -->
 
     <owl:Class rdf:about="&ContextAccio;Department">
         <rdfs:label xml:lang="nl">Afdeling</rdfs:label>
@@ -499,7 +499,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Device -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Device -->
 
     <owl:Class rdf:about="&ContextAccio;Device">
         <rdfs:label xml:lang="nl">Toestel</rdfs:label>
@@ -537,7 +537,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#DeviceFunction -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#DeviceFunction -->
 
     <owl:Class rdf:about="&ContextAccio;DeviceFunction">
         <rdfs:label xml:lang="nl">ToestelFunctie</rdfs:label>
@@ -547,7 +547,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#DeviceProperties -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#DeviceProperties -->
 
     <owl:Class rdf:about="&ContextAccio;DeviceProperties">
         <rdfs:label xml:lang="nl">ToestelEigenschappen</rdfs:label>
@@ -556,7 +556,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#DeviceStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#DeviceStatus -->
 
     <owl:Class rdf:about="&ContextAccio;DeviceStatus">
         <rdfs:label xml:lang="nl">ToestelStatus</rdfs:label>
@@ -569,7 +569,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Floor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Floor -->
 
     <owl:Class rdf:about="&ContextAccio;Floor">
         <rdfs:label xml:lang="nl">Verdieping</rdfs:label>
@@ -597,7 +597,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Function -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Function -->
 
     <owl:Class rdf:about="&ContextAccio;Function">
         <rdfs:label xml:lang="nl">Functie</rdfs:label>
@@ -606,7 +606,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Furniture -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Furniture -->
 
     <owl:Class rdf:about="&ContextAccio;Furniture">
         <rdfs:label xml:lang="nl">Meubel</rdfs:label>
@@ -615,7 +615,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#GPS -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#GPS -->
 
     <owl:Class rdf:about="&ContextAccio;GPS">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Device"/>
@@ -623,7 +623,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Hallway -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Hallway -->
 
     <owl:Class rdf:about="&ContextAccio;Hallway">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
@@ -647,7 +647,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Intercom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Intercom -->
 
     <owl:Class rdf:about="&ContextAccio;Intercom">
         <rdfs:label xml:lang="nl">Intercom</rdfs:label>
@@ -662,7 +662,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Item -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Item -->
 
     <owl:Class rdf:about="&ContextAccio;Item">
         <rdfs:label xml:lang="nl">Item</rdfs:label>
@@ -671,7 +671,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#LightControl -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#LightControl -->
 
     <owl:Class rdf:about="&ContextAccio;LightControl">
         <rdfs:label xml:lang="nl">LichtBediening</rdfs:label>
@@ -680,7 +680,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Location -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Location -->
 
     <owl:Class rdf:about="&ContextAccio;Location">
         <rdfs:label xml:lang="nl">Locatie</rdfs:label>
@@ -690,7 +690,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#MultimediaHandset -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#MultimediaHandset -->
 
     <owl:Class rdf:about="&ContextAccio;MultimediaHandset">
         <rdfs:label xml:lang="nl">MultimediaHandset</rdfs:label>
@@ -729,7 +729,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#NurseCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#NurseCall -->
 
     <owl:Class rdf:about="&ContextAccio;NurseCall">
         <rdfs:label xml:lang="nl">VerpleegOproep</rdfs:label>
@@ -738,7 +738,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#NurseGroup -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#NurseGroup -->
 
     <owl:Class rdf:about="&ContextAccio;NurseGroup">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Troop"/>
@@ -746,7 +746,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#NursingOfficeTerminal -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#NursingOfficeTerminal -->
 
     <owl:Class rdf:about="&ContextAccio;NursingOfficeTerminal">
         <rdfs:label xml:lang="nl">VerpleegpostTerminal</rdfs:label>
@@ -761,7 +761,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#PDA -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#PDA -->
 
     <owl:Class rdf:about="&ContextAccio;PDA">
         <rdfs:label xml:lang="nl">PDA</rdfs:label>
@@ -782,7 +782,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#PatientCare -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#PatientCare -->
 
     <owl:Class rdf:about="&ContextAccio;PatientCare">
         <rdfs:label xml:lang="nl">PatientVerzorging</rdfs:label>
@@ -791,7 +791,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#PatientUnit -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#PatientUnit -->
 
     <owl:Class rdf:about="&ContextAccio;PatientUnit">
         <rdfs:label xml:lang="nl">PatientEenheid</rdfs:label>
@@ -800,7 +800,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#PersonalElectronicDevice -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#PersonalElectronicDevice -->
 
     <owl:Class rdf:about="&ContextAccio;PersonalElectronicDevice">
         <rdfs:label xml:lang="nl">PersoonlijkElektronischToestel</rdfs:label>
@@ -811,7 +811,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#PortablePhone -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#PortablePhone -->
 
     <owl:Class rdf:about="&ContextAccio;PortablePhone">
         <rdfs:label xml:lang="nl">DECT</rdfs:label>
@@ -832,7 +832,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#ResidentialUse -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#ResidentialUse -->
 
     <owl:Class rdf:about="&ContextAccio;ResidentialUse">
         <rdfs:label xml:lang="nl">WoonFunctie</rdfs:label>
@@ -841,7 +841,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#RollingShutterControl -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#RollingShutterControl -->
 
     <owl:Class rdf:about="&ContextAccio;RollingShutterControl">
         <rdfs:label xml:lang="nl">RolluikBediening</rdfs:label>
@@ -850,7 +850,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Room -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Room -->
 
     <owl:Class rdf:about="&ContextAccio;Room">
         <rdfs:label xml:lang="nl">Kamer</rdfs:label>
@@ -896,7 +896,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#RoomFunction -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#RoomFunction -->
 
     <owl:Class rdf:about="&ContextAccio;RoomFunction">
         <rdfs:label xml:lang="nl">KamerFunctie</rdfs:label>
@@ -905,7 +905,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Sanitary -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Sanitary -->
 
     <owl:Class rdf:about="&ContextAccio;Sanitary">
         <rdfs:label xml:lang="nl">Sanitair</rdfs:label>
@@ -914,7 +914,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Screen -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Screen -->
 
     <owl:Class rdf:about="&ContextAccio;Screen">
         <rdfs:label xml:lang="nl">Scherm</rdfs:label>
@@ -929,7 +929,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#SmartPhone -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#SmartPhone -->
 
     <owl:Class rdf:about="&ContextAccio;SmartPhone">
         <rdfs:label xml:lang="nl">SmartPhone</rdfs:label>
@@ -962,7 +962,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TV -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TV -->
 
     <owl:Class rdf:about="&ContextAccio;TV">
         <rdfs:label xml:lang="nl">TV</rdfs:label>
@@ -977,7 +977,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TVChannel -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TVChannel -->
 
     <owl:Class rdf:about="&ContextAccio;TVChannel">
         <rdfs:label xml:lang="nl">TVKanaal</rdfs:label>
@@ -1009,7 +1009,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TVControl -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TVControl -->
 
     <owl:Class rdf:about="&ContextAccio;TVControl">
         <rdfs:label xml:lang="nl">TVBediening</rdfs:label>
@@ -1018,7 +1018,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TVProperties -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TVProperties -->
 
     <owl:Class rdf:about="&ContextAccio;TVProperties">
         <rdfs:label xml:lang="nl">TVEigenschappen</rdfs:label>
@@ -1027,7 +1027,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TVVolume -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TVVolume -->
 
     <owl:Class rdf:about="&ContextAccio;TVVolume">
         <rdfs:label xml:lang="nl">TVVolume</rdfs:label>
@@ -1042,7 +1042,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#TaskManagement -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#TaskManagement -->
 
     <owl:Class rdf:about="&ContextAccio;TaskManagement">
         <rdfs:label xml:lang="nl">TaakBeheer</rdfs:label>
@@ -1051,7 +1051,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Telephone -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Telephone -->
 
     <owl:Class rdf:about="&ContextAccio;Telephone">
         <rdfs:label xml:lang="nl">Telefoon</rdfs:label>
@@ -1066,7 +1066,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Telephony -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Telephony -->
 
     <owl:Class rdf:about="&ContextAccio;Telephony">
         <rdfs:label xml:lang="nl">Telefonie</rdfs:label>
@@ -1075,7 +1075,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Terminal -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Terminal -->
 
     <owl:Class rdf:about="&ContextAccio;Terminal">
         <rdfs:label xml:lang="nl">Terminal</rdfs:label>
@@ -1126,7 +1126,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Towel -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Towel -->
 
     <owl:Class rdf:about="&ContextAccio;Towel">
         <rdfs:label xml:lang="nl">Handdoek</rdfs:label>
@@ -1135,7 +1135,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Troop -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Troop -->
 
     <owl:Class rdf:about="&ContextAccio;Troop">
         <rdfs:label xml:lang="nl">Troep</rdfs:label>
@@ -1144,7 +1144,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Visualization -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Visualization -->
 
     <owl:Class rdf:about="&ContextAccio;Visualization">
         <rdfs:label xml:lang="nl">Visualisatie</rdfs:label>
@@ -1153,7 +1153,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Ward -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Ward -->
 
     <owl:Class rdf:about="&ContextAccio;Ward">
         <rdfs:subClassOf rdf:resource="&ContextAccio;Zone"/>
@@ -1161,7 +1161,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Zone -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Zone -->
 
     <owl:Class rdf:about="&ContextAccio;Zone">
         <rdfs:label xml:lang="nl">Zone</rdfs:label>
@@ -1195,7 +1195,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Off -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Off -->
 
     <owl:NamedIndividual rdf:about="&ContextAccio;Off">
         <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>
@@ -1204,7 +1204,7 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#On -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#On -->
 
     <owl:NamedIndividual rdf:about="&ContextAccio;On">
         <rdf:type rdf:resource="&ContextAccio;DeviceStatus"/>

@@ -5,14 +5,14 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY TaskAccio "http://orca.test/ontology/TaskAccio.owl#" >
-    <!ENTITY upperaccio "http://orca.test/ontology/UpperAccio.owl#" >
-    <!ENTITY profileaccio "http://orca.test/ontology/ProfileAccio.owl#" >
-    <!ENTITY contextaccio "http://orca.test/ontology/ContextAccio.owl#" >
+    <!ENTITY TaskAccio "http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#" >
+    <!ENTITY upperaccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
+    <!ENTITY profileaccio "http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#" >
+    <!ENTITY contextaccio "http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY wsnadjustedaccio "http://orca.test/ontology/WSNadjustedAccio.owl#" >
-    <!ENTITY wsnextensionaccio "http://orca.test/ontology/WSNextensionAccio.owl#" >
-    <!ENTITY rolecompetenceaccio "http://orca.test/ontology/RoleCompetenceAccio.owl#" >
+    <!ENTITY wsnadjustedaccio "http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#" >
+    <!ENTITY wsnextensionaccio "http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#" >
+    <!ENTITY rolecompetenceaccio "http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#" >
     <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl#" >
     <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl#" >
     <!ENTITY objectlist "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" >
@@ -21,26 +21,26 @@
 ]>
 
 
-<rdf:RDF xmlns="http://orca.test/ontology/TaskAccio.owl#"
-     xml:base="http://orca.test/ontology/TaskAccio.owl"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl"
      xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-     xmlns:profileaccio="http://orca.test/ontology/ProfileAccio.owl#"
-     xmlns:wsnadjustedaccio="http://orca.test/ontology/WSNadjustedAccio.owl#"
+     xmlns:profileaccio="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl#"
+     xmlns:wsnadjustedaccio="http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#"
      xmlns:objectlist="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wsnextensionaccio="http://orca.test/ontology/WSNextensionAccio.owl#"
-     xmlns:rolecompetenceaccio="http://orca.test/ontology/RoleCompetenceAccio.owl#"
-     xmlns:TaskAccio="http://orca.test/ontology/TaskAccio.owl#"
+     xmlns:wsnextensionaccio="http://ibcnservices.github.io/Accio-Ontology/WSNextensionAccio.owl#"
+     xmlns:rolecompetenceaccio="http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#"
+     xmlns:TaskAccio="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:contextaccio="http://orca.test/ontology/ContextAccio.owl#"
-     xmlns:upperaccio="http://orca.test/ontology/UpperAccio.owl#">
-    <owl:Ontology rdf:about="http://orca.test/ontology/TaskAccio.owl">
-        <owl:imports rdf:resource="http://orca.test/ontology/ProfileAccio.owl"/>
+     xmlns:contextaccio="http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#"
+     xmlns:upperaccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#">
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ProfileAccio.owl"/>
     </owl:Ontology>
     
 
@@ -56,13 +56,13 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#isLocationOf -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#isLocationOf -->
 
     <owl:ObjectProperty rdf:about="&contextaccio;isLocationOf"/>
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#acceptedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#acceptedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;acceptedBy">
         <rdfs:label xml:lang="nl">aanvaardDoor</rdfs:label>
@@ -81,7 +81,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#assignedTo -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#assignedTo -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;assignedTo">
         <rdfs:label xml:lang="nl">toegewezenAan</rdfs:label>
@@ -99,7 +99,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#callMadeBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#callMadeBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;callMadeBy">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -118,7 +118,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#causedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#causedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;causedBy">
         <rdfs:label xml:lang="nl">veroorzaaktDoor</rdfs:label>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#checkedInWith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#checkedInWith -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;checkedInWith">
         <rdfs:range rdf:resource="&profileaccio;Person"/>
@@ -137,7 +137,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#declindedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#declindedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;declindedBy">
         <rdfs:range rdf:resource="&profileaccio;Person"/>
@@ -155,7 +155,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#executedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#executedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;executedBy">
         <rdfs:label xml:lang="nl">uitgevoerdDoor</rdfs:label>
@@ -172,7 +172,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#executedDuring -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#executedDuring -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;executedDuring">
         <rdfs:label xml:lang="nl">uitgevoerdGedurende</rdfs:label>
@@ -190,7 +190,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#executedOn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#executedOn -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;executedOn">
         <rdfs:label xml:lang="nl">uitgevoerdOp</rdfs:label>
@@ -207,7 +207,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasConsentedForTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasConsentedForTask -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasConsentedForTask">
         <rdfs:label xml:lang="nl">heeftToegezegdVoorTaak</rdfs:label>
@@ -217,7 +217,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasContent -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasContent -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasContent">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
@@ -226,7 +226,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasCurrentTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasCurrentTask -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasCurrentTask">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -237,7 +237,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasPriority -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasPriority -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasPriority">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -255,7 +255,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasReason -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasReason">
         <rdfs:label xml:lang="nl">heeftReden</rdfs:label>
@@ -265,7 +265,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasSequenceNumber -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasSequenceNumber -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasSequenceNumber">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -276,7 +276,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasTODOTasks -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasTODOTasks -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;hasTODOTasks">
         <rdfs:label xml:lang="nl">heeftTODOTaken</rdfs:label>
@@ -286,7 +286,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isAssignedTo -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isAssignedTo -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isAssignedTo">
         <rdfs:label xml:lang="nl">isToegewezenAan</rdfs:label>
@@ -295,7 +295,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isExecutedOn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isExecutedOn -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isExecutedOn">
         <owl:inverseOf rdf:resource="&TaskAccio;executedOn"/>
@@ -303,7 +303,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isIdeallyPerformedAtLocation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -314,7 +314,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isInNeedOfCompetence -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isInNeedOfCompetence -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isInNeedOfCompetence">
         <rdfs:label xml:lang="nl">heeftNoodAanCompetentie</rdfs:label>
@@ -324,7 +324,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isRegisteredWith -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isRegisteredWith -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isRegisteredWith">
         <rdfs:label xml:lang="nl">isGeregistreerdBij</rdfs:label>
@@ -334,7 +334,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isTaskFor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isTaskFor -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;isTaskFor">
         <rdfs:label xml:lang="nl">isTaakVoor</rdfs:label>
@@ -344,7 +344,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#madeAtLocation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#madeAtLocation -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;madeAtLocation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -355,7 +355,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#madeAtTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#madeAtTime -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;madeAtTime">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -367,7 +367,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#makesCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#makesCall -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;makesCall">
         <rdfs:label xml:lang="nl">maaktOproep</rdfs:label>
@@ -376,7 +376,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#redirectedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#redirectedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;redirectedBy">
         <rdfs:label xml:lang="nl">doorverwezenDoor</rdfs:label>
@@ -386,7 +386,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#telephonicContactMadeBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#telephonicContactMadeBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;telephonicContactMadeBy">
         <rdfs:label xml:lang="nl">telefonischContactGemaaktDoor</rdfs:label>
@@ -396,7 +396,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#temporarilyAcceptedBy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#temporarilyAcceptedBy -->
 
     <owl:ObjectProperty rdf:about="&TaskAccio;temporarilyAcceptedBy">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -407,13 +407,13 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasId -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasId -->
 
     <owl:ObjectProperty rdf:about="&upperaccio;hasId"/>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasStatus -->
 
     <owl:ObjectProperty rdf:about="&upperaccio;hasStatus"/>
     
@@ -430,7 +430,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NumberOfTimesCalled -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NumberOfTimesCalled -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesCalled">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -441,7 +441,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NumberOfTimesRedirected -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NumberOfTimesRedirected -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRedirected">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -452,7 +452,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NumberOfTimesRelaunched -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NumberOfTimesRelaunched -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;NumberOfTimesRelaunched">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -463,7 +463,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#answerNeeded -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#answerNeeded -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;answerNeeded">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
@@ -472,7 +472,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#availableSince -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#availableSince -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;availableSince">
         <rdfs:domain rdf:resource="&profileaccio;Person"/>
@@ -481,7 +481,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#futherReasening -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#futherReasening -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;futherReasening">
         <rdfs:domain rdf:resource="&TaskAccio;Notification"/>
@@ -490,7 +490,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasHadTelephonicContact -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasHadTelephonicContact -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;hasHadTelephonicContact">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -501,7 +501,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasMinimalInterventionTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasMinimalInterventionTime -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;hasMinimalInterventionTime">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -512,7 +512,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#hasTimeOutTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#hasTimeOutTime -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;hasTimeOutTime">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -530,7 +530,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#isInConversation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#isInConversation -->
 
     <owl:DatatypeProperty rdf:about="&TaskAccio;isInConversation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasIDType -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasIDType -->
 
     <owl:DatatypeProperty rdf:about="&upperaccio;hasIDType"/>
     
@@ -558,37 +558,37 @@
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Location -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Location -->
 
     <owl:Class rdf:about="&contextaccio;Location"/>
     
 
 
-    <!-- http://orca.test/ontology/ContextAccio.owl#Room -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ContextAccio.owl#Room -->
 
     <owl:Class rdf:about="&contextaccio;Room"/>
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Patient -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Patient -->
 
     <owl:Class rdf:about="&rolecompetenceaccio;Patient"/>
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#Resident -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Resident -->
 
     <owl:Class rdf:about="&rolecompetenceaccio;Resident"/>
     
 
 
-    <!-- http://orca.test/ontology/RoleCompetenceAccio.owl#StaffMember -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMember -->
 
     <owl:Class rdf:about="&rolecompetenceaccio;StaffMember"/>
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#ActualTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask -->
 
     <owl:Class rdf:about="&TaskAccio;ActualTask">
         <rdfs:label xml:lang="nl">EchteTaak</rdfs:label>
@@ -606,7 +606,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#AssistanceCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#AssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;AssistanceCall">
         <rdfs:label xml:lang="nl">AssistentieOproep</rdfs:label>
@@ -644,7 +644,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Call -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Call -->
 
     <owl:Class rdf:about="&TaskAccio;Call">
         <rdfs:label xml:lang="nl">Oproep</rdfs:label>
@@ -721,7 +721,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#CareAssistanceCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#CareAssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;CareAssistanceCall">
         <rdfs:label xml:lang="nl">VerzorgingAssistentieOproep</rdfs:label>
@@ -741,7 +741,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#CareCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#CareCall -->
 
     <owl:Class rdf:about="&TaskAccio;CareCall">
         <rdfs:label xml:lang="nl">VerzorgingOproep</rdfs:label>
@@ -761,7 +761,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#CareContextCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#CareContextCall -->
 
     <owl:Class rdf:about="&TaskAccio;CareContextCall">
         <rdfs:label xml:lang="nl">VerzorgingContextOproep</rdfs:label>
@@ -781,7 +781,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#CareReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#CareReason -->
 
     <owl:Class rdf:about="&TaskAccio;CareReason">
         <rdfs:label xml:lang="nl">VerzorgingReden</rdfs:label>
@@ -790,7 +790,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#ContextCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#ContextCall -->
 
     <owl:Class rdf:about="&TaskAccio;ContextCall">
         <rdfs:label xml:lang="nl">ContextOproep</rdfs:label>
@@ -821,7 +821,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#DoctorNeededAssistanceCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededAssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;DoctorNeededAssistanceCall">
         <rdfs:label xml:lang="nl">ArtsNodigAssistentieOproep</rdfs:label>
@@ -841,7 +841,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#DoctorNeededCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededCall -->
 
     <owl:Class rdf:about="&TaskAccio;DoctorNeededCall">
         <rdfs:label xml:lang="nl">ArtsNodigOproep</rdfs:label>
@@ -861,7 +861,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#DoctorNeededContextCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededContextCall -->
 
     <owl:Class rdf:about="&TaskAccio;DoctorNeededContextCall">
         <rdfs:label xml:lang="nl">ArtsNodigContextOproep</rdfs:label>
@@ -881,7 +881,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#DoctorNeededReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededReason -->
 
     <owl:Class rdf:about="&TaskAccio;DoctorNeededReason">
         <rdfs:label xml:lang="nl">ArtsNodigReden</rdfs:label>
@@ -890,7 +890,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#HotelFunctionAssistanceCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionAssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;HotelFunctionAssistanceCall">
         <rdfs:label xml:lang="nl">HotelFunctieAssistentieOproep</rdfs:label>
@@ -910,7 +910,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#HotelFunctionCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionCall -->
 
     <owl:Class rdf:about="&TaskAccio;HotelFunctionCall">
         <rdfs:label xml:lang="nl">HotelFunctieOproep</rdfs:label>
@@ -930,7 +930,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#HotelFunctionContextCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionContextCall -->
 
     <owl:Class rdf:about="&TaskAccio;HotelFunctionContextCall">
         <rdfs:label xml:lang="nl">HotelFunctieContextOproep</rdfs:label>
@@ -950,7 +950,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#HotelFunctionReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionReason -->
 
     <owl:Class rdf:about="&TaskAccio;HotelFunctionReason">
         <rdfs:label xml:lang="nl">HotelFunctieReden</rdfs:label>
@@ -959,7 +959,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#MedicalAssistanceCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#MedicalAssistanceCall -->
 
     <owl:Class rdf:about="&TaskAccio;MedicalAssistanceCall">
         <rdfs:label xml:lang="nl">MedischeAssistentieOproep</rdfs:label>
@@ -979,7 +979,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#MedicalCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#MedicalCall -->
 
     <owl:Class rdf:about="&TaskAccio;MedicalCall">
         <rdfs:label xml:lang="nl">MedischeOproep</rdfs:label>
@@ -999,7 +999,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#MedicalContextCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#MedicalContextCall -->
 
     <owl:Class rdf:about="&TaskAccio;MedicalContextCall">
         <rdfs:label xml:lang="nl">MedischeContextOproep</rdfs:label>
@@ -1019,7 +1019,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#MedicalReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#MedicalReason -->
 
     <owl:Class rdf:about="&TaskAccio;MedicalReason">
         <rdfs:label xml:lang="nl">MedischeReden</rdfs:label>
@@ -1028,7 +1028,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NormalCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NormalCall -->
 
     <owl:Class rdf:about="&TaskAccio;NormalCall">
         <rdfs:label xml:lang="nl">NormaleOproep</rdfs:label>
@@ -1072,7 +1072,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NormalPriority -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NormalPriority -->
 
     <owl:Class rdf:about="&TaskAccio;NormalPriority">
         <rdfs:label xml:lang="nl">NormalePrioriteit</rdfs:label>
@@ -1081,7 +1081,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Notification -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Notification -->
 
     <owl:Class rdf:about="&TaskAccio;Notification">
         <rdfs:label xml:lang="nl">Melding</rdfs:label>
@@ -1090,7 +1090,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#NotificationStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#NotificationStatus -->
 
     <owl:Class rdf:about="&TaskAccio;NotificationStatus">
         <rdfs:subClassOf rdf:resource="&upperaccio;Status"/>
@@ -1098,7 +1098,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#PainReason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#PainReason -->
 
     <owl:Class rdf:about="&TaskAccio;PainReason">
         <rdfs:subClassOf rdf:resource="&TaskAccio;CareReason"/>
@@ -1106,7 +1106,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#PatientInfoRequest -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#PatientInfoRequest -->
 
     <owl:Class rdf:about="&TaskAccio;PatientInfoRequest">
         <rdfs:subClassOf rdf:resource="&TaskAccio;Request"/>
@@ -1114,7 +1114,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#PlannedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#PlannedTask -->
 
     <owl:Class rdf:about="&TaskAccio;PlannedTask">
         <rdfs:label xml:lang="nl">GeplandeTaak</rdfs:label>
@@ -1123,7 +1123,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#PotentialTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#PotentialTask -->
 
     <owl:Class rdf:about="&TaskAccio;PotentialTask">
         <rdfs:label xml:lang="nl">PotentieleTaak</rdfs:label>
@@ -1132,7 +1132,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Priority -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Priority -->
 
     <owl:Class rdf:about="&TaskAccio;Priority">
         <rdfs:label xml:lang="nl">Prioriteit</rdfs:label>
@@ -1151,7 +1151,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Reason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Reason -->
 
     <owl:Class rdf:about="&TaskAccio;Reason">
         <rdfs:label xml:lang="nl">Reden</rdfs:label>
@@ -1170,7 +1170,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Request -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Request -->
 
     <owl:Class rdf:about="&TaskAccio;Request">
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
@@ -1178,7 +1178,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#RoomWithBusyStaffMember -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#RoomWithBusyStaffMember -->
 
     <owl:Class rdf:about="&TaskAccio;RoomWithBusyStaffMember">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslid</rdfs:label>
@@ -1211,7 +1211,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
 
     <owl:Class rdf:about="&TaskAccio;RoomWithBusyStaffMemberAcceptedMedicalCall">
         <rdfs:label xml:lang="nl">KamerMetBezigPersoneelslidAanvaarddeMedischeOproep</rdfs:label>
@@ -1261,7 +1261,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#RoomWithPatientorResident -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#RoomWithPatientorResident -->
 
     <owl:Class rdf:about="&TaskAccio;RoomWithPatientorResident">
         <rdfs:label xml:lang="nl">KamerMetPatientOfBewoner</rdfs:label>
@@ -1293,7 +1293,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#RoomWithStaffMember -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#RoomWithStaffMember -->
 
     <owl:Class rdf:about="&TaskAccio;RoomWithStaffMember">
         <rdfs:label xml:lang="nl">KamerMetPersoneelslid</rdfs:label>
@@ -1334,7 +1334,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Task -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Task -->
 
     <owl:Class rdf:about="&TaskAccio;Task">
         <rdfs:label xml:lang="nl">Taak</rdfs:label>
@@ -1378,7 +1378,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#TaskInfoRequest -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#TaskInfoRequest -->
 
     <owl:Class rdf:about="&TaskAccio;TaskInfoRequest">
         <rdfs:subClassOf rdf:resource="&TaskAccio;Request"/>
@@ -1386,7 +1386,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#TaskStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus -->
 
     <owl:Class rdf:about="&TaskAccio;TaskStatus">
         <rdfs:label xml:lang="nl">TaakStatus</rdfs:label>
@@ -1395,7 +1395,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#TechnicalCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#TechnicalCall -->
 
     <owl:Class rdf:about="&TaskAccio;TechnicalCall">
         <owl:equivalentClass>
@@ -1436,7 +1436,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#UnplannedTask -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#UnplannedTask -->
 
     <owl:Class rdf:about="&TaskAccio;UnplannedTask">
         <rdfs:label xml:lang="nl">OngeplandeTaak</rdfs:label>
@@ -1445,7 +1445,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#UrgencyCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#UrgencyCall -->
 
     <owl:Class rdf:about="&TaskAccio;UrgencyCall">
         <rdfs:label xml:lang="nl">UrgentieOproep</rdfs:label>
@@ -1477,7 +1477,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#UrgentPriority -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#UrgentPriority -->
 
     <owl:Class rdf:about="&TaskAccio;UrgentPriority">
         <rdfs:label xml:lang="nl">UrgentePrioriteit</rdfs:label>
@@ -1486,7 +1486,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#UrgentPriorityCall -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#UrgentPriorityCall -->
 
     <owl:Class rdf:about="&TaskAccio;UrgentPriorityCall">
         <owl:equivalentClass>
@@ -1505,7 +1505,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#VeryUrgentPriority -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#VeryUrgentPriority -->
 
     <owl:Class rdf:about="&TaskAccio;VeryUrgentPriority">
         <rdfs:label xml:lang="nl">ZeerUrgentePrioriteit</rdfs:label>
@@ -1514,7 +1514,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Visit -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Visit -->
 
     <owl:Class rdf:about="&TaskAccio;Visit">
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
@@ -1522,13 +1522,13 @@
     
 
 
-    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#Observation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#Observation -->
 
     <owl:Class rdf:about="&wsnadjustedaccio;Observation"/>
     
 
 
-    <!-- http://orca.test/ontology/WSNadjustedAccio.owl#System -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/WSNadjustedAccio.owl#System -->
 
     <owl:Class rdf:about="&wsnadjustedaccio;System"/>
     
@@ -1563,7 +1563,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Accepted -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Accepted -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Accepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1572,7 +1572,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Active -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Active -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Active">
         <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
@@ -1582,7 +1582,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Assigned -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Assigned -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Assigned">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1591,7 +1591,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Busy -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Busy -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Busy">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1599,7 +1599,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Declined -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Declined -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Declined">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1607,7 +1607,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Finished -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Finished -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Finished">
         <rdf:type rdf:resource="&TaskAccio;NotificationStatus"/>
@@ -1617,7 +1617,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#InConversation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#InConversation -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;InConversation">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1626,7 +1626,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#New -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#New -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;New">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1634,7 +1634,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Pending -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Pending -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Pending">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1642,7 +1642,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Redirected -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Redirected -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Redirected">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1651,7 +1651,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#Request -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#Request -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;Request">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>
@@ -1659,7 +1659,7 @@
     
 
 
-    <!-- http://orca.test/ontology/TaskAccio.owl#TemporarilyAccepted -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/TaskAccio.owl#TemporarilyAccepted -->
 
     <owl:NamedIndividual rdf:about="&TaskAccio;TemporarilyAccepted">
         <rdf:type rdf:resource="&TaskAccio;TaskStatus"/>

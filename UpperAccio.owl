@@ -5,7 +5,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY UpperAccio "http://orca.test/ontology/UpperAccio.owl#" >
+    <!ENTITY UpperAccio "http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#" >
     <!ENTITY temporal "http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#" >
 ]>
 
@@ -13,11 +13,11 @@
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:UpperAccio="http://orca.test/ontology/UpperAccio.owl#"
+     xmlns:UpperAccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#"
      xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Ontology rdf:about="http://orca.test/ontology/UpperAccio.owl">
+    <Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl">
         <imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
     </Ontology>
     
@@ -34,84 +34,84 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasContext -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasContext -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasContext">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasContext">
         <rdfs:label xml:lang="nl">heeftContext</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#Event"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Event"/>
         <rdfs:range rdf:resource="&temporal;Entity"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasCurrentSeason -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentSeason -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasCurrentSeason">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentSeason">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftHuidigSeizoen</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#CurrentTime"/>
-        <rdfs:range rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasCurrentShift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentShift -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasCurrentShift">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentShift">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftHuidigShift</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#CurrentTime"/>
-        <rdfs:range rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasCurrentVacationPeriod -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentVacationPeriod -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasCurrentVacationPeriod">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentVacationPeriod">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftHuidigVakantiePeriode</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#CurrentTime"/>
-        <rdfs:range rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasEnterTimeOntology -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasEnterTimeOntology -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasEnterTimeOntology">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasEnterTimeOntology">
         <rdfs:label xml:lang="nl">heeftIngaveTijdOntologie</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&temporal;hasValidTime"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasId -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasId -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasId">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasId">
         <rdfs:label xml:lang="nl">heeftId</rdfs:label>
-        <rdfs:range rdf:resource="http://orca.test/ontology/UpperAccio.owl#ID"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
         <rdfs:domain rdf:resource="&temporal;Entity"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasSource -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasSource -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasSource">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasSource">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftBron</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#Event"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Event"/>
         <rdfs:range rdf:resource="&temporal;Entity"/>
     </ObjectProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasStatus -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasStatus -->
 
-    <ObjectProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasStatus">
+    <ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasStatus">
         <rdfs:label xml:lang="nl">heeftStatus</rdfs:label>
-        <rdfs:range rdf:resource="http://orca.test/ontology/UpperAccio.owl#Status"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Status"/>
         <rdfs:domain rdf:resource="&temporal;Entity"/>
     </ObjectProperty>
     
@@ -128,42 +128,42 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasID -->
 
-    <DatatypeProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasID">
+    <DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">heeftID</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#ID"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasIDType -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasIDType -->
 
-    <DatatypeProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasIDType">
+    <DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasIDType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#ID"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#hasName -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasName -->
 
-    <DatatypeProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#hasName">
+    <DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasName">
         <rdfs:domain rdf:resource="&temporal;Entity"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#isVacationPeriod -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#isVacationPeriod -->
 
-    <DatatypeProperty rdf:about="http://orca.test/ontology/UpperAccio.owl#isVacationPeriod">
+    <DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#isVacationPeriod">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="nl">isVakantiePeriode</rdfs:label>
-        <rdfs:domain rdf:resource="http://orca.test/ontology/UpperAccio.owl#CurrentTime"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </DatatypeProperty>
     
@@ -180,30 +180,30 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#CurrentTime -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#CurrentTime">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#CurrentTime">
         <rdfs:label xml:lang="nl">HuidigeTijd</rdfs:label>
         <equivalentClass>
             <Class>
                 <intersectionOf rdf:parseType="Collection">
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasCurrentSeason"/>
-                        <onClass rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentSeason"/>
+                        <onClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                     </Restriction>
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasCurrentShift"/>
-                        <onClass rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentShift"/>
+                        <onClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                     </Restriction>
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasCurrentVacationPeriod"/>
-                        <onClass rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasCurrentVacationPeriod"/>
+                        <onClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                     </Restriction>
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#isVacationPeriod"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#isVacationPeriod"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                         <onDataRange rdf:resource="&xsd;boolean"/>
                     </Restriction>
@@ -220,34 +220,34 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Event -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Event -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#Event">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Event">
         <rdfs:label xml:lang="nl">Gebeurtenis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;Entity"/>
     </Class>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#ID -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ID -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#ID">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ID">
         <rdfs:label xml:lang="nl">ID</rdfs:label>
         <equivalentClass>
             <Class>
                 <intersectionOf rdf:parseType="Collection">
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasEnterTimeOntology"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasEnterTimeOntology"/>
                         <onClass rdf:resource="&temporal;ValidInstant"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                     </Restriction>
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasID"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasID"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                         <onDataRange rdf:resource="&xsd;string"/>
                     </Restriction>
                     <Restriction>
-                        <onProperty rdf:resource="http://orca.test/ontology/UpperAccio.owl#hasIDType"/>
+                        <onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#hasIDType"/>
                         <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
                         <onDataRange rdf:resource="&xsd;string"/>
                     </Restriction>
@@ -259,49 +259,49 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Season -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#Season">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season">
         <rdfs:label xml:lang="nl">Seizoen</rdfs:label>
         <equivalentClass>
             <Class>
                 <oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Spring"/>
-                    <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Autumn"/>
-                    <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Summer"/>
-                    <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Winter"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter"/>
                 </oneOf>
             </Class>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
-        <disjointWith rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
-        <disjointWith rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+        <disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
+        <disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
     </Class>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Shift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#Shift">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift">
         <rdfs:label xml:lang="nl">Regime</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
-        <disjointWith rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+        <disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
     </Class>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Status -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Status -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#Status">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Status">
         <rdfs:label xml:lang="nl">Status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ExtendedProposition"/>
     </Class>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Vacation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation -->
 
-    <Class rdf:about="http://orca.test/ontology/UpperAccio.owl#Vacation">
+    <Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation">
         <rdfs:label xml:lang="nl">Vakantie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&temporal;ValidPeriod"/>
     </Class>
@@ -319,91 +319,91 @@
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Autumn -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#Autumn">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
         <rdfs:label xml:lang="nl">Herfst</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#ChristmasHoliday -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ChristmasHoliday -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#ChristmasHoliday">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ChristmasHoliday">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
         <rdfs:label xml:lang="nl">KerstVakantie</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#DayShift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#DayShift -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#DayShift">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#DayShift">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
         <rdfs:label xml:lang="nl">DagRegime</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#MorningShift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#MorningShift -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#MorningShift">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#MorningShift">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
         <rdfs:label xml:lang="nl">OchtendRegime</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#NightShift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#NightShift -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#NightShift">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#NightShift">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
         <rdfs:label xml:lang="nl">NachtRegime</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Spring -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#Spring">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
         <rdfs:label xml:lang="nl">Lente</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Summer -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#Summer">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
         <rdfs:label xml:lang="nl">Zomer</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#SummerHoliday -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#SummerHoliday -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#SummerHoliday">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Vacation"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#SummerHoliday">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Vacation"/>
         <rdfs:label xml:lang="nl">ZomerVakantie</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#WeekendShift -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#WeekendShift -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#WeekendShift">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Shift"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#WeekendShift">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Shift"/>
         <rdfs:label xml:lang="nl">WeekendRegime</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- http://orca.test/ontology/UpperAccio.owl#Winter -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter -->
 
-    <NamedIndividual rdf:about="http://orca.test/ontology/UpperAccio.owl#Winter">
-        <rdf:type rdf:resource="http://orca.test/ontology/UpperAccio.owl#Season"/>
+    <NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter">
+        <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Season"/>
         <rdfs:label xml:lang="nl">Winter</rdfs:label>
     </NamedIndividual>
     
@@ -420,92 +420,92 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#DayShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#MorningShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#DayShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#MorningShift"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Spring"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Summer"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Autumn"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Spring"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Autumn"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Summer"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#DayShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#NightShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#DayShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#NightShift"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#NightShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#WeekendShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#NightShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#WeekendShift"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#ChristmasHoliday"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#SummerHoliday"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#ChristmasHoliday"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#SummerHoliday"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#MorningShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#WeekendShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#MorningShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#WeekendShift"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Autumn"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Winter"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Autumn"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Summer"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Winter"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Summer"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Spring"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#Winter"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Spring"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#Winter"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#MorningShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#NightShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#MorningShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#NightShift"/>
         </distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#DayShift"/>
-            <rdf:Description rdf:about="http://orca.test/ontology/UpperAccio.owl#WeekendShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#DayShift"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#WeekendShift"/>
         </distinctMembers>
     </rdf:Description>
 </rdf:RDF>

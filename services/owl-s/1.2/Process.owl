@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
 
-<!DOCTYPE uridef[
+<!DOCTYPE uridef[ 
   <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns">
   <!ENTITY shadow-rdf "http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl">
   <!ENTITY expr "http://www.daml.org/services/owl-s/1.2/generic/Expression.owl">

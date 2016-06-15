@@ -23,7 +23,7 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#ValidTime">
-    <rdfs:subClassOf rdf:resource="#Entity"/>
+    <rdfs:subClassOf rdf:resource="#Entity"/> 
   </owl:Class>
   <owl:Class rdf:ID="ValidPeriod">
     <rdfs:subClassOf rdf:resource="#ValidTime"/>
