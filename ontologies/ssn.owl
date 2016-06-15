@@ -8,12 +8,12 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:DUL="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:DUL="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#">
     <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontology/ssn">
-        <owl:imports rdf:resource="https://github.com/IBCNServices/Accio-Ontology/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W3C Semantic Sensor Network Incubator Group</dc:creator>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org</rdfs:comment>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
