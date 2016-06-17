@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.oclc.org/NET/ssnx/ssn#"
-     xml:base="http://purl.oclc.org/NET/ssnx/ssn"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,11 +8,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:DUL="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#">
-    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontology/ssn">
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn">
         <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W3C Semantic Sensor Network Incubator Group</dc:creator>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org</rdfs:comment>
@@ -126,6 +126,102 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
     
 
 
@@ -611,102 +707,6 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasParticipant"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesEvent"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#includesObject"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isObjectIncludedIn"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isParticipantIn"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isRegionFor"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isSettingFor"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -715,6 +715,66 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
+    
+
+
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
     
 
 
@@ -818,8 +878,8 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
         <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
         <dc:source>http://www.w3.org/2005/Incubator/ssn/</dc:source>
         <rdfs:comment>A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components).</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -1579,66 +1639,6 @@ See comments at ObservationValue.</dc:source>
         <rdfs:label>System Lifetime</rdfs:label>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
     </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#DesignedArtifact"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
 </rdf:RDF>
 
 
