@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#"
+     xml:base="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44">
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasFault -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasFault">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isFaultOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasNextObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasNextObservation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasPreviousObservation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasPreviousObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasPreviousObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSolution">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSolutionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSymptomOf"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isActionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isActionOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#requiresAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isFaultOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isFaultOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSolutionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSolutionOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSubsystemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSubsystemOf">
+        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSymptomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#isSymptomOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#requiresAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#requiresAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#forOS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#forOS">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasCommand -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasCommand">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#AllSensorValueZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#AllSensorValueZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#AverageDataValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#AverageDataValue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyHumiditySensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyLightSensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyTemperatureSensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BelowZeroValueSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BelowZeroValueSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BytesReceivedObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BytesReceivedObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BytesSentObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BytesSentObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#CheckHVACSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#CheckHVACSettings">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleHeatingFault"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DoNotUseDataValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DoNotUseDataValue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyHumiditySensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyLightSensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTMoteSky"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTemperatureSensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DoNotUseMote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DoNotUseMote">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTMoteSky"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ExternalTemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ExternalTemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FailedPacketsSentObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FailedPacketsSentObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyHumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyHumiditySensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityBelowZeroSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyLightSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyLightSensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityBelowZeroSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyPacketsReceivedObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyPacketsReceivedObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTMoteSky -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTMoteSky">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TMoteSky"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityZeroSymptom"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityZeroSymptom"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureZeroSymptom"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TMoteSky"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#MissingReportsSymptom"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyHumiditySensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyLightSensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTMoteSky"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTemperatureSensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#FaultyTemperatureSensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureSensorValue10DeviationSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#DetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Humidity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityBelowZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityBelowZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BelowZeroValueSymptom"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityBelowZeroSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityNotZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#InternalTemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#InternalTemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#InternalVoltage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#InternalVoltage">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityBelowZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityBelowZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BelowZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityNotZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#MissingReportsSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#MissingReportsSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsDroppedObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsDroppedObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsReceivedObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsReceivedObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsSentObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PacketsSentObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyHumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyHumiditySensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityZeroSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyLightSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyLightSensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityZeroSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyTemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleFaultyTemperatureSensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureZeroSymptom"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleHeatingFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#PossibleHeatingFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#IncipientFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#QueueOccupationObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#QueueOccupationObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NetworkTransmissionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#SensorBoard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#SensorBoard">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Solution">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom">
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TMoteSky -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TMoteSky">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#SensorBoard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureAbove25Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureAbove25Symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureBelow15Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureBelow15Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureBelow15Symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureNotZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureSensorValue10DeviationSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureSensorValue10DeviationSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureZeroSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#BelowZeroValueSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#MissingReportsSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#NotZeroValueSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ThresholdSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#ZeroValueSymptom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityNotZeroSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityNotZeroSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureNotZeroSymptom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#HumidityZeroSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#LightIntensityZeroSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/femke_000/ontologies/2016/5/untitled-ontology-44#TemperatureZeroSymptom"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
