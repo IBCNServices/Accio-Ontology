@@ -42,8 +42,8 @@
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#hasNextObservation">
         <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#hasPreviousObservation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:ObjectProperty>
     
 
@@ -52,8 +52,8 @@
 
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#hasPreviousObservation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:ObjectProperty>
     
 
@@ -72,7 +72,7 @@
 
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#hasSymptom">
         <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#isSymptomOf"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
         <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#Symptom"/>
     </owl:ObjectProperty>
     
@@ -234,7 +234,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#Humidity -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#Humidity">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:Class>
     
 
@@ -242,7 +242,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#HumiditySensor -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#HumiditySensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
     </owl:Class>
     
 
@@ -266,7 +266,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#InternalVoltage -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#InternalVoltage">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:Class>
     
 
@@ -274,7 +274,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#LightSensor -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#LightSensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
     </owl:Class>
     
 
@@ -290,7 +290,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#NetworkTransmissionObservation -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#NetworkTransmissionObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:Class>
     
 
@@ -338,7 +338,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#SensorBoard -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#SensorBoard">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
     </owl:Class>
     
 
@@ -370,7 +370,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#TemperatureObservation -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#TemperatureObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     </owl:Class>
     
 
@@ -378,7 +378,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#TemperatureSensor -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot#TemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
     </owl:Class>
     
 
@@ -399,21 +399,21 @@
     
 
 
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Device -->
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
     
 
 
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation -->
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#Observation"/>
     
 
 
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice -->
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
     
 
 
