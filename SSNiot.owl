@@ -631,6 +631,12 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorWindowContactSensor">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observes"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorWindowContact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
