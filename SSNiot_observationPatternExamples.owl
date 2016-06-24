@@ -1,170 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#"
-     xml:base="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples"
+<rdf:RDF xmlns="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#"
+     xml:base="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:DUL1="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:DUL="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples">
-        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/ssn"/>
+    <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasFault -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasFault">
-        <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isFaultOf"/>
-        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasNextObservation -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasNextObservation">
-        <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasPreviousObservation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasPreviousObservation -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasPreviousObservation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSolution -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSolution">
-        <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSolutionOf"/>
-        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault"/>
-        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom">
-        <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSymptomOf"/>
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isActionOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isActionOf">
-        <owl:inverseOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#requiresAction"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isFaultOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isFaultOf"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSolutionOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSolutionOf"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSubsystemOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSubsystemOf">
-        <rdfs:subPropertyOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#isPartOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSymptomOf -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#isSymptomOf"/>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#requiresAction -->
-
-    <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#requiresAction">
-        <rdfs:domain rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
-        <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem -->
-
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#observes -->
-
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#forOS -->
-
-    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#forOS">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasCommand -->
-
-    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasCommand">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasDescription -->
-
-    <owl:DatatypeProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasDescription">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -179,213 +28,149 @@
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#AllSensorValueZeroSymptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#AllSensorValuesZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#AllSensorValueZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#AllSensorValuesZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#AverageDataValue -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#AverageDataValue -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#AverageDataValue">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#AverageDataValue">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyLightSensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyLightSensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BelowZeroValueSymptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#CheckHVACSettings -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BelowZeroValueSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#CheckHVACSettings">
+        <owl:equivalentClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleHeatingFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BytesReceivedObservation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#DoNotUseDataValue -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BytesReceivedObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BytesSentObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BytesSentObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#CheckHVACSettings -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#CheckHVACSettings">
-        <owl:equivalentClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleHeatingFault"/>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DoNotUseDataValue -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DoNotUseDataValue">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#DoNotUseDataValue">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyHumiditySensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyLightSensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTMoteSky"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTemperatureSensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyHumiditySensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyLightSensor"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTMoteSky"/>
+                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTemperatureSensor"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DoNotUseMote -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#DoNotUseMote -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DoNotUseMote">
-        <owl:equivalentClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTMoteSky"/>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#DoNotUseMote">
+        <owl:equivalentClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTMoteSky"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ExternalTemperatureObservation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyHumiditySensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ExternalTemperatureObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FailedPacketsSentObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FailedPacketsSentObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyHumiditySensor -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyHumiditySensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyHumiditySensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyLightSensor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyLightSensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyLightSensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyLightSensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyPacketsReceivedObservation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTMoteSky -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyPacketsReceivedObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTMoteSky -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTMoteSky">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTMoteSky">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TMoteSky"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TMoteSky"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#hasSubSystem"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                                 <owl:someValuesFrom>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
                                     </owl:Restriction>
                                 </owl:someValuesFrom>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#hasSubSystem"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                                 <owl:someValuesFrom>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
                                     </owl:Restriction>
                                 </owl:someValuesFrom>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#hasSubSystem"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                                 <owl:someValuesFrom>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
                                     </owl:Restriction>
                                 </owl:someValuesFrom>
                             </owl:Restriction>
@@ -397,391 +182,203 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TMoteSky"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TMoteSky"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                                <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#MissingReportsSymptom"/>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#MissingReportsSymptom"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyHumiditySensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyLightSensor"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTMoteSky"/>
-                    <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTemperatureSensor"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTemperatureSensor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTemperatureSensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#FaultyTemperatureSensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#FaultyTemperatureSensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#DetectedFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Humidity -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Humidity">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#BelowZeroValueSymptom"/>
+        <owl:disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityNotZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityBelowZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BelowZeroValueSymptom"/>
-        <owl:disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#NotZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityNotZeroSymptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityNotZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumiditySensor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumiditySensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#BelowZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityZeroSymptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#NotZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Fault"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#InternalTemperatureObservation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#NoiseAboveAlarmThresholdSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#InternalTemperatureObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureObservation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#NoiseAboveAlarmThresholdSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ThresholdSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#InternalVoltage -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#InternalVoltage">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityBelowZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BelowZeroValueSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityZeroSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightSensor -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightSensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#MissingReportsSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#MissingReportsSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsDroppedObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsDroppedObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsReceivedObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsReceivedObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsSentObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PacketsSentObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyHumiditySensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#IncipientFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyLightSensor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyLightSensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyLightSensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyLightSensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#IncipientFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor">
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleFaultyTemperatureSensor">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#madeObservation"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#hasSymptom"/>
-                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#IncipientFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleHeatingFault -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleHeatingFault -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#PossibleHeatingFault">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#IncipientFault"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#PossibleHeatingFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#IncipientFault"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#QueueOccupationObservation -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureAbove25Symptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#QueueOccupationObservation">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NetworkTransmissionObservation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureAbove25Symptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ThresholdSymptom"/>
+        <owl:disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureBelow15Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#SensorBoard -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureBelow15Symptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#SensorBoard">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureBelow15Symptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ThresholdSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Solution">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#NotZeroValueSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ThresholdSymptom"/>
     </owl:Class>
     
 
 
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TMoteSky -->
+    <!-- http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureZeroSymptom -->
 
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TMoteSky">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#SensorBoard"/>
+    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureZeroSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom"/>
     </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureAbove25Symptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureAbove25Symptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom"/>
-        <owl:disjointWith rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureBelow15Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureBelow15Symptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureBelow15Symptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureObservation -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureSensor -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureZeroSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureZeroSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom -->
-
-    <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom">
-        <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
-
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
-
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
-
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
     
 
 
@@ -796,27 +393,26 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#BelowZeroValueSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#MissingReportsSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#NotZeroValueSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ThresholdSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#ZeroValueSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityNotZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityNotZeroSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityNotZeroSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureNotZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#HumidityZeroSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#LightIntensityZeroSymptom"/>
-            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/ontologies/SSNiot_observationPatternExamples#TemperatureZeroSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#NoiseAboveAlarmThresholdSymptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureAbove25Symptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureBelow15Symptom"/>
+            <rdf:Description rdf:about="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples#TemperatureSensorValue10DeviationSymptom"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
