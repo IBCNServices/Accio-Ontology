@@ -12,6 +12,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl">
         <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/SSNiot_observationPatternExamples"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl"/>
     </owl:Ontology>
     
 
@@ -31,6 +32,14 @@
 
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#partOfShift">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
     </owl:ObjectProperty>
     
