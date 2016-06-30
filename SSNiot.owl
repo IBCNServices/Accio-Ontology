@@ -12,7 +12,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot">
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl"/>
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn.owl"/>
     </owl:Ontology>
     
 
