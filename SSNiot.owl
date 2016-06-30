@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#"
-     xml:base="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl"
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/SSNiot#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/SSNiot"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
