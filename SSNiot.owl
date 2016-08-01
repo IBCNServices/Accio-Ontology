@@ -138,6 +138,62 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#hasContext">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isParametrizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isParametrizedBy"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isPartOf"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#hasValue"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#isProducedBy"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observationResult -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observationResult"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedBy"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedProperty"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observes -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observes"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2093,6 +2149,30 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#UnitOfMeasure"/>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
@@ -2105,9 +2185,33 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#ObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#ObservationValue"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Property -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Property"/>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#SensingDevice"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#SensorOutput -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#SensorOutput"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#System -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#System"/>
     
 
 
