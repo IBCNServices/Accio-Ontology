@@ -28,6 +28,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasContext">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Event"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasFault -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#hasFault">
@@ -134,14 +142,6 @@
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#requiresAction">
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Solution"/>
         <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#hasContext -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#hasContext">
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event"/>
     </owl:ObjectProperty>
     
 
@@ -714,6 +714,12 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Event -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Event"/>
     
 
 
@@ -2146,12 +2152,6 @@
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Symptom"/>
     </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Event"/>
     
 
 
