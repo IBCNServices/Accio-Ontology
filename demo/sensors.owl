@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl"
+     xmlns:icalSpec="http://www.w3.org/2002/12/cal/icalSpec#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:UpperAccio1="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UpperAccio="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl#"
+     xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:DUL="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/foaf.rdf"/>
+        <owl:imports rdf:resource="http://ibcnservices.github.io/Accio-Ontology/UpperAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#hasId -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#hasId"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#hasPreferences -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#hasPreferences">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Preference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/12/cal/ical#attendee -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/12/cal/ical#attendee"/>
+    
+
+
+    <!-- http://www.w3.org/2002/12/cal/ical#organizer -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/12/cal/ical#organizer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#hasID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#ID -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Employee -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Employee">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightColorPreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightColorPreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Preference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Preference"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperaturePreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperaturePreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Visitor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Visitor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/12/cal/ical#Vevent -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/12/cal/ical#Vevent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorWindowContactSensorenocean.019DCAF7.d5 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorWindowContactSensorenocean.019DCAF7.d5">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorWindowContactSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#LightSensorhue.1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#LightSensorhue.1.1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#LightSensor"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">hue.1.1</UpperAccio1:hasID>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#LockSensor0198 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#LockSensor0198">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#LockSensor"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0198</UpperAccio1:hasID>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#PressureSensorenocean.008B00F0.EB -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#PressureSensorenocean.008B00F0.EB">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#PressureSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B00F0.EB -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B00F0.EB">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B6914.EB -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B6914.EB">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B691C.EB -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensorenocean.008B691C.EB">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RFIDSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#employee1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#employee1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <UpperAccio1:hasId rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE1"/>
+        <hasPreferences rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl1"/>
+        <hasPreferences rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl1"/>
+        <DUL:hasRole rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#employeeRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#employee2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#employee2">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <UpperAccio1:hasId rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE2"/>
+        <hasPreferences rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl2"/>
+        <hasPreferences rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl2"/>
+        <DUL:hasRole rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#employeeRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#visitor -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#visitor">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <UpperAccio1:hasId rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEV"/>
+        <DUL:hasRole rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#visitorRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightColorPreference"/>
+        <DUL:hasDataValue>Red</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#ColorPreferenceEmpl2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightColorPreference"/>
+        <DUL:hasDataValue>Green</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enocean.008B6914.EB</UpperAccio1:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEE2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enocean.008B691C.EB</UpperAccio1:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEV -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#IDBLEV">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/UpperAccio.owl#ID"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enocean.008B00F0.EB</UpperAccio1:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightSensorhue.3.3 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#LightSensorhue.3.3">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#LightSensor"/>
+        <UpperAccio1:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">hue.3.3</UpperAccio1:hasID>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperaturePreference"/>
+        <DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TempPreferenceEmpl2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperaturePreference"/>
+        <DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperatureSensor0121 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#TemperatureSensor0121">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TemperatureSensor"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#Room1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#employeeRole -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#employeeRole">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Employee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#meeting -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#meeting">
+        <rdf:type rdf:resource="http://www.w3.org/2002/12/cal/ical#Vevent"/>
+        <ical:attendee rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#visitor"/>
+        <ical:organizer rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/cal.owl#employee1"/>
+        <DUL:hasLocation rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Room2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#visitorRole -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#visitorRole">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/demo/sensors.owl#Visitor"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
