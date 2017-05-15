@@ -32,6 +32,7 @@
 
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#partOfShift">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
         <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
     </owl:ObjectProperty>
     
