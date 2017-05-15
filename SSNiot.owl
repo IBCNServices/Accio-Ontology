@@ -13,7 +13,7 @@
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl">
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn.owl"/>
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
     </owl:Ontology>
     
 
@@ -2083,7 +2083,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Status"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
     </owl:Class>
     
 
