@@ -32,14 +32,6 @@
 
     <owl:ObjectProperty rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#partOfShift">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
     </owl:ObjectProperty>
     
@@ -53,6 +45,48 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Button -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Button"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPush -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPush"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushObservation"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushObservationValue"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushSensorOutput -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushSensorOutput"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#TagObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TagObservation"/>
     
 
 

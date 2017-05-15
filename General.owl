@@ -11,7 +11,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl">
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
     </owl:Ontology>
     
 
@@ -36,29 +37,11 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasEnterTimeOntology -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasEnterTimeOntology">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasGranularity -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasGranularity">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isParametrizedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
     </owl:ObjectProperty>
     
 
@@ -93,54 +76,22 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isPartOfSeason -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime">
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isPartOfSeason">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Entity"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfSeason -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfSeason">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
         <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Season"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfVacationPeriod -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isPartOfVacation -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfVacationPeriod">
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isPartOfVacation">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Vacation"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#VacationPeriod"/>
     </owl:ObjectProperty>
     
 
@@ -153,17 +104,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasFinishTime -->
-
-    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasFinishTime">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegionDataValue"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -199,24 +139,13 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasStartTime -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isVacationPeriod -->
 
-    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasStartTime">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegionDataValue"/>
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#isVacationPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime -->
-
-    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegionDataValue"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -229,43 +158,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#CurrentTime -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#CurrentTime">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfSeason"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Season"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#partOfVacationPeriod"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Vacation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#hasTime"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Parameter"/>
-    </owl:Class>
     
 
 
@@ -319,17 +211,9 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#VacationPeriod -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#TimeInstant">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Vacation -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Vacation">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#VacationPeriod">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
     </owl:Class>
     
@@ -356,49 +240,37 @@
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Days -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Days">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Days"/>
     
 
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Hours -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Hours">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Hours"/>
     
 
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Milliseconds -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Milliseconds">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Milliseconds"/>
     
 
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Minutes -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Minutes">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Minutes"/>
     
 
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Months -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Months">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Months"/>
     
 
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Seconds -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Seconds">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Seconds"/>
     
 
 
@@ -428,9 +300,7 @@
 
     <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Years -->
 
-    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Years">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Granularity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Years"/>
 </rdf:RDF>
 
 
