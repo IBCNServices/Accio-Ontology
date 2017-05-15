@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn.owl"/>
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
     </owl:Ontology>
     
 
@@ -339,14 +339,6 @@
                 <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Acceleration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
     </owl:Class>
     
 
@@ -890,20 +882,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#IndicatorLight -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#IndicatorLight">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#isSubsystemOf"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#InternalTemperature -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#InternalTemperature">
@@ -987,14 +965,6 @@
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#InternalVoltageObservationValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator"/>
     </owl:Class>
     
 
