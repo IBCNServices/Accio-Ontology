@@ -6,8 +6,10 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:DUL="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl"/>
         <owl:imports rdf:resource="https://w3id.org/saref"/>
     </owl:Ontology>
     
@@ -52,6 +54,12 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#IndicatorLight">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#isSubsystemOf"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
