@@ -21,6 +21,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -449,14 +466,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Buzzer -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Buzzer">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#BytesReceived -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#BytesReceived">
@@ -610,34 +619,10 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Camera -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Camera">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ColorWall -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ColorWall">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DetectedFault">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Fault"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorActuator -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#DoorActuator">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator"/>
     </owl:Class>
     
 
@@ -1259,34 +1244,10 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#MagneticLock -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#MagneticLock">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Microphone -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Microphone">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#MissingReportsSymptom -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#MissingReportsSymptom">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Symptom"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#MoodLight -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#MoodLight">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
     </owl:Class>
     
 
@@ -1719,14 +1680,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#RoomLight -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#RoomLight">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#SensorBoard -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#SensorBoard">
@@ -1847,14 +1800,6 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TMoteSky">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#SensorBoard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#TV -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TV">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#Device"/>
     </owl:Class>
     
 
@@ -2127,22 +2072,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#UnderBedLight -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#UnderBedLight">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#Vibrator -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Vibrator">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ZeroValueSymptom">
@@ -2151,9 +2080,9 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#DeviceStatus -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#DeviceStatus">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/general.owl#Status"/>
     </owl:Class>
     
@@ -2255,7 +2184,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Off -->
 
     <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Off">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#DeviceStatus"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus"/>
     </owl:NamedIndividual>
     
 
@@ -2263,8 +2192,11 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#On -->
 
     <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#On">
-        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#DeviceStatus"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#SensorStatus"/>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
     
 
 
