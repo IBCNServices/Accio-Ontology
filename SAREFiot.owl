@@ -152,7 +152,6 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#DeviceStatus -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#DeviceStatus">
-        <owl:equivalentClass rdf:resource="https://w3id.org/saref#State"/>
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
     </owl:Class>
     
@@ -884,12 +883,6 @@
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#VolumeLevelState">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#MultiLevelState"/>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/saref#State -->
-
-    <rdf:Description rdf:about="https://w3id.org/saref#State"/>
     
 
 
