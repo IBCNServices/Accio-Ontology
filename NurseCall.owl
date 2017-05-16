@@ -104,6 +104,7 @@
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#AxisRegistrationObservation">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#TagObservation"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error3"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observationResult"/>
@@ -114,13 +115,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedProperty"/>
                 <owl:allValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#AxisRegistration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedBy"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#AxisSensor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -231,6 +225,7 @@
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservation">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#ButtonPushObservation"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observationResult"/>
@@ -241,13 +236,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedProperty"/>
                 <owl:allValuesFrom rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPush"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssn#observedBy"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -374,7 +362,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Prism -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Prism">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
     </owl:Class>
     
 
@@ -416,7 +404,7 @@
     <!-- http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Spock -->
 
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Spock">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot#Light"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
     </owl:Class>
     
 
@@ -426,6 +414,18 @@
     <owl:Class rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCallButton">
         <rdfs:subClassOf rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
     </owl:Class>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error3 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
     
 
 
@@ -485,6 +485,12 @@
     <owl:NamedIndividual rdf:about="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#WeekendShift">
         <rdf:type rdf:resource="http://ibcnservices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
 </rdf:RDF>
 
 
