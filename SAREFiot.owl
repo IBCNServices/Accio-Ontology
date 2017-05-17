@@ -52,7 +52,13 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Buzzer -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Buzzer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -78,7 +84,13 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Camera -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Camera">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
@@ -99,8 +111,13 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#CellPhone">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
@@ -114,13 +131,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#ColorWall -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#ColorWall">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -133,24 +144,38 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Lighting"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPS -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPS">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FunctionRelated"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPSDevice -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPSDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#NavigationFunction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -183,12 +208,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#StartStopState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -196,7 +215,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#IndicatorLight -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#IndicatorLight">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#isSubsystemOf"/>
@@ -205,20 +224,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Safety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Safety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -228,11 +241,17 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Intercom -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Intercom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Volume"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -269,12 +288,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#StartStopState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -315,10 +328,36 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#IsUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Lighting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MagneticLock -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MagneticLock">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -338,11 +377,17 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Microphone -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Microphone">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Volume"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -369,12 +414,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -382,13 +421,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MoodLight -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MoodLight">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -399,12 +432,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Lighting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -422,17 +449,23 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MultimediaHandset -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MultimediaHandset">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TVProperty"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Entertainment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -453,30 +486,6 @@
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephony"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Comfort"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Entertainment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Lighting"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -484,6 +493,14 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#NavigationFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#NavigationFunction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Function"/>
     </owl:Class>
     
@@ -493,8 +510,13 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PDA">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
@@ -508,11 +530,11 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FunctionRelated"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Volume"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -547,7 +569,7 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PortablePhone">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice"/>
     </owl:Class>
     
 
@@ -555,13 +577,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RoomLight -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RoomLight">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -574,12 +590,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Lighting"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -587,7 +597,13 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Screen -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Screen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
@@ -613,7 +629,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SensorBoard -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SensorBoard">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#DeviceCategory"/>
     </owl:Class>
     
 
@@ -621,20 +637,25 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SmartPhone -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SmartPhone">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPS"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#GPSDevice"/>
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#PersonalElectronicDevice"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Visualization"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Entertainment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Entertainment"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Visualization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -644,7 +665,13 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TMoteSky -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TMoteSky">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SensorBoard"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#SensorBoard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -652,11 +679,17 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TV -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TV">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TVProperty"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Entertainment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -681,12 +714,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Entertainment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -770,20 +797,26 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephone">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FunctionRelated"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TelephoneDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephony"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Multimedia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephony"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -801,13 +834,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#UnderBedLight -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#UnderBedLight">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LightingDevice"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -820,12 +847,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Lighting"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -833,7 +854,13 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Vibrator -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Vibrator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -902,7 +929,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication -->
 
     <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication">
-        <rdf:type rdf:resource="https://w3id.org/saref#Task"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
     </owl:NamedIndividual>
     
 
@@ -910,7 +937,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation -->
 
     <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation">
-        <rdf:type rdf:resource="https://w3id.org/saref#Task"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Navigation"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
