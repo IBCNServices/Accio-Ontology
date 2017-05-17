@@ -134,6 +134,18 @@
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelState"/>
             </owl:Restriction>
@@ -335,7 +347,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#IsUsedFor"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Light"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -354,6 +366,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Safety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Actuator"/>
             </owl:Restriction>
@@ -362,12 +380,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
-                <owl:hasValue rdf:resource="https://w3id.org/saref#Safety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -422,6 +434,18 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#MoodLight">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -484,6 +508,30 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Telephony"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#VolumeLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -574,10 +622,108 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutter -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#BuildingObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterDevice -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#IsUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#BuildingRelated"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterLevelControlFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterLevelControlFunction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#LevelControlFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterLevelState -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterLevelState">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#MultiLevelState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterOpenCloseFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterOpenCloseFunction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#OpenCloseFunction"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RoomLight -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RoomLight">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
@@ -702,6 +848,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Visualization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -835,6 +987,18 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#UnderBedLight">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightLevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
