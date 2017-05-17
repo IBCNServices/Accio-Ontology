@@ -68,6 +68,20 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PhysicalAsset.owl#PatientBed">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PhysicalAsset.owl#Bed"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasNumber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
