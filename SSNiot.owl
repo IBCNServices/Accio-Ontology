@@ -1445,6 +1445,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFID -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFID">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDObservationValue -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDObservationValue">
@@ -1495,7 +1503,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDTag"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFID"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1616,7 +1624,6 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Tag">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </owl:Class>
     
 
@@ -1625,12 +1632,6 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Tag"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
