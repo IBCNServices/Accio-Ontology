@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl"
+     xmlns:schema="http://schema.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:dul="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hosts -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isHostedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeObservation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/usedProcedure -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedOnPlatform -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/deployedOnPlatform">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedSystem -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/deployedSystem">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/hasDeployment">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implementedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/implementedBy">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#describes"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implements -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/implements">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/inDeployment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/inDeployment">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/isPropertyOf">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Method -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Process -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Deployment -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Deployment">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Process"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Platform -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Procedure -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Method"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Property -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/Property">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Stimulus -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/Stimulus">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
