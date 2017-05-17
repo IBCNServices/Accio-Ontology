@@ -1,152 +1,283 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl#> .
+@prefix dul: <http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix dul: <http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix ssn: <http://www.w3.org/ns/ssn/> .
+<http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl> a owl:Ontology ;
+	owl:imports <http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl> , <http://www.w3.org/ns/ssn/> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith
 
-<http://www.w3.org/ns/ssn/dul> rdf:type owl:Ontology ;
-  owl:imports <http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#> ;
-  owl:imports ssn: .
+dul:associatedWith a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#describes
 
+dul:describes a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasLocation
 
-## Features of interest and observable property
+dul:hasLocation a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasPart
 
-sosa:FeatureOfInterest
-  rdfs:subClassOf [ owl:unionOf ( dul:Event dul:Object dul:Quality ) ] ;
-  rdfs:isDefinedBy sosa: .
+dul:hasPart a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasQuality
 
-ssn:Property 
-  rdfs:subClassOf dul:Quality ;
-  rdfs:isDefinedBy ssn: .
+dul:hasQuality a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion
 
-  ssn:hasProperty 
-    rdfs:subPropertyOf dul:hasQuality ;
-    rdfs:isDefinedBy ssn: .
+dul:hasRegion a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isDescribedBy
 
-  ssn:isPropertyOf 
-    rdfs:subPropertyOf dul:isQualityOf ;
-    rdfs:isDefinedBy ssn: .
+dul:isDescribedBy a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isLocationOf
 
+dul:isLocationOf a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#isQualityOf
 
-## Platform
+dul:isQualityOf a owl:ObjectProperty .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies
 
-sosa:Platform
-  rdfs:subClassOf dul:PhysicalObject ;
-  rdfs:isDefinedBy sosa: .
+dul:satisfies a owl:ObjectProperty .
+# 
+# http://www.w3.org/ns/sosa/hasResult
 
-  sosa:hosts
-    rdfs:subPropertyOf dul:isLocationOf ;
-    rdfs:isDefinedBy sosa: .
+sosa:hasResult rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/hosts
 
-sosa:isHostedBy
-  rdfs:subPropertyOf dul:hasLocation ;
-  rdfs:isDefinedBy sosa: .
+sosa:hosts rdfs:subPropertyOf dul:isLocationOf ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/isHostedBy
 
+sosa:isHostedBy rdfs:subPropertyOf dul:hasLocation ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
 
-## Procedures
+sosa:madeBySensor rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/madeObservation
 
-sosa:Procedure
-  rdfs:subClassOf dul:Method ;
-  rdfs:isDefinedBy sosa: .
+sosa:madeObservation rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
 
+sosa:observedProperty rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
 
-## ProcedureExecutors
+sosa:phenomenonTime rdfs:subPropertyOf dul:hasRegion ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/usedProcedure
 
-ssn:implements
-  rdfs:subPropertyOf dul:isDescribedBy ;
-  rdfs:isDefinedBy ssn: .
+sosa:usedProcedure rdfs:subPropertyOf dul:satisfies ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/deployedOnPlatform
 
-ssn:implementedBy
-  rdfs:subPropertyOf dul:describes ;
-  rdfs:isDefinedBy ssn: .
+ssn:deployedOnPlatform rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/deployedSystem
 
-sosa:Sensor
-  rdfs:subClassOf dul:Object ;
-  rdfs:isDefinedBy sosa: .
+ssn:deployedSystem rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/hasDeployment
 
+ssn:hasDeployment rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/hasProperty
 
-## ProcedureExecutions
+ssn:hasProperty rdfs:subPropertyOf dul:hasQuality ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/hasSubSystem
 
-sosa:usedProcedure
-  rdfs:subPropertyOf dul:satisfies ;
-  rdfs:isDefinedBy sosa: .
+ssn:hasSubSystem rdfs:subPropertyOf dul:hasPart ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/implementedBy
 
-sosa:Observation
-  rdfs:subClassOf dul:Event ;
-  rdfs:isDefinedBy sosa: .
+ssn:implementedBy rdfs:subPropertyOf dul:describes ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/implements
 
-sosa:madeObservation
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+ssn:implements rdfs:subPropertyOf dul:isDescribedBy ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/inDeployment
 
-sosa:madeBySensor
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+ssn:inDeployment rdfs:subPropertyOf dul:associatedWith ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/isPropertyOf
 
-sosa:observedProperty
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+ssn:isPropertyOf rdfs:subPropertyOf dul:isQualityOf ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event
 
+dul:Event a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Method
 
-# Stimulus
+dul:Method a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Object
 
-ssn:Stimulus 
-  rdfs:subClassOf dul:Event ;
-  rdfs:isDefinedBy ssn: .
+dul:Object a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalObject
 
-sosa:Result
-  rdfs:subClassOf [ owl:unionOf ( dul:Region dul:Object ) ] ;
-  rdfs:isDefinedBy sosa: .
+dul:PhysicalObject a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Process
 
-sosa:hasResult
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+dul:Process a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Quality
 
-sosa:phenomenonTime
-  rdfs:subPropertyOf dul:hasRegion ;
-  rdfs:isDefinedBy sosa: .
+dul:Quality a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region
 
+dul:Region a owl:Class .
+# 
+# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation
 
-## System 
-ssn:System
-  rdfs:subClassOf dul:Object ;
-  rdfs:isDefinedBy ssn: .
+dul:Situation a owl:Class .
+# 
+# http://www.w3.org/ns/sosa/Deployment
 
-ssn:hasSubSystem
-  rdfs:subPropertyOf dul:hasPart ;
-  rdfs:isDefinedBy ssn: .
+sosa:Deployment a owl:Class ;
+	rdfs:subClassOf _:genid1 .
 
-sosa:Platform 
-  rdfs:subClassOf dul:PhysicalObject ;
-  rdfs:isDefinedBy sosa: .
+_:genid1 a owl:Class ;
+	owl:unionOf _:genid3 .
 
+_:genid3 a rdf:List ;
+	rdf:first dul:Process ;
+	rdf:rest _:genid2 .
 
-## Deployment
+_:genid2 a rdf:List ;
+	rdf:first dul:Situation ;
+	rdf:rest rdf:nil .
 
-sosa:Deployment
-  rdfs:subClassOf [ owl:unionOf ( dul:Situation dul:Process ) ] ;
-  rdfs:isDefinedBy sosa: .
+sosa:Deployment rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
 
-ssn:deployedOnPlatform
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+sosa:FeatureOfInterest rdfs:subClassOf _:genid4 .
 
-ssn:deployedSystem 
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+_:genid4 a owl:Class ;
+	owl:unionOf _:genid7 .
 
-ssn:hasDeployment 
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+_:genid7 a rdf:List ;
+	rdf:first dul:Event ;
+	rdf:rest _:genid6 .
 
-ssn:inDeployment 
-  rdfs:subPropertyOf dul:associatedWith ;
-  rdfs:isDefinedBy sosa: .
+_:genid6 a rdf:List ;
+	rdf:first dul:Object ;
+	rdf:rest _:genid5 .
 
+_:genid5 a rdf:List ;
+	rdf:first dul:Quality ;
+	rdf:rest rdf:nil .
+
+sosa:FeatureOfInterest rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+
+sosa:Observation rdfs:subClassOf dul:Event ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/Platform
+
+sosa:Platform rdfs:subClassOf dul:PhysicalObject ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/Procedure
+
+sosa:Procedure rdfs:subClassOf dul:Method ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/Result
+
+sosa:Result rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Class ;
+	owl:unionOf _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first dul:Object ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first dul:Region ;
+	rdf:rest rdf:nil .
+
+sosa:Result rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+
+sosa:Sensor rdfs:subClassOf dul:Object ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+# 
+# http://www.w3.org/ns/ssn/Property
+
+ssn:Property rdfs:subClassOf dul:Quality ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/Stimulus
+
+ssn:Stimulus rdfs:subClassOf dul:Event ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/System
+
+ssn:System rdfs:subClassOf dul:Object ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
