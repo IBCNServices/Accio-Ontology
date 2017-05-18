@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#partOfShift -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#partOfShift">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisRegistrationObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisRegistrationObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisRegistrationObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisSensor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Button"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Safety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCallOnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPush -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPush">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ButtonPush"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ButtonPushObservation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ButtonPushObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushedInRapidSuccessionSymptom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushedInRapidSuccessionSymptom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ThresholdSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NormalCallButton -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NormalCallButton">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FunctionRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCallOnOffFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCallOnOffFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCallTerminal -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCallTerminal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Communication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#RollingShutterControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#TVControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Visualization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#StartStopFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#StartStopState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursingOfficeTerminal -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursingOfficeTerminal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#Visualization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#PresenceRegistrationButton -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#PresenceRegistrationButton">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Prism -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Prism">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#accomplishes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Safety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NurseCall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#TimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Spock -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Spock">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#LightingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCallButton -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCallButton">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#DayShift -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#DayShift">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#MorningShift -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#MorningShift">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NightShift -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NightShift">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TaskManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#WeekendShift -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#WeekendShift">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
