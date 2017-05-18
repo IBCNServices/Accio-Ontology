@@ -43,6 +43,17 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#hasPriority -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasPriority">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRegion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#hasSource -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasSource">
@@ -178,6 +189,30 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#LowPriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#LowPriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#NormalPriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#NormalPriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Region"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#Season -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#Season">
@@ -204,6 +239,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#UrgentPriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#UrgentPriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#VacationPeriod -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#VacationPeriod">
@@ -214,6 +257,22 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#VeryLowPriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#VeryLowPriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/General.owl#VeryUrgentPriorityLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/General.owl#VeryUrgentPriorityLevel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
     </owl:Class>
     
 
