@@ -331,17 +331,17 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PersonRole -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PersonRole">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#entailsCompetence"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Role"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isValidDuringPeriod"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#entailsCompetence"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
