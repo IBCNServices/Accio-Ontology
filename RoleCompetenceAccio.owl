@@ -76,150 +76,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasAunt -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasAunt">
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AuntRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasBrother -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasBrother">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#BrotherRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild">
-        <owl:inverseOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasDaughter -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasDaughter">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#DaughterRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasFather -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasFather">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FatherRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasHusband -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasHusband">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasPartner"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HusbandRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasMother -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasMother">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MotherRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasNephew -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasNephew">
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NephewRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasNiece -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasNiece">
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NieceRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent">
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasPartner -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasPartner">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSister -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSister">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SisterRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSon -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSon">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SonRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasUncle -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasUncle">
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#UncleRole"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasWife -->
-
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasWife">
-        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasPartner"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WifeRole"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isValidDuringPeriod -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#isValidDuringPeriod">
@@ -296,22 +152,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AuntRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#AuntRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#BrotherRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#BrotherRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CareCompetence -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CareCompetence">
@@ -332,21 +172,6 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CaregiverRole">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMemberRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasParent"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
     </owl:Class>
     
 
@@ -388,14 +213,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#DaughterRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#DaughterRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#EditDataCompetence -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#EditDataCompetence">
@@ -426,14 +243,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FatherRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FatherRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Form -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Form">
@@ -454,14 +263,6 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HusbandRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HusbandRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole"/>
     </owl:Class>
     
 
@@ -498,30 +299,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MotherRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MotherRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NephewRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NephewRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NieceRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#NieceRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#OrganizationRole -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#OrganizationRole">
@@ -539,36 +316,6 @@
                 <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ParentRole">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasChild"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasPartner"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
     </owl:Class>
     
 
@@ -655,37 +402,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#hasSibling"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SisterRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SisterRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SiblingRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SonRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#SonRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ChildRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMemberRole -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMemberRole">
@@ -702,26 +418,10 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#UncleRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#UncleRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#FamilyRole"/>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WaterProvider -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WaterProvider">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#ServiceProviderRole"/>
-    </owl:Class>
-    
-
-
-    <!-- http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WifeRole -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#WifeRole">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PartnerRole"/>
     </owl:Class>
     
 
