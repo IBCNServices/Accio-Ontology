@@ -34,6 +34,15 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#checkedInWith -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#checkedInWith">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile">
@@ -175,6 +184,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#availableSince -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#availableSince">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
     
 
 
