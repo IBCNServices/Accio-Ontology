@@ -12,6 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl"/>
     </owl:Ontology>
     
@@ -53,6 +54,57 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Alerting">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCareCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCareCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#CareCompetence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerDoctorNeededCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerDoctorNeededCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerMedicalCallCompetence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerHotelFunctionCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerHotelFunctionCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#HotelFunctionCompetence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerMedicalCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerMedicalCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#MedicalCompetence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerUrgencyCallCompetence -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerUrgencyCallCompetence">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AnswerCallCompetence"/>
     </owl:Class>
     
 
