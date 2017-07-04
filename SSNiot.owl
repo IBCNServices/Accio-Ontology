@@ -257,6 +257,63 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLEBeacon -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLEBeacon">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETag"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETag -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETag">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETag"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLEBeacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservationValue"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BelowZeroValueSymptom -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BelowZeroValueSymptom">
@@ -1453,21 +1510,6 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDObservationValue -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDObservationValue">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDSensor -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDSensor">
@@ -1475,7 +1517,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDTag"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFID"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1497,7 +1539,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDObservationValue"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDTagObservationValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1513,6 +1555,14 @@
                 <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDSensor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDTagObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#RFIDTagObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservationValue"/>
     </owl:Class>
     
 
@@ -1632,6 +1682,21 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

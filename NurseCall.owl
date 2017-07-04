@@ -2,18 +2,22 @@
 <rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#"
      xml:base="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl"
      xmlns:schema="http://schema.org/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl">
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl"/>
     </owl:Ontology>
     
 
@@ -109,6 +113,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AssistanceCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AssistanceCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID">
@@ -169,6 +181,14 @@
                 <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#AxisKeyID"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#UnplannedTask"/>
     </owl:Class>
     
 
@@ -264,6 +284,22 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButtonPushedInRapidSuccessionSymptom">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ThresholdSymptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#ContextCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#ContextCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NormalCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NormalCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
     </owl:Class>
     
 
@@ -456,6 +492,38 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithBusyStaffMember -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithBusyStaffMember">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithBusyStaffMemberAcceptedMedicalCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithBusyStaffMemberAcceptedMedicalCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithCareReceiver -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithCareReceiver">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithStaffMember -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#RoomWithStaffMember">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Shift">
@@ -492,10 +560,34 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TechnicalCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#TechnicalCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCallButton -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgencyCallButton">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#CallButton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgentPriorityCall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#UrgentPriorityCall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
     </owl:Class>
     
 
