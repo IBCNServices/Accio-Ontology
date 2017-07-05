@@ -12,8 +12,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl">
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.ttl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.ttl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl"/>
     </owl:Ontology>
     
@@ -145,6 +145,30 @@
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Solution"/>
         <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observes -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes"/>
     
 
 
@@ -310,6 +334,56 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLETagObservationValue">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#TagObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SystemProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevelObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevelObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevelObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevelObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevelObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#QuantityObservationValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1246,6 +1320,56 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeople -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeople">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeopleObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeopleObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeopleObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeople"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeopleObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeopleObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#QuantityObservationValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasDataValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue">
@@ -1382,6 +1506,49 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
     </owl:Class>
     
 
@@ -1925,6 +2092,20 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#XetalKinsei">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevel"/>
+                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeople"/>
+                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1934,6 +2115,42 @@
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ZeroValueSymptom">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Symptom"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/SystemProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/SystemProperty"/>
     
 
 
