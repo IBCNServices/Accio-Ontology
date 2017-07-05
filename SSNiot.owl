@@ -12,7 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl">
-        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.ttl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl"/>
     </owl:Ontology>
@@ -1917,6 +1917,14 @@
                 <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Touch"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#XetalKinsei -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#XetalKinsei">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
     </owl:Class>
     
 
