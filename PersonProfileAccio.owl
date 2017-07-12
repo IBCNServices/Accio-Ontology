@@ -87,6 +87,15 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreference">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile">
@@ -193,6 +202,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -304,6 +323,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Nationality -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Nationality">
@@ -324,6 +351,29 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonalRelationship">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PreferredInteraction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PreferredInteraction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
     </owl:Class>
     
 
