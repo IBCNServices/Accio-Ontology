@@ -2,8 +2,8 @@
 <rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#"
      xml:base="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -11,6 +11,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tbcgeo="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -21,8 +23,196 @@
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl"/>
         <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#VisuallyImpairedPerson -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#VisuallyImpairedPerson">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#hasClinicalRecord"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.demcare.eu/ontologies/demlab.owl#ClinicalRecord"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#containsAssessment"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#Participant"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ClearVision -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ClearVision">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
