@@ -1140,6 +1140,49 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Location -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Location">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#LocationObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#LocationObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#LocationObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#LocationObservationValue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#LocationObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Loudness -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Loudness">
@@ -1510,28 +1553,36 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonLieingObservation -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonLieingObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPosition -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPosition">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </owl:Class>
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservation -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservation -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservation">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservationValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPosition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1545,10 +1596,26 @@
     
 
 
-    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue -->
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservationValue -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PositionObservationValue">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#ObservationValue"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservationValue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#StatusChangeObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonSittingObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonSittingObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonStandingObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonStandingObservation">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPositionObservation"/>
     </owl:Class>
     
 
@@ -2099,8 +2166,9 @@
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BatteryLevel"/>
+                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Location"/>
                             <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#NrOfPeople"/>
-                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Position"/>
+                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#PersonPosition"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
