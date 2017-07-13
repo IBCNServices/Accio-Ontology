@@ -112,7 +112,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBook -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBook">
-        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Book"/>
     </owl:ObjectProperty>
     
@@ -195,6 +195,15 @@
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWriter">
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
     </owl:ObjectProperty>
     
 
@@ -416,12 +425,6 @@
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBook"/>
-                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Book"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureGenre"/>
                 <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/LiteraryGenre"/>
             </owl:Restriction>
@@ -436,6 +439,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWriter"/>
                 <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Writer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
