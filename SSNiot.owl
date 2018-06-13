@@ -820,7 +820,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Fault -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Fault">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
     </owl:Class>
     
 
@@ -1829,7 +1829,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Solution -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Solution">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
     </owl:Class>
     
 
@@ -1916,7 +1916,7 @@
     <!-- http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Symptom -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Symptom">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Event"/>
     </owl:Class>
     
 

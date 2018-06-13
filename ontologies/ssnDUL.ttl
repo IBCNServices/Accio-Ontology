@@ -59,10 +59,6 @@ dul:isLocationOf a owl:ObjectProperty .
 
 dul:isQualityOf a owl:ObjectProperty .
 # 
-# http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#satisfies
-
-dul:satisfies a owl:ObjectProperty .
-# 
 # http://www.w3.org/ns/sosa/hasResult
 
 sosa:hasResult rdfs:subPropertyOf dul:associatedWith ;
@@ -100,7 +96,7 @@ sosa:phenomenonTime rdfs:subPropertyOf dul:hasRegion ;
 # 
 # http://www.w3.org/ns/sosa/usedProcedure
 
-sosa:usedProcedure rdfs:subPropertyOf dul:satisfies ;
+sosa:usedProcedure rdfs:subPropertyOf dul:associatedWith ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
 # 
 # http://www.w3.org/ns/ssn/deployedOnPlatform
