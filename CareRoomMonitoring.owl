@@ -20,8 +20,8 @@
 @base <http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl> .
 
 <http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl> rdf:type owl:Ontology ;
-                                                                       owl:imports <http://IBCNServices.github.io/Accio-Ontology/ContextAccio.owl> ,
-                                                                                   <http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl> .
+                                                                       owl:imports <http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl> ,
+                                                                                   <http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl> .
 
 #################################################################
 #    Object Properties
