@@ -620,6 +620,14 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#WarnNurseAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#WarnNurseAction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
