@@ -29,6 +29,15 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#deviceOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#deviceOwnedBy">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <owl:inverseOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#ownsDevice"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#observedDevice -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#observedDevice">

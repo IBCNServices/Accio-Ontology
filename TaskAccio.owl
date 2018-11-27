@@ -2,8 +2,8 @@
 <rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#"
      xml:base="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -322,6 +322,32 @@
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#MedicalReason">
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NewOrActiveOrAssignedAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NewOrActiveOrAssignedAction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Active"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Assigned"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#New"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
     </owl:Class>
     
 

@@ -442,6 +442,53 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursePresentObservation -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursePresentObservation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#observedDevice"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#BLEBracelet"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#deviceOwnedBy"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#hasRole"/>
+                                                                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#StaffMemberRole"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#BLEBeacon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursingOfficeTerminal -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#NursingOfficeTerminal">
