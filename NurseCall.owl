@@ -40,7 +40,14 @@
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#callMadeBy">
         <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#executedBy"/>
         <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#Call"/>
-        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/System"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
