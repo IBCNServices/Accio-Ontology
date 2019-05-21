@@ -61,6 +61,57 @@
                             ] .
 
 
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#HumidityAboveThresholdFault
+:HumidityAboveThresholdFault rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty SSNiot:hasSymptom ;
+                                                                          owl:someValuesFrom :HumidityAboveThresholdSymptom
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                          owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty SSNiot:isSubsystemOf ;
+                                                                                               owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty DUL:hasLocation ;
+                                                                                                                    owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                         owl:onProperty DUL:isLocationOf ;
+                                                                                                                                         owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                                                     owl:onProperty :hasDiagnosis ;
+                                                                                                                                                                                     owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                          owl:onProperty :hasMedicalSymptom ;
+                                                                                                                                                                                                          owl:someValuesFrom :SensitiveToHumidity
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                   ]
+                                                                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                                                                     owl:onProperty DUL:hasRole ;
+                                                                                                                                                                                     owl:someValuesFrom RoleCompetenceAccio:PatientRole
+                                                                                                                                                                                   ]
+                                                                                                                                                                                 ) ;
+                                                                                                                                                              rdf:type owl:Class
+                                                                                                                                                            ]
+                                                                                                                                       ]
+                                                                                                                  ]
+                                                                                             ]
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf SSNiot:DetectedFault .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#HumidityAboveThresholdSymptom
+:HumidityAboveThresholdSymptom rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( SSNiot:ThresholdSymptom
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty ssn:forProperty ;
+                                                                            owl:someValuesFrom SSNiot:Humidity
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf SSNiot:ThresholdSymptom .
+
+
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#LightIntensityAboveThresholdFault
 :LightIntensityAboveThresholdFault rdf:type owl:Class ;
                                    owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -101,6 +152,14 @@
 
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#LightIntensityAboveThresholdSymptom
 :LightIntensityAboveThresholdSymptom rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( SSNiot:ThresholdSymptom
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty ssn:forProperty ;
+                                                                                  owl:someValuesFrom SSNiot:LightIntensity
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
                                      rdfs:subClassOf SSNiot:ThresholdSymptom .
 
 
@@ -109,14 +168,56 @@
                 rdfs:subClassOf DUL:Description .
 
 
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToHumidity
+:SensitiveToHumidity rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :MedicalSymptom
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty ssn:forProperty ;
+                                                                  owl:someValuesFrom SSNiot:Humidity
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :MedicalSymptom .
+
+
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToLight
 :SensitiveToLight rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :MedicalSymptom
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty ssn:forProperty ;
+                                                               owl:someValuesFrom SSNiot:LightIntensity
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                   rdfs:subClassOf :MedicalSymptom .
 
 
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToSound
 :SensitiveToSound rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :MedicalSymptom
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty ssn:forProperty ;
+                                                               owl:someValuesFrom SSNiot:Sound
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                   rdfs:subClassOf :MedicalSymptom .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToTemperature
+:SensitiveToTemperature rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( :MedicalSymptom
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty ssn:forProperty ;
+                                                                     owl:someValuesFrom SSNiot:Temperature
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf :MedicalSymptom .
 
 
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SoundAboveThresholdFault
@@ -159,7 +260,66 @@
 
 ###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SoundAboveThresholdSymptom
 :SoundAboveThresholdSymptom rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( SSNiot:ThresholdSymptom
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty ssn:forProperty ;
+                                                                         owl:someValuesFrom SSNiot:Sound
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
                             rdfs:subClassOf SSNiot:ThresholdSymptom .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#TemperatureAboveThresholdFault
+:TemperatureAboveThresholdFault rdf:type owl:Class ;
+                                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty SSNiot:hasSymptom ;
+                                                                             owl:someValuesFrom :TemperatureAboveThresholdSymptom
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty SSNiot:isSubsystemOf ;
+                                                                                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty DUL:hasLocation ;
+                                                                                                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty DUL:isLocationOf ;
+                                                                                                                                            owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                                                        owl:onProperty :hasDiagnosis ;
+                                                                                                                                                                                        owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                             owl:onProperty :hasMedicalSymptom ;
+                                                                                                                                                                                                             owl:someValuesFrom :SensitiveToTemperature
+                                                                                                                                                                                                           ]
+                                                                                                                                                                                      ]
+                                                                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                                                                        owl:onProperty DUL:hasRole ;
+                                                                                                                                                                                        owl:someValuesFrom RoleCompetenceAccio:PatientRole
+                                                                                                                                                                                      ]
+                                                                                                                                                                                    ) ;
+                                                                                                                                                                 rdf:type owl:Class
+                                                                                                                                                               ]
+                                                                                                                                          ]
+                                                                                                                     ]
+                                                                                                ]
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:subClassOf SSNiot:DetectedFault .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#TemperatureAboveThresholdSymptom
+:TemperatureAboveThresholdSymptom rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( SSNiot:ThresholdSymptom
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ssn:forProperty ;
+                                                                               owl:someValuesFrom SSNiot:Temperature
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf SSNiot:ThresholdSymptom .
 
 
 #################################################################
